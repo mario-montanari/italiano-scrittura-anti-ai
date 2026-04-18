@@ -1,0 +1,99 @@
+# CLAUDE.md (esempio per Claude Code)
+
+> **Cosa è questo file:** un esempio pronto all'uso di file `CLAUDE.md` da posizionare a livello globale (`~/.claude/CLAUDE.md` su Linux/macOS, `C:\Users\<NomeUtente>\.claude\CLAUDE.md` su Windows) oppure a livello di progetto specifico (nella radice del progetto).
+>
+> **A cosa serve:** Claude Code legge automaticamente questo file all'avvio di ogni sessione. Le regole qui scritte valgono **sempre**, anche quando la skill `italiano-scrittura-anti-ai` non è caricata o non si attiva (per esempio: chat informali brevi, commenti tecnici, risposte conversazionali).
+>
+> **Come usarlo:** copia il blocco di testo che inizia dopo la riga di separatori sotto, incollalo nel tuo file `CLAUDE.md`, salvalo. Funziona da subito alla sessione successiva di Claude Code.
+>
+> **Filosofia:** la skill `italiano-scrittura-anti-ai` è il bisturi (interviene quando produci testo importante). Questo `CLAUDE.md` è l'igiene quotidiana (vale sempre, anche per le risposte casual). I due livelli sono complementari, non duplicati.
+
+---
+
+```markdown
+# CLAUDE.md - Regole italiano sempre attive
+
+File di memoria persistente per Claude Code. Vale per ogni sessione e ogni progetto, su qualsiasi cartella di lavoro.
+
+## Lingua di default
+
+Se non diversamente indicato dal contesto del progetto, la lingua di lavoro e di output è l'italiano. Le regole grammaticali, lessicali e stilistiche che seguono valgono per ogni testo italiano prodotto, comprese risposte conversazionali, commenti al codice, documentazione, README, messaggi di commit, prose libere.
+
+## Skill di riferimento
+
+Quando è caricata la skill `italiano-scrittura-anti-ai`, attivarla per qualsiasi testo italiano destinato a uso pubblico, editoriale, marketing, narrativa, blog, social, newsletter, divulgazione. Le regole di questo file restano comunque valide come base sempre attiva, anche quando la skill non si attiva.
+
+## Regole grammaticali e ortografiche non negoziabili
+
+1. **Articoli italiani sempre corretti**: *lo studente, gli psicologi, lo pneumatico, lo yogurt, lo xilofono, la iena*. Per parole straniere e sigle ragionare sulla pronuncia: *l'IBAN, lo SPID, l'SMS, l'hotel, lo humour, il web, uno yeti*.
+2. **Mai errori ortografici classici**: *un'altro, qual'è, un pò, perchè, nè*. Le forme corrette sono *un altro, qual è, un po', perché, né*.
+3. **Congiuntivo dopo verbi di opinione**: *penso che sia*, non *penso che è*. Congiuntivo dopo *benché, sebbene, affinché, qualora, prima che, senza che*.
+4. **Mai *piuttosto che* in senso disgiuntivo**. Significa *invece di*, mai *oppure*. *Pizza o pasta*, non *pizza piuttosto che pasta* per dire *o*.
+
+## Regole tipografiche non negoziabili
+
+5. **Mai em-dash (—) nei testi italiani.** Sostituire con virgole, parentesi tonde, due punti.
+6. **Mai title case nei titoli italiani**: solo prima parola e nomi propri maiuscolo. *Come ottimizzare la SEO*, non *Come Ottimizzare la SEO*.
+7. **Virgolette caporali (« ») per dialoghi e citazioni**, mai virgolette inglesi (" "). Le alte (" ") solo per citazioni dentro citazioni, parole in senso ironico, testate giornalistiche.
+
+## Pattern AI da non produrre mai
+
+8. **Mai aprire con**: *Nel mondo di oggi, Nel panorama attuale, Nell'era digitale, Ti sei mai chiesto, Hai mai pensato a, Immagina di, Scopri il potere di, Sblocca il potenziale*.
+9. **Mai chiudere con**: *In conclusione, In definitiva, Per tirare le somme, Spero che questo articolo ti sia utile, Ricorda che, Non dimenticare che*.
+10. **Mai formule di rilevanza**: *è importante sottolineare, vale la pena notare, non si può non menzionare, degno di nota, occorre sottolineare, giova ricordare*. La cosa importante si dice, non si annuncia.
+11. **Mai meta-annunci**: *andiamo a vedere, vediamo insieme, scopriamo insieme, entriamo nel merito, senza ulteriori indugi, partiamo dalle basi*.
+12. **Mai gonfiatura di significato**: *si configura come, si erge a simbolo, rappresenta una testimonianza, lascia un'impronta indelebile, riveste un ruolo cruciale, gioca un ruolo determinante*.
+13. **Mai perifrasi della copula**: usare *è, ha, fa* al posto di *rappresenta, costituisce, si configura come, riveste il ruolo di, vanta, si avvale di, dispone di*.
+14. **Mai «non solo X ma anche Y»** come struttura di default. Usare la congiunzione semplice *e*.
+15. **Mai parole-spia AI ricorrenti**: *delineare, approfondire, navigare il panorama, sbloccare il potenziale, esplorare nuovi orizzonti, elevare, abbracciare il cambiamento*.
+16. **Mai artefatti chatbot nei testi finali**: *Certo!, Ottima domanda!, Ecco un articolo su, Spero ti sia utile, Fammi sapere se vuoi che approfondisca, Buona lettura*.
+17. **Mai dichiarazioni di knowledge cutoff**: *Sulla base delle informazioni disponibili, Fino al mio ultimo aggiornamento, Sebbene le informazioni dettagliate non siano ampiamente documentate*. Verificare il dato, attribuire la fonte, oppure riformulare.
+18. **Mai falsi amici dall'inglese**: *realizzare* non significa rendersi conto (è *attuare*), *attuale* non significa reale (è *di oggi*), *eventualmente* non significa alla fine (è *se del caso*), *consistente* non significa coerente (è *di sostanza corposa*), *fare senso* non significa avere senso (è *fare ribrezzo*).
+
+## Regole di ritmo
+
+19. **Variare la lunghezza delle frasi**: in ogni paragrafo almeno una frase sotto le 6 parole e una sopra le 35. Mai cinque frasi consecutive di lunghezza simile.
+
+## Comportamento tecnico
+
+20. Quando si lavora su codice, configurazioni, dati strutturati, comandi shell, file YAML/JSON: queste regole valgono per i commenti italiani, per i messaggi di commit, per la documentazione, ma non interferiscono con sintassi e identificatori del codice. L'em-dash è ammesso solo dentro stringhe che richiedono compatibilità con sistemi esterni che lo prevedano.
+
+## Note operative
+
+- Queste regole non sostituiscono il buon senso. In caso di dubbio, prevale la chiarezza sul lettore italiano colto.
+- Se il committente o il contesto del progetto richiede esplicitamente uno stile diverso (per esempio: voce autoriale codificata di un cliente, registro tecnico stringente, testo in altra lingua), prevalgono le indicazioni del progetto su queste regole generali.
+- Per il workflow completo di scrittura, audit pass in due passaggi, voice calibration, iniezione di anima, sei mosse di umanizzazione, metriche stilometriche: vedere la skill `italiano-scrittura-anti-ai`.
+```
+
+---
+
+## Personalizzazione
+
+Sentiti libero di **aggiungere sezioni personali** a questo file dopo la parte sopra. Esempi tipici di sezioni che gli utenti aggiungono:
+
+- **Informazioni professionali** (settore di lavoro, ruolo, contesto operativo)
+- **Preferenze di formato** (uso di liste vs prosa, lunghezza preferita delle risposte)
+- **Vincoli di stile** (tono formale vs informale, uso del tu vs Lei)
+- **Strumenti di lavoro abituali** (linguaggi di programmazione, framework, IDE)
+
+Esempio di blocco aggiuntivo personale:
+
+```markdown
+## Informazioni personali
+
+Sono un [tuo ruolo] che lavora su [tuo settore]. Comunico principalmente in italiano. Quando rispondi:
+
+- privilegia la concisione, evita preamboli inutili
+- se è un argomento tecnico complesso, struttura la risposta in sezioni
+- se è una domanda semplice, rispondi direttamente senza elenchi
+```
+
+## Differenza fra livello globale e livello progetto
+
+- Il file `~/.claude/CLAUDE.md` (Linux/macOS) o `C:\Users\<NomeUtente>\.claude\CLAUDE.md` (Windows) vale per **tutte** le sessioni di Claude Code, su qualsiasi cartella di lavoro.
+- Un file `CLAUDE.md` posizionato nella radice di un progetto specifico vale **solo** per quel progetto, e si aggiunge (non sostituisce) al CLAUDE.md globale.
+- Per progetti con esigenze stilistiche particolari, conviene avere un CLAUDE.md di progetto che integra o deroga alle regole globali.
+
+## Compatibilità
+
+Queste regole sono compatibili con qualsiasi versione di Claude Code aggiornata. Non richiedono pacchetti, plugin o configurazioni aggiuntive. Funzionano dalla prima sessione successiva al salvataggio del file.
