@@ -6,6 +6,8 @@ La regola pratica è che nessuna singola parola condanna un testo. È la **co-oc
 
 Le fonti principali sono il catalogo del WikiProject AI Cleanup (skill Humanizer), AI Pattern Detector (aipatterndetector.it), il progetto *AAA Alternative Agli Anglicismi* di Antonio Zoppetti, le indicazioni di Claudio Marazzini per l'Accademia della Crusca.
 
+> **Statuto di questo catalogo: preferenza di gusto, non rilevatore.** Le liste di parole sospette che seguono sono uno strumento di gusto editoriale, non una prova di paternità artificiale del testo. Sono inaffidabili come rilevatore per quattro ragioni: cambiano a ogni versione del modello, dipendono dal prompt, sono confuse dal genere (parole additate come AI abbondano nella prosa umana accademica e di genere), e non si trasferiscono da un modello all'altro. Lo dimostra il calo di *delve* dopo la sua segnalazione pubblica nel 2024: appena una lista diventa nota, smette di funzionare come rilevatore. Restano utilissime come scelta di stile, «non voglio che la mia prosa suoni così», a patto di essere onesti su questo punto. Per i segnali davvero misurabili e con base peer-reviewed (varietà lessicale, pronomi, emozioni, interiorità, sottotesto, template sintattici) vedi `segnali-misurabili.md`.
+
 ## Indice
 
 1. [Come leggere questo catalogo](#1-come-leggere-questo-catalogo)

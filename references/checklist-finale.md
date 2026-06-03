@@ -98,6 +98,37 @@ Scorrere in ordine. Ogni voce è un controllo discreto, con azione pratica.
 - [ ] **Coerenza di formalità**: non oscillare fra registro formale e informale senza ragione
 - [ ] **Coerenza terminologica**: termini tecnici uniformi; se si introduce un sinonimo, chiarire il rapporto
 
+### Segnali misurabili
+
+Controlli con base scientifica, più affidabili delle liste di parole. Dettagli in `segnali-misurabili.md`.
+
+- [ ] **Varietà lessicale**: nessun sostantivo astratto o verbo di servizio che torna tre volte in pochi periodi; la varietà nasce dal dire cose diverse, non dai sinonimi forzati (MATTR a finestra mobile, non type-token grezzo)
+- [ ] **Pronomi personali presenti dove l'esperienza li giustifica**: in testi di opinione o testimonianza, l'autore compare come soggetto e non si nasconde dietro *si nota, è possibile osservare*; nei registri tecnici l'impersonale resta corretto
+- [ ] **Nessun eccesso di emozioni positive**: una difficoltà non viene ricomposta nello stesso paragrafo con la morale consolatoria; il cupo può restare cupo
+- [ ] **Interiorità non riassunta**: dove si dà accesso a un pensiero, il pensiero procede a strappi e l'emozione si mostra invece di essere etichettata (*provò una ondata di determinazione*)
+- [ ] **Sottotesto nei dialoghi**: i personaggi non dichiarano tutto; in saggistica, equivalente della fiducia nel lettore (sotto)
+- [ ] **Nessun template sintattico ripetuto**: cinque frasi con lo stesso scheletro (*[soggetto] permette di [infinito]*) vanno variate nella struttura, non solo nelle parole
+
+### Leak del registro conversazionale
+
+Controlli per il testo che parla come se rispondesse in chat. Dettagli in `leak-conversazionale.md`.
+
+- [ ] **Nessuna negazione che corregge un equivoco inesistente**: via *non è X, è Y* quando il lettore non pensava X; affermare direttamente, salvo equivoco reale e diffuso
+- [ ] **Nessuna suspense inutile**: via *qui sta il punto, ecco la cosa, la verità è che, il fatto è che*
+- [ ] **Nessun riassunto frattale**: via i paragrafi che ricapitolano sé stessi e annunciano la sezione dopo (*come abbiamo visto, vedremo ora*)
+- [ ] **Nessuna domanda messa in bocca al lettore**: via *ti starai chiedendo, andiamo a scoprirlo insieme*
+- [ ] **Test radice**: rileggere immaginando un lettore che non era nella conversazione; ciò che risponde a una domanda mai posta si taglia
+
+### Canali del lettore
+
+Griglia diagnostica quando un paragrafo suona piatto. Dettagli in `canali-lettore-saggistica.md`.
+
+- [ ] **Fiducia nel lettore**: dare i fatti e lasciare la conclusione a chi legge; non spiegare ciò che i dati già dicono
+- [ ] **Piacere estetico**: ritmo e forma variati; non tutte le frasi della stessa lunghezza (si collega alla variazione di lunghezza, sopra)
+- [ ] **Trasporto**: le idee astratte hanno appigli concreti (esempi con numeri, nomi, gesti); il lettore ha qualcosa da seguire
+- [ ] **Fluidità**: né periodi gonfi con subordinate incassate (troppo difficile), né tutto ripetuto due volte (troppo facile)
+- [ ] **Quale canale si è rotto?** Se il paragrafo è piatto, identificare il canale prima di riscrivere: la diagnosi indica la correzione
+
 ### Verifica finale
 
 - [ ] **Lettura ad alta voce**: il filtro decisivo. Correggere ciò che non scorre
@@ -140,6 +171,9 @@ Altre stringhe da verificare rapidamente:
 - `qual'è`, `un pò`, `se stesso`, `perchè`, `nè` (errori ortografici ricorrenti)
 - `Ottima domanda`, `Certo!`, `Certamente!`
 - `Sulla base delle informazioni disponibili`
+- `non è` + `è` (struttura *non è X, è Y* che corregge un equivoco inesistente)
+- `qui sta il punto`, `ecco la cosa`, `la verità è che`, `il fatto è che`
+- `come abbiamo visto`, `vedremo ora`, `andiamo a scoprirlo insieme`, `ti starai chiedendo`
 
 ## 3. Tabella sinottica dei pattern
 

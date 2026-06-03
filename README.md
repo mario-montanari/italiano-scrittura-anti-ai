@@ -1,7 +1,7 @@
 # italiano-scrittura-anti-ai
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
-![Version: 1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
+![Version: 1.1.0](https://img.shields.io/badge/version-1.1.0-blue)
 ![Language: Italian](https://img.shields.io/badge/language-italiano-red)
 
 Skill Claude per scrivere in italiano corretto evitando i pattern tipici della prosa generata da modelli linguistici.
@@ -19,6 +19,7 @@ Fornisce a Claude tre cose:
 1. **Le regole di grammatica italiana normativa** che i modelli sbagliano con più frequenza (articoli davanti a consonanti speciali, accenti acuti e gravi, congiuntivo, trattino breve/medio/lungo, virgolette caporali)
 2. **Il catalogo operativo del lessico AI italiano** da sopprimere, con alternative concrete
 3. **Le metodologie pratiche** di lavoro: soppressione attiva durante la stesura, audit pass in due passaggi, voice calibration per la voce del cliente, sei mosse di umanizzazione tratte dalla tradizione italiana (Calvino, Eco, Levi, Carrada, Testa)
+4. **I segnali misurabili e i canali del lettore**: i marcatori anti-AI con base peer-reviewed (varietà lessicale, pronomi personali, emozioni, interiorità, sottotesto, template sintattici), più affidabili delle liste di parole; il riconoscimento del leak del registro conversazionale; i quattro canali attraverso cui un lettore gode di un testo, usati come griglia diagnostica
 
 La base scientifica include gli studi dell'ItaliaNLP Lab del CNR-ILC di Pisa sulla stilometria italiana, le pubblicazioni CLiC-it 2024, lo skill open source Humanizer del WikiProject AI Cleanup.
 
@@ -102,7 +103,10 @@ italiano-scrittura-anti-ai/
 │   ├── metodologie-operative.md       # Workflow, audit pass, voice calibration, sei mosse di umanizzazione
 │   ├── personalita-e-anima.md         # Sei sintomi, sei tecniche, esempio di trasformazione
 │   ├── checklist-finale.md            # Checklist pre-consegna, red flag, tabella sinottica
-│   └── registri-e-contesti.md         # Sei registri, norme editoriali, SEO, E-E-A-T
+│   ├── registri-e-contesti.md         # Sei registri, norme editoriali, SEO, E-E-A-T
+│   ├── segnali-misurabili.md          # Segnali anti-AI con base peer-reviewed (MATTR, pronomi, sottotesto)
+│   ├── leak-conversazionale.md        # Il testo che parla come una chat: negazioni, suspense, riassunti frattali
+│   └── canali-lettore-saggistica.md   # I quattro canali del lettore come griglia diagnostica
 └── extras/                            # Risorse complementari opzionali (vedi sezione successiva)
     ├── README.md                      # Spiega la filosofia dei tre livelli di copertura
     ├── CLAUDE.md.example              # Template per Claude Code
@@ -113,8 +117,8 @@ italiano-scrittura-anti-ai/
 
 Oltre ai file della skill, la repo include una cartella `extras/` con due **template opzionali** che estendono le regole italiane anche ai contesti dove la skill non si attiva (chat informali, commenti tecnici, risposte conversazionali).
 
-- **`extras/CLAUDE.md.example`** — file di memoria persistente per Claude Code, da posizionare in `~/.claude/CLAUDE.md` (globale) o nella radice di un progetto specifico.
-- **`extras/user-preferences.example.md`** — testo da incollare nelle user preferences di claude.ai (Settings → Profile → User Preferences).
+- **`extras/CLAUDE.md.example`**: file di memoria persistente per Claude Code, da posizionare in `~/.claude/CLAUDE.md` (globale) o nella radice di un progetto specifico.
+- **`extras/user-preferences.example.md`**: testo da incollare nelle user preferences di claude.ai (Settings → Profile → User Preferences).
 
 I template contengono le 20 regole linguistiche essenziali estratte dalla skill, formulate come istruzioni dirette sempre attive. La filosofia è quella dei **tre livelli di copertura**: la skill come bisturi (interviene sui testi importanti), CLAUDE.md e user preferences come igiene quotidiana (valgono sempre). Vedi `extras/README.md` per i dettagli e per le istruzioni di installazione.
 
@@ -154,6 +158,19 @@ La skill consolida e organizza materiale di documenti sorgente redatti dall'auto
 - **WikiProject AI Cleanup**, pagina *Signs of AI writing* di Wikipedia
 - **Skill Humanizer open source**, basato sul WikiProject AI Cleanup
 
+**Fonte dell'upgrade 1.1.0 (segnali misurabili, leak conversazionale, canali del lettore):**
+
+- **`creative-writing-skills` di haowjy**, licenza Apache 2.0. I tre nuovi reference adattano in italiano concetti tratti da questo repository (antipatterns, leak del registro conversazionale, canali di ricompensa del lettore). L'attribuzione è riportata anche in fondo a ciascuno dei tre file.
+
+**Fonti scientifiche aggiunte con l'upgrade 1.1.0:**
+
+- Kobak, González-Márquez, Horvát, Lause (2024), *Delving into LLM-assisted writing in biomedical publications through excess vocabulary*, arXiv:2406.07016: vocabolario in eccesso e parole di stile come marcatori d'uso degli LLM
+- Shaib, Elazar, Li, Wallace (2024), *Detection and Measurement of Syntactic Templates in Generated Text*, EMNLP 2024, arXiv:2407.00211: template sintattici ripetuti
+- Covington, McFall (2010), *Cutting the Gordian Knot: The Moving-Average Type-Token Ratio (MATTR)*, Journal of Quantitative Linguistics: metrica della varietà lessicale robusta rispetto alla lunghezza
+- van Laer, de Ruyter, Visconti, Wetzels (2014), *The Extended Transportation-Imagery Model*, Journal of Consumer Research 40(5), doi:10.1086/673383: il trasporto narrativo come costrutto misurabile
+- Thissen, Menninghaus, Schlotz (2018), *Measuring optimal reading experiences: The reading flow short scale*, Frontiers in Psychology, doi:10.3389/fpsyg.2018.02542: il flusso di lettura
+- Hemingway, *Death in the Afternoon* (1932), capitolo 16: la teoria dell'iceberg
+
 A tutti questi autori, istituzioni e progetti va il riconoscimento per aver fornito la base su cui questa skill è costruita.
 
 ## Licenza
@@ -161,6 +178,8 @@ A tutti questi autori, istituzioni e progetti va il riconoscimento per aver forn
 MIT License. Vedere il file `LICENSE` per il testo completo.
 
 Significa: puoi usare, modificare, integrare questa skill in qualsiasi progetto, anche commerciale, mantenendo l'attribuzione. Non ci sono restrizioni particolari. La licenza è scelta per massimizzare la riutilizzabilità da parte della comunità italiana.
+
+L'upgrade 1.1.0 incorpora concetti adattati dal repository `creative-writing-skills` di haowjy, distribuito con licenza Apache 2.0. Le due licenze sono compatibili: si può integrare materiale Apache 2.0 in un progetto MIT mantenendo l'attribuzione, che è riportata sia in fondo ai tre nuovi reference sia nella sezione crediti. La licenza della skill resta MIT.
 
 ## Contributi
 

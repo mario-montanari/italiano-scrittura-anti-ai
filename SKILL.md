@@ -55,6 +55,9 @@ In base al tipo di compito:
 - per **comprendere i pattern strutturali** da sopprimere: `references/pattern-strutturali.md`
 - per **metodi di lavoro** (soppressione attiva, audit pass, voice calibration, umanizzazione): `references/metodologie-operative.md`
 - per **registro e norme editoriali** (corsivo, virgolette, bibliografie, SEO, E-E-A-T): `references/registri-e-contesti.md`
+- per **i segnali con base scientifica** (varietà lessicale, pronomi, emozioni, interiorità, sottotesto) quando serve qualcosa di più affidabile delle liste di parole: `references/segnali-misurabili.md`
+- quando il testo **parla al lettore come se rispondesse in chat** (negazioni preventive, suspense inutile, riassunti di sé stesso): `references/leak-conversazionale.md`
+- quando un **paragrafo suona piatto e non si capisce perché**, per diagnosticare quale canale del lettore si è rotto: `references/canali-lettore-saggistica.md`
 
 ### 3. Scrittura con soppressione attiva
 
@@ -110,6 +113,12 @@ Elenco completo dei file di reference, con indicazione esplicita di quando consu
 - **`references/checklist-finale.md`**: consultare prima di consegnare un testo. Contiene la checklist pre-consegna consolidata in otto famiglie tematiche, le venti red flag per Ctrl+F, la tabella sinottica dei pattern con esempi e correzioni, la strategia a tre passaggi.
 
 - **`references/registri-e-contesti.md`**: consultare per questioni di registro stilistico (i sei registri italiani), norme editoriali (corsivo, virgolette, bibliografie, maiuscole, numerali), ISBN e deposito legale, SEO italiano, E-E-A-T, manuali e fonti di riferimento.
+
+- **`references/segnali-misurabili.md`**: consultare quando le liste di parole non bastano e serve un criterio più solido. Contiene i segnali anti-AI con base peer-reviewed (varietà lessicale via MATTR, densità di pronomi personali, eccesso di emozioni positive, interiorità superficiale, basso sottotesto, template sintattici), come si riconoscono e si misurano, e il declassamento delle liste di parole a preferenza di gusto. Riporta le fonti scientifiche (Kobak 2024, Shaib 2024).
+
+- **`references/leak-conversazionale.md`**: consultare quando il testo scivola nel registro della chat invece di stare in piedi come documento. Contiene il pattern di negazione che corregge un equivoco inesistente (*non è X, è Y*), la suspense inutile (*qui sta il punto*), i riassunti frattali, le domande messe in bocca al lettore, e la correzione alla radice (scrivere per chi legge, non per la conversazione).
+
+- **`references/canali-lettore-saggistica.md`**: consultare come griglia diagnostica quando un paragrafo suona piatto. Contiene i quattro canali attraverso cui il lettore gode di un testo (fiducia nel lettore, piacere estetico, trasporto, fluidità), adattati alla saggistica e alla divulgazione, con la tabella per capire quale canale si è rotto. Riporta le fonti scientifiche (van Laer 2014, Thissen 2018).
 
 ## Regole non negoziabili
 
