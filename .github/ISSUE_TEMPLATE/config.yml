@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Domande e discussioni di stile
+    url: https://github.com/mario-montanari/italiano-scrittura-anti-ai/discussions
+    about: Per dubbi d'uso e confronti sullo stile, apri una discussione invece di una issue.

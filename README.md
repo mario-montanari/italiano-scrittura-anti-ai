@@ -1,7 +1,7 @@
 # italiano-scrittura-anti-ai
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
-![Version: 1.1.0](https://img.shields.io/badge/version-1.1.0-blue)
+![Version: 1.1.1](https://img.shields.io/badge/version-1.1.1-blue)
 ![Language: Italian](https://img.shields.io/badge/language-italiano-red)
 
 Skill Claude per scrivere in italiano corretto evitando i pattern tipici della prosa generata da modelli linguistici.
@@ -21,7 +21,7 @@ Fornisce a Claude tre cose:
 3. **Le metodologie pratiche** di lavoro: soppressione attiva durante la stesura, audit pass in due passaggi, voice calibration per la voce del cliente, sei mosse di umanizzazione tratte dalla tradizione italiana (Calvino, Eco, Levi, Carrada, Testa)
 4. **I segnali misurabili e i canali del lettore**: i marcatori anti-AI con base peer-reviewed (varietà lessicale, pronomi personali, emozioni, interiorità, sottotesto, template sintattici), più affidabili delle liste di parole; il riconoscimento del leak del registro conversazionale; i quattro canali attraverso cui un lettore gode di un testo, usati come griglia diagnostica
 
-La base scientifica include gli studi dell'ItaliaNLP Lab del CNR-ILC di Pisa sulla stilometria italiana, le pubblicazioni CLiC-it 2024, lo skill open source Humanizer del WikiProject AI Cleanup.
+La base scientifica include gli studi dell'ItaliaNLP Lab del CNR-ILC di Pisa sulla stilometria italiana, le pubblicazioni CLiC-it 2024, la skill open source Humanizer del WikiProject AI Cleanup.
 
 ## A chi serve
 

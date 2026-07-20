@@ -14,7 +14,7 @@
 
 ---
 
-## Versione base — Solo regole linguistiche
+## Versione base: solo regole linguistiche
 
 Da incollare se non hai altre preferenze personali da specificare:
 
@@ -26,7 +26,7 @@ Per il workflow completo su testi importanti, attiva la skill "italiano-scrittur
 Tipografia:
 - Mai em-dash (—). Usa virgole, parentesi tonde, due punti.
 - Virgolette caporali « » per dialoghi e citazioni, mai virgolette inglesi " ".
-- Titoli in minuscolo italiano: "Come ottimizzare la SEO", non "Come Ottimizzare la SEO".
+- Titoli in minuscolo italiano: «Come ottimizzare la SEO», non «Come Ottimizzare la SEO».
 
 Articoli e ortografia:
 - Sempre corretti: lo studente, gli psicologi, lo yogurt, lo xilofono, la iena, lo pneumatico.
@@ -58,7 +58,7 @@ Ritmo:
 
 ---
 
-## Versione estesa — Regole linguistiche + profilo personale
+## Versione estesa: regole linguistiche e profilo personale
 
 Se hai informazioni personali da comunicare a Claude (professione, contesto, modo di lavorare), puoi integrarle prima delle regole linguistiche. Questo è un esempio di struttura, da personalizzare:
 

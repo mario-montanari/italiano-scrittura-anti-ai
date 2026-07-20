@@ -4,7 +4,7 @@ Questo file raccoglie le metodologie pratiche per produrre testi italiani che no
 
 Le metodologie sono cinque: un workflow di soppressione durante la stesura, quattro tecniche di prevenzione attiva, l'audit pass in due passaggi, la voice calibration per allinearsi alla voce di un cliente, le sei mosse di umanizzazione dalla tradizione italiana. Chiude una sezione sulle metriche stilometriche che servono da diagnostica rapida.
 
-Le fonti principali sono lo skill Humanizer del WikiProject AI Cleanup, *Le lezioni americane* di Calvino, *Come si fa una tesi di laurea* di Eco, *L'altrui mestiere* di Levi, le opere di Luisa Carrada e Annamaria Testa, lo studio dell'ItaliaNLP Lab del CNR-ILC di Pisa per le metriche italiane.
+Le fonti principali sono la skill Humanizer del WikiProject AI Cleanup, *Le lezioni americane* di Calvino, *Come si fa una tesi di laurea* di Eco, *L'altrui mestiere* di Levi, le opere di Luisa Carrada e Annamaria Testa, lo studio dell'ItaliaNLP Lab del CNR-ILC di Pisa per le metriche italiane.
 
 ## Indice
 
@@ -89,7 +89,7 @@ Se la lettura scorre senza sussulti per più di cinque frasi consecutive, c'è u
 
 ## 3. Audit pass in due passaggi
 
-È il metodo operativo più potente dello skill Humanizer e merita di essere replicato su ogni testo di una certa importanza. Si articola in due prompt esatti da eseguire dopo aver scritto la prima bozza.
+È il metodo operativo più potente della skill Humanizer e merita di essere replicato su ogni testo di una certa importanza. Si articola in due prompt esatti da eseguire dopo aver scritto la prima bozza.
 
 ### Primo prompt
 
@@ -292,7 +292,9 @@ Levi in *Dello scrivere oscuro* (*L'altrui mestiere*, Einaudi 1985) denuncia lo 
 
 Dal punto di vista quantitativo, un testo italiano generato da un LLM presenta una firma statistica riconoscibile. Conoscerla aiuta a diagnosticare rapidamente un testo e a calibrare la revisione.
 
-Le fonti sono gli studi dell'ItaliaNLP Lab del CNR-ILC di Pisa (Dell'Orletta, Montemagni, Venturi, Brunato) e la produzione CLiC-it 2024.
+Il quadro metodologico si appoggia agli studi dell'ItaliaNLP Lab del CNR-ILC di Pisa (Dell'Orletta, Montemagni, Venturi, Brunato) e alla produzione CLiC-it 2024. Le cifre puntuali che seguono non sono però estratte verbatim da quelle fonti.
+
+> Le cifre di questa sezione sono stime indicative, ordini di grandezza osservati su campioni limitati, non misurazioni pubblicate con intervallo di confidenza. Vanno lette come tendenze utili a orientare la diagnosi, non come costanti. I modelli cambiano in fretta e questi numeri invecchiano: conta più il rapporto (l'umano è più vario dell'AI) che il valore esatto. Vale per tutte le cifre per modello di questa sezione, comprese quelle ripetute nella checklist finale.
 
 ### Indice Gulpease
 

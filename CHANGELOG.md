@@ -2,7 +2,26 @@
 
 Tutte le modifiche rilevanti alla skill sono annotate qui. Il formato segue la convenzione Keep a Changelog; la numerazione segue il versionamento semantico.
 
-## [1.1.0]
+## [1.1.1] - 2026-07-20
+
+Rilascio di igiene e coerenza. Nessun cambiamento ai contenuti metodologici, solo pulizia, community health e conformità.
+
+### Aggiunto
+
+- `CONTRIBUTING.md`: le tre vie del contributo, il formato di un pattern (parola spia, esempio negativo, spiegazione, correzione), convenzioni di commit e versione.
+- `CODE_OF_CONDUCT.md`: Contributor Covenant 3.0 in versione italiana, con l'originale inglese come testo di riferimento.
+- `SECURITY.md`: segnalazione privata tramite il private vulnerability reporting di GitHub.
+- `.github/ISSUE_TEMPLATE/`: template di segnalazione e di proposta di un pattern, più `config.yml`.
+- `.github/PULL_REQUEST_TEMPLATE.md`: checklist con fonti citate e testo che passa l'audit della skill stessa.
+- `CITATION.cff`: metadati per citare la skill.
+
+### Modificato
+
+- `SKILL.md`: rimosso il campo `license` dal frontmatter. Resta la coppia canonica `name` più `description`; la licenza vive nel file `LICENSE`.
+- Coerenza di genere: «la skill» al femminile nei quattro punti prima al maschile (`README.md`, `references/personalita-e-anima.md` e `references/metodologie-operative.md`, quest'ultimo in due punti).
+- `references/metodologie-operative.md`: nota di cautela nella sezione 6, le cifre per modello sono stime indicative e ordini di grandezza, non misurazioni pubblicate.
+
+## [1.1.0] - 2026-06-03
 
 Upgrade che integra materiale di ricerca selezionato e sposta il baricentro dalle liste di parole ai segnali misurabili.
 
@@ -24,6 +43,6 @@ Upgrade che integra materiale di ricerca selezionato e sposta il baricentro dall
 
 I tre nuovi reference adattano in italiano concetti tratti dal repository `creative-writing-skills` di haowjy, distribuito con licenza Apache 2.0, compatibile con la licenza MIT di questa skill. L'attribuzione è riportata in fondo a ciascuno dei tre file e nei crediti del README. La licenza della skill resta MIT.
 
-## [1.0.0]
+## [1.0.0] - 2026-04-18
 
 Prima versione pubblica. Grammatica normativa italiana, catalogo del lessico AI da evitare, pattern strutturali, metodologie operative, personalità e anima, checklist finale, registri e contesti, più la cartella `extras/` con i template per Claude Code e per le user preferences di claude.ai.

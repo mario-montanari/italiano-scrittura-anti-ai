@@ -132,7 +132,7 @@ Griglia diagnostica quando un paragrafo suona piatto. Dettagli in `canali-lettor
 ### Verifica finale
 
 - [ ] **Lettura ad alta voce**: il filtro decisivo. Correggere ciò che non scorre
-- [ ] **Leggibilità misurata**: Gulpease tramite Corrige.it o Due Parole (target 50-60 per testi informativi ampi). Se uniforme sotto 4 punti di deviazione standard, problema di monotonia
+- [ ] **Leggibilità misurata**: Gulpease tramite Corrige.it o Due Parole (valore indicativo intorno a 50-60 per testi informativi ampi, stima orientativa e non soglia certa). Se resta uniforme entro pochi punti di deviazione standard tra i passaggi, possibile monotonia
 - [ ] **Nessun refuso di battitura** dopo l'ultima revisione sostanziale
 - [ ] **Controllo detector AI** con spirito informato: i falsi positivi sono alti sull'italiano. Il responso è segnale, non verdetto
 - [ ] **Se il testo nasce da revisione AI per un cliente**, dichiararlo con trasparenza nel rapporto contrattuale

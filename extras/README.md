@@ -4,8 +4,8 @@ Questa cartella contiene **risorse complementari** alla skill `italiano-scrittur
 
 ## Cosa c'è dentro
 
-- **`CLAUDE.md.example`** — template per il file di memoria persistente di Claude Code, da posizionare a livello globale (`~/.claude/CLAUDE.md`) o di progetto.
-- **`user-preferences.example.md`** — template per le user preferences di claude.ai, da incollare in Settings → Profile → User Preferences.
+- **`CLAUDE.md.example`**: template per il file di memoria persistente di Claude Code, da posizionare a livello globale (`~/.claude/CLAUDE.md`) o di progetto.
+- **`user-preferences.example.md`**: template per le user preferences di claude.ai, da incollare in Settings, Profile, User Preferences.
 
 ## Filosofia: tre livelli di copertura
 

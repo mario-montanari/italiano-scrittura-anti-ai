@@ -4,7 +4,7 @@ Questo file tratta il problema più importante e meno discusso della scrittura i
 
 Un testo che ha eliminato tutti i tic algoritmici ma è rimasto neutro, equidistante, asettico, è ancora un testo AI: AI senza i marker di superficie, ma con la stessa assenza di anima.
 
-Il principio di fondo, così come formulato dallo skill Humanizer del WikiProject AI Cleanup, è che i large language model usano algoritmi statistici per indovinare cosa dovrebbe venire dopo, e il risultato tende verso l'esito statisticamente più probabile applicabile alla più ampia varietà di casi. Tradotto: la macchina produce sempre la **media**. Il compito dell'autore è produrre la **deviazione dalla media**.
+Il principio di fondo, così come formulato dalla skill Humanizer del WikiProject AI Cleanup, è che i large language model usano algoritmi statistici per indovinare cosa dovrebbe venire dopo, e il risultato tende verso l'esito statisticamente più probabile applicabile alla più ampia varietà di casi. Tradotto: la macchina produce sempre la **media**. Il compito dell'autore è produrre la **deviazione dalla media**.
 
 ## Indice
 

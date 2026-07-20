@@ -1,7 +1,6 @@
 ---
 name: italiano-scrittura-anti-ai
 description: Si attiva quando l'utente chiede di scrivere, redigere, tradurre o revisionare testi italiani per uso pubblico, editoriale, blog, social, newsletter, marketing, narrativa, saggistica o divulgazione. Si attiva anche quando l'utente chiede di umanizzare testi italiani, eliminare pattern AI, correggere lessico da chatbot, o quando rivede testi italiani generati da modelli linguistici.
-license: MIT License (vedi LICENSE)
 ---
 
 # Scrittura italiana anti pattern AI
