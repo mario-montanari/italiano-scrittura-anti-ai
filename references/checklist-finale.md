@@ -91,6 +91,8 @@ Scorrere in ordine. Ogni voce è un controllo discreto, con azione pratica.
 - [ ] **Il testo ha qualcuno dentro?** Se no, aggiungere: una posizione presa, una variazione di ritmo, un'ammissione di complessità, una prima persona, una digressione, un dettaglio sensoriale concreto
 - [ ] **Almeno un dettaglio sensoriale specifico**: orario, luogo, oggetto, cifra, nome proprio, data
 - [ ] **Almeno un'ammissione di complessità o incertezza** nei testi argomentativi
+- [ ] **Nessun finto-umano di plastica**: le mosse d'anima nascono dal contenuto, non sono decorative; se una digressione, un'incertezza o un dettaglio sensoriale si potrebbe togliere senza perdere senso, o si incollerebbe identico su qualsiasi testo, è over-humanizing (dettagli in `personalita-e-anima.md` sezione 4)
+- [ ] **Impara la mossa d'autore, non limitarti a togliere il tic**: per la deviazione fatta bene vedi `maestri-della-deviazione.md`
 
 ### Coerenza di registro
 

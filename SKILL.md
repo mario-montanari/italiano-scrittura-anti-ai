@@ -57,6 +57,7 @@ In base al tipo di compito:
 - per **i segnali con base scientifica** (varietà lessicale, pronomi, emozioni, interiorità, sottotesto) quando serve qualcosa di più affidabile delle liste di parole: `references/segnali-misurabili.md`
 - quando il testo **parla al lettore come se rispondesse in chat** (negazioni preventive, suspense inutile, riassunti di sé stesso): `references/leak-conversazionale.md`
 - quando un **paragrafo suona piatto e non si capisce perché**, per diagnosticare quale canale del lettore si è rotto: `references/canali-lettore-saggistica.md`
+- quando serve **imparare la deviazione fatta bene, oltre a evitare i tic**, con una galleria di mosse d'autore italiane da rubare: `references/maestri-della-deviazione.md`
 
 ### 3. Scrittura con soppressione attiva
 
@@ -107,7 +108,9 @@ Elenco completo dei file di reference, con indicazione esplicita di quando consu
 
 - **`references/metodologie-operative.md`**: consultare per le metodologie pratiche: soppressione attiva durante la stesura, quattro tecniche di prevenzione (verbo specifico, numero verificabile, nome proprio, lettura ad alta voce), audit pass in due passaggi con i due prompt esatti, voice calibration in cinque mosse, sei mosse di umanizzazione dalla tradizione italiana (Calvino, Eco, Levi, Carrada, Testa), metriche stilometriche di diagnosi.
 
-- **`references/personalita-e-anima.md`**: consultare quando il testo «è pulito ma non ha qualcuno dentro». Contiene i sei sintomi di scrittura asettica, le sei tecniche per iniettare anima (prendere posizione, variare ritmo, ammettere complessità, prima persona, lasciare disordine, essere specifici sui sentimenti), l'esempio di trasformazione finale.
+- **`references/personalita-e-anima.md`**: consultare quando il testo «è pulito ma non ha qualcuno dentro». Contiene i sei sintomi di scrittura asettica, le sei tecniche per iniettare anima (prendere posizione, variare ritmo, ammettere complessità, prima persona, lasciare disordine, essere specifici sui sentimenti), l'esempio di trasformazione finale, e la guardia contro il finto-umano di plastica (over-humanizing).
+
+- **`references/maestri-della-deviazione.md`**: consultare per imparare la deviazione dalla media dai maestri, oltre che per evitare il negativo. Galleria di sette scrittori italiani (Calvino, Eco, Levi, Ginzburg, Testa, Camilleri, Carrada), ognuno con una mossa-firma, un passo che la mostra e la regola per portarla via. Ribalta l'asse della sezione 5 di `metodologie-operative.md`, che indicizza le mosse per tecnica, partendo qui dall'autore. Include l'avvertenza a rubare la mossa, non a imitare l'autore.
 
 - **`references/checklist-finale.md`**: consultare prima di consegnare un testo. Contiene la checklist pre-consegna consolidata in otto famiglie tematiche, le venti red flag per Ctrl+F, la tabella sinottica dei pattern con esempi e correzioni, la strategia a tre passaggi.
 

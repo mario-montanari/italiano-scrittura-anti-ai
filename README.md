@@ -1,7 +1,7 @@
 # italiano-scrittura-anti-ai
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
-![Version: 1.1.1](https://img.shields.io/badge/version-1.1.1-blue)
+![Version: 1.2.0](https://img.shields.io/badge/version-1.2.0-blue)
 ![Language: Italian](https://img.shields.io/badge/language-italiano-red)
 
 Skill Claude per scrivere in italiano corretto evitando i pattern tipici della prosa generata da modelli linguistici.
@@ -18,7 +18,7 @@ Fornisce a Claude tre cose:
 
 1. **Le regole di grammatica italiana normativa** che i modelli sbagliano con più frequenza (articoli davanti a consonanti speciali, accenti acuti e gravi, congiuntivo, trattino breve/medio/lungo, virgolette caporali)
 2. **Il catalogo operativo del lessico AI italiano** da sopprimere, con alternative concrete
-3. **Le metodologie pratiche** di lavoro: soppressione attiva durante la stesura, audit pass in due passaggi, voice calibration per la voce del cliente, sei mosse di umanizzazione tratte dalla tradizione italiana (Calvino, Eco, Levi, Carrada, Testa)
+3. **Le metodologie pratiche** di lavoro: soppressione attiva durante la stesura, audit pass in due passaggi, voice calibration per la voce del cliente, sei mosse di umanizzazione tratte dalla tradizione italiana (Calvino, Eco, Levi, Carrada, Testa), ampliate in una galleria di sette maestri da cui rubare la mossa-firma
 4. **I segnali misurabili e i canali del lettore**: i marcatori anti-AI con base peer-reviewed (varietà lessicale, pronomi personali, emozioni, interiorità, sottotesto, template sintattici), più affidabili delle liste di parole; il riconoscimento del leak del registro conversazionale; i quattro canali attraverso cui un lettore gode di un testo, usati come griglia diagnostica
 
 La base scientifica include gli studi dell'ItaliaNLP Lab del CNR-ILC di Pisa sulla stilometria italiana, le pubblicazioni CLiC-it 2024, la skill open source Humanizer del WikiProject AI Cleanup.
@@ -101,7 +101,8 @@ italiano-scrittura-anti-ai/
 │   ├── lessico-da-evitare.md          # Aggettivi, verbi, sostantivi, calchi, falsi amici, anglicismi
 │   ├── pattern-strutturali.md         # 20 pattern AI con esempi e correzioni
 │   ├── metodologie-operative.md       # Workflow, audit pass, voice calibration, sei mosse di umanizzazione
-│   ├── personalita-e-anima.md         # Sei sintomi, sei tecniche, esempio di trasformazione
+│   ├── maestri-della-deviazione.md    # Galleria di 7 autori italiani, la mossa-firma di ognuno da rubare
+│   ├── personalita-e-anima.md         # Sei sintomi, sei tecniche, esempio di trasformazione, anti over-humanizing
 │   ├── checklist-finale.md            # Checklist pre-consegna, red flag, tabella sinottica
 │   ├── registri-e-contesti.md         # Sei registri, norme editoriali, SEO, E-E-A-T
 │   ├── segnali-misurabili.md          # Segnali anti-AI con base peer-reviewed (MATTR, pronomi, sottotesto)
@@ -135,9 +136,10 @@ La skill consolida e organizza materiale di documenti sorgente redatti dall'auto
 
 **Fonti stilistiche e di scrittura professionale:**
 
-- Italo Calvino, *Lezioni americane* (Garzanti 1988)
+- Italo Calvino, *Lezioni americane* (Garzanti 1988), *Le città invisibili* (Einaudi 1972)
 - Umberto Eco, *Come si fa una tesi di laurea* (Bompiani 1977), *Dire quasi la stessa cosa* (Bompiani 2003)
 - Primo Levi, *L'altrui mestiere* (Einaudi 1985)
+- Natalia Ginzburg, *Le piccole virtù* (Einaudi 1962)
 - Luisa Carrada, *Il mestiere di scrivere*, collana Zanichelli
 - Annamaria Testa, *Farsi capire* (Rizzoli 2000)
 

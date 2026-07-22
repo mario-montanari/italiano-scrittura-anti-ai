@@ -218,7 +218,7 @@ Le sei mosse derivano dalla lezione di Calvino, Eco, Levi, Carrada, Testa, Sever
 
 In ogni paragrafo, almeno una frase sotto le sei parole e una sopra le trentacinque. La deviazione standard target è 8-12 parole; quella da fuggire è 3-5.
 
-Calvino nelle *Città invisibili* scrive: «D'una città non godi le sette o settantasette meraviglie, ma la risposta che dà a una tua domanda». Diciassette parole, una sola frase, inquadrata da periodi più ampi. La «burstiness» applicata all'italiano è l'esplosività ritmica del periodo umano.
+Calvino nelle *Città invisibili* scrive: «D'una città non godi le sette o le settantasette meraviglie, ma la risposta che dà a una tua domanda». Diciannove parole, una sola frase, inquadrata da periodi più ampi. La «burstiness» applicata all'italiano è l'esplosività ritmica del periodo umano.
 
 ### Seconda mossa: uso degli incisi e delle parentesi
 

@@ -2,6 +2,20 @@
 
 Tutte le modifiche rilevanti alla skill sono annotate qui. Il formato segue la convenzione Keep a Changelog; la numerazione segue il versionamento semantico.
 
+## [1.2.0] - 2026-07-22
+
+Upgrade di contenuto. Due nuove guardie di qualità che nascono da semi già presenti nella skill: la galleria dei maestri della deviazione e la difesa contro l'over-humanizing.
+
+### Aggiunto
+
+- `references/maestri-della-deviazione.md`: galleria di sette autori italiani (Calvino, Eco, Levi, Ginzburg, Testa, Camilleri, Carrada), ognuno con la mossa-firma, un passo che la mostra e la regola per portarla via. Ribalta l'asse della sezione 5 di `metodologie-operative.md`, dove le mosse sono indicizzate per tecnica: qui si parte dall'autore. Citazioni reali solo dove verificabili, con opera e anno; per gli altri, esempi costruiti nello stile e dichiarati come tali, mai false attribuzioni. Le schede di Calvino ed Eco riprendono passaggi già presenti nella sezione 5 di `metodologie-operative.md`.
+
+### Modificato
+
+- `references/personalita-e-anima.md`: nuova sezione 4 «Il profumo dell'umanizzatore», con i sei sintomi del finto-umano di plastica e il test «si può togliere senza perdere senso?». Indice e numerazione delle sezioni successive aggiornati.
+- `SKILL.md`: rimandi alle due nuove guardie nella sezione di consultazione e nell'elenco dei reference.
+- `references/checklist-finale.md`: due controlli nella famiglia Anima, uno contro il finto-umano di plastica e uno che rimanda alla deviazione d'autore.
+
 ## [1.1.1] - 2026-07-20
 
 Rilascio di igiene e coerenza. Nessun cambiamento ai contenuti metodologici, solo pulizia, community health e conformità.

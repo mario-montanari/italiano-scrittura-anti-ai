@@ -11,7 +11,8 @@ Il principio di fondo, così come formulato dalla skill Humanizer del WikiProjec
 1. [Sei sintomi di scrittura pulita ma senz'anima](#1-sei-sintomi-di-scrittura-pulita-ma-senzanima)
 2. [Sei tecniche per iniettare anima](#2-sei-tecniche-per-iniettare-anima)
 3. [Esempio di trasformazione finale](#3-esempio-di-trasformazione-finale)
-4. [La domanda finale da porsi](#4-la-domanda-finale-da-porsi)
+4. [Il profumo dell'umanizzatore](#4-il-profumo-dellumanizzatore)
+5. [La domanda finale da porsi](#5-la-domanda-finale-da-porsi)
 
 ---
 
@@ -118,7 +119,29 @@ Tutti i marker AI sono stati eliminati. Nessun *significativo*, nessun *pivotal*
 
 Stesso contenuto, stessa lunghezza approssimativa, ma il secondo paragrafo ha qualcuno dentro.
 
-## 4. La domanda finale da porsi
+## 4. Il profumo dell'umanizzatore
+
+Iniettare anima ha un fallimento speculare, meno ovvio dei sei sintomi ma altrettanto insidioso. Chi corregge troppo produce un finto-umano di plastica: digressioni messe apposta, imperfezioni piazzate a tavolino, colloquialità gonfiata, l'occhiolino continuo al lettore. È riconoscibile quanto la media asettica, solo dall'altro lato. Un testo così non sembra scritto da una persona: sembra scritto da una macchina che imita una persona, che è peggio.
+
+Chi umanizza a mano, o con un altro modello, lascia tracce sue. Ecco i sintomi del finto-umano, specchio dei sei di prima:
+
+1. **La digressione decorativa.** Una parentesi personale che non nasce dal pensiero ma è aggiunta per «sembrare umani». Se la togli e non manca niente, era finta.
+
+2. **L'incertezza esibita.** *Chi lo sa, forse mi sbaglio, ma è solo la mia opinione* ripetuto a freddo, come formula. L'ammissione vera di un dubbio è una sola e pesa; l'incertezza di maniera è un riempitivo nuovo.
+
+3. **La colloquialità gonfiata.** Troppi *insomma, diciamo, alla fine dei conti, onestamente, a essere sinceri*. Uno ci sta, cinque sono una maschera.
+
+4. **L'io invadente.** La prima persona ovunque, anche dove il contenuto non la chiede. L'anima non è parlare sempre di sé, è comparire quando serve.
+
+5. **La complessità automatica.** *È una questione complicata, ha molte sfumature, non è tutto bianco o nero* messo per riflesso su qualsiasi tema. Ammettere la complessità vale se la complessità è reale e specifica, non come clausola di stile.
+
+6. **Il dettaglio sensoriale finto.** *Era una fredda mattina di novembre* appiccicato per spuntare la casella del concreto. Il dettaglio che pesa è vero e ricordato, non generico e verosimile: la macchina genera specificità plausibili, ed è esattamente ciò che l'umanizzazione pigra imita.
+
+Il test è uno solo, lo stesso dei maestri (in `maestri-della-deviazione.md`): una mossa d'anima è autentica se serve il contenuto e non la puoi togliere senza perdere senso. È di plastica se è decorativa, rimovibile, e la potresti incollare identica su qualunque altro testo. La digressione buona nasce dove il pensiero devia davvero; quella finta è messa perché «adesso tocca una digressione».
+
+La regola che ne segue è scomoda: meglio una pagina piana e onesta che una imbottita di finto-umano. Umanizzare non è aggiungere rumore umano sopra la media, è restituire la complessità vera che la media aveva tolto. Quando l'imperfezione diventa un effetto da produrre, sei tornato al punto di partenza, con un pattern nuovo al posto di quello vecchio.
+
+## 5. La domanda finale da porsi
 
 Dopo aver eliminato i pattern AI e applicato la checklist finale, si pone una sola domanda:
 
