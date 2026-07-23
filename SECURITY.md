@@ -8,7 +8,9 @@
 
 ## Segnalare un problema
 
-Questa skill è fatta di testo e non esegue codice, quindi la superficie di rischio è piccola. Restano possibili problemi da segnalare: un file che espone dati non voluti, un link malevolo, un contenuto che viola la licenza di una fonte.
+Questa skill è fatta quasi tutta di testo, e il testo non esegue niente. L'unica parte eseguibile è `scripts/profilo_voce.py`, uno strumento facoltativo: usa la sola libreria standard di Python, non accede alla rete, non installa niente, e scrive due soli file, `scheda-voce.md` e `profilo-voce.json`, nella cartella di uscita indicata da chi lo lancia.
+
+Restano possibili problemi da segnalare: un difetto dello script che lo porti a scrivere fuori da quella cartella o a consumare risorse fuori misura, un file che espone dati non voluti, un link malevolo, un contenuto che viola la licenza di una fonte.
 
 Se trovi un problema di sicurezza, segnalalo **in privato**, non aprire una issue pubblica.
 

@@ -1,0 +1,45 @@
+name: CodeQL
+
+# Analisi statica dell'unica parte eseguibile della skill,
+# scripts/profilo_voce.py. Il resto della repo e testo e non viene analizzato.
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  schedule:
+    # Lunedi alle 05:27 UTC, sfasato per non cadere nel minuto zero.
+    - cron: "27 5 * * 1"
+
+# Permessi minimi in cima: la scrittura vive solo nel job che ne ha bisogno.
+permissions: read-all
+
+concurrency:
+  group: "codeql-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  analisi:
+    name: Analisi CodeQL (Python)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    steps:
+      - name: Preleva il codice
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+
+      - name: Inizializza CodeQL
+        uses: github/codeql-action/init@e4fba868fa4b1b91e1fdab776edc8cfbe6e9fb81 # v4
+        with:
+          languages: python
+          queries: security-extended
+
+      - name: Analizza
+        uses: github/codeql-action/analyze@e4fba868fa4b1b91e1fdab776edc8cfbe6e9fb81 # v4
+        with:
+          category: "/language:python"

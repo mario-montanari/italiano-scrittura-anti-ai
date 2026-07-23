@@ -43,7 +43,7 @@ Prima di scrivere, chiarire:
 - **scopo** (informare, persuadere, raccontare, documentare)
 - **vincoli** (lunghezza, piattaforma, parole chiave obbligatorie)
 
-Se l'utente lavora per un cliente con voce autoriale definita, consultare `references/metodologie-operative.md` sezione 4 sulla voice calibration in cinque mosse.
+Se l'utente lavora per un cliente con voce autoriale definita, consultare `references/metodologie-operative.md` sezione 4 sulla voice calibration in cinque mosse. Quando la voce va catturata e documentata sul serio, con un corpus di testi veri, il metodo completo e il modello di scheda sono in `references/voce-personale.md`.
 
 ### 2. Consultazione dei reference utili
 
@@ -58,6 +58,8 @@ In base al tipo di compito:
 - quando il testo **parla al lettore come se rispondesse in chat** (negazioni preventive, suspense inutile, riassunti di sé stesso): `references/leak-conversazionale.md`
 - quando un **paragrafo suona piatto e non si capisce perché**, per diagnosticare quale canale del lettore si è rotto: `references/canali-lettore-saggistica.md`
 - quando serve **imparare la deviazione fatta bene, oltre a evitare i tic**, con una galleria di mosse d'autore italiane da rubare: `references/maestri-della-deviazione.md`
+- quando si scrive **per conto di una persona con una voce riconoscibile**, o si vuole documentare la propria: `references/voce-personale.md`
+- quando un **testo dell'utente viene segnalato come generato** da un rilevatore automatico e serve costruire la risposta: `references/scudo-falsi-positivi.md`
 
 ### 3. Scrittura con soppressione attiva
 
@@ -106,11 +108,13 @@ Elenco completo dei file di reference, con indicazione esplicita di quando consu
 
 - **`references/pattern-strutturali.md`**: consultare per diagnosticare o correggere pattern strutturali: gonfiatura di significato, participio parassita, perifrasi della copula (evitare *rappresenta, costituisce, si configura come*), meta-annunci, elenchi meccanici, variazione elegante (esempio Calvino in sette modi), contrasti fittizi, false range, esibizione di notabilità, schema «sfide e prospettive future».
 
-- **`references/metodologie-operative.md`**: consultare per le metodologie pratiche: soppressione attiva durante la stesura, quattro tecniche di prevenzione (verbo specifico, numero verificabile, nome proprio, lettura ad alta voce), audit pass in due passaggi con i due prompt esatti, voice calibration in cinque mosse, sei mosse di umanizzazione dalla tradizione italiana (Calvino, Eco, Levi, Carrada, Testa), metriche stilometriche di diagnosi.
+- **`references/metodologie-operative.md`**: consultare per le metodologie pratiche: soppressione attiva durante la stesura, quattro tecniche di prevenzione (verbo specifico, numero verificabile, nome proprio, lettura ad alta voce), audit pass in due passaggi con i due prompt esatti, voice calibration in cinque mosse, sei mosse di umanizzazione dalla tradizione italiana (Calvino, Eco, Levi, Camilleri), metriche stilometriche di diagnosi.
 
 - **`references/personalita-e-anima.md`**: consultare quando il testo «è pulito ma non ha qualcuno dentro». Contiene i sei sintomi di scrittura asettica, le sei tecniche per iniettare anima (prendere posizione, variare ritmo, ammettere complessità, prima persona, lasciare disordine, essere specifici sui sentimenti), l'esempio di trasformazione finale, e la guardia contro il finto-umano di plastica (over-humanizing).
 
 - **`references/maestri-della-deviazione.md`**: consultare per imparare la deviazione dalla media dai maestri, oltre che per evitare il negativo. Galleria di sette scrittori italiani (Calvino, Eco, Levi, Ginzburg, Testa, Camilleri, Carrada), ognuno con una mossa-firma, un passo che la mostra e la regola per portarla via. Ribalta l'asse della sezione 5 di `metodologie-operative.md`, che indicizza le mosse per tecnica, partendo qui dall'autore. Include l'avvertenza a rubare la mossa, non a imitare l'autore.
+
+- **`references/voce-personale.md`**: consultare quando la voce di chi firma il testo va catturata e rispettata, per un cliente o per sé stessi. Contiene il metodo di raccolta del corpus, i due livelli del profilo (misurato e osservato), il modello di scheda voce con un esempio compilato su dati reali, le istruzioni per usare il profilo mentre si scrive, e il confine oltre il quale la voce non prevale: le regole non negoziabili sono norma della lingua, non gusto, e nessuno ha una voce fatta di errori. Espande la sezione 4 di `metodologie-operative.md`.
 
 - **`references/checklist-finale.md`**: consultare prima di consegnare un testo. Contiene la checklist pre-consegna consolidata in otto famiglie tematiche, le venti red flag per Ctrl+F, la tabella sinottica dei pattern con esempi e correzioni, la strategia a tre passaggi.
 
@@ -121,6 +125,18 @@ Elenco completo dei file di reference, con indicazione esplicita di quando consu
 - **`references/leak-conversazionale.md`**: consultare quando il testo scivola nel registro della chat invece di stare in piedi come documento. Contiene il pattern di negazione che corregge un equivoco inesistente (*non è X, è Y*), la suspense inutile (*qui sta il punto*), i riassunti frattali, le domande messe in bocca al lettore, e la correzione alla radice (scrivere per chi legge, non per la conversazione).
 
 - **`references/canali-lettore-saggistica.md`**: consultare come griglia diagnostica quando un paragrafo suona piatto. Contiene i quattro canali attraverso cui il lettore gode di un testo (fiducia nel lettore, piacere estetico, trasporto, fluidità), adattati alla saggistica e alla divulgazione, con la tabella per capire quale canale si è rotto. Riporta le fonti scientifiche (van Laer 2014, Thissen 2018).
+
+- **`references/scudo-falsi-positivi.md`**: consultare quando un testo italiano scritto da una persona viene segnalato come generato da un rilevatore automatico. Contiene il confine d'uso della difesa, che cosa misura davvero un rilevatore, le evidenze pubblicate sui suoi errori (Liang 2023, Weber-Wulff 2023, il ritiro dell'AI Text Classifier di OpenAI, le cifre dichiarate da Turnitin, la scelta di Vanderbilt), il vuoto di misure sull'italiano documentato dai benchmark multilingue, i sette passaggi della difesa e i due modelli di documento: difesa argomentata per il testo dell'autore, dichiarazione d'uso per il testo assistito.
+
+## Strumenti inclusi
+
+La skill include uno script facoltativo. Chi non ha Python installato usa la skill per intero senza perdere nulla: i reference spiegano come ottenere gli stessi risultati a mano.
+
+- **`scripts/profilo_voce.py`**: calcola il profilo quantitativo di una voce a partire da una cartella di testi dello stesso autore e dello stesso registro. Produce una scheda leggibile e i dati grezzi in JSON. Si invoca con `python scripts/profilo_voce.py CARTELLA --nome "Nome autore"` e non richiede librerie esterne. Le decisioni di conteggio, i limiti e il modo di leggere i numeri sono in `references/voce-personale.md`. Lo strumento misura e non giudica: non stabilisce se un testo sia stato generato da una macchina.
+
+- **`extras/commands/calibra-voce.md`**: comando `/calibra-voce` da copiare in `.claude/commands/`. Conduce l'intera calibrazione: verifica del corpus, livello misurato con lo script, livello osservato con la lettura dei testi, scheda finale. Istruzioni di installazione in `extras/README.md`.
+
+- **`extras/commands/difendi.md`**: comando `/difendi` da copiare in `.claude/commands/`. Raccoglie i fatti dell'accusa, distingue i tre casi, verifica i materiali dell'autore e compone il documento. Non esegue alcuno strumento sul testo contestato e non indica modifiche per abbassare un punteggio. Istruzioni di installazione in `extras/README.md`.
 
 ## Regole non negoziabili
 
@@ -141,6 +157,10 @@ Applicare sempre, anche senza consultare i reference. Nessuna eccezione.
 13. **SEMPRE articoli italiani corretti:** *lo studente, gli psicologi, l'IBAN, lo SPID, la iena*. Mai *un'altro* al maschile.
 14. **SEMPRE congiuntivo con verbi di opinione** (*penso che sia*, non *penso che è*) e con le congiunzioni *benché, sebbene, affinché, qualora*.
 15. **SEMPRE variare la lunghezza delle frasi:** in ogni paragrafo almeno una frase sotto le sei parole e una sopra le trentacinque. Mai cinque frasi di fila di lunghezza simile.
+
+## Limite d'uso
+
+Questa skill serve a scrivere in italiano senza i tic della prosa generata, e a difendere un testo umano accusato ingiustamente da un rilevatore automatico (`references/scudo-falsi-positivi.md`). Non serve a far passare per umano un testo generato, e non contiene niente che aiuti a farlo. Nessuno strumento certifica la paternità umana di un testo, nemmeno questo: la difesa si regge su prove esterne al testo, e chi volesse difendere un testo generato troverebbe quei campi vuoti.
 
 ## Principio guida
 

@@ -166,7 +166,7 @@ Annotare cinque tic riconoscibili. Esempi:
 - inizia spesso le frasi con *e* o *ma*?
 - ha parole-feticcio (*sostanzialmente, di fatto, per davvero*)?
 - apre i paragrafi con domande?
-- chiude con sentenze brevi?
+- chiude con massime brevi?
 - usa metafore ricorrenti?
 - cita sempre fonti per nome o resta sulle generalizzazioni?
 
@@ -212,7 +212,7 @@ La voce del cliente prevale sempre sui filtri anti-AI generici. Un pattern appar
 
 Umanizzare un testo non significa aggiungere errori controllati. Significa restituire al testo la complessità che la prosa italiana ha codificato nei secoli: oscillazione fra paratassi e ipotassi, uso degli incisi, voce personale modulata dal pudore, varietà di registri, concretezza delle immagini.
 
-Le sei mosse derivano dalla lezione di Calvino, Eco, Levi, Carrada, Testa, Severgnini.
+Le sei mosse derivano dalla lezione di Calvino, Eco, Levi e Camilleri: ognuno torna qui sotto con un esempio suo.
 
 ### Prima mossa: variazione della lunghezza delle frasi
 

@@ -1,11 +1,32 @@
 # Extras
 
-Questa cartella contiene **risorse complementari** alla skill `italiano-scrittura-anti-ai`. Non sono parte della skill stessa: sono **template di esempio** che chi installa la skill può scegliere di usare per estendere la copertura delle regole italiane anche ai contesti dove la skill non si attiva automaticamente.
+Questa cartella contiene **risorse complementari** alla skill `italiano-scrittura-anti-ai`: **template di esempio**, esterni alla skill, che chi la installa può scegliere di usare per estendere la copertura delle regole italiane anche ai contesti dove la skill non si attiva automaticamente.
 
 ## Cosa c'è dentro
 
 - **`CLAUDE.md.example`**: template per il file di memoria persistente di Claude Code, da posizionare a livello globale (`~/.claude/CLAUDE.md`) o di progetto.
 - **`user-preferences.example.md`**: template per le user preferences di claude.ai, da incollare in Settings, Profile, User Preferences.
+- **`commands/calibra-voce.md`**: comando da copiare in `.claude/commands/` per avere `/calibra-voce` in Claude Code. Guida la raccolta del corpus, calcola il profilo con lo script della skill e produce la scheda voce. Istruzioni sotto.
+- **`commands/difendi.md`**: comando da copiare in `.claude/commands/` per avere `/difendi`. Prepara la risposta a un rilevatore automatico che ha segnalato come generato un testo scritto da una persona. Istruzioni sotto.
+
+## Il comando `/calibra-voce`
+
+I comandi personalizzati di Claude Code sono ormai unificati con le skill: un file in `.claude/commands/nome.md` e una skill in `.claude/skills/nome/SKILL.md` creano entrambi `/nome`. Una repo che distribuisce una skill singola, come questa, mette quindi a disposizione il proprio comando come file da copiare.
+
+Copiare `extras/commands/calibra-voce.md` in una di queste posizioni:
+
+- `~/.claude/commands/calibra-voce.md` per averlo in ogni progetto;
+- `.claude/commands/calibra-voce.md` nella radice di un progetto, per averlo solo lì.
+
+Poi si invoca con `/calibra-voce cartella-dei-miei-testi`. Il comando cerca lo script `scripts/profilo_voce.py` dentro la skill installata; se non lo trova, o se Python non è presente, ricade sulle misure a mano descritte nel reference. Il risultato non cambia di natura, cambia la precisione.
+
+## Il comando `/difendi`
+
+Stessa installazione. Copiare `extras/commands/difendi.md` in `~/.claude/commands/difendi.md` per averlo ovunque, oppure in `.claude/commands/difendi.md` dentro un progetto.
+
+Si invoca con `/difendi file-del-testo-contestato.md`. Serve a chi ha scritto un testo e se lo vede contestare da un rilevatore automatico di AI: il comando raccoglie i fatti dell'accusa, chiede i materiali di lavoro dell'autore e compone il documento da consegnare a chi ha sollevato il caso. Il metodo completo e le evidenze pubblicate sono in `references/scudo-falsi-positivi.md`.
+
+Due cose che il comando non fa, per scelta. Non esegue alcuno strumento sul testo contestato per stabilirne la natura, perché un punteggio prodotto lì varrebbe quanto quello che si sta contestando. Non indica modifiche per abbassare il punteggio di un rilevatore: una riscrittura successiva all'accusa distrugge la prova di processo e somiglia a una manomissione.
 
 ## Filosofia: tre livelli di copertura
 

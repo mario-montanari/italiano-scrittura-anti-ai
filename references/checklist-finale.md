@@ -136,7 +136,7 @@ Griglia diagnostica quando un paragrafo suona piatto. Dettagli in `canali-lettor
 - [ ] **Lettura ad alta voce**: il filtro decisivo. Correggere ciò che non scorre
 - [ ] **Leggibilità misurata**: Gulpease tramite Corrige.it o Due Parole (valore indicativo intorno a 50-60 per testi informativi ampi, stima orientativa e non soglia certa). Se resta uniforme entro pochi punti di deviazione standard tra i passaggi, possibile monotonia
 - [ ] **Nessun refuso di battitura** dopo l'ultima revisione sostanziale
-- [ ] **Controllo detector AI** con spirito informato: i falsi positivi sono alti sull'italiano. Il responso è segnale, non verdetto
+- [ ] **Controllo detector AI** con spirito informato: il responso è un segnale debole, non un verdetto. Sull'italiano nessuno ha pubblicato una misura dei falsi positivi, quindi quel responso non ha un margine di errore noto. Se diventa un'accusa, il metodo di risposta è in `scudo-falsi-positivi.md`
 - [ ] **Se il testo nasce da revisione AI per un cliente**, dichiararlo con trasparenza nel rapporto contrattuale
 
 ## 2. Red flag immediate da ricerca rapida
