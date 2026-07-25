@@ -2,7 +2,7 @@
 
 File complementare di consultazione per allineare la scrittura al contesto d'uso. Copre i sei registri stilistici italiani, le norme editoriali di base (corsivo, virgolette, bibliografie, ISBN, deposito legale), gli indirizzi per il SEO italiano e la conformità E-E-A-T.
 
-Non è un manuale esaustivo: è un compendio rapido dei punti che i modelli sbagliano con maggiore frequenza. Per approfondimenti, la bibliografia di consultazione è indicata nella sezione finale.
+Resta un compendio rapido dei punti che i modelli sbagliano con maggiore frequenza, non un manuale esaustivo. Per approfondimenti, la bibliografia di consultazione è indicata nella sezione finale.
 
 ## Indice
 
@@ -10,7 +10,7 @@ Non è un manuale esaustivo: è un compendio rapido dei punti che i modelli sbag
 2. [Norme editoriali italiane di base](#2-norme-editoriali-italiane-di-base)
 3. [Citazioni, bibliografie, apparati](#3-citazioni-bibliografie-apparati)
 4. [ISBN, deposito legale, copyright](#4-isbn-deposito-legale-copyright)
-5. [SEO italiano: densità, cluster, errori tipici](#5-seo-italiano-densit%C3%A0-cluster-errori-tipici)
+5. [SEO italiano: densità, cluster, errori tipici](#5-seo-italiano-densità-cluster-errori-tipici)
 6. [E-E-A-T e Helpful Content System](#6-e-e-a-t-e-helpful-content-system)
 7. [Manuali e fonti di riferimento](#7-manuali-e-fonti-di-riferimento)
 
@@ -244,7 +244,7 @@ Il SEO italiano chiede di bilanciare keyword e naturalezza. Gli studi di Studio 
 
 ### Densità keyword
 
-- **Non esiste una densità ottimale universale.** Qualunque valore fra l'1 e il 2% basta se la scrittura è naturale.
+- **Non esiste una densità ottimale universale.** Qualunque valore fra l'1 e il 2 per cento basta se la scrittura è naturale.
 - **La keyword principale deve comparire** in title, H1, primo paragrafo, almeno un H2, un paragrafo intermedio, conclusione.
 - **Oltre quella soglia minima, il resto lo fa l'analisi semantica di Google** (BM25, entità, embeddings).
 

@@ -224,7 +224,7 @@ L'italiano ha tre livelli di virgolette con usi distinti.
 
 **Virgolette alte o inglesi doppie ("")**: si riservano a citazioni dentro citazioni, parole in senso particolare o ironico, titoli di testate giornalistiche.
 
-- *Levi scrive: «Sta allo scrittore farsi capire da chi desidera capirlo: è il suo "mestiere"»*.
+- *Il critico scrisse: «lo chiamano un "capolavoro", ma resta un esercizio»*.
 - *ha letto "la Repubblica" di ieri*
 
 **Apici semplici ('')**: per il terzo livello o per glosse semantiche.

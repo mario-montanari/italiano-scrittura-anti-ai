@@ -2,7 +2,7 @@
 
 La macchina produce sempre la media: l'esito statisticamente più probabile, applicabile alla più ampia varietà di casi (il principio è in `personalita-e-anima.md`). Scrivere bene è produrre la deviazione dalla media. Questo file mostra come l'hanno fatto quattro scrittori e tre scrittrici che quella deviazione l'hanno codificata.
 
-È una scelta di metodo. Un rilevatore di parole invecchia: *delve* è morto appena è stato scoperto, e la skill stessa lo ammette in `lessico-da-evitare.md`. I maestri no. Una mossa d'autore studiata nel 1962 funziona ancora, perché non è una parola da segnare in una lista, è un modo di piegare la frase.
+È una scelta di metodo. Un rilevatore di parole invecchia: *delve* è morto appena è stato scoperto, e la skill stessa lo ammette in `lessico-da-evitare.md`. I maestri no. Una mossa d'autore studiata nel 1962 funziona ancora, perché sta nel modo di piegare la frase, non in una parola da mettere in lista.
 
 Il file completa la sezione 5 di `metodologie-operative.md` ribaltando l'asse. Là le mosse sono indicizzate per tecnica (variazione della lunghezza, incisi, voce personale, rotture della struttura). Qui si parte dall'autore: ognuno con la sua mossa-firma, un passo che la mostra, e la regola per portarla via.
 
@@ -26,7 +26,7 @@ Una avvertenza che vale per tutte le schede, e che rimanda alla guardia contro l
 
 ### Calvino, la frase breve incastonata
 
-**La mossa.** Alternare periodi ampi e improvvise frasi corte, così che la breve, circondata dalle lunghe, colpisca. Non è ritmo casuale: è la breve messa dove pesa.
+**La mossa.** Alternare periodi ampi e improvvise frasi corte, così che la breve, circondata dalle lunghe, colpisca. La breve va messa dove pesa, non lasciata al caso.
 
 **Il passo.** Da *Le città invisibili*: «D'una città non godi le sette o le settantasette meraviglie, ma la risposta che dà a una tua domanda». Diciannove parole, una sola frase, tra periodi più larghi.
 
@@ -40,7 +40,7 @@ Una avvertenza che vale per tutte le schede, e che rimanda alla guardia contro l
 
 **La mossa.** Due gesti opposti tenuti insieme. Da un lato il periodo che si apre a scatole cinesi, un inciso dentro l'altro, una glossa che commenta la glossa. Dall'altro il coraggio dell'asserzione secca, la frase che chiude senza spiegarsi.
 
-**Il passo.** In *Come si fa una tesi di laurea* (Bompiani 1977) Eco detta la regola contro sé stesso: «Non siete Proust. Non fate periodi lunghi. Non siete e.e. cummings. Non usate puntini di sospensione, punti esclamativi e non spiegate le ironie». Sette frasi brevissime, nessuna subordinata, nessuna attenuazione.
+**Il passo.** In *Come si fa una tesi di laurea* (Bompiani 1977) Eco detta la regola contro sé stesso, e lo fa a colpi di frasi brevissime: non siete Proust, quindi niente periodi lunghi; non siete e.e. cummings, quindi niente puntini di sospensione, niente punti esclamativi, e le ironie non si spiegano. È una parafrasi fedele, non una citazione: le fonti in rete concordano sul contenuto ma non bastano a garantire l'ordine e le parole esatte dell'edizione a stampa. Nessuna subordinata, nessuna attenuazione.
 
 **Perché devia dalla media.** La macchina teme entrambi gli estremi. Evita la sintassi annidata, perché a ogni parentesi aumenta la probabilità di perdere il filo che ha pianificato. Ed evita l'asserzione nuda, perché preferisce la formula prudente, *si potrebbe dire che, è possibile sostenere che*. L'autore fa il contrario: scava a fondo quando serve profondità, taglia netto quando serve una verità.
 
@@ -116,7 +116,7 @@ Battuta inventata nello stile di Camilleri, non una sua citazione. Il resto dell
 
 **Perché devia dalla media.** La macchina impacchetta tutto in periodi lunghi e paragrafi densi, perché ottimizza la frase, non la pagina, e non vede il lettore che scorre col pollice. Carrada progetta la lettura prima della frase: dove l'occhio si ferma, dove riposa, dove riparte. Il ritmo del testo diventa il ritmo di chi lo legge.
 
-**Come rubarla.** Un'idea per paragrafo. Se un capoverso supera le cinque o sei righe sullo schermo, cerca il punto dove spezzarlo. Leggi il testo guardando solo la forma dei blocchi: se sono tutti uguali e compatti, l'occhio scivola via prima di leggere. Il bianco non è spazio perso, è respiro.
+**Come rubarla.** Un'idea per paragrafo. Se un capoverso supera le cinque o sei righe sullo schermo, cerca il punto dove spezzarlo. Leggi il testo guardando solo la forma dei blocchi: se sono tutti uguali e compatti, l'occhio scivola via prima di leggere. Il bianco è respiro, non spazio perso.
 
 ---
 
@@ -128,4 +128,4 @@ La regola è la stessa dell'anima (in `personalita-e-anima.md`): la mossa serve 
 
 ## Attribuzione
 
-Le citazioni testuali sono tratte dalle opere indicate: Italo Calvino, *Le città invisibili* (Einaudi 1972); Umberto Eco, *Come si fa una tesi di laurea* (Bompiani 1977); Natalia Ginzburg, *Le piccole virtù* (Einaudi 1962). Il passo su Primo Levi (*Dello scrivere oscuro*, in *L'altrui mestiere*, Einaudi 1985) è reso come parafrasi fedele del suo pensiero, non come citazione testuale. Gli esempi per Annamaria Testa, Andrea Camilleri e Luisa Carrada sono anch'essi costruiti nello stile della mossa descritta e dichiarati come tali, non citazioni testuali. Le riflessioni su leggerezza, rapidità ed esattezza rimandano alle *Lezioni americane* di Calvino, di cui scrisse cinque delle sei previste prima della morte nel 1985, la sesta mai scritta, pubblicate postume nel 1988.
+Le citazioni testuali sono tratte dalle opere indicate: Italo Calvino, *Le città invisibili* (Einaudi 1972); Natalia Ginzburg, *Le piccole virtù* (Einaudi 1962). Il passo su Umberto Eco (*Come si fa una tesi di laurea*, Bompiani 1977) è reso come parafrasi fedele: le fonti in rete concordano sul contenuto della regola, ma nessuna basta a garantire l'ordine e le parole esatte dell'edizione a stampa. Il passo su Primo Levi (*Dello scrivere oscuro*, in *L'altrui mestiere*, Einaudi 1985) è reso come parafrasi fedele del suo pensiero, non come citazione testuale. Gli esempi per Annamaria Testa, Andrea Camilleri e Luisa Carrada sono anch'essi costruiti nello stile della mossa descritta e dichiarati come tali, non citazioni testuali. Le riflessioni su leggerezza, rapidità ed esattezza rimandano alle *Lezioni americane* di Calvino, di cui scrisse cinque delle sei previste prima della morte nel 1985, la sesta mai scritta, pubblicate postume nel 1988.

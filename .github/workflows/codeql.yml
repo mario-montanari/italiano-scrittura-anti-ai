@@ -1,0 +1,59 @@
+name: CodeQL
+
+# Analisi statica delle parti eseguibili della skill. Con languages: python
+# CodeQL prende tutti e tre i file: scripts/profilo_voce.py,
+# scripts/prova_profilo_voce.py e extras/hooks/consenti-solo-profilo-voce.py.
+# Il resto della repo è testo e non viene analizzato.
+
+on:
+  # paths-ignore evita di lanciare l'analisi Python quando cambiano solo
+  # testo o metadati: una modifica al solo Markdown non avvia la CI. Un push
+  # o una pull request che tocca anche un file di codice la avvia lo stesso,
+  # e l'esecuzione settimanale garantisce comunque la copertura periodica.
+  push:
+    branches: ["main"]
+    paths-ignore:
+      - "**/*.md"
+      - "LICENSE"
+      - "CITATION.cff"
+  pull_request:
+    branches: ["main"]
+    paths-ignore:
+      - "**/*.md"
+      - "LICENSE"
+      - "CITATION.cff"
+  schedule:
+    # Lunedì alle 05:27 UTC, sfasato per non cadere nel minuto zero.
+    - cron: "27 5 * * 1"
+
+# Permessi minimi in cima: la scrittura vive solo nel job che ne ha bisogno.
+permissions: read-all
+
+concurrency:
+  group: "codeql-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  analisi:
+    name: Analisi CodeQL (Python)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    steps:
+      - name: Preleva il codice
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Inizializza CodeQL
+        uses: github/codeql-action/init@e4fba868fa4b1b91e1fdab776edc8cfbe6e9fb81 # v4
+        with:
+          languages: python
+          queries: security-extended
+
+      - name: Analizza
+        uses: github/codeql-action/analyze@e4fba868fa4b1b91e1fdab776edc8cfbe6e9fb81 # v4
+        with:
+          category: "/language:python"

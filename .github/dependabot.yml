@@ -1,0 +1,18 @@
+version: 2
+
+# La skill non ha dipendenze di runtime: lo strumento facoltativo
+# scripts/profilo_voce.py usa la sola libreria standard di Python, quindi non
+# esistono ecosistemi pip, npm o simili da sorvegliare. Resta da tenere
+# aggiornato il solo ecosistema presente, cioè le action usate dai workflow,
+# che vanno pinnate a SHA completo e quindi non si aggiornano da sole.
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    commit-message:
+      prefix: "chore(ci)"
+    labels:
+      - "dipendenze"
+    open-pull-requests-limit: 5

@@ -166,7 +166,7 @@ Annotare cinque tic riconoscibili. Esempi:
 - inizia spesso le frasi con *e* o *ma*?
 - ha parole-feticcio (*sostanzialmente, di fatto, per davvero*)?
 - apre i paragrafi con domande?
-- chiude con sentenze brevi?
+- chiude con massime brevi?
 - usa metafore ricorrenti?
 - cita sempre fonti per nome o resta sulle generalizzazioni?
 
@@ -212,7 +212,7 @@ La voce del cliente prevale sempre sui filtri anti-AI generici. Un pattern appar
 
 Umanizzare un testo non significa aggiungere errori controllati. Significa restituire al testo la complessità che la prosa italiana ha codificato nei secoli: oscillazione fra paratassi e ipotassi, uso degli incisi, voce personale modulata dal pudore, varietà di registri, concretezza delle immagini.
 
-Le sei mosse derivano dalla lezione di Calvino, Eco, Levi, Carrada, Testa, Severgnini.
+Le sei mosse derivano dalla lezione di Calvino, Eco, Levi e Camilleri: ognuno torna qui sotto con un esempio suo.
 
 ### Prima mossa: variazione della lunghezza delle frasi
 
@@ -284,9 +284,9 @@ Le cinque proposte calviniane completate prima della morte del 1985 sono il mani
 
 ### Sintesi da Eco e Levi
 
-Eco in *Come si fa una tesi di laurea* (Bompiani 1977) offre la regola lapidaria: «Non siete Proust. Non fate periodi lunghi. Non siete e.e. cummings. Non usate puntini di sospensione, punti esclamativi e non spiegate le ironie». Spezzare i periodi lunghi, ripetere il soggetto invece di accumulare pronomi, avere il coraggio dell'asserzione.
+Eco in *Come si fa una tesi di laurea* (Bompiani 1977) offre la regola lapidaria, qui parafrasata perché il primario a stampa non è stato verificato: non siete Proust, quindi niente periodi lunghi; non siete e.e. cummings, quindi niente puntini di sospensione, niente punti esclamativi, e le ironie non si spiegano. Spezzare i periodi lunghi, ripetere il soggetto invece di accumulare pronomi, avere il coraggio dell'asserzione.
 
-Levi in *Dello scrivere oscuro* (*L'altrui mestiere*, Einaudi 1985) denuncia lo stile oscuro come forma di arroganza: «Sta allo scrittore farsi capire da chi desidera capirlo: è il suo mestiere, scrivere è un servizio pubblico, e il lettore volonteroso non deve andare deluso». La scrittura è etica prima che estetica.
+Levi in *Dello scrivere oscuro* (*L'altrui mestiere*, Einaudi 1985) denuncia lo stile oscuro come forma di arroganza: per lui farsi capire da chi desidera capire è un dovere dello scrittore, scrivere è un servizio pubblico, e il lettore di buona volontà non va deluso. La scrittura è etica prima che estetica.
 
 ## 6. Metriche stilometriche di diagnosi
 
@@ -335,7 +335,7 @@ Il rapporto **hapax/vocabolario** (parole che compaiono una sola volta / vocabol
 **GPT-4 e GPT-5:**
 
 - frasi di 19-22 parole con σ 4-5
-- densità di connettivi (*inoltre, tuttavia, pertanto*) al 3-5% dei token contro 1,5-2% umano
+- densità di connettivi (*inoltre, tuttavia, pertanto*) al 3-5 per cento dei token contro 1,5-2 per cento umano
 - uso massiccio di triadi asindetiche (*coerente, strutturato, chiaro*)
 - elenchi puntati a tre voci
 - incipit stereotipati e chiusure formulaiche

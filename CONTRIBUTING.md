@@ -35,6 +35,7 @@ Le modifiche che rompono la compatibilità riportano `BREAKING CHANGE:` nel corp
 
 - Il testo che aggiungi passa l'audit della skill stessa: niente em-dash, caporali «», niente lessico da chatbot, ritmo variato.
 - Ogni affermazione su come scrivono gli LLM o gli umani cita una fonte.
+- Se tocchi il codice in `scripts/` o l'hook in `extras/hooks/`, lancia le prove e verifica che passino: `python scripts/prova_profilo_voce.py` e `python extras/hooks/consenti-solo-profilo-voce.py --prova`. Le stesse prove girano in CI a ogni push e a ogni pull request; una prova che fallisce ferma il workflow.
 - Se tocchi una regola, aggiungi la voce nel `CHANGELOG.md` sotto l'intestazione della versione, con la data al momento del rilascio (formato Keep a Changelog: `## [x.y.z] - AAAA-MM-GG`).
 
 ## Codice di condotta

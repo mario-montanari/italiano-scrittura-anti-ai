@@ -11,7 +11,7 @@ Premessa importante. L'istinto del modello spinge sempre nella stessa direzione:
 1. [Fiducia nel lettore](#1-fiducia-nel-lettore)
 2. [Piacere estetico della frase](#2-piacere-estetico-della-frase)
 3. [Trasporto nel ragionamento](#3-trasporto-nel-ragionamento)
-4. [Fluidità](#4-fluidit%C3%A0)
+4. [Fluidità](#4-fluidità)
 5. [I canali si compongono](#5-i-canali-si-compongono)
 6. [La griglia diagnostica](#6-la-griglia-diagnostica)
 

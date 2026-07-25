@@ -8,11 +8,11 @@ Importante: la ricerca citata sotto studia in prevalenza la narrativa e l'ingles
 
 ## Indice
 
-1. [Perché i segnali misurabili battono le liste di parole](#1-perch%C3%A9-i-segnali-misurabili-battono-le-liste-di-parole)
-2. [Minore varietà lessicale](#2-minore-variet%C3%A0-lessicale)
+1. [Perché i segnali misurabili battono le liste di parole](#1-perché-i-segnali-misurabili-battono-le-liste-di-parole)
+2. [Minore varietà lessicale](#2-minore-varietà-lessicale)
 3. [Meno pronomi personali](#3-meno-pronomi-personali)
 4. [Eccesso di emozioni positive](#4-eccesso-di-emozioni-positive)
-5. [Interiorità superficiale](#5-interiorit%C3%A0-superficiale)
+5. [Interiorità superficiale](#5-interiorità-superficiale)
 6. [Basso sottotesto](#6-basso-sottotesto)
 7. [Template sintattici ripetuti](#7-template-sintattici-ripetuti)
 8. [Il punto chiave: le liste di parole non sono un rilevatore](#8-il-punto-chiave-le-liste-di-parole-non-sono-un-rilevatore)
@@ -143,7 +143,7 @@ Un dettaglio che lo dimostra: dopo che nel 2024 alcune parole tipiche (come *del
 
 Questo non rende le liste inutili. Restano un'ottima **preferenza di gusto editoriale**: «non voglio che la mia prosa suoni così» è una scelta legittima e in molti casi giusta. Ma è una scelta di stile, non una prova di autorialità artificiale. Chi usa le liste deve essere onesto su questo punto: gusto, non diagnosi.
 
-I detector automatici basati su queste euristiche meritano la stessa cautela. Sull'italiano i falsi positivi sono alti. Il loro responso è un segnale debole da incrociare con i segnali misurabili di questo file, non un verdetto.
+I detector automatici basati su queste euristiche meritano la stessa cautela. Dove il falso positivo è stato misurato, cioè sull'inglese, è risultato grande; sull'italiano nessuno lo ha misurato, e i due benchmark multilingue che coprono sedici lingue lasciano fuori la nostra. Il loro responso è un segnale debole da incrociare con i segnali misurabili di questo file, non un verdetto. Quando quel responso diventa un'accusa, il metodo per rispondere è in `scudo-falsi-positivi.md`.
 
 Riferimenti scientifici principali di questo file:
 

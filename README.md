@@ -1,25 +1,26 @@
 # italiano-scrittura-anti-ai
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
-![Version: 1.2.0](https://img.shields.io/badge/version-1.2.0-blue)
+![Version: 1.3.0](https://img.shields.io/badge/version-1.3.0-blue)
 ![Language: Italian](https://img.shields.io/badge/language-italiano-red)
 
 Skill Claude per scrivere in italiano corretto evitando i pattern tipici della prosa generata da modelli linguistici.
 
 ## Il problema
 
-I modelli linguistici (GPT, Claude, Gemini, altri) scrivono in italiano con una firma riconoscibile. Non è solo una questione estetica: è un problema pratico. Un lettore italiano colto percepisce immediatamente i tic algoritmici, e chi pubblica testi così rischia di perdere credibilità professionale, ranking SEO, rapporto di fiducia con clienti e lettori.
+I modelli linguistici (GPT, Claude, Gemini, altri) scrivono in italiano con una firma riconoscibile. Un lettore italiano colto percepisce immediatamente i tic algoritmici, e chi pubblica testi così rischia di perdere credibilità professionale, ranking SEO, rapporto di fiducia con clienti e lettori.
 
 La firma include pattern come l'abuso dell'em-dash (—), i calchi dall'inglese («navigare le complessità», «elevare il tuo business»), la gonfiatura retorica («si configura come un punto di svolta»), i meta-annunci («è importante sottolineare che», «andiamo a vedere»), la sinonimia forzata (Calvino chiamato in sette modi diversi nello stesso paragrafo), i contrasti fittizi («non solo X ma anche Y»), gli artefatti da chatbot («Certo! Spero ti sia utile!»). Ciascuno preso da solo è svista; la loro compresenza densa produce il «profumo dell'AI».
 
 ## Cosa fa questa skill
 
-Fornisce a Claude tre cose:
+Fornisce a Claude cinque cose:
 
 1. **Le regole di grammatica italiana normativa** che i modelli sbagliano con più frequenza (articoli davanti a consonanti speciali, accenti acuti e gravi, congiuntivo, trattino breve/medio/lungo, virgolette caporali)
 2. **Il catalogo operativo del lessico AI italiano** da sopprimere, con alternative concrete
-3. **Le metodologie pratiche** di lavoro: soppressione attiva durante la stesura, audit pass in due passaggi, voice calibration per la voce del cliente, sei mosse di umanizzazione tratte dalla tradizione italiana (Calvino, Eco, Levi, Carrada, Testa), ampliate in una galleria di sette maestri da cui rubare la mossa-firma
+3. **Le metodologie pratiche** di lavoro: soppressione attiva durante la stesura, audit pass in due passaggi, voice calibration per la voce del cliente, sei mosse di umanizzazione tratte dalla tradizione italiana (Calvino, Eco, Levi, Camilleri), ampliate in una galleria di sette maestri da cui rubare la mossa-firma
 4. **I segnali misurabili e i canali del lettore**: i marcatori anti-AI con base peer-reviewed (varietà lessicale, pronomi personali, emozioni, interiorità, sottotesto, template sintattici), più affidabili delle liste di parole; il riconoscimento del leak del registro conversazionale; i quattro canali attraverso cui un lettore gode di un testo, usati come griglia diagnostica
+5. **La difesa contro le accuse dei rilevatori automatici**: che cosa misura davvero un rilevatore, quanto sbaglia secondo le misure pubblicate, il vuoto di dati sull'italiano, e come si costruisce la risposta quando un testo scritto da una persona viene segnalato come generato. Serve a difendere un testo umano accusato ingiustamente, non a far passare per umano un testo generato
 
 La base scientifica include gli studi dell'ItaliaNLP Lab del CNR-ILC di Pisa sulla stilometria italiana, le pubblicazioni CLiC-it 2024, la skill open source Humanizer del WikiProject AI Cleanup.
 
@@ -39,7 +40,7 @@ Non serve per la scrittura in inglese o altre lingue. Non serve per testi purame
 
 Copiare la cartella `italiano-scrittura-anti-ai/` dentro la cartella `.claude/skills/` del proprio progetto:
 
-```
+```text
 progetto/
 ├── .claude/
 │   └── skills/
@@ -71,6 +72,8 @@ La skill si attiva automaticamente quando l'utente chiede a Claude di:
 - revisionare, correggere, migliorare un testo italiano
 - «umanizzare» un testo italiano prodotto da AI
 - correggere grammatica e stile italiani
+- rispondere a un rilevatore automatico che ha segnalato come generato un testo scritto da una persona
+- catturare o calibrare la voce di un autore a partire da un corpus di suoi testi
 
 Non si attiva per chat informali brevi né per contesti non testuali.
 
@@ -90,36 +93,58 @@ Data verificabile, tre casi d'uso concreti, posizione presa, prima persona, cita
 
 ## Struttura della skill
 
-```
+```text
 italiano-scrittura-anti-ai/
 ├── SKILL.md                           # File indice con frontmatter YAML
 ├── README.md                          # Questo file
+├── CHANGELOG.md                       # Storia delle versioni, formato Keep a Changelog
+├── CITATION.cff                       # Metadati per citare la skill
+├── CONTRIBUTING.md                    # Le tre vie del contributo, formato di un pattern
+├── CODE_OF_CONDUCT.md                 # Contributor Covenant 3.0 in italiano
+├── SECURITY.md                        # Superficie eseguibile e segnalazione privata
 ├── LICENSE                            # Licenza MIT
 ├── .gitignore                         # File ignorati da git
+├── .github/                           # Automazioni e modelli della repo
+│   ├── workflows/codeql.yml           # Analisi statica del solo script Python
+│   ├── workflows/prove.yml            # Suite dello strumento e autoprova dell'hook a ogni push
+│   ├── dependabot.yml                 # Aggiornamento settimanale delle action
+│   ├── ISSUE_TEMPLATE/                # Segnalazione e proposta di un pattern
+│   └── PULL_REQUEST_TEMPLATE.md       # Checklist con fonti citate
 ├── references/                        # Reference caricati on-demand da Claude
 │   ├── grammatica-italiana.md         # Articoli, accenti, apostrofi, punteggiatura, congiuntivo
 │   ├── lessico-da-evitare.md          # Aggettivi, verbi, sostantivi, calchi, falsi amici, anglicismi
 │   ├── pattern-strutturali.md         # 20 pattern AI con esempi e correzioni
 │   ├── metodologie-operative.md       # Workflow, audit pass, voice calibration, sei mosse di umanizzazione
+│   ├── voce-personale.md              # Profilo di voce in due livelli, scheda compilabile, confine con le norme
 │   ├── maestri-della-deviazione.md    # Galleria di 7 autori italiani, la mossa-firma di ognuno da rubare
 │   ├── personalita-e-anima.md         # Sei sintomi, sei tecniche, esempio di trasformazione, anti over-humanizing
 │   ├── checklist-finale.md            # Checklist pre-consegna, red flag, tabella sinottica
 │   ├── registri-e-contesti.md         # Sei registri, norme editoriali, SEO, E-E-A-T
 │   ├── segnali-misurabili.md          # Segnali anti-AI con base peer-reviewed (MATTR, pronomi, sottotesto)
 │   ├── leak-conversazionale.md        # Il testo che parla come una chat: negazioni, suspense, riassunti frattali
-│   └── canali-lettore-saggistica.md   # I quattro canali del lettore come griglia diagnostica
+│   ├── canali-lettore-saggistica.md   # I quattro canali del lettore come griglia diagnostica
+│   └── scudo-falsi-positivi.md        # Difesa di un testo umano segnalato da un rilevatore automatico
+├── scripts/                           # Strumenti facoltativi, sola libreria standard Python
+│   ├── profilo_voce.py                # Calcola il profilo quantitativo di una voce da un corpus di testi
+│   └── prova_profilo_voce.py          # Prove automatiche dello strumento, una per ogni difetto corretto
 └── extras/                            # Risorse complementari opzionali (vedi sezione successiva)
     ├── README.md                      # Spiega la filosofia dei tre livelli di copertura
     ├── CLAUDE.md.example              # Template per Claude Code
-    └── user-preferences.example.md    # Template per claude.ai
+    ├── user-preferences.example.md    # Template per claude.ai
+    ├── commands/
+    │   ├── calibra-voce.md            # Comando /calibra-voce da copiare in .claude/commands/
+    │   └── difendi.md                 # Comando /difendi da copiare in .claude/commands/
+    └── hooks/
+        └── consenti-solo-profilo-voce.py  # Hook PreToolUse facoltativo, pre-approva il solo lancio dello strumento
 ```
 
 ## Risorse complementari (cartella `extras/`)
 
-Oltre ai file della skill, la repo include una cartella `extras/` con due **template opzionali** che estendono le regole italiane anche ai contesti dove la skill non si attiva (chat informali, commenti tecnici, risposte conversazionali).
+Oltre ai file della skill, la repo include una cartella `extras/` con due **template opzionali** che estendono le regole italiane anche ai contesti dove la skill non si attiva (chat informali, commenti tecnici, risposte conversazionali), più i **comandi** di Claude Code.
 
 - **`extras/CLAUDE.md.example`**: file di memoria persistente per Claude Code, da posizionare in `~/.claude/CLAUDE.md` (globale) o nella radice di un progetto specifico.
 - **`extras/user-preferences.example.md`**: testo da incollare nelle user preferences di claude.ai (Settings → Profile → User Preferences).
+- **`extras/commands/calibra-voce.md`** e **`extras/commands/difendi.md`**: i due comandi della skill, da copiare in `.claude/commands/` per avere `/calibra-voce` e `/difendi`. Il primo costruisce il profilo di una voce a partire da un corpus di testi, il secondo prepara la risposta a un rilevatore che ha segnalato un testo come generato.
 
 I template contengono le 20 regole linguistiche essenziali estratte dalla skill, formulate come istruzioni dirette sempre attive. La filosofia è quella dei **tre livelli di copertura**: la skill come bisturi (interviene sui testi importanti), CLAUDE.md e user preferences come igiene quotidiana (valgono sempre). Vedi `extras/README.md` per i dettagli e per le istruzioni di installazione.
 
@@ -149,6 +174,16 @@ La skill consolida e organizza materiale di documenti sorgente redatti dall'auto
 - CLiC-it 2024 (atti CEUR Vol. 3878, ACL Anthology): contributi di Esuli, Falchi, Puccetti, Ciaccio, Miaschi
 - Sarti, Bisazza, Occhipinti, Nissim, HED-IT, ACL 2024 Findings
 - Edward Tian, GPTZero (perplessità e burstiness)
+
+**Fonti sui falsi positivi dei rilevatori** (per esteso, con DOI e citazioni testuali, in `references/scudo-falsi-positivi.md`):
+
+- Liang, Yuksekgonul, Mao, Wu, Zou (2023), *GPT detectors are biased against non-native English writers*, Patterns 4(7)
+- Weber-Wulff e colleghi (2023), *Testing of detection tools for AI-generated text*, International Journal for Educational Integrity 19
+- Sadasivan, Kumar, Balasubramanian, Wang, Feizi, *Can AI-Generated Text be Reliably Detected?*, TMLR
+- Jabarian, Imas (2025), *Artificial Writing and Automated Detection*, NBER Working Paper 34223
+- Macko, Kopal (2025), benchmark CEAID, arXiv:2509.26051; Macko e colleghi (2023), benchmark MULTITuDE, EMNLP 2023
+- OpenAI, nota sul ritiro dell'AI Text Classifier (2023); Turnitin, dichiarazioni di Annie Chechitelli (2023); Vanderbilt University, disattivazione del rilevatore (2023)
+- ICMJE, raccomandazioni sull'uso di strumenti di AI da parte degli autori
 
 **Fonti per gli anglicismi:**
 

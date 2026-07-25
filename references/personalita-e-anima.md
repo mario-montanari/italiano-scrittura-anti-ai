@@ -63,7 +63,7 @@ Ammettere quello che non si sa, quello che rimane in sospeso, quello che inquiet
 
 ### Tecnica quattro: usare la prima persona quando ha senso
 
-L'io non è scortese né poco professionale: è onesto. Sono segnali di un essere umano che pensa frasi del tipo:
+L'io è onesto, e resta professionale come ogni altra scelta di persona. Sono segnali di un essere umano che pensa frasi del tipo:
 
 *Continuo a pensarci, non riesco a togliermelo dalla testa, mi torna in mente ogni volta che, ho provato per due anni a, la mia esperienza con questo è stata, ho cambiato idea su questo punto, mi sono sbagliato quando ho scritto*
 
@@ -131,7 +131,7 @@ Chi umanizza a mano, o con un altro modello, lascia tracce sue. Ecco i sintomi d
 
 3. **La colloquialità gonfiata.** Troppi *insomma, diciamo, alla fine dei conti, onestamente, a essere sinceri*. Uno ci sta, cinque sono una maschera.
 
-4. **L'io invadente.** La prima persona ovunque, anche dove il contenuto non la chiede. L'anima non è parlare sempre di sé, è comparire quando serve.
+4. **L'io invadente.** La prima persona ovunque, anche dove il contenuto non la chiede. L'anima si vede quando compare al momento giusto, e parlare sempre di sé la copre.
 
 5. **La complessità automatica.** *È una questione complicata, ha molte sfumature, non è tutto bianco o nero* messo per riflesso su qualsiasi tema. Ammettere la complessità vale se la complessità è reale e specifica, non come clausola di stile.
 
@@ -139,7 +139,7 @@ Chi umanizza a mano, o con un altro modello, lascia tracce sue. Ecco i sintomi d
 
 Il test è uno solo, lo stesso dei maestri (in `maestri-della-deviazione.md`): una mossa d'anima è autentica se serve il contenuto e non la puoi togliere senza perdere senso. È di plastica se è decorativa, rimovibile, e la potresti incollare identica su qualunque altro testo. La digressione buona nasce dove il pensiero devia davvero; quella finta è messa perché «adesso tocca una digressione».
 
-La regola che ne segue è scomoda: meglio una pagina piana e onesta che una imbottita di finto-umano. Umanizzare non è aggiungere rumore umano sopra la media, è restituire la complessità vera che la media aveva tolto. Quando l'imperfezione diventa un effetto da produrre, sei tornato al punto di partenza, con un pattern nuovo al posto di quello vecchio.
+La regola che ne segue è scomoda: meglio una pagina piana e onesta che una imbottita di finto-umano. Umanizzare vuol dire restituire la complessità vera che la media aveva tolto, mai aggiungere rumore umano sopra quella media. Quando l'imperfezione diventa un effetto da produrre, sei tornato al punto di partenza, con un pattern nuovo al posto di quello vecchio.
 
 ## 5. La domanda finale da porsi
 

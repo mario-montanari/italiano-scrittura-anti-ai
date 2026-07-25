@@ -15,7 +15,7 @@ Le fonti principali sono il catalogo del WikiProject AI Cleanup (skill Humanizer
 3. [Verbi a rischio alto](#3-verbi-a-rischio-alto)
 4. [Sostantivi a rischio alto e metafore viaggio](#4-sostantivi-a-rischio-alto-e-metafore-viaggio)
 5. [Formule connettive sovrabbondanti](#5-formule-connettive-sovrabbondanti)
-6. [Formule di apertura stile «è importante sottolineare»](#6-formule-di-apertura-stile-%C3%A8-importante-sottolineare)
+6. [Formule di apertura stile «è importante sottolineare»](#6-formule-di-apertura-stile-è-importante-sottolineare)
 7. [Incipit da ripudiare](#7-incipit-da-ripudiare)
 8. [Chiusure stereotipate](#8-chiusure-stereotipate)
 9. [Calchi dall'inglese](#9-calchi-dallinglese)
@@ -358,7 +358,6 @@ Antonio Zoppetti nel progetto *AAA Alternative Agli Anglicismi* e Claudio Marazz
 | vision | visione, direzione |
 | roadmap | piano, tabella di marcia |
 | pitch | presentazione breve |
-| deadline | scadenza |
 | stakeholder | portatore di interessi |
 | framework | struttura, impalcatura |
 | challenge | sfida |

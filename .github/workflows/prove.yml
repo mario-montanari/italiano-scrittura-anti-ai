@@ -1,0 +1,44 @@
+name: Prove
+
+# La suite di prove dello strumento gira a ogni push su main e a ogni pull
+# request. scripts/prova_profilo_voce.py usa la sola libreria standard di
+# Python: ogni prova nasce da un difetto trovato durante l'audit e serve a
+# impedire che torni. Gira anche l'autoprova dell'hook facoltativo
+# extras/hooks/consenti-solo-profilo-voce.py. Nessuna dipendenza da installare.
+# Su Linux il collegamento simbolico si crea senza privilegi, quindi qui la
+# prova del contenimento del corpus gira davvero, mentre su Windows si salta.
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+# Permessi minimi: leggere il codice è tutto ciò che serve per lanciare le prove.
+permissions:
+  contents: read
+
+concurrency:
+  group: "prove-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  prove:
+    name: Suite di prove (Python)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Preleva il codice
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Prepara Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Prove dello strumento
+        run: python scripts/prova_profilo_voce.py
+
+      - name: Autoprova dell'hook
+        run: python extras/hooks/consenti-solo-profilo-voce.py --prova
