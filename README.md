@@ -1,5 +1,7 @@
 # italiano-scrittura-anti-ai
 
+![Suite per la lingua italiana e sistema avanzato anti AI: una macchina da scrivere meccanica con i tasti illuminati al neon, un foglio manoscritto nel rullo e pagine di scrittura a mano sullo sfondo.](assets/banner.png)
+
 [![Licenza MIT](https://img.shields.io/badge/licenza-MIT-green?style=for-the-badge)](LICENSE)
 [![Versione 1.3.0](https://img.shields.io/badge/versione-1.3.0-blue?style=for-the-badge)](CHANGELOG.md)
 [![Prove](https://img.shields.io/github/actions/workflow/status/mario-montanari/italiano-scrittura-anti-ai/prove.yml?style=for-the-badge&label=prove)](.github/workflows/prove.yml)
