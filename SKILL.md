@@ -7,9 +7,17 @@ description: Si attiva quando l'utente chiede di scrivere, redigere, tradurre o 
 
 ## Cosa fa questa skill
 
-Questa skill fornisce a Claude le regole, il lessico, i pattern e le metodologie per scrivere in italiano corretto evitando i tic riconoscibili della prosa generata da modelli linguistici. È pensata per qualsiasi testo italiano destinato a lettori umani: editoria, blog, social, marketing, newsletter, narrativa, saggistica, divulgazione.
+Questa skill è una suite di lavoro sull'italiano scritto, e insieme un sistema avanzato contro la firma della prosa generata. Serve per cinque compiti distinti, e vale per qualsiasi testo destinato a lettori umani: editoria, blog, social, marketing, newsletter, narrativa, saggistica, divulgazione.
 
-Unisce tre componenti: la grammatica normativa italiana che i modelli sbagliano con più frequenza, il catalogo operativo del lessico AI da sopprimere, le metodologie pratiche di soppressione durante la stesura e di audit finale. La base scientifica include gli studi dell'ItaliaNLP Lab del CNR-ILC di Pisa, la lezione dei prosatori italiani del Novecento, il WikiProject AI Cleanup.
+1. **Scrivere** un testo italiano nuovo secondo la norma, applicata durante la stesura invece che controllata dopo.
+2. **Correggere e rivedere** un testo già scritto, da chiunque sia stato scritto: bozze, articoli, tesi, relazioni, capitoli.
+3. **Tradurre** verso l'italiano senza i calchi lessicali e sintattici che l'originale suggerisce.
+4. **Catturare e rispettare la voce** di chi firma il testo, propria o di un cliente.
+5. **Difendere un testo umano** segnalato come generato da un rilevatore automatico.
+
+Il materiale è lo stesso per tutti e cinque, ed è la ragione per cui la skill funziona su un testo umano esattamente come su un testo generato: la grammatica normativa che i modelli sbagliano più spesso, il catalogo operativo del lessico da sopprimere, i pattern strutturali, i sei registri con le loro norme editoriali, il ritmo e l'anima del testo, e i segnali stilometrici con base peer-reviewed. Togliere i tic della prosa generata è una conseguenza di questo lavoro, non il suo perimetro.
+
+La base scientifica include gli studi dell'ItaliaNLP Lab del CNR-ILC di Pisa, la lezione dei prosatori italiani del Novecento, il WikiProject AI Cleanup.
 
 ## Quando si attiva
 

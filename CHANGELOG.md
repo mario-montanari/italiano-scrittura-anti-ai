@@ -2,6 +2,12 @@
 
 Tutte le modifiche rilevanti alla skill sono annotate qui. Il formato segue la convenzione Keep a Changelog; la numerazione segue il versionamento semantico.
 
+## [Non rilasciato]
+
+### Modificato
+
+- `README.md`, `SKILL.md` e `CITATION.cff`: la presentazione descriveva la skill come un filtro contro i pattern dell'AI, mentre il materiale che contiene serve a cinque lavori distinti, di cui quello è solo l'ultimo per impegno: scrivere secondo la norma, correggere e rivedere un testo già scritto da chiunque, tradurre senza calchi, catturare e misurare la voce di chi firma, difendere un testo umano segnalato da un rilevatore. Il README è stato riscritto attorno a quei cinque lavori, con indice, tabella delle tredici guide, prerequisiti e un modo per verificare che la skill sia attiva.
+
 ## [1.3.0] - 2026-07-25
 
 Due funzioni nuove, e attorno a esse un lungo lavoro di irrobustimento. Il calibratore della voce personale è il primo pezzo eseguibile: la skill smette di essere solo un manuale e comincia a misurare ciò che finora indicava a parole. Lo scudo contro i falsi positivi sposta invece il lavoro dal testo all'accusa, e risponde alla domanda di chi si vede segnalare come generato un testo che ha scritto. Un audit avversario in più giri ha reso lo strumento robusto e verificato: la suite di prove passa da dodici a duecentoquarantadue.

@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: Se usi questa skill, cita come segue.
 title: italiano-scrittura-anti-ai
-abstract: Skill Claude per scrivere in italiano corretto evitando i pattern tipici della prosa generata da modelli linguistici.
+abstract: Suite per la lingua italiana e sistema avanzato anti AI, in Claude e non solo. Scrive secondo la norma, corregge e rivede testi già scritti, traduce senza calchi, cattura e misura la voce di un autore, riconosce la firma della prosa generata e difende un testo umano segnalato da un rilevatore automatico.
 type: software
 authors:
   - family-names: Montanari
