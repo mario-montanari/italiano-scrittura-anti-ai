@@ -14,7 +14,7 @@
 [![Lingua italiano](https://img.shields.io/badge/lingua-italiano-A4262C?style=flat-square)](SKILL.md)
 [![Guide](https://img.shields.io/badge/guide-13-1C1A17?style=flat-square)](#che-cosa-contiene)
 
-[![Prove automatiche](https://img.shields.io/badge/prove-242-4A5D23?style=flat-square)](scripts/prova_profilo_voce.py)
+[![Prove automatiche](https://img.shields.io/badge/prove-246-4A5D23?style=flat-square)](scripts/prova_profilo_voce.py)
 [![Autoprova hook](https://img.shields.io/badge/autoprova_hook-43-4A5D23?style=flat-square)](extras/hooks/consenti-solo-profilo-voce.py)
 [![Dipendenze](https://img.shields.io/badge/dipendenze-nessuna-4A5D23?style=flat-square)](#prerequisiti)
 [![Python](https://img.shields.io/badge/Python-3.12_in_continua-3776AB?style=flat-square&logo=python&logoColor=white)](.github/workflows/prove.yml)
@@ -280,7 +280,7 @@ italiano-scrittura-anti-ai/
 │   └── scudo-falsi-positivi.md
 ├── scripts/                           # Strumenti facoltativi, sola libreria standard Python
 │   ├── profilo_voce.py                # Calcola il profilo quantitativo di una voce
-│   └── prova_profilo_voce.py          # 242 prove automatiche, una per ogni difetto corretto
+│   └── prova_profilo_voce.py          # 246 prove automatiche, una per ogni difetto corretto
 └── extras/                            # Risorse complementari opzionali
     ├── README.md                      # I tre livelli di copertura
     ├── CLAUDE.md.example              # Template per Claude Code

@@ -9,6 +9,10 @@ Tutte le modifiche rilevanti alla skill sono annotate qui. Il formato segue la c
 - `README.md`: i badge passano da cinque a ventidue, su quattro righe tematiche. La prima porta lo stato della repo, la seconda dice dove la skill gira, la terza quello che la sostiene, la quarta l'attività. Ognuno è stato provato scaricando l'immagine e leggendo il valore che mostra davvero, perché un badge che dice «invalid» o dichiara il falso vale meno di nessun badge. Per lo stesso motivo il badge di Python dichiara `3.12 in continua`, che è la sola versione su cui le prove girano davvero, e quello di Cowork dice `stesso formato` invece di `compatibile`, perché il formato è documentato mentre l'esecuzione dentro Cowork non è stata verificata. Il badge della versione diventa dinamico e legge la release da GitHub, così non può più restare indietro.
 - `.github/workflows/prove.yml`: i badge che dichiarano un numero vengono ora confrontati con quello che le prove stampano davvero, e la continua fallisce se non coincidono. La quarta fonte del controllo sulle versioni passa dal badge, ora dinamico, alla voce più recente del changelog.
 
+### Corretto
+
+- Il numero delle prove dichiarato nel `README.md` era **242**, che è il totale su Windows, dove tre funzioni saltano perché il sistema non permette di creare un collegamento simbolico senza privilegi. Dove tutto gira, cioè in continua su Ubuntu, le prove sono **246**: le tre funzioni saltate ne portano con sé quattro. Il numero è stato corretto ovunque. Lo ha trovato la guardia nuova, al primo giro utile e prima di qualunque lettore: la continua è fallita dicendo «badge 242, eseguite 246». Il confronto viene ora saltato, e dichiarato tale, sulle piattaforme dove qualche prova salta, perché lì non proverebbe niente.
+
 ## [1.4.0] - 2026-07-27
 
 La skill diventa anche un plugin, senza smettere di essere una skill. Chi la usa copiando la cartella in `.claude/skills/` non deve cambiare niente; chi preferisce installarla in un colpo solo trova ora un manifest, e con lui i due comandi già pronti invece che da copiare a mano. Il formato del plugin è quello che Claude Code e Claude Cowork condividono.
