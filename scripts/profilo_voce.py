@@ -34,7 +34,7 @@ from collections import Counter
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Sequence, Tuple
 
-VERSIONE = "1.3.0"
+VERSIONE = "1.4.0"
 SOGLIA_PAROLE_AFFIDABILE = 2000
 FINESTRA_MATTR = 50
 FINESTRA_TTR_CONFRONTO = 1000

@@ -28,13 +28,19 @@ dichiara per intero la superficie eseguibile della skill.
 
 Comando della skill `italiano-scrittura-anti-ai`. Il metodo completo, le
 evidenze pubblicate e i due modelli di documento sono in
-`references/scudo-falsi-positivi.md`, dentro la cartella della skill
-installata:
+`references/scudo-falsi-positivi.md`, che sta in una di queste tre posizioni
+secondo come la skill è stata installata:
 
 ```text
+${CLAUDE_PLUGIN_ROOT}/references/scudo-falsi-positivi.md
 ~/.claude/skills/italiano-scrittura-anti-ai/references/scudo-falsi-positivi.md
 .claude/skills/italiano-scrittura-anti-ai/references/scudo-falsi-positivi.md
 ```
+
+La prima riga vale quando il comando arriva dal plugin: Claude Code sostituisce
+il segnaposto con la cartella dove il plugin è installato. Se lo si legge con
+le parentesi graffe ancora al loro posto, il plugin non c'è e quella riga si
+salta.
 
 Se il file c'è, leggerlo prima di procedere, e con lui
 `references/voce-personale.md` per il passo 4. Se non c'è, il comando è stato

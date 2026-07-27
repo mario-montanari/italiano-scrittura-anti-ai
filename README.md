@@ -3,7 +3,7 @@
 ![Suite per la lingua italiana e sistema avanzato anti AI: una macchina da scrivere meccanica con i tasti illuminati al neon, un foglio manoscritto nel rullo e pagine di scrittura a mano sullo sfondo.](assets/banner.png)
 
 [![Licenza MIT](https://img.shields.io/badge/licenza-MIT-green?style=for-the-badge)](LICENSE)
-[![Versione 1.3.0](https://img.shields.io/badge/versione-1.3.0-blue?style=for-the-badge)](CHANGELOG.md)
+[![Versione 1.4.0](https://img.shields.io/badge/versione-1.4.0-blue?style=for-the-badge)](CHANGELOG.md)
 [![Prove](https://img.shields.io/github/actions/workflow/status/mario-montanari/italiano-scrittura-anti-ai/prove.yml?style=for-the-badge&label=prove)](.github/workflows/prove.yml)
 [![Lingua italiano](https://img.shields.io/badge/lingua-italiano-red?style=for-the-badge)](SKILL.md)
 [![Stelle](https://img.shields.io/github/stars/mario-montanari/italiano-scrittura-anti-ai?style=for-the-badge)](https://github.com/mario-montanari/italiano-scrittura-anti-ai/stargazers)
@@ -115,7 +115,34 @@ Lo strumento misura e non giudica: non stabilisce se un testo sia stato generato
 
 ## Installazione
 
-### In Claude Code, per un progetto
+Questa repo è due cose insieme, e si sceglie quale usare.
+
+È un **plugin**, con il suo manifest in `.claude-plugin/plugin.json`: si installa in un colpo solo e porta con sé la skill e i due comandi `/calibra-voce` e `/difendi`, già pronti. Il formato è quello che Claude Code e Claude Cowork condividono.
+
+Ed è una **skill semplice**, una cartella con dentro `SKILL.md`: si copia dove le skill vivono e funziona come ha sempre funzionato, senza plugin e senza marketplace. Chi la usa così non deve cambiare niente.
+
+### Come plugin, in Claude Code
+
+```bash
+claude plugin marketplace add mario-montanari/italiano-scrittura-anti-ai
+claude plugin install italiano-scrittura-anti-ai@mario-montanari-skills
+```
+
+La repo fa da catalogo di sé stessa: `.claude-plugin/marketplace.json` dichiara il marketplace `mario-montanari-skills`, che contiene questo unico plugin.
+
+Per provarlo senza installare niente, da una copia locale della repo:
+
+```bash
+claude --plugin-dir ./italiano-scrittura-anti-ai
+```
+
+I comandi arrivano con il prefisso del plugin: `/italiano-scrittura-anti-ai:calibra-voce` e `/italiano-scrittura-anti-ai:difendi`.
+
+### Come plugin, in Claude Cowork
+
+Il plugin è nello stesso formato che Cowork usa, ma lì l'installazione non è dell'utente: la fa chi amministra l'organizzazione, dalle impostazioni, caricando il pacchetto o collegando una repo. Se in Cowork ti serve questo plugin, il pacchetto da consegnare a chi amministra è questa repo così com'è.
+
+### Come skill, in Claude Code, per un progetto
 
 Copiare la cartella `italiano-scrittura-anti-ai/` dentro `.claude/skills/` del progetto:
 
@@ -194,6 +221,14 @@ L'elenco completo sta in [SKILL.md](SKILL.md), e comprende gli errori ortografic
 
 ```text
 italiano-scrittura-anti-ai/
+├── .claude-plugin/
+│   ├── plugin.json                    # Manifest del plugin: nome, versione, autore, licenza
+│   └── marketplace.json               # Catalogo: la repo fa da marketplace di sé stessa
+├── assets/
+│   └── banner.png                     # L'immagine del README, versionata qui e non esterna
+├── commands/                          # I due comandi, nativi quando si installa il plugin
+│   ├── calibra-voce.md                # Comando /calibra-voce
+│   └── difendi.md                     # Comando /difendi
 ├── SKILL.md                           # File indice con frontmatter YAML
 ├── README.md                          # Questo file
 ├── CHANGELOG.md                       # Storia delle versioni, formato Keep a Changelog
@@ -230,9 +265,6 @@ italiano-scrittura-anti-ai/
     ├── README.md                      # I tre livelli di copertura
     ├── CLAUDE.md.example              # Template per Claude Code
     ├── user-preferences.example.md    # Template per claude.ai
-    ├── commands/
-    │   ├── calibra-voce.md            # Comando /calibra-voce
-    │   └── difendi.md                 # Comando /difendi
     └── hooks/
         └── consenti-solo-profilo-voce.py  # Hook PreToolUse facoltativo
 ```
@@ -245,7 +277,7 @@ La skill interviene sui testi che contano. Per il resto della giornata, dove non
 
 - **`extras/CLAUDE.md.example`**: memoria persistente per Claude Code, da mettere in `~/.claude/CLAUDE.md` o nella radice di un progetto.
 - **`extras/user-preferences.example.md`**: testo da incollare nelle user preferences di claude.ai.
-- **`extras/commands/calibra-voce.md`** e **`extras/commands/difendi.md`**: i due comandi, da copiare in `.claude/commands/`. Funzionano anche da soli, senza installare la skill intera.
+- **`commands/calibra-voce.md`** e **`commands/difendi.md`**: i due comandi, da copiare in `.claude/commands/`. Funzionano anche da soli, senza installare la skill intera.
 - **`extras/hooks/consenti-solo-profilo-voce.py`**: hook facoltativo per chi calibra spesso e vuole togliere la conferma manuale al lancio dello strumento, senza allargare la superficie eseguibile.
 
 I due template contengono le venti regole essenziali estratte dalla skill, scritte come istruzioni dirette sempre attive. È la filosofia dei tre livelli: la skill come bisturi, il file di memoria e le preferenze come igiene quotidiana. I dettagli stanno in [extras/README.md](extras/README.md).

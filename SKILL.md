@@ -146,9 +146,9 @@ La skill include uno strumento facoltativo e le sue prove automatiche. Chi non h
 
 - **`scripts/prova_profilo_voce.py`**: le prove automatiche dello strumento, una per ogni difetto trovato durante l'audit e corretto, così che non torni. Si lanciano con `python scripts/prova_profilo_voce.py`, non richiedono librerie esterne, e girano anche in continua a ogni push e pull request. Servono a chi contribuisce, non all'uso quotidiano.
 
-- **`extras/commands/calibra-voce.md`**: comando `/calibra-voce` da copiare in `.claude/commands/`. Conduce l'intera calibrazione: verifica del corpus, livello misurato con lo script, livello osservato con la lettura dei testi, scheda finale. Istruzioni di installazione in `extras/README.md`.
+- **`commands/calibra-voce.md`**: comando `/calibra-voce` da copiare in `.claude/commands/`. Conduce l'intera calibrazione: verifica del corpus, livello misurato con lo script, livello osservato con la lettura dei testi, scheda finale. Istruzioni di installazione in `extras/README.md`.
 
-- **`extras/commands/difendi.md`**: comando `/difendi` da copiare in `.claude/commands/`. Raccoglie i fatti dell'accusa, distingue i tre casi, verifica i materiali dell'autore e compone il documento. Non esegue alcuno strumento sul testo contestato e non indica modifiche per abbassare un punteggio. Istruzioni di installazione in `extras/README.md`.
+- **`commands/difendi.md`**: comando `/difendi` da copiare in `.claude/commands/`. Raccoglie i fatti dell'accusa, distingue i tre casi, verifica i materiali dell'autore e compone il documento. Non esegue alcuno strumento sul testo contestato e non indica modifiche per abbassare un punteggio. Istruzioni di installazione in `extras/README.md`.
 
 ## Regole non negoziabili
 

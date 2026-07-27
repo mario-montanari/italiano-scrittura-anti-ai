@@ -36,12 +36,19 @@ percorso: la cartella del corpus e quella di uscita cambiano a ogni uso, e
 
 Comando della skill `italiano-scrittura-anti-ai`. Il metodo completo, le
 decisioni di conteggio e il modello di scheda sono in
-`references/voce-personale.md`, dentro la cartella della skill installata:
+`references/voce-personale.md`, che sta in una di queste tre posizioni secondo
+come la skill è stata installata:
 
 ```text
+${CLAUDE_PLUGIN_ROOT}/references/voce-personale.md
 ~/.claude/skills/italiano-scrittura-anti-ai/references/voce-personale.md
 .claude/skills/italiano-scrittura-anti-ai/references/voce-personale.md
 ```
+
+La prima riga vale quando il comando arriva dal plugin: Claude Code sostituisce
+il segnaposto con la cartella dove il plugin è installato. Se invece lo si
+legge tale e quale, con le parentesi graffe ancora al loro posto, vuol dire che
+il plugin non c'è: quella riga si salta e si provano le altre due.
 
 Se il file c'è, leggerlo prima di procedere. Se non c'è, il comando è stato
 copiato da solo in `.claude/commands/` senza la skill: si procede lo stesso,
@@ -85,12 +92,16 @@ La risposta va scritta in cima alla scheda.
 
 ### 2. Calcolare il livello misurato
 
-Cercare lo strumento nei percorsi consueti di installazione della skill:
+Cercare lo strumento nelle posizioni dove l'installazione lo mette, nell'ordine:
 
 ```text
+${CLAUDE_PLUGIN_ROOT}/scripts/profilo_voce.py
 ~/.claude/skills/italiano-scrittura-anti-ai/scripts/profilo_voce.py
 .claude/skills/italiano-scrittura-anti-ai/scripts/profilo_voce.py
 ```
+
+Vale la stessa avvertenza di sopra: se il segnaposto si legge con le graffe
+ancora attaccate, il plugin non c'è e quella prima riga va saltata.
 
 Se lo si trova, eseguirlo:
 

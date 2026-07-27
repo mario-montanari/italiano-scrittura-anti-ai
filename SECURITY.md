@@ -14,7 +14,7 @@ Questa skill è fatta quasi tutta di testo, e il testo non esegue niente. Il cod
 - `scripts/prova_profilo_voce.py`, che verifica il comportamento dello strumento. Scrive soltanto dentro una cartella temporanea, e la rimuove alla fine.
 - `extras/hooks/consenti-solo-profilo-voce.py`, l'hook facoltativo descritto qui sotto. Legge un evento su standard input e scrive una decisione su standard output. Non tocca il disco.
 
-Va dichiarata anche una seconda superficie. I due comandi in `extras/commands/` portano nel frontmatter una riga `allowed-tools`, che **pre-approva** alcuni strumenti: li lascia agire senza la conferma dell'utente per quel turno.
+Va dichiarata anche una seconda superficie. I due comandi in `commands/` portano nel frontmatter una riga `allowed-tools`, che **pre-approva** alcuni strumenti: li lascia agire senza la conferma dell'utente per quel turno.
 
 **Nessuno dei due pre-approva `Bash`.** Lo strumento si lancia con la conferma dell'utente, a ogni esecuzione. Un pattern ristretto non basterebbe: in `Bash(python *profilo_voce.py *)` l'asterisco attraversa spazi e separatori di cartella, quindi vincola il nome del file e non il percorso, e un file omonimo messo altrove vi rientrerebbe.
 

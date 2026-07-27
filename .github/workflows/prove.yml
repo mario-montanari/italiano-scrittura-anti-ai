@@ -42,3 +42,46 @@ jobs:
 
       - name: Autoprova dell'hook
         run: python extras/hooks/consenti-solo-profilo-voce.py --prova
+
+      # La versione è scritta in quattro posti, e finora niente impediva di
+      # aggiornarne tre su quattro. Qui si controlla che dicano la stessa cosa.
+      - name: Versione coerente nei quattro posti
+        run: |
+          python - <<'PY'
+          import json
+          import pathlib
+          import re
+          import sys
+
+          manifest = json.loads(
+              pathlib.Path(".claude-plugin/plugin.json").read_text(encoding="utf-8")
+          )["version"]
+          trovate = {"plugin.json": manifest}
+
+          citazione = re.search(
+              r"^version:\s*(\S+)",
+              pathlib.Path("CITATION.cff").read_text(encoding="utf-8"),
+              re.MULTILINE,
+          )
+          trovate["CITATION.cff"] = citazione.group(1) if citazione else None
+
+          strumento = re.search(
+              r'^VERSIONE\s*=\s*"([^"]+)"',
+              pathlib.Path("scripts/profilo_voce.py").read_text(encoding="utf-8"),
+              re.MULTILINE,
+          )
+          trovate["profilo_voce.py"] = strumento.group(1) if strumento else None
+
+          badge = re.search(
+              r"badge/versione-([0-9]+\.[0-9]+\.[0-9]+)-",
+              pathlib.Path("README.md").read_text(encoding="utf-8"),
+          )
+          trovate["badge del README"] = badge.group(1) if badge else None
+
+          for dove, valore in trovate.items():
+              print(f"{dove}: {valore}")
+          if len(set(trovate.values())) != 1 or None in trovate.values():
+              print("Le versioni non coincidono.")
+              sys.exit(1)
+          print("Le quattro versioni coincidono.")
+          PY

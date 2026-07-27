@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "mario-montanari-skills",
+  "description": "Le skill pubbliche di Mario Montanari per Claude Code e Claude Cowork.",
+  "owner": {
+    "name": "Mario Montanari",
+    "url": "https://mariomontanari.it"
+  },
+  "plugins": [
+    {
+      "name": "italiano-scrittura-anti-ai",
+      "source": "./",
+      "description": "Suite per la lingua italiana e sistema avanzato anti AI. Scrive secondo la norma, rivede testi già scritti, traduce senza calchi, misura la voce di un autore su un corpus e difende un testo umano segnalato da un rilevatore automatico.",
+      "category": "productivity",
+      "keywords": [
+        "italian",
+        "italian-language",
+        "italian-grammar",
+        "ai-writing",
+        "proofreading",
+        "writing-tools"
+      ]
+    }
+  ]
+}
