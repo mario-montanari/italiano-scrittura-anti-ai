@@ -2,11 +2,31 @@
 
 ![Suite per la lingua italiana e sistema avanzato anti AI: una macchina da scrivere meccanica con i tasti illuminati al neon, un foglio manoscritto nel rullo e pagine di scrittura a mano sullo sfondo.](assets/banner.png)
 
-[![Licenza MIT](https://img.shields.io/badge/licenza-MIT-green?style=for-the-badge)](LICENSE)
-[![Versione 1.4.0](https://img.shields.io/badge/versione-1.4.0-blue?style=for-the-badge)](CHANGELOG.md)
+[![Licenza MIT](https://img.shields.io/badge/licenza-MIT-4A5D23?style=for-the-badge)](LICENSE)
+[![Versione](https://img.shields.io/github/v/release/mario-montanari/italiano-scrittura-anti-ai?style=for-the-badge&label=versione&color=1C1A17)](CHANGELOG.md)
 [![Prove](https://img.shields.io/github/actions/workflow/status/mario-montanari/italiano-scrittura-anti-ai/prove.yml?style=for-the-badge&label=prove)](.github/workflows/prove.yml)
-[![Lingua italiano](https://img.shields.io/badge/lingua-italiano-red?style=for-the-badge)](SKILL.md)
-[![Stelle](https://img.shields.io/github/stars/mario-montanari/italiano-scrittura-anti-ai?style=for-the-badge)](https://github.com/mario-montanari/italiano-scrittura-anti-ai/stargazers)
+[![CodeQL](https://img.shields.io/github/actions/workflow/status/mario-montanari/italiano-scrittura-anti-ai/codeql.yml?style=for-the-badge&label=CodeQL)](.github/workflows/codeql.yml)
+[![Stelle](https://img.shields.io/github/stars/mario-montanari/italiano-scrittura-anti-ai?style=for-the-badge&color=A4262C)](https://github.com/mario-montanari/italiano-scrittura-anti-ai/stargazers)
+
+[![Claude Code](https://img.shields.io/badge/Claude_Code-plugin-D97757?style=flat-square&logo=claude&logoColor=white)](#come-plugin-in-claude-code)
+[![Claude Cowork](https://img.shields.io/badge/Claude_Cowork-stesso_formato-D97757?style=flat-square&logo=anthropic&logoColor=white)](#come-plugin-in-claude-cowork)
+[![Agent Skills](https://img.shields.io/badge/Agent_Skills-standard_aperto-6B7280?style=flat-square)](SKILL.md)
+[![Lingua italiano](https://img.shields.io/badge/lingua-italiano-A4262C?style=flat-square)](SKILL.md)
+[![Guide](https://img.shields.io/badge/guide-13-1C1A17?style=flat-square)](#che-cosa-contiene)
+
+[![Prove automatiche](https://img.shields.io/badge/prove-242-4A5D23?style=flat-square)](scripts/prova_profilo_voce.py)
+[![Autoprova hook](https://img.shields.io/badge/autoprova_hook-43-4A5D23?style=flat-square)](extras/hooks/consenti-solo-profilo-voce.py)
+[![Dipendenze](https://img.shields.io/badge/dipendenze-nessuna-4A5D23?style=flat-square)](#prerequisiti)
+[![Python](https://img.shields.io/badge/Python-3.12_in_continua-3776AB?style=flat-square&logo=python&logoColor=white)](.github/workflows/prove.yml)
+[![Conventional Commits](https://img.shields.io/badge/Conventional_Commits-1.0.0-FE5196?style=flat-square)](CONTRIBUTING.md)
+[![Keep a Changelog](https://img.shields.io/badge/Keep_a_Changelog-1.1.0-E05735?style=flat-square)](CHANGELOG.md)
+[![SemVer](https://img.shields.io/badge/SemVer-2.0.0-3F4551?style=flat-square)](CHANGELOG.md)
+
+[![Ultimo commit](https://img.shields.io/github/last-commit/mario-montanari/italiano-scrittura-anti-ai?style=flat-square&label=ultimo%20commit)](https://github.com/mario-montanari/italiano-scrittura-anti-ai/commits/main)
+[![Commit dal rilascio](https://img.shields.io/github/commits-since/mario-montanari/italiano-scrittura-anti-ai/latest?style=flat-square&label=commit%20dal%20rilascio)](https://github.com/mario-montanari/italiano-scrittura-anti-ai/compare)
+[![Issue aperte](https://img.shields.io/github/issues/mario-montanari/italiano-scrittura-anti-ai?style=flat-square&label=issue)](https://github.com/mario-montanari/italiano-scrittura-anti-ai/issues)
+[![Contributori](https://img.shields.io/github/contributors/mario-montanari/italiano-scrittura-anti-ai?style=flat-square&label=contributori)](https://github.com/mario-montanari/italiano-scrittura-anti-ai/graphs/contributors)
+[![Dimensione](https://img.shields.io/github/repo-size/mario-montanari/italiano-scrittura-anti-ai?style=flat-square&label=dimensione)](https://github.com/mario-montanari/italiano-scrittura-anti-ai)
 
 **Suite per la lingua italiana e sistema avanzato anti AI, in Claude e non solo.** Scrive secondo la norma, corregge e rivede testi già scritti, traduce senza calchi, cattura la voce di un autore e la misura, riconosce e smonta la firma della prosa generata, difende un testo umano segnalato da un rilevatore automatico.
 

@@ -72,11 +72,15 @@ jobs:
           )
           trovate["profilo_voce.py"] = strumento.group(1) if strumento else None
 
-          badge = re.search(
-              r"badge/versione-([0-9]+\.[0-9]+\.[0-9]+)-",
-              pathlib.Path("README.md").read_text(encoding="utf-8"),
+          # Il badge della versione è dinamico e legge la release da GitHub,
+          # quindi la quarta fonte da confrontare è la voce più recente del
+          # changelog, esclusa la sezione di ciò che non è ancora rilasciato.
+          voce = re.search(
+              r"^## \[([0-9]+\.[0-9]+\.[0-9]+)\]",
+              pathlib.Path("CHANGELOG.md").read_text(encoding="utf-8"),
+              re.MULTILINE,
           )
-          trovate["badge del README"] = badge.group(1) if badge else None
+          trovate["CHANGELOG.md"] = voce.group(1) if voce else None
 
           for dove, valore in trovate.items():
               print(f"{dove}: {valore}")
@@ -84,4 +88,50 @@ jobs:
               print("Le versioni non coincidono.")
               sys.exit(1)
           print("Le quattro versioni coincidono.")
+          PY
+
+      # I badge del README dichiarano dei numeri. Un badge che dice il falso è
+      # peggio di un badge assente, quindi i numeri si confrontano con quelli
+      # che le prove stampano davvero.
+      - name: Numeri dei badge veri
+        run: |
+          python - <<'PY'
+          import pathlib
+          import re
+          import subprocess
+          import sys
+
+          readme = pathlib.Path("README.md").read_text(encoding="utf-8")
+
+          def dal_badge(etichetta):
+              trovato = re.search(rf"badge/{etichetta}-([0-9]+)-", readme)
+              return int(trovato.group(1)) if trovato else None
+
+          def dallo_script(comando, modello):
+              uscita = subprocess.run(
+                  [sys.executable] + comando,
+                  capture_output=True, text=True,
+              )
+              trovato = re.search(modello, uscita.stdout)
+              return int(trovato.group(1)) if trovato else None
+
+          controlli = [
+              ("prove", dal_badge("prove"),
+               dallo_script(["scripts/prova_profilo_voce.py"],
+                            r"([0-9]+) prove, ")),
+              ("autoprova dell'hook", dal_badge("autoprova_hook"),
+               dallo_script(
+                   ["extras/hooks/consenti-solo-profilo-voce.py", "--prova"],
+                   r"([0-9]+) casi, ")),
+          ]
+
+          storto = False
+          for nome, nel_badge, davvero in controlli:
+              print(f"{nome}: badge {nel_badge}, eseguite {davvero}")
+              if nel_badge is None or davvero is None or nel_badge != davvero:
+                  storto = True
+          if storto:
+              print("Un badge dichiara un numero che le prove non confermano.")
+              sys.exit(1)
+          print("I numeri dei badge corrispondono.")
           PY
