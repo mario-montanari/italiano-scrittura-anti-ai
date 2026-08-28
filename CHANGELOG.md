@@ -4,6 +4,10 @@ Tutte le modifiche rilevanti alla skill sono annotate qui. Il formato segue la c
 
 ## [Non rilasciato]
 
+### Aggiunto
+
+- `SKILL.md`: la sedicesima regola non negoziabile, il divieto del contrasto fittizio «non è X, è Y», la negazione seguita dalla riformulazione positiva. Il pattern stava già in `references/leak-conversazionale.md`, ma da lì si vede solo quando si apre la guida, e sul campo è il tic che i lettori segnalano più spesso: promosso fra le regole che valgono sempre, accanto al cugino «non solo X ma anche Y» della regola 8. Il `README.md` passa da quindici a sedici regole dichiarate.
+
 ### Modificato
 
 - `README.md`: i badge passano da cinque a ventidue, su quattro righe tematiche. La prima porta lo stato della repo, la seconda dice dove la skill gira, la terza quello che la sostiene, la quarta l'attività. Ognuno è stato provato scaricando l'immagine e leggendo il valore che mostra davvero, perché un badge che dice «invalid» o dichiara il falso vale meno di nessun badge. Per lo stesso motivo il badge di Python dichiara `3.12 in continua`, che è la sola versione su cui le prove girano davvero, e quello di Cowork dice `stesso formato` invece di `compatibile`, perché il formato è documentato mentre l'esecuzione dentro Cowork non è stata verificata. Il badge della versione diventa dinamico e legge la release da GitHub, così non può più restare indietro.

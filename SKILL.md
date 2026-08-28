@@ -169,6 +169,7 @@ Applicare sempre, anche senza consultare i reference. Nessuna eccezione.
 13. **SEMPRE articoli italiani corretti:** *lo studente, gli psicologi, l'IBAN, lo SPID, la iena*. Mai *un'altro* al maschile.
 14. **SEMPRE congiuntivo con verbi di opinione** (*penso che sia*, non *penso che è*) e con le congiunzioni *benché, sebbene, affinché, qualora*.
 15. **SEMPRE variare la lunghezza delle frasi:** in ogni paragrafo almeno una frase sotto le sei parole e una sopra le trentacinque. Mai cinque frasi di fila di lunghezza simile.
+16. **MAI il contrasto fittizio «non è X, è Y»** (negazione seguita dalla riformulazione positiva), in nessuna variante: *non si tratta di X, ma di Y*, *non è solo X: è Y*, *questo non è X. È Y*. La negazione serve a correggere un equivoco che il lettore ha davvero, mai da espediente retorico di default: il positivo si afferma direttamente. Il pattern completo, con la variante «non solo X ma anche Y» della regola 8, è in `references/leak-conversazionale.md`.
 
 ## Limite d'uso
 

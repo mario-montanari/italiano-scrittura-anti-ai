@@ -92,7 +92,7 @@ Serve a difendere un testo umano accusato ingiustamente. Non serve a far passare
 
 ## Che cosa contiene
 
-Tredici guide, caricate da Claude quando servono, più le quindici regole che valgono sempre.
+Tredici guide, caricate da Claude quando servono, più le sedici regole che valgono sempre.
 
 | Guida | Che cosa porta |
 | --- | --- |
@@ -227,7 +227,7 @@ Data verificabile, tre casi d'uso concreti, una posizione presa, la prima person
 
 ## Le regole che non si negoziano
 
-Quindici, applicate sempre, anche senza aprire una guida. Le prime cinque, per dare la misura:
+Sedici, applicate sempre, anche senza aprire una guida. Le prime cinque, per dare la misura:
 
 1. **Mai em-dash** (—) in un testo italiano: al suo posto virgole, parentesi tonde, due punti.
 2. **Mai maiuscole all'inglese** nei titoli: *Come ottimizzare la SEO*, mai *Come Ottimizzare la SEO*.
