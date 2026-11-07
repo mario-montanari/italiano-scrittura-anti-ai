@@ -180,6 +180,14 @@ Eccezioni legittime solo in caso di incisi, dislocazioni o focalizzazioni marcat
 
 **Virgola di Oxford:** non si usa in italiano prima della *e* finale di un'enumerazione. Si scrive *A, B e C*, non *A, B, e C*. Eccezione rarissima per disambiguazione.
 
+**Virgola prima di *e* fra due proposizioni.** Qui la norma lascia libertà, a differenza di quanto accade fra soggetto e verbo. La consulenza della Crusca la tratta come una scelta di stile (Marina Bongi, *Uso della virgola prima della congiunzione e*, 2005). La voce *Virgola* dell'*Enciclopedia dell'Italiano* Treccani (Elisa Tonani, 2011) la registra quando le coordinate hanno soggetti grammaticali diversi, o quando si vuole mettere in evidenza l'elemento coordinato. Diventa un tic quando è sistematica: la sequenza «, e» messa a ogni giuntura, senza un'esigenza di ritmo, pare ricalcare l'inglese «, and», come osserva Flavio Santi sul magazine Treccani (*«Siamo il nerbo della rivoluzione vera»*, 2022). La regola pratica:
+
+- **di norma niente virgola** quando le due proposizioni hanno lo stesso soggetto: *ha chiuso il file e l'ha spedito*, non *ha chiuso il file, e l'ha spedito*
+- **la virgola è d'uso** quando cambia il soggetto: *Marco è partito per il Brasile, e noi siamo rimasti a Roma*
+- **la virgola si mette** quando la *e* prende un valore avversativo o introduce una conseguenza inattesa, anche a parità di soggetto: *prometteva molto, e non concludeva niente*; *aveva studiato tutta la notte, e all'esame non ricordò niente*
+- **la virgola si può mettere** per dare rilievo all'ultimo elemento, o per staccare il ritmo in un periodo lungo; deve restare una scelta, non un'abitudine
+- **la virgola resta comunque** quando chiude un inciso che finisce proprio prima della *e*: *ha riletto la lettera, scritta di notte, e l'ha spedita*. Lì non appartiene alla *e*, e toglierla lascerebbe l'inciso aperto
+
 **Il punto e virgola** è centrale nella prosa italiana colta: separa coordinate complesse o elementi di elenchi articolati. I modelli linguistici lo usano poco: inserirlo aumenta la naturalezza del testo.
 
 **I due punti** introducono discorso diretto, spiegazione, enumerazione, conseguenza logica.
@@ -302,6 +310,7 @@ I modelli linguistici, addestrati su corpora misti di qualità variabile, inciam
 | Periodo ipotetico irrealtà | *se avrei saputo* | *se avessi saputo* |
 | Em-dash al posto di virgole | *la soluzione — che pareva…* | *la soluzione, che pareva…* |
 | Virgola prima di *e* finale | *A, B, e C* | *A, B e C* |
+| Virgola all'inglese prima di *e* fra proposizioni con lo stesso soggetto (di norma si toglie; resta nei casi elencati nella sezione 8) | *ha chiuso il file, e l'ha spedito* | *ha chiuso il file e l'ha spedito* |
 | Virgolette inglesi nei dialoghi | *"Va bene", disse Marco.* | *«Va bene», disse Marco.* |
 | Elisione al femminile plurale | *l'amiche* | *le amiche* |
 | Articolo arcaico | *gl'italiani* | *gli italiani* |

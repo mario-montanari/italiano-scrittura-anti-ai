@@ -7,7 +7,7 @@ description: Si attiva quando l'utente chiede di scrivere, redigere, tradurre o 
 
 ## Cosa fa questa skill
 
-Questa skill è una suite di lavoro sull'italiano scritto, e insieme un sistema avanzato contro la firma della prosa generata. Serve per cinque compiti distinti, e vale per qualsiasi testo destinato a lettori umani: editoria, blog, social, marketing, newsletter, narrativa, saggistica, divulgazione.
+Questa skill è una suite di lavoro sull'italiano scritto e insieme un sistema avanzato contro la firma della prosa generata. Serve per cinque compiti distinti e vale per qualsiasi testo destinato a lettori umani: editoria, blog, social, marketing, newsletter, narrativa, saggistica, divulgazione.
 
 1. **Scrivere** un testo italiano nuovo secondo la norma, applicata durante la stesura invece che controllata dopo.
 2. **Correggere e rivedere** un testo già scritto, da chiunque sia stato scritto: bozze, articoli, tesi, relazioni, capitoli.
@@ -15,7 +15,7 @@ Questa skill è una suite di lavoro sull'italiano scritto, e insieme un sistema 
 4. **Catturare e rispettare la voce** di chi firma il testo, propria o di un cliente.
 5. **Difendere un testo umano** segnalato come generato da un rilevatore automatico.
 
-Il materiale è lo stesso per tutti e cinque, ed è la ragione per cui la skill funziona su un testo umano esattamente come su un testo generato: la grammatica normativa che i modelli sbagliano più spesso, il catalogo operativo del lessico da sopprimere, i pattern strutturali, i sei registri con le loro norme editoriali, il ritmo e l'anima del testo, e i segnali stilometrici con base peer-reviewed. Togliere i tic della prosa generata è una conseguenza di questo lavoro, non il suo perimetro.
+Il materiale è lo stesso per tutti e cinque ed è la ragione per cui la skill funziona su un testo umano esattamente come su un testo generato: la grammatica normativa che i modelli sbagliano più spesso, il catalogo operativo del lessico da sopprimere, i pattern strutturali, i sei registri con le loro norme editoriali, il ritmo e l'anima del testo, e i segnali stilometrici con base peer-reviewed. Togliere i tic della prosa generata è una conseguenza di questo lavoro, non il suo perimetro.
 
 La base scientifica include gli studi dell'ItaliaNLP Lab del CNR-ILC di Pisa, la lezione dei prosatori italiani del Novecento, il WikiProject AI Cleanup.
 
@@ -112,7 +112,7 @@ Scan sistematico con la checklist consolidata: `references/checklist-finale.md`.
 
 Elenco completo dei file di reference, con indicazione esplicita di quando consultare ciascuno.
 
-- **`references/grammatica-italiana.md`**: consultare per dubbi su articoli (lo studente, gli psicologi, l'IBAN, lo SPID, la iena), accenti (perché con acuto, cioè con grave, sé riflessivo accentato), apostrofi (qual è senza, un po' con), punteggiatura, trattini (breve, medio, lungo), virgolette (caporali standard), congiuntivo e consecutio temporum, preposizioni e calchi sintattici.
+- **`references/grammatica-italiana.md`**: consultare per dubbi su articoli (lo studente, gli psicologi, l'IBAN, lo SPID, la iena), accenti (perché con acuto, cioè con grave, sé riflessivo accentato), apostrofi (qual è senza, un po' con), punteggiatura (virgola di Oxford, virgola all'inglese prima di *e*), trattini (breve, medio, lungo), virgolette (caporali standard), congiuntivo e consecutio temporum, preposizioni e calchi sintattici.
 
 - **`references/lessico-da-evitare.md`**: consultare prima di scegliere aggettivi, verbi, sostantivi, formule connettive, incipit, chiusure. Contiene il catalogo operativo con soglie di densità, la voce dedicata al «piuttosto che» disgiuntivo, la tabella dei falsi amici, le alternative agli anglicismi secondo Zoppetti e Marazzini.
 
@@ -120,11 +120,11 @@ Elenco completo dei file di reference, con indicazione esplicita di quando consu
 
 - **`references/metodologie-operative.md`**: consultare per le metodologie pratiche: soppressione attiva durante la stesura, quattro tecniche di prevenzione (verbo specifico, numero verificabile, nome proprio, lettura ad alta voce), audit pass in due passaggi con i due prompt esatti, voice calibration in cinque mosse, sei mosse di umanizzazione dalla tradizione italiana (Calvino, Eco, Levi, Camilleri), metriche stilometriche di diagnosi.
 
-- **`references/personalita-e-anima.md`**: consultare quando il testo «è pulito ma non ha qualcuno dentro». Contiene i sei sintomi di scrittura asettica, le sei tecniche per iniettare anima (prendere posizione, variare ritmo, ammettere complessità, prima persona, lasciare disordine, essere specifici sui sentimenti), l'esempio di trasformazione finale, e la guardia contro il finto-umano di plastica (over-humanizing).
+- **`references/personalita-e-anima.md`**: consultare quando il testo «è pulito ma non ha qualcuno dentro». Contiene i sei sintomi di scrittura asettica, le sei tecniche per iniettare anima (prendere posizione, variare ritmo, ammettere complessità, prima persona, lasciare disordine, essere specifici sui sentimenti), l'esempio di trasformazione finale e la guardia contro il finto-umano di plastica (over-humanizing).
 
 - **`references/maestri-della-deviazione.md`**: consultare per imparare la deviazione dalla media dai maestri, oltre che per evitare il negativo. Galleria di sette scrittori italiani (Calvino, Eco, Levi, Ginzburg, Testa, Camilleri, Carrada), ognuno con una mossa-firma, un passo che la mostra e la regola per portarla via. Ribalta l'asse della sezione 5 di `metodologie-operative.md`, che indicizza le mosse per tecnica, partendo qui dall'autore. Include l'avvertenza a rubare la mossa, non a imitare l'autore.
 
-- **`references/voce-personale.md`**: consultare quando la voce di chi firma il testo va catturata e rispettata, per un cliente o per sé stessi. Contiene il metodo di raccolta del corpus, i due livelli del profilo (misurato e osservato), il modello di scheda voce con un esempio compilato su dati reali, le istruzioni per usare il profilo mentre si scrive, e il confine oltre il quale la voce non prevale: le regole non negoziabili sono norma della lingua, non gusto, e nessuno ha una voce fatta di errori. Espande la sezione 4 di `metodologie-operative.md`.
+- **`references/voce-personale.md`**: consultare quando la voce di chi firma il testo va catturata e rispettata, per un cliente o per sé stessi. Contiene il metodo di raccolta del corpus, i due livelli del profilo (misurato e osservato), il modello di scheda voce con un esempio compilato su dati reali, le istruzioni per usare il profilo mentre si scrive e il confine oltre il quale la voce non prevale: le regole non negoziabili sono norma della lingua, non gusto, e nessuno ha una voce fatta di errori. Espande la sezione 4 di `metodologie-operative.md`.
 
 - **`references/checklist-finale.md`**: consultare prima di consegnare un testo. Contiene la checklist pre-consegna consolidata in undici famiglie tematiche più la verifica finale, le venti red flag per Ctrl+F, la tabella sinottica dei pattern con esempi e correzioni, la strategia a tre passaggi.
 
@@ -132,7 +132,7 @@ Elenco completo dei file di reference, con indicazione esplicita di quando consu
 
 - **`references/segnali-misurabili.md`**: consultare quando le liste di parole non bastano e serve un criterio più solido. Contiene i segnali anti-AI con base peer-reviewed (varietà lessicale via MATTR, densità di pronomi personali, eccesso di emozioni positive, interiorità superficiale, basso sottotesto, template sintattici), come si riconoscono e si misurano, e il declassamento delle liste di parole a preferenza di gusto. Riporta le fonti scientifiche (Kobak 2024, Shaib 2024).
 
-- **`references/leak-conversazionale.md`**: consultare quando il testo scivola nel registro della chat invece di stare in piedi come documento. Contiene il pattern di negazione che corregge un equivoco inesistente (*non è X, è Y*), la suspense inutile (*qui sta il punto*), i riassunti frattali, le domande messe in bocca al lettore, e la correzione alla radice (scrivere per chi legge, non per la conversazione).
+- **`references/leak-conversazionale.md`**: consultare quando il testo scivola nel registro della chat invece di stare in piedi come documento. Contiene il pattern di negazione che corregge un equivoco inesistente (*non è X, è Y*), la suspense inutile (*qui sta il punto*), i riassunti frattali, le domande messe in bocca al lettore e la correzione alla radice (scrivere per chi legge, non per la conversazione).
 
 - **`references/canali-lettore-saggistica.md`**: consultare come griglia diagnostica quando un paragrafo suona piatto. Contiene i quattro canali attraverso cui il lettore gode di un testo (fiducia nel lettore, piacere estetico, trasporto, fluidità), adattati alla saggistica e alla divulgazione, con la tabella per capire quale canale si è rotto. Riporta le fonti scientifiche (van Laer 2014, Thissen 2018).
 
@@ -144,7 +144,7 @@ La skill include uno strumento facoltativo e le sue prove automatiche. Chi non h
 
 - **`scripts/profilo_voce.py`**: calcola il profilo quantitativo di una voce a partire da una cartella di testi dello stesso autore e dello stesso registro. Produce una scheda leggibile e i dati grezzi in JSON. Si invoca con `python scripts/profilo_voce.py CARTELLA --nome "Nome autore"` e non richiede librerie esterne. Le decisioni di conteggio, i limiti e il modo di leggere i numeri sono in `references/voce-personale.md`. Lo strumento misura e non giudica: non stabilisce se un testo sia stato generato da una macchina.
 
-- **`scripts/prova_profilo_voce.py`**: le prove automatiche dello strumento, una per ogni difetto trovato durante l'audit e corretto, così che non torni. Si lanciano con `python scripts/prova_profilo_voce.py`, non richiedono librerie esterne, e girano anche in continua a ogni push e pull request. Servono a chi contribuisce, non all'uso quotidiano.
+- **`scripts/prova_profilo_voce.py`**: le prove automatiche dello strumento, una per ogni difetto trovato durante l'audit e corretto, così che non torni. Si lanciano con `python scripts/prova_profilo_voce.py`, non richiedono librerie esterne e girano anche in continua a ogni push e pull request. Servono a chi contribuisce, non all'uso quotidiano.
 
 - **`commands/calibra-voce.md`**: comando `/calibra-voce` da copiare in `.claude/commands/`. Conduce l'intera calibrazione: verifica del corpus, livello misurato con lo script, livello osservato con la lettura dei testi, scheda finale. Istruzioni di installazione in `extras/README.md`.
 
@@ -173,7 +173,7 @@ Applicare sempre, anche senza consultare i reference. Nessuna eccezione.
 
 ## Limite d'uso
 
-Questa skill serve a scrivere in italiano senza i tic della prosa generata, e a difendere un testo umano accusato ingiustamente da un rilevatore automatico (`references/scudo-falsi-positivi.md`). Non serve a far passare per umano un testo generato, e non contiene niente che aiuti a farlo. Nessuno strumento certifica la paternità umana di un testo, nemmeno questo: la difesa si regge su prove esterne al testo, e chi volesse difendere un testo generato quei campi li troverebbe vuoti. Quel limite però tiene per la forma del documento, non per un controllo tecnico: niente qui verifica la data o la provenienza dei materiali che l'utente porta, e la parte che regge davvero è il colloquio dal vivo, dove si risponde riga per riga.
+Questa skill serve a scrivere in italiano senza i tic della prosa generata e a difendere un testo umano accusato ingiustamente da un rilevatore automatico (`references/scudo-falsi-positivi.md`). Non serve a far passare per umano un testo generato e non contiene niente che aiuti a farlo. Nessuno strumento certifica la paternità umana di un testo, nemmeno questo: la difesa si regge su prove esterne al testo, e chi volesse difendere un testo generato quei campi li troverebbe vuoti. Quel limite però tiene per la forma del documento, non per un controllo tecnico: niente qui verifica la data o la provenienza dei materiali che l'utente porta, e la parte che regge davvero è il colloquio dal vivo, dove si risponde riga per riga.
 
 ## Principio guida
 

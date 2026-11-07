@@ -1,15 +1,19 @@
 {
   "name": "italiano-scrittura-anti-ai",
   "displayName": "Italiano scrittura anti AI",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Suite per la lingua italiana e sistema avanzato anti AI. Scrive secondo la norma, rivede testi già scritti, traduce senza calchi, misura la voce di un autore su un corpus e difende un testo umano segnalato da un rilevatore automatico.",
   "author": {
     "name": "Mario Montanari",
     "url": "https://mariomontanari.it"
   },
-  "homepage": "https://github.com/mario-montanari/italiano-scrittura-anti-ai",
+  "homepage": "https://mariomontanari.it/italiano-scrittura-anti-ai",
   "repository": "https://github.com/mario-montanari/italiano-scrittura-anti-ai",
   "license": "MIT",
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://github.com/mario-montanari/italiano-scrittura-anti-ai#readme",
+  "supportUrl": "https://github.com/mario-montanari/italiano-scrittura-anti-ai/issues",
+  "privacyPolicyUrl": "https://mariomontanari.it/privacy.html",
   "keywords": [
     "italian",
     "italian-language",

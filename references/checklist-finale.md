@@ -37,6 +37,7 @@ Scorrere in ordine. Ogni voce è un controllo discreto, con azione pratica.
 - [ ] **Virgolette caporali (« »)** per dialoghi e citazioni dirette
 - [ ] **Virgolette alte (" ")** solo per citazioni dentro citazioni, parole in senso ironico, testate giornalistiche
 - [ ] **Nessuna virgola di Oxford**: *A, B e C*, non *A, B, e C*
+- [ ] **Nessuna virgola prima di *e* fra due proposizioni con lo stesso soggetto**: *ha chiuso il file e l'ha spedito*. Resta quando cambia il soggetto, quando la *e* vale *ma* o introduce una conseguenza inattesa, quando chiude un inciso o quando il rilievo o il ritmo sono voluti (`grammatica-italiana.md`, sezione 8)
 - [ ] **Nessuna virgola fra soggetto e verbo**, né fra verbo e oggetto diretto
 - [ ] **Puntini di sospensione sempre tre** (…)
 - [ ] **Titoli in minuscolo** tranne prima parola e nomi propri: *Come ottimizzare la SEO*, non *Come Ottimizzare la SEO*
@@ -199,6 +200,7 @@ Tabella finale di consultazione, consolidata dal documento principale e dal comp
 | Em-dash | *La soluzione — che pareva impossibile —* | Virgole o parentesi tonde |
 | Title case italiano | *Come Ottimizzare la SEO* | Minuscolo tranne prima parola e nomi propri |
 | Virgolette inglesi | *"Va bene", disse Marco.* | *«Va bene», disse Marco.* |
+| Virgola all'inglese prima di *e* | *ha chiuso il file, e l'ha spedito* | Togliere la virgola se il soggetto è lo stesso, salvo inciso, *e* avversativa o rilievo voluto |
 | Sinonimia forzata | *Calvino… l'autore… il narratore… il romanziere ligure* | Ripetere il nome o usare pronome |
 | Contrasto fittizio | *non solo X ma anche Y* | Congiunzione semplice |
 | False range | *dalla matematica all'arte* | Elenco onesto con esempi veri |

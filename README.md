@@ -7,6 +7,7 @@
 [![Prove](https://img.shields.io/github/actions/workflow/status/mario-montanari/italiano-scrittura-anti-ai/prove.yml?style=for-the-badge&label=prove)](.github/workflows/prove.yml)
 [![CodeQL](https://img.shields.io/github/actions/workflow/status/mario-montanari/italiano-scrittura-anti-ai/codeql.yml?style=for-the-badge&label=CodeQL)](.github/workflows/codeql.yml)
 [![Stelle](https://img.shields.io/github/stars/mario-montanari/italiano-scrittura-anti-ai?style=for-the-badge&color=A4262C)](https://github.com/mario-montanari/italiano-scrittura-anti-ai/stargazers)
+[![Fork](https://img.shields.io/github/forks/mario-montanari/italiano-scrittura-anti-ai?style=for-the-badge&label=fork&color=1C1A17)](https://github.com/mario-montanari/italiano-scrittura-anti-ai/forks)
 
 [![Claude Code](https://img.shields.io/badge/Claude_Code-plugin-D97757?style=flat-square&logo=claude&logoColor=white)](#come-plugin-in-claude-code)
 [![Claude Cowork](https://img.shields.io/badge/Claude_Cowork-stesso_formato-D97757?style=flat-square&logo=anthropic&logoColor=white)](#come-plugin-in-claude-cowork)
@@ -21,11 +22,16 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional_Commits-1.0.0-FE5196?style=flat-square)](CONTRIBUTING.md)
 [![Keep a Changelog](https://img.shields.io/badge/Keep_a_Changelog-1.1.0-E05735?style=flat-square)](CHANGELOG.md)
 [![SemVer](https://img.shields.io/badge/SemVer-2.0.0-3F4551?style=flat-square)](CHANGELOG.md)
+[![Dependabot](https://img.shields.io/badge/Dependabot-attivo-025E8C?style=flat-square&logo=dependabot&logoColor=white)](.github/dependabot.yml)
+[![Segnalazioni di sicurezza](https://img.shields.io/badge/segnalazioni_di_sicurezza-private-4A5D23?style=flat-square&logo=github)](SECURITY.md)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor_Covenant-3.0-4A5D23?style=flat-square)](CODE_OF_CONDUCT.md)
+[![Citazione](https://img.shields.io/badge/citazione-CITATION.cff-1C1A17?style=flat-square)](CITATION.cff)
 
 [![Ultimo commit](https://img.shields.io/github/last-commit/mario-montanari/italiano-scrittura-anti-ai?style=flat-square&label=ultimo%20commit)](https://github.com/mario-montanari/italiano-scrittura-anti-ai/commits/main)
 [![Commit dal rilascio](https://img.shields.io/github/commits-since/mario-montanari/italiano-scrittura-anti-ai/latest?style=flat-square&label=commit%20dal%20rilascio)](https://github.com/mario-montanari/italiano-scrittura-anti-ai/compare)
 [![Issue aperte](https://img.shields.io/github/issues/mario-montanari/italiano-scrittura-anti-ai?style=flat-square&label=issue)](https://github.com/mario-montanari/italiano-scrittura-anti-ai/issues)
 [![Contributori](https://img.shields.io/github/contributors/mario-montanari/italiano-scrittura-anti-ai?style=flat-square&label=contributori)](https://github.com/mario-montanari/italiano-scrittura-anti-ai/graphs/contributors)
+[![PR benvenute](https://img.shields.io/badge/PR-benvenute-4A5D23?style=flat-square)](CONTRIBUTING.md)
 [![Dimensione](https://img.shields.io/github/repo-size/mario-montanari/italiano-scrittura-anti-ai?style=flat-square&label=dimensione)](https://github.com/mario-montanari/italiano-scrittura-anti-ai)
 
 **Suite per la lingua italiana e sistema avanzato anti AI, in Claude e non solo.** Scrive secondo la norma, corregge e rivede testi già scritti, traduce senza calchi, cattura la voce di un autore e la misura, riconosce e smonta la firma della prosa generata, difende un testo umano segnalato da un rilevatore automatico.
@@ -242,10 +248,11 @@ L'elenco completo sta in [SKILL.md](SKILL.md), e comprende gli errori ortografic
 ```text
 italiano-scrittura-anti-ai/
 ├── .claude-plugin/
-│   ├── plugin.json                    # Manifest del plugin: nome, versione, autore, licenza
+│   ├── plugin.json                    # Manifest del plugin: nome, versione, autore, licenza, icona
 │   └── marketplace.json               # Catalogo: la repo fa da marketplace di sé stessa
 ├── assets/
-│   └── banner.png                     # L'immagine del README, versionata qui e non esterna
+│   ├── banner.png                     # L'immagine del README, versionata qui e non esterna
+│   └── icon.png                       # L'icona del plugin nel catalogo, 512x512
 ├── commands/                          # I due comandi, nativi quando si installa il plugin
 │   ├── calibra-voce.md                # Comando /calibra-voce
 │   └── difendi.md                     # Comando /difendi

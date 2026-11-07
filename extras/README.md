@@ -101,7 +101,7 @@ aggiungere in `.claude/settings.json`:
         "hooks": [
           {
             "type": "command",
-            "command": "python ${CLAUDE_PROJECT_DIR}/.claude/hooks/consenti-solo-profilo-voce.py"
+            "command": "python \"${CLAUDE_PROJECT_DIR}/.claude/hooks/consenti-solo-profilo-voce.py\""
           }
         ]
       }
@@ -109,6 +109,22 @@ aggiungere in `.claude/settings.json`:
   }
 }
 ```
+
+Le virgolette attorno al percorso servono quando la cartella del progetto
+contiene spazi: senza, la shell spezza il percorso in due parole, e l'hook non
+parte.
+
+**Su Windows senza Git Bash** Claude Code esegue l'hook con PowerShell, e lì
+conta come verdetto solo un'uscita con codice 0 o 2: qualunque altro codice è
+un guasto, e un guasto di un hook `PreToolUse` in questa forma può bloccare il
+comando. L'hook esce con 0 su ogni evento che Claude Code gli passa, anche
+quando l'evento ha una forma inattesa (vuoto, non JSON, una lista al posto di
+un oggetto, campi del tipo sbagliato), quindi il rischio pratico è uno solo:
+che `python` non si trovi. Prima di installarlo, verificare che
+`python --version` risponda nel terminale. Dalla versione 2.1.295 di Claude
+Code si può aggiungere `"onFailure": "continue"` accanto a `"command"`, così
+un guasto lascia passare il comando invece di bloccarlo, e la conferma torna
+all'utente.
 
 **Verifica prima di fidarsi.** L'hook porta con sé la propria prova e si
 controlla senza installarlo:
