@@ -16,7 +16,7 @@
 [![Guide](https://img.shields.io/badge/guide-13-1C1A17?style=flat-square)](#che-cosa-contiene)
 
 [![Prove automatiche](https://img.shields.io/badge/prove-246-4A5D23?style=flat-square)](scripts/prova_profilo_voce.py)
-[![Autoprova hook](https://img.shields.io/badge/autoprova_hook-43-4A5D23?style=flat-square)](extras/hooks/consenti-solo-profilo-voce.py)
+[![Autoprova hook](https://img.shields.io/badge/autoprova_hook-59-4A5D23?style=flat-square)](extras/hooks/consenti-solo-profilo-voce.py)
 [![Dipendenze](https://img.shields.io/badge/dipendenze-nessuna-4A5D23?style=flat-square)](#prerequisiti)
 [![Python](https://img.shields.io/badge/Python-3.12_in_continua-3776AB?style=flat-square&logo=python&logoColor=white)](.github/workflows/prove.yml)
 [![Conventional Commits](https://img.shields.io/badge/Conventional_Commits-1.0.0-FE5196?style=flat-square)](CONTRIBUTING.md)
@@ -130,7 +130,7 @@ Misura il respiro della frase (lunghezza media, oscillazione, quota di domande),
 
 Lo strumento misura e non giudica: non stabilisce se un testo sia stato generato da una macchina, e nessuno strumento al mondo lo fa in modo affidabile. Sotto le duemila parole di corpus il profilo esce dichiarato come indicativo. Chi non ha Python usa la skill per intero senza perdere niente, perché le stesse misure si ricavano a mano su cinquanta frasi e la procedura è scritta nel comando.
 
-`scripts/prova_profilo_voce.py` porta duecentoquarantadue prove automatiche, e girano anche in continua a ogni push e a ogni pull request. Ognuna nasce da un difetto trovato durante l'audit, e serve a impedire che torni.
+`scripts/prova_profilo_voce.py` porta 246 prove automatiche, e girano anche in continua a ogni push e a ogni pull request. Ognuna nasce da un difetto trovato durante l'audit e serve a impedire che torni.
 
 <p align="right"><a href="#italiano-scrittura-anti-ai">torna in alto</a></p>
 
@@ -250,9 +250,7 @@ italiano-scrittura-anti-ai/
 ├── .claude-plugin/
 │   ├── plugin.json                    # Manifest del plugin: nome, versione, autore, licenza, icona
 │   └── marketplace.json               # Catalogo: la repo fa da marketplace di sé stessa
-├── assets/
-│   ├── banner.png                     # L'immagine del README, versionata qui e non esterna
-│   └── icon.png                       # L'icona del plugin nel catalogo, 512x512
+├── assets/                            # Il banner del README e l'icona del plugin, versionati qui
 ├── commands/                          # I due comandi, nativi quando si installa il plugin
 │   ├── calibra-voce.md                # Comando /calibra-voce
 │   └── difendi.md                     # Comando /difendi
@@ -307,13 +305,12 @@ La skill interviene sui testi che contano. Per il resto della giornata, dove non
 - **`commands/calibra-voce.md`** e **`commands/difendi.md`**: i due comandi, da copiare in `.claude/commands/`. Funzionano anche da soli, senza installare la skill intera.
 - **`extras/hooks/consenti-solo-profilo-voce.py`**: hook facoltativo per chi calibra spesso e vuole togliere la conferma manuale al lancio dello strumento, senza allargare la superficie eseguibile.
 
-I due template contengono le venti regole essenziali estratte dalla skill, scritte come istruzioni dirette sempre attive. È la filosofia dei tre livelli: la skill come bisturi, il file di memoria e le preferenze come igiene quotidiana. I dettagli stanno in [extras/README.md](extras/README.md).
+I due template contengono le regole essenziali estratte dalla skill, scritte come istruzioni dirette sempre attive: il `CLAUDE.md` ne porta 22, le user preferences le riprendono in forma compatta, senza quella sul codice. È la filosofia dei tre livelli: la skill come bisturi, il file di memoria e le preferenze come igiene quotidiana. I dettagli stanno in [extras/README.md](extras/README.md).
 
 ## Prossimi passi
 
 Senza date promesse, e in ordine di utilità dichiarata:
 
-- **Plugin Claude Code** con i due comandi nativi, al posto dei file da copiare a mano in `.claude/commands/`.
 - **Avviso sulla lingua del corpus** nello strumento, che oggi produce una scheda dalla forma regolare anche su testi che non sono in italiano.
 - Il resto nasce dalle segnalazioni: i pattern che la skill non copre ancora arrivano da chi scrive in italiano tutti i giorni.
 

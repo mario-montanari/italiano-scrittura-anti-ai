@@ -92,7 +92,13 @@ jobs:
 
       # I badge del README dichiarano dei numeri. Un badge che dice il falso è
       # peggio di un badge assente, quindi i numeri si confrontano con quelli
-      # che le prove stampano davvero.
+      # che le prove stampano davvero. Lo stesso vale per il numero delle prove
+      # scritto in prosa, che una volta è rimasto indietro mentre il badge era
+      # giusto. Un numero scritto in lettere non si può convertire in modo
+      # affidabile: il controllo fallisce, perché si confronta solo la cifra.
+      # Fallisce anche la parola che contiene una cifra ma non è un numero puro
+      # («~245», «245+», «<b>245</b>»), e l'uscita della suite senza la riga
+      # del totale.
       - name: Numeri dei badge veri
         run: |
           python - <<'PY'
@@ -107,6 +113,11 @@ jobs:
               trovato = re.search(rf"badge/{etichetta}-([0-9]+)-", readme)
               return int(trovato.group(1)) if trovato else None
 
+          # dallo_script restituisce tre cose diverse: un intero (il totale
+          # stampato), SALTATO (qualche prova è saltata, salto legittimo) e
+          # None (la riga del totale non c'è: errore, non salto).
+          SALTATO = object()
+
           def dallo_script(comando, modello):
               uscita = subprocess.run(
                   [sys.executable] + comando,
@@ -120,7 +131,7 @@ jobs:
               if saltate and int(saltate.group(1)) > 0:
                   print(f"  {saltate.group(1)} prove saltate su questa "
                         f"piattaforma: confronto non attendibile, salto")
-                  return None
+                  return SALTATO
               trovato = re.search(modello, uscita.stdout)
               return int(trovato.group(1)) if trovato else None
 
@@ -135,15 +146,97 @@ jobs:
           ]
 
           storto = False
+          confronti = 0
+          saltati = 0
           for nome, nel_badge, davvero in controlli:
-              if davvero is None:
+              if davvero is SALTATO:
                   print(f"{nome}: badge {nel_badge}, confronto saltato")
+                  saltati += 1
+                  continue
+              if davvero is None:
+                  print(f"{nome}: la riga del totale non c'è nell'uscita "
+                        f"dello script, il confronto non è possibile")
+                  storto = True
                   continue
               print(f"{nome}: badge {nel_badge}, eseguite {davvero}")
+              confronti += 1
               if nel_badge is None or nel_badge != davvero:
                   storto = True
           if storto:
-              print("Un badge dichiara un numero che le prove non confermano.")
+              print("Un badge dichiara un numero che le prove non confermano "
+                    "o non si può verificare.")
               sys.exit(1)
-          print("I numeri dei badge corrispondono.")
+
+          # Il numero delle prove compare anche nel testo: nella prosa e nel
+          # commento dell'albero dei file. Si cerca ogni «<numero> prove
+          # automatiche» e si confronta con il totale eseguito, con la stessa
+          # regola di salto dei badge. Il ramo del numero in lettere non
+          # dipende dalla piattaforma e non si salta mai.
+          # Limite dichiarato: si cerca solo questa frase. Una frase riscritta
+          # («le 245 prove girano», «245 test automatici») non si cerca, e il
+          # suo numero non si controlla. Se spariscono tutte le occorrenze, il
+          # passo fallisce, ma finché ne resta una le altre frasi restano
+          # senza guardia.
+          numerali = (
+              "zero|uno|un|due|tr[eéè]|quattro|cinque|sei|sette|otto|nove|"
+              "dieci|undici|dodici|tredici|quattordici|quindici|sedici|"
+              "diciassette|diciotto|diciannove|venti|vent|trenta|trent|"
+              "quaranta|quarant|cinquanta|cinquant|sessanta|sessant|"
+              "settanta|settant|ottanta|ottant|novanta|novant|cento|cent|"
+              "mille|mila|milione|milioni"
+          )
+          # Il trattino ammette i numerali composti («duecento-quarantasei»).
+          in_lettere = re.compile(rf"(?:(?:{numerali})-?)+", re.IGNORECASE)
+          # Qui prove_davvero è un intero o SALTATO: se fosse None, il ciclo
+          # dei badge avrebbe già fermato il passo.
+          prove_davvero = controlli[0][2]
+          # Lo spazio che non va a capo, scritto come carattere o come
+          # «&nbsp;», separa la cifra dalla parola come uno spazio normale:
+          # senza questa riga «245&nbsp;prove automatiche» sfuggirebbe.
+          testo = readme.replace("&nbsp;", " ").replace(" ", " ")
+          occorrenze = re.findall(
+              r"(\S+)\s+prove\s+automatiche", testo, re.IGNORECASE
+          )
+          storto = False
+          con_numero = 0
+          for grezza in occorrenze:
+              # Si tolgono solo i segni di contorno innocui. Una parentesi
+              # chiusa, un tilde, un più o un tag HTML restano nella parola e
+              # la fanno fallire più avanti, perché nascondono la cifra.
+              parola = grezza.strip("*_`([«»\"'.,;:")
+              if re.fullmatch(r"[0-9][0-9.]*", parola):
+                  con_numero += 1
+                  nel_testo = int(parola.replace(".", ""))
+                  if prove_davvero is SALTATO:
+                      print(f"prove in prosa: {nel_testo}, confronto saltato")
+                      saltati += 1
+                  else:
+                      print(f"prove in prosa: {nel_testo}, "
+                            f"eseguite {prove_davvero}")
+                      confronti += 1
+                      if nel_testo != prove_davvero:
+                          storto = True
+              elif re.search(r"[0-9]", parola):
+                  con_numero += 1
+                  print(f"prove in prosa: «{grezza}» contiene una cifra ma "
+                        f"non è un numero puro, va scritta la sola cifra")
+                  storto = True
+              elif in_lettere.fullmatch(parola):
+                  con_numero += 1
+                  print(f"prove in prosa: «{parola}» è scritto in lettere, "
+                        f"va scritto in cifre")
+                  storto = True
+          if con_numero == 0:
+              print("Nessun «<numero> prove automatiche» nel README: "
+                    "il controllo non verifica niente.")
+              sys.exit(1)
+          if storto:
+              print("Il README dichiara un numero di prove che non torna.")
+              sys.exit(1)
+          if confronti == 0:
+              print("Nessun confronto eseguito: tutti i confronti numerici "
+                    "sono stati saltati su questa piattaforma.")
+          else:
+              print(f"Confronti eseguiti e corrispondenti: {confronti}. "
+                    f"Confronti saltati: {saltati}.")
           PY

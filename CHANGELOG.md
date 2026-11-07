@@ -4,6 +4,25 @@ Tutte le modifiche rilevanti alla skill sono annotate qui. Il formato segue la c
 
 ## [Non rilasciato]
 
+## [1.5.1] - 2026-11-07
+
+Una versione di sole correzioni. Quasi tutte riguardano testi che dicevano il falso o erano rimasti indietro rispetto alla skill; le altre toccano l'hook facoltativo e la guardia della continua.
+
+### Modificato
+
+- `.github/workflows/codeql.yml`: il commento accanto allo SHA di `github/codeql-action` porta la versione completa, `v4.39.1`, come gli altri pin. Lo SHA è stato confrontato con il commit del tag.
+
+### Corretto
+
+- `README.md`: la sezione sullo strumento dichiarava ancora «duecentoquarantadue prove automatiche». In continua le prove sono 246, e il numero ora è scritto in cifre come nel badge e nell'albero dei file. La 1.5.0 dava il numero per corretto ovunque, ma questa riga era sfuggita, perché la guardia della continua leggeva soltanto i badge.
+- `.github/workflows/prove.yml`: per questo la guardia confronta ora con il totale delle prove eseguite anche ogni numero che nella prosa del README precede «prove automatiche». Fallisce se il numero è scritto in lettere, se la cifra è attaccata ad altri segni o se nel README non resta nessun numero da controllare. Distingue anche il salto voluto, sulle piattaforme dove qualche prova salta, dall'uscita della suite che ha perso la riga del totale. Alla fine dice quanti confronti ha fatto davvero. Resta un limite, dichiarato nel commento: una frase scritta in un'altra forma, come «245 test automatici», non si controlla.
+- `README.md`: fra i «Prossimi passi» c'era ancora il plugin con i due comandi nativi, uscito con la 1.4.0. La voce è tolta.
+- `README.md`: nell'albero dei file la cartella `assets/` non elenca più i nomi delle due immagini. Dentro un blocco di codice il controllo del catalogo di Anthropic poteva leggerli come riferimenti a immagini.
+- `extras/CLAUDE.md.example` e `extras/user-preferences.example.md`: i due modelli, che tengono le regole nelle chat dove la skill non si attiva, non portavano la sedicesima regola, il contrasto fittizio «non è X, è Y», né la regola sulla virgola prima di *e*. Ora le portano, con lo stesso contenuto della regola 16 di `SKILL.md` e della sezione 8 di `grammatica-italiana.md`. Nel `CLAUDE.md.example` le regole passano da 20 a 22, e chi cita i numeri vecchi li trova spostati: dalla 8 alla 14 salgono di uno, dalla 15 in poi di due. Le virgolette dritte usate per citare sono diventate caporali.
+- `extras/README.md` e `README.md`: i conteggi delle regole dei modelli sono veri per tutti e due i file. Il peso del modello per claude.ai è misurato, circa 3.000 caratteri il blocco base e 3.400 la versione estesa, e il testo non afferma più un limite di lunghezza che l'articolo ufficiale di Anthropic non indica.
+- `extras/hooks/consenti-solo-profilo-voce.py`: con un JSON annidato in profondità su stdin l'hook usciva con 1, perché `RecursionError` non era fra le eccezioni intercettate. Ora esce con 0 senza decidere niente, come per un JSON non valido, e lo stesso vale se la lettura esaurisce la memoria o se il processo parte senza stdin, caso in cui Python non crea il flusso e l'hook prima usciva con 1 per un `AttributeError`. L'autoprova passa da 43 a 59 casi: 14 ingressi ostili o al limite e 2 casi che attraversano l'hook da capo a fondo e provano che un evento approvabile viene ancora approvato, così una guardia che zittisse tutto non passerebbe inosservata. Nessun comando che prima veniva rifiutato ora passa.
+- `references/metodologie-operative.md`, sezione 3: l'esempio di riscrittura, cioè il modello che Claude imita quando revisiona, violava le regole che la skill insegna. Apriva con un contrasto fittizio, chiudeva con un quantificatore vago, raccontava un'esperienza in prima persona che un modello non ha e citava una cifra, attribuita a «dati Microsoft 2022», di cui non si è trovata una fonte primaria. La riscrittura corregge i cinque difetti che l'esempio stesso elenca nella risposta al primo prompt, senza inventare fatti né fonti e rispettando la regola 15. Il paragrafo che descrive le differenze e la regola operativa che chiude la sezione sono allineati al testo nuovo.
+
 ## [1.5.0] - 2026-11-07
 
 La versione prepara la scheda del plugin nel catalogo di Anthropic e risponde alla segnalazione di un lettore, la issue #16, sulla virgola prima di *e*.

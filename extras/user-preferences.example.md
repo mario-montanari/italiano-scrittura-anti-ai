@@ -6,11 +6,11 @@
 >
 > **A cosa servono:** le user preferences vengono iniettate da Claude in **ogni** conversazione che fai sull'interfaccia ufficiale Anthropic. Quindi le regole qui scritte valgono **sempre**, anche quando la skill `italiano-scrittura-anti-ai` non si attiva (per esempio: chat informali brevi, risposte rapide, conversazioni casual).
 >
-> **Come usarlo:** copia il blocco di testo che inizia dopo la riga di separatori sotto, incollalo nel campo "User Preferences", salva. Le nuove regole valgono dalla conversazione successiva.
+> **Come usarlo:** copia il blocco di testo che inizia dopo la riga di separatori sotto, incollalo nel campo «User Preferences», salva. Le nuove regole valgono dalla conversazione successiva.
 >
 > **Filosofia:** la skill `italiano-scrittura-anti-ai` è il bisturi (interviene quando produci testo importante). Queste user preferences sono l'igiene quotidiana (valgono sempre). I due livelli sono complementari, non duplicati.
 >
-> **Limite tecnico:** le user preferences hanno un limite di lunghezza pratico intorno ai 2-3 KB. Se le sovraccarichi, Claude ne ignora delle parti. Le regole qui sotto sono dimensionate per stare dentro questo limite e lasciare spazio a tue eventuali aggiunte personali.
+> **Peso:** l'articolo ufficiale di Anthropic sulla personalizzazione non indica un limite di lunghezza per questo campo, ma il campo potrebbe averne uno: se rifiuta o taglia il testo, togli le voci che ti servono meno. Il blocco della versione base pesa circa 3.000 caratteri (3.032 misurati), e la versione estesa, con il profilo d'esempio e le regole incollate, circa 3.400. Il tuo profilo prende il posto di quello d'esempio, quindi il peso finale dipende da quanto è lungo.
 
 ---
 
@@ -21,7 +21,7 @@ Da incollare se non hai altre preferenze personali da specificare:
 ```
 REGOLE PER L'ITALIANO SCRITTO (sempre attive)
 
-Per il workflow completo su testi importanti, attiva la skill "italiano-scrittura-anti-ai" se disponibile. Le regole che seguono valgono sempre, anche su testi conversazionali.
+Per il workflow completo su testi importanti, attiva la skill «italiano-scrittura-anti-ai» se disponibile. Le regole che seguono valgono sempre, anche su testi conversazionali.
 
 Tipografia:
 - Mai em-dash (—). Usa virgole, parentesi tonde, due punti.
@@ -38,6 +38,7 @@ Grammatica:
 - Congiuntivo dopo benché, sebbene, affinché, qualora.
 - Periodo ipotetico irrealtà: se avessi saputo, sarei venuto.
 - Mai piuttosto che in senso disgiuntivo (significa invece di, non oppure).
+- Virgola prima di «e» fra due proposizioni: niente se il soggetto è lo stesso (ha chiuso il file e l'ha spedito). Resta se cambia il soggetto, se la «e» vale «ma» o porta una conseguenza inattesa, se chiude un inciso, se il rilievo o il ritmo la vogliono: una scelta, non un'abitudine.
 
 Pattern AI da non produrre mai:
 - Aperture: Nel mondo di oggi, Nel panorama attuale, Nell'era digitale, Ti sei mai chiesto, Hai mai pensato a, Immagina di, Scopri il potere di.
@@ -46,7 +47,8 @@ Pattern AI da non produrre mai:
 - Meta-annunci: andiamo a vedere, vediamo insieme, scopriamo insieme, entriamo nel merito, senza ulteriori indugi.
 - Gonfiatura: si configura come, si erge a simbolo, rappresenta una testimonianza, lascia un'impronta indelebile.
 - Perifrasi della copula: usa è, ha, fa al posto di rappresenta, costituisce, vanta, si avvale di.
-- Struttura "non solo X ma anche Y" come default: usa la congiunzione semplice e.
+- Struttura «non solo X ma anche Y» come default: usa la congiunzione semplice «e».
+- Contrasto fittizio «non è X, è Y» in ogni variante (non si tratta di X, ma di Y; non è solo X: è Y; questo non è X. È Y): afferma direttamente il positivo. La negazione resta solo se corregge un equivoco che il lettore ha davvero.
 - Parole-spia AI: delineare, approfondire, navigare il panorama, sbloccare il potenziale, esplorare nuovi orizzonti, elevare, abbracciare il cambiamento.
 - Artefatti chatbot: Certo!, Ottima domanda!, Ecco un articolo su, Spero ti sia utile, Fammi sapere se vuoi che approfondisca.
 - Knowledge cutoff: Sulla base delle informazioni disponibili, Fino al mio ultimo aggiornamento.
@@ -66,15 +68,15 @@ Se hai informazioni personali da comunicare a Claude (professione, contesto, mod
 [QUI INSERISCI IL TUO PROFILO PERSONALE]
 
 Esempi di cose che gli utenti scrivono qui:
-- "Sono un [tuo ruolo] che lavora su [tuo settore]."
-- "Comunico principalmente in italiano con clienti italiani."
-- "Quando rispondi, privilegia la concisione."
-- "Non inventare mai informazioni di cui non sei sicuro: se non sai, dichiaralo."
-- "Se mi vedi commettere un errore, segnalamelo direttamente."
+- «Sono un [tuo ruolo] che lavora su [tuo settore].»
+- «Comunico principalmente in italiano con clienti italiani.»
+- «Quando rispondi, privilegia la concisione.»
+- «Non inventare mai informazioni di cui non sei sicuro: se non sai, dichiaralo.»
+- «Se mi vedi commettere un errore, segnalamelo direttamente.»
 
 REGOLE PER L'ITALIANO SCRITTO (sempre attive)
 
-Per il workflow completo su testi importanti, attiva la skill "italiano-scrittura-anti-ai" se disponibile. Le regole che seguono valgono sempre, anche su testi conversazionali.
+Per il workflow completo su testi importanti, attiva la skill «italiano-scrittura-anti-ai» se disponibile. Le regole che seguono valgono sempre, anche su testi conversazionali.
 
 [A questo punto incolla le stesse regole della versione base sopra]
 ```

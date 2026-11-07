@@ -30,33 +30,35 @@ Quando è caricata la skill `italiano-scrittura-anti-ai`, attivarla per qualsias
 3. **Congiuntivo dopo verbi di opinione**: *penso che sia*, non *penso che è*. Congiuntivo dopo *benché, sebbene, affinché, qualora, prima che, senza che*.
 4. **Mai *piuttosto che* in senso disgiuntivo**. Significa *invece di*, mai *oppure*. *Pizza o pasta*, non *pizza piuttosto che pasta* per dire *o*.
 
-## Regole tipografiche non negoziabili
+## Regole tipografiche e di punteggiatura non negoziabili
 
 5. **Mai em-dash (—) nei testi italiani.** Sostituire con virgole, parentesi tonde, due punti.
 6. **Mai title case nei titoli italiani**: solo prima parola e nomi propri maiuscolo. *Come ottimizzare la SEO*, non *Come Ottimizzare la SEO*.
 7. **Virgolette caporali (« ») per dialoghi e citazioni**, mai virgolette inglesi (" "). Le alte (" ") solo per citazioni dentro citazioni, parole in senso ironico, testate giornalistiche.
+8. **Virgola prima di *e* fra due proposizioni**: di norma niente virgola quando il soggetto è lo stesso, *ha chiuso il file e l'ha spedito*, non *ha chiuso il file, e l'ha spedito*. La virgola resta quando cambia il soggetto (*Marco è partito per il Brasile, e noi siamo rimasti a Roma*), quando la *e* vale *ma* o introduce una conseguenza inattesa (*prometteva molto, e non concludeva niente*), quando chiude un inciso (*ha riletto la lettera, scritta di notte, e l'ha spedita*) e quando il rilievo o il ritmo la vogliono: deve restare una scelta, mai l'abitudine di metterla a ogni giuntura. A differenza delle altre regole di questa sezione, qui la norma lascia libertà: è una regola di stile.
 
 ## Pattern AI da non produrre mai
 
-8. **Mai aprire con**: *Nel mondo di oggi, Nel panorama attuale, Nell'era digitale, Ti sei mai chiesto, Hai mai pensato a, Immagina di, Scopri il potere di, Sblocca il potenziale*.
-9. **Mai chiudere con**: *In conclusione, In definitiva, Per tirare le somme, Spero che questo articolo ti sia utile, Ricorda che, Non dimenticare che*.
-10. **Mai formule di rilevanza**: *è importante sottolineare, vale la pena notare, non si può non menzionare, degno di nota, occorre sottolineare, giova ricordare*. La cosa importante si dice, non si annuncia.
-11. **Mai meta-annunci**: *andiamo a vedere, vediamo insieme, scopriamo insieme, entriamo nel merito, senza ulteriori indugi, partiamo dalle basi*.
-12. **Mai gonfiatura di significato**: *si configura come, si erge a simbolo, rappresenta una testimonianza, lascia un'impronta indelebile, riveste un ruolo cruciale, gioca un ruolo determinante*.
-13. **Mai perifrasi della copula**: usare *è, ha, fa* al posto di *rappresenta, costituisce, si configura come, riveste il ruolo di, vanta, si avvale di, dispone di*.
-14. **Mai «non solo X ma anche Y»** come struttura di default. Usare la congiunzione semplice *e*.
-15. **Mai parole-spia AI ricorrenti**: *delineare, approfondire, navigare il panorama, sbloccare il potenziale, esplorare nuovi orizzonti, elevare, abbracciare il cambiamento*.
-16. **Mai artefatti chatbot nei testi finali**: *Certo!, Ottima domanda!, Ecco un articolo su, Spero ti sia utile, Fammi sapere se vuoi che approfondisca, Buona lettura*.
-17. **Mai dichiarazioni di knowledge cutoff**: *Sulla base delle informazioni disponibili, Fino al mio ultimo aggiornamento, Sebbene le informazioni dettagliate non siano ampiamente documentate*. Verificare il dato, attribuire la fonte, oppure riformulare.
-18. **Mai falsi amici dall'inglese**: *realizzare* non significa rendersi conto (è *attuare*), *attuale* non significa reale (è *di oggi*), *eventualmente* non significa alla fine (è *se del caso*), *consistente* non significa coerente (è *di sostanza corposa*), *fare senso* non significa avere senso (è *fare ribrezzo*).
+9. **Mai aprire con**: *Nel mondo di oggi, Nel panorama attuale, Nell'era digitale, Ti sei mai chiesto, Hai mai pensato a, Immagina di, Scopri il potere di, Sblocca il potenziale*.
+10. **Mai chiudere con**: *In conclusione, In definitiva, Per tirare le somme, Spero che questo articolo ti sia utile, Ricorda che, Non dimenticare che*.
+11. **Mai formule di rilevanza**: *è importante sottolineare, vale la pena notare, non si può non menzionare, degno di nota, occorre sottolineare, giova ricordare*. La cosa importante si dice, non si annuncia.
+12. **Mai meta-annunci**: *andiamo a vedere, vediamo insieme, scopriamo insieme, entriamo nel merito, senza ulteriori indugi, partiamo dalle basi*.
+13. **Mai gonfiatura di significato**: *si configura come, si erge a simbolo, rappresenta una testimonianza, lascia un'impronta indelebile, riveste un ruolo cruciale, gioca un ruolo determinante*.
+14. **Mai perifrasi della copula**: usare *è, ha, fa* al posto di *rappresenta, costituisce, si configura come, riveste il ruolo di, vanta, si avvale di, dispone di*.
+15. **Mai «non solo X ma anche Y»** come struttura di default. Usare la congiunzione semplice *e*.
+16. **Mai il contrasto fittizio «non è X, è Y»** (negazione seguita dalla riformulazione positiva), in nessuna variante: *non si tratta di X, ma di Y*, *non è solo X: è Y*, *questo non è X. È Y*. La negazione serve a correggere un equivoco che il lettore ha davvero, mai come espediente retorico di default: il positivo si afferma direttamente.
+17. **Mai parole-spia AI ricorrenti**: *delineare, approfondire, navigare il panorama, sbloccare il potenziale, esplorare nuovi orizzonti, elevare, abbracciare il cambiamento*.
+18. **Mai artefatti chatbot nei testi finali**: *Certo!, Ottima domanda!, Ecco un articolo su, Spero ti sia utile, Fammi sapere se vuoi che approfondisca, Buona lettura*.
+19. **Mai dichiarazioni di knowledge cutoff**: *Sulla base delle informazioni disponibili, Fino al mio ultimo aggiornamento, Sebbene le informazioni dettagliate non siano ampiamente documentate*. Verificare il dato, attribuire la fonte, oppure riformulare.
+20. **Mai falsi amici dall'inglese**: *realizzare* non significa rendersi conto (è *attuare*), *attuale* non significa reale (è *di oggi*), *eventualmente* non significa alla fine (è *se del caso*), *consistente* non significa coerente (è *di sostanza corposa*), *fare senso* non significa avere senso (è *fare ribrezzo*).
 
 ## Regole di ritmo
 
-19. **Variare la lunghezza delle frasi**: in ogni paragrafo almeno una frase sotto le 6 parole e una sopra le 35. Mai cinque frasi consecutive di lunghezza simile.
+21. **Variare la lunghezza delle frasi**: in ogni paragrafo almeno una frase sotto le 6 parole e una sopra le 35. Mai cinque frasi consecutive di lunghezza simile.
 
 ## Comportamento tecnico
 
-20. Quando si lavora su codice, configurazioni, dati strutturati, comandi shell, file YAML/JSON: queste regole valgono per i commenti italiani, per i messaggi di commit, per la documentazione, ma non interferiscono con sintassi e identificatori del codice. L'em-dash è ammesso solo dentro stringhe che richiedono compatibilità con sistemi esterni che lo prevedano.
+22. Quando si lavora su codice, configurazioni, dati strutturati, comandi shell, file YAML/JSON: queste regole valgono per i commenti italiani, per i messaggi di commit, per la documentazione, ma non interferiscono con sintassi e identificatori del codice. L'em-dash è ammesso solo dentro stringhe che richiedono compatibilità con sistemi esterni che lo prevedano.
 
 ## Note operative
 

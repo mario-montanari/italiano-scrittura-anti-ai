@@ -63,13 +63,14 @@ Autoprova, senza installare niente:
 """
 from __future__ import annotations
 
+import io
 import json
 import os
 import re
 import shlex
 import sys
 from pathlib import Path
-from typing import Iterable, List, Optional, Tuple
+from typing import IO, Iterable, List, Optional, Tuple
 
 CODA_ATTESA = ("italiano-scrittura-anti-ai", "scripts", "profilo_voce.py")
 
@@ -604,6 +605,177 @@ RADICE_DI_UN_ALTRO_PLUGIN = radice_del_plugin(
 )
 
 
+# Il progetto dei casi che passano da `main`. Come per `RADICI_DI_PROVA`, non
+# serve che esista: l'hook confronta percorsi risolti e non chiede che lo
+# strumento ci sia su disco. La radice del
+# progetto la ricava `main` dal campo `cwd` dell'evento, come in produzione,
+# quindi il comando relativo si risolve sotto `.claude/skills/` del progetto.
+_PROGETTO_DI_PROVA = "/home/x/progetto"
+_COMANDO_APPROVABILE = (
+    "python .claude/skills/italiano-scrittura-anti-ai/scripts/profilo_voce.py corpus"
+)
+
+
+def _evento_approvabile(fratello: Optional[str] = None) -> str:
+    """L'evento di un comando approvabile, scritto come lo manda Claude Code.
+
+    Con `fratello` l'evento porta un campo in più, `altro`, che l'hook non
+    legge: serve a mettere l'annidamento accanto al comando, non dentro.
+    """
+    campo_in_piu = "" if fratello is None else ',"altro":' + fratello
+    return (
+        '{"tool_name":"Bash","cwd":' + json.dumps(_PROGETTO_DI_PROVA)
+        + campo_in_piu
+        + ',"tool_input":{"command":' + json.dumps(_COMANDO_APPROVABILE) + "}}"
+    )
+
+
+def _ingressi_ostili() -> List[Tuple[str, Optional[str]]]:
+    """Ingressi su cui l'hook deve uscire con 0 senza emettere decisioni.
+
+    Si costruiscono qui, e non a livello di modulo, perché pesano circa due
+    megabyte e servono solo all'autoprova: a livello di modulo l'hook li
+    avrebbe costruiti a ogni evento.
+
+    Il JSON annidato centomila volte esaurisce la pila prima di arrivare in
+    fondo. L'elenco ne copre le forme principali, non tutte: array e oggetti,
+    l'annidamento seguito da JSON non valido o mai chiuso, quello dentro i
+    campi che l'hook legge e quello in un campo che non legge, accanto a un
+    comando che altrimenti verrebbe approvato. In quest'ultimo caso l'hook
+    rinuncia a un'approvazione e Claude Code chiede la solita conferma: è il
+    verso giusto in cui sbagliare. Che l'elenco non sia completo non
+    toglie forza alla correzione, perché la guardia sta sul caricamento, prima
+    di qualunque lettura dei campi, e non dipende dalla forma dell'annidamento.
+
+    I due casi da 200 livelli si leggono con ogni decodificatore JSON, anche
+    con quello scritto in Python, che consuma due livelli di pila per ogni
+    annidamento. Non hanno la forma di un comando approvabile: provano che un
+    annidamento leggibile non fa morire l'hook.
+    Non provano che la guardia lo lasci passare, perché un evento scartato
+    dalla guardia esce allo stesso modo. Quello lo provano i casi di
+    `_eventi_approvabili`.
+    """
+    estrema = 100000
+    array_profondo = "[" * estrema + "]" * estrema
+    oggetto_profondo = '{"a":' * estrema + "1" + "}" * estrema
+    return [
+        ("array annidati centomila volte", array_profondo),
+        ("oggetti annidati centomila volte", oggetto_profondo),
+        ("annidamento profondo seguito da JSON non valido", array_profondo + "}"),
+        ("array profondo mai chiuso", "[" * estrema),
+        ("evento valido con tool_input profondo",
+         '{"tool_name":"Bash","tool_input":' + array_profondo + "}"),
+        ("evento valido con command profondo",
+         '{"tool_name":"Bash","tool_input":{"command":' + array_profondo + "}}"),
+        ("evento valido con cwd profondo",
+         '{"tool_name":"Bash","cwd":' + array_profondo
+         + ',"tool_input":{"command":"x"}}'),
+        ("tool_name profondo", '{"tool_name":' + array_profondo + "}"),
+        ("campo profondo accanto a un comando approvabile",
+         _evento_approvabile(array_profondo)),
+        ("flusso d'ingresso chiuso", None),
+        ("ingresso vuoto", ""),
+        ("annidamento leggibile di 200 livelli", "[" * 200 + "]" * 200),
+        ("command con 200 livelli di annidamento",
+         '{"tool_name":"Bash","tool_input":{"command":'
+         + "[" * 200 + "]" * 200 + "}}"),
+    ]
+
+
+def _eventi_approvabili() -> List[Tuple[str, str]]:
+    """Eventi leggibili che devono arrivare fino all'`allow` su stdout.
+
+    Una guardia che scartasse anche gli eventi leggibili renderebbe l'hook
+    muto per sempre, e i casi ostili non se ne accorgerebbero. Qui invece
+    l'esito atteso è la decisione, quindi un hook muto fa fallire l'autoprova.
+    Il secondo caso porta accanto al comando un campo di 200 livelli, una
+    profondità che si legge anche con il decodificatore JSON scritto in
+    Python: una guardia che scartasse già un annidamento di quella profondità
+    farebbe fallire l'autoprova qui. Una guardia che scartasse fra i 200
+    livelli e la soglia in cui la pila si esaurisce davvero, che cambia con
+    l'interprete e con la versione di Python, qui non si vedrebbe.
+    """
+    return [
+        ("evento approvabile", _evento_approvabile()),
+        ("evento approvabile con un campo di 200 livelli",
+         _evento_approvabile("[" * 200 + "]" * 200)),
+    ]
+
+
+def _lancia_main(flusso: Optional[IO[str]]) -> Tuple[Optional[str], str]:
+    """Lancia `main` con `flusso` al posto dello stdin, come farebbe Claude Code.
+
+    Restituisce il problema, o None se `main` è uscita con 0 senza sollevare
+    niente, insieme a ciò che ha scritto su stdout.
+    """
+    vecchio_ingresso = sys.stdin
+    vecchia_uscita = sys.stdout
+    scritto = io.StringIO()
+    sys.stdin = flusso
+    sys.stdout = scritto
+    try:
+        codice = main([])
+    except SystemExit as uscita:
+        codice = uscita.code
+    except Exception as errore:
+        # `Exception` e non `BaseException`: un Ctrl+C durante l'autoprova
+        # deve fermarla, non contare come un caso fallito.
+        return "solleva {}".format(type(errore).__name__), scritto.getvalue()
+    finally:
+        sys.stdin = vecchio_ingresso
+        sys.stdout = vecchia_uscita
+    if codice not in (0, None):
+        return "esce con {}".format(codice), scritto.getvalue()
+    return None, scritto.getvalue()
+
+
+def _flusso(ingresso: Optional[str]) -> Optional[IO[str]]:
+    """Il flusso d'ingresso che porta `ingresso`; None vale come stdin chiuso."""
+    return None if ingresso is None else io.StringIO(ingresso)
+
+
+def _esito_senza_decisione(flusso: Optional[IO[str]]) -> Optional[str]:
+    """Che cosa non va, o None se `main` esce con 0 senza scrivere niente.
+
+    Un ingresso che non si lascia leggere non può mai diventare un `allow`.
+    """
+    problema, scritto = _lancia_main(flusso)
+    if problema is None and scritto:
+        problema = "emette una decisione: {}".format(repr(scritto[:60]))
+    return problema
+
+
+def _esito_con_allow(flusso: Optional[IO[str]]) -> Optional[str]:
+    """Che cosa non va, o None se `main` esce con 0 e approva il comando."""
+    problema, scritto = _lancia_main(flusso)
+    if problema is not None:
+        return problema
+    try:
+        decisione = json.loads(scritto)["hookSpecificOutput"]["permissionDecision"]
+    except (ValueError, KeyError, TypeError):
+        return "nessuna decisione leggibile: {}".format(repr(scritto[:60]))
+    if decisione == "allow":
+        return None
+    return "decide {} invece di allow".format(repr(decisione))
+
+
+def _esito_senza_memoria() -> Optional[str]:
+    """Il ramo `MemoryError` della guardia, che un ingresso vero non riproduce.
+
+    Un ingresso tanto grande da esaurire la memoria non si costruisce in
+    un'autoprova. Al suo posto `main` riceve un flusso che solleva l'errore
+    appena lo si legge, come farebbe la lettura di un ingresso enorme. Dentro
+    c'è un evento che altrimenti verrebbe approvato: se un giorno l'hook lo
+    leggesse per un'altra strada, l'autoprova vedrebbe l'`allow` e fallirebbe.
+    """
+
+    class FlussoSenzaMemoria(io.StringIO):
+        def read(self, size: Optional[int] = -1) -> str:
+            raise MemoryError
+
+    return _esito_senza_decisione(FlussoSenzaMemoria(_evento_approvabile()))
+
+
 def autoprova() -> int:
     fallite = 0
     gruppi = (
@@ -641,19 +813,58 @@ def autoprova() -> int:
             fallite += 1
             print("FALLITA {} è stata accettata: {}".format(titolo, radice))
 
+    def registra(titolo: str, esito: Optional[str]) -> None:
+        nonlocal totale, fallite
+        totale += 1
+        if esito is None:
+            print("ok   {}".format(titolo))
+        else:
+            fallite += 1
+            print("FALLITA {}: {}".format(titolo, esito))
+
+    print("--- ingressi ostili: uscita 0 e nessuna decisione ---")
+    for titolo, ingresso in _ingressi_ostili():
+        registra(titolo, _esito_senza_decisione(_flusso(ingresso)))
+    registra("memoria esaurita durante la lettura", _esito_senza_memoria())
+
+    print("--- eventi approvabili, da capo a fondo: uscita 0 e allow ---")
+    for titolo, ingresso in _eventi_approvabili():
+        registra(titolo, _esito_con_allow(_flusso(ingresso)))
+
     print("")
     print("{} casi, {} falliti.".format(totale, fallite))
     return 1 if fallite else 0
+
+
+def leggi_evento(flusso: Optional[IO[str]]) -> object:
+    """L'evento letto dal flusso, oppure None se non si lascia leggere.
+
+    Il JSON annidato in profondità non solleva `ValueError`: l'interprete
+    esaurisce la pila e solleva `RecursionError`, che è una sottoclasse di
+    `RuntimeError`, e il traceback faceva uscire l'hook con 1. Un'uscita
+    diversa da 0 e da 2 su Windows senza Git Bash può bloccare il comando.
+    Lo stesso vale per un flusso d'ingresso chiuso (`sys.stdin` è `None`) e per
+    un ingresso così grande da esaurire la memoria. Tutti questi casi valgono
+    come il JSON non valido: nessuna decisione, uscita 0.
+
+    Dopo il caricamento l'evento non si attraversa mai in modo ricorsivo: si
+    leggono soltanto `tool_name`, `tool_input`, il `command` che sta dentro
+    `tool_input` e `cwd`, sempre a profondità fissa. Un campo che non ha il
+    tipo atteso vale come assente. Per questo la guardia sta qui e non altrove.
+    """
+    if flusso is None:
+        return None
+    try:
+        return json.load(flusso)
+    except (ValueError, OSError, RecursionError, MemoryError):
+        return None
 
 
 def main(argomenti: Optional[List[str]] = None) -> int:
     argomenti = list(sys.argv[1:] if argomenti is None else argomenti)
     if "--prova" in argomenti:
         return autoprova()
-    try:
-        evento = json.load(sys.stdin)
-    except (ValueError, OSError):
-        return 0
+    evento = leggi_evento(sys.stdin)
     # Un evento di forma inattesa (una lista al posto di un oggetto, un campo
     # di tipo diverso da quello del contratto) deve lasciare l'hook muto, non
     # farlo morire con un traceback: chi non decide non deve nemmeno disturbare.

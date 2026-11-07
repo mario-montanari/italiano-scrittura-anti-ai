@@ -131,13 +131,13 @@ La prima revisione tradizionale (rileggere e correggere) è troppo generica: si 
 
 **Risposta al secondo prompt (riscrittura):**
 
-> «Scrivere un buon articolo di marketing digitale non è difficile. Lo è farlo bene. Tre cose contano davvero: un titolo che superi i sei secondi di soglia attenzione (dati Microsoft 2022), le parole chiave nelle prime cento parole, una struttura a tre livelli massimi. Il resto è dettaglio. Lo dico dopo diversi anni di pubblicazioni con tassi di lettura molto diversi a seconda di quanto rispettavo questi tre punti.»
+> «Secondo me un buon articolo di marketing digitale parte da una domanda del lettore. La parola chiave giusta è quella stessa domanda, così come finisce nella casella di ricerca. Il titolo viene per ultimo. Lo scrivo a lavoro finito, quando ormai so che cosa il testo mantiene. Alla risposta concedo le prime trecento battute, perché chi si ferma lì abbia già avuto ciò che il titolo prometteva; poi a ogni passaggio che segue do un sottotitolo, scritto per chi scorre la pagina senza leggerla.»
 
-Differenze: ritmo variato (frase di sette parole, frase di quattro parole, periodo medio, periodo lungo), zero parole-spugna, numero verificabile con fonte, parentetica con tono diretto, prima persona dichiarativa con esperienza.
+Differenze: le cinque frasi contano 14, 15, 5, 13 e 37 parole, con una sotto le sei e una sopra le trentacinque, come vogliono la regola 15 di SKILL.md e la prima mossa della sezione 5. *Fondamentale* e *significativi* spariscono. Al posto di *diversi aspetti* c'è un punto di partenza, la domanda del lettore, e la formula *solo seguendo… è possibile* lascia il campo a regole dette in prima persona. La voce viene da quelle regole e da un'opinione dichiarata (*secondo me*), senza esperienze raccontate. Il solo numero, trecento battute, è una soglia che chi scrive si dà (*concedo*), e la stessa frase ne dice il motivo. Mancano di proposito misure e fonti: un dato come il tasso di lettura degli articoli entra se esiste ed è stato verificato sulla fonte, altrimenti la frase non si scrive (tecnica del numero verificabile, sezione 2).
 
 ### Regola operativa
 
-Integrare il doppio prompt come ultimo passaggio prima di consegnare o pubblicare. Non saltarlo mai sui testi importanti.
+Integrare il doppio prompt come ultimo passaggio prima di consegnare o pubblicare. Non saltarlo mai sui testi importanti. Nella riscrittura un numero entra come scelta di chi scrive, dichiarata e motivata, oppure come dato cercato e verificato sulla fonte, che si cita (sezione 2). Un'esperienza vissuta la racconta soltanto l'autore.
 
 ## 4. Voice calibration in cinque mosse
 

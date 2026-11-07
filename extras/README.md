@@ -118,13 +118,13 @@ parte.
 conta come verdetto solo un'uscita con codice 0 o 2: qualunque altro codice è
 un guasto, e un guasto di un hook `PreToolUse` in questa forma può bloccare il
 comando. L'hook esce con 0 su ogni evento che Claude Code gli passa, anche
-quando l'evento ha una forma inattesa (vuoto, non JSON, una lista al posto di
-un oggetto, campi del tipo sbagliato), quindi il rischio pratico è uno solo:
-che `python` non si trovi. Prima di installarlo, verificare che
-`python --version` risponda nel terminale. Dalla versione 2.1.295 di Claude
-Code si può aggiungere `"onFailure": "continue"` accanto a `"command"`, così
-un guasto lascia passare il comando invece di bloccarlo, e la conferma torna
-all'utente.
+quando l'evento ha una forma inattesa (vuoto, non JSON, annidato in
+profondità, una lista al posto di un oggetto, campi del tipo sbagliato),
+quindi il rischio pratico è uno solo: che `python` non si trovi. Prima di
+installarlo, verificare che `python --version` risponda nel terminale. Dalla
+versione 2.1.295 di Claude Code si può aggiungere `"onFailure": "continue"`
+accanto a `"command"`, così un guasto lascia passare il comando invece di
+bloccarlo, e la conferma torna all'utente.
 
 **Verifica prima di fidarsi.** L'hook porta con sé la propria prova e si
 controlla senza installarlo:
@@ -133,7 +133,7 @@ controlla senza installarlo:
 python extras/hooks/consenti-solo-profilo-voce.py --prova
 ```
 
-Elenca quarantatré casi con l'esito atteso, fra cui il comando concatenato, lo
+Elenca cinquantanove casi con l'esito atteso, fra cui il comando concatenato, lo
 script omonimo messo altrove, la cartella che imita gli ultimi tre nomi, il
 percorso di rete, l'eseguibile chiamato `python` messo in una cartella
 qualunque e le opzioni non previste. Leggerli è il modo più rapido per capire
@@ -175,7 +175,7 @@ Non serve usarli tutti e tre: dipende dalle interfacce che usi e da quanto rigor
 ## Note importanti
 
 - I template sono **esempi generici**, pensati per chiunque scarichi la skill. Se vuoi aggiungere informazioni personali (professione, contesto di lavoro, preferenze stilistiche), inseriscile **prima** delle regole linguistiche, non al posto.
-- Le user preferences hanno un limite pratico di lunghezza intorno ai 2-3 KB. Il template è dimensionato per stare dentro il limite e lasciare spazio a tue aggiunte.
+- L'articolo ufficiale di Anthropic sulla personalizzazione non indica un limite di lunghezza per le user preferences, ma il campo potrebbe averne uno. Il blocco base del template pesa circa 3.000 caratteri, e la versione estesa, con il profilo d'esempio, circa 3.400: se il campo rifiuta o taglia il testo, togli le voci che ti servono meno.
 - Il CLAUDE.md non ha limiti tecnici stretti, ma più è lungo più appesantisce ogni sessione di Claude Code. Mantieni l'essenziale.
 - Per personalizzazioni più sofisticate (cambio di stile, aggiunta di pattern specifici al tuo settore), considera di **creare una skill derivata** invece di sovraccaricare CLAUDE.md o preferences.
 
@@ -183,7 +183,7 @@ Non serve usarli tutti e tre: dipende dalle interfacce che usi e da quanto rigor
 
 **Posso usare CLAUDE.md o user preferences senza installare la skill?**
 
-Sì. I template sono autonomi: contengono le 20 regole essenziali estratte dalla skill, formulate come istruzioni dirette. Funzionano anche senza la skill. Il vantaggio della skill è che fornisce in più tutto il contesto profondo (grammatica avanzata, catalogo lessicale completo, metodologie operative come l'audit pass in due passaggi, voice calibration, sei mosse di umanizzazione, eccetera).
+Sì. I template sono autonomi: contengono le regole essenziali estratte dalla skill, formulate come istruzioni dirette. Il `CLAUDE.md` ne ha 22. Le user preferences le riprendono in forma più compatta, senza quella sul codice, e aggiungono il periodo ipotetico dell'irrealtà. Funzionano anche senza la skill. Il vantaggio della skill è che fornisce in più tutto il contesto profondo (grammatica avanzata, catalogo lessicale completo, metodologie operative come l'audit pass in due passaggi, voice calibration, sei mosse di umanizzazione, eccetera).
 
 **Cosa succede se le tre fonti dicono cose diverse?**
 
