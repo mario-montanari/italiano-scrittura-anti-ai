@@ -8,18 +8,19 @@ Questa cartella contiene **risorse complementari** alla skill `italiano-scrittur
 - **`user-preferences.example.md`**: template per le user preferences di claude.ai, da incollare in Settings, Profile, User Preferences.
 - **`hooks/consenti-solo-profilo-voce.py`**: hook `PreToolUse` facoltativo, per chi calibra spesso e vuole togliere la conferma al solo lancio dello strumento. Istruzioni sotto.
 
-## I due comandi si sono spostati
+## I comandi stanno in `commands/`
 
-`/calibra-voce` e `/difendi` stavano qui dentro, come file da copiare a mano in `.claude/commands/`. Dalla versione 1.4.0 stanno in `commands/`, nella radice della repo, perché quella è la posizione che li rende comandi veri del plugin: chi installa il plugin se li ritrova già pronti, senza copiare niente.
+`/calibra-voce` e `/difendi` stavano qui dentro, come file da copiare a mano in `.claude/commands/`. Dalla versione 1.4.0 stanno in `commands/`, nella radice della repo, perché quella è la posizione che li rende comandi veri del plugin: chi installa il plugin se li ritrova già pronti, senza copiare niente. `/traduci`, arrivato con la versione 1.6.0, è nato direttamente lì.
 
-Chi non usa il plugin non ha perso nulla: quei due file restano semplici Markdown e si copiano come prima, solo da un'altra cartella.
+Chi non usa il plugin non ha perso nulla: i tre file restano semplici Markdown e si copiano come prima, solo da un'altra cartella.
 
 - `commands/calibra-voce.md` → `~/.claude/commands/calibra-voce.md` per averlo ovunque, oppure `.claude/commands/calibra-voce.md` dentro un progetto.
 - `commands/difendi.md` → stesso discorso.
+- `commands/traduci.md` → stesso discorso.
 
-Copiati a mano, i due comandi funzionano lo stesso: cercano i file della skill nelle tre posizioni possibili e, quando non trovano niente, ricadono sul metodo scritto al loro interno. Cambia la precisione, non la natura del risultato.
+Copiati a mano, i tre comandi funzionano lo stesso: cercano i file della skill nelle tre posizioni possibili e, quando non trovano niente, ricadono sul metodo scritto al loro interno. Cambia la precisione, non la natura del risultato.
 
-Due cose che il comando non fa, per scelta. Non esegue alcuno strumento sul testo contestato per stabilirne la natura, perché un punteggio prodotto lì varrebbe quanto quello che si sta contestando. Non indica modifiche per abbassare il punteggio di un rilevatore: una riscrittura successiva all'accusa distrugge la prova di processo e somiglia a una manomissione.
+Due cose che `/difendi` non fa, per scelta. Non esegue alcuno strumento sul testo contestato per stabilirne la natura, perché un punteggio prodotto lì varrebbe quanto quello che si sta contestando. Non indica modifiche per abbassare il punteggio di un rilevatore: una riscrittura successiva all'accusa distrugge la prova di processo e somiglia a una manomissione.
 
 ## L'hook facoltativo per lo strumento
 

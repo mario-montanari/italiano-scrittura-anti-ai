@@ -51,6 +51,7 @@ Scorrere in ordine. Ogni voce è un controllo discreto, con azione pratica.
 - [ ] **Anglicismi valutati uno per uno**: se esiste alternativa italiana, usarla (*mindset→mentalità, deadline→scadenza, feedback→riscontro, target→pubblico, skill→competenza*)
 - [ ] **Falsi amici controllati**: *realizzare* per *rendersi conto*, *attuale* per *reale*, *eventualmente* per *alla fine*, *consistente* per *coerente*, *fare senso* per *avere senso*
 - [ ] **Nessun verbo ibrido** stile *sharare, downloadare, brieffare, pitchare, googlare*
+- [ ] **Testo tradotto**: passata anche la checklist della sezione 9 di `tradurre-in-italiano.md`
 
 ### Strutture formulaiche e pattern
 
@@ -97,7 +98,7 @@ Scorrere in ordine. Ogni voce è un controllo discreto, con azione pratica.
 
 ### Coerenza di registro
 
-- [ ] **Coerenza del tu / Lei**: stesso riferimento dall'inizio alla fine
+- [ ] **Coerenza del tu / lei**: stesso riferimento dall'inizio alla fine
 - [ ] **Coerenza di formalità**: non oscillare fra registro formale e informale senza ragione
 - [ ] **Coerenza terminologica**: termini tecnici uniformi; se si introduce un sinonimo, chiarire il rapporto
 

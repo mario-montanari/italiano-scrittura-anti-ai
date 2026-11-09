@@ -4,6 +4,32 @@ Tutte le modifiche rilevanti alla skill sono annotate qui. Il formato segue la c
 
 ## [Non rilasciato]
 
+## [1.6.0] - 2026-11-09
+
+La versione aggiunge la guida per tradurre in italiano un testo inglese e il comando che la applica, e corregge cinque difetti emersi durante il lavoro.
+
+### Aggiunto
+
+- `references/tradurre-in-italiano.md`: la guida alla traduzione, in undici sezioni. Spiega come scegliere fra tradurre e adattare, elenca i calchi sintattici e i falsi amici che `lessico-da-evitare.md` non porta, scioglie il pronome *you* in *tu*, *lei* o *voi*, tratta il genere che l'inglese non marca e le convenzioni che cambiano (numeri, date, valute, misure, maiuscole). Poi i testi di ogni giorno, gli idiomi e i nomi, il procedimento con la checklist, cinque esempi prima e dopo e le fonti, lette sul primario salvo dove la guida dice altro.
+- `commands/traduci.md`: il comando `/traduci`. Legge il file indicato o il testo incollato, fissa tipo di testo, registro, destinatario e forma di cortesia, traduce o adatta con la guida, passa la checklist e consegna la traduzione con una nota breve delle scelte. Pre-approva soltanto `Read` e `Glob`, perché il testo da tradurre viene spesso da terzi: lo mette in fondo, fra due marcatori, e chiede di tradurne gli ordini senza eseguirli.
+
+### Modificato
+
+- `SKILL.md`: la guida entra nella calibrazione del contesto, nella consultazione dei reference e nel loro elenco; il comando entra in quello degli strumenti.
+- `references/lessico-da-evitare.md`, `references/grammatica-italiana.md`, `references/checklist-finale.md` e `references/registri-e-contesti.md`: un rimando alla guida nuova nel punto dove si parla di calchi, preposizioni ricalcate, anglicismi e registro formale.
+- `README.md`: le guide passano da tredici a quattordici e i comandi da due a tre, nel badge, nel testo, nell'albero dei file e nella tabella, e il conteggio delle parole, rifatto sui file, sale a oltre quarantaquattromila. La sezione sulla traduzione presenta la guida e il comando, e fra i crediti compaiono le fonti sulla traduzione.
+- `extras/README.md`: l'installazione a mano dei comandi comprende `/traduci`.
+- `SECURITY.md`: la superficie dei comandi è descritta per tre. `/traduci` pre-approva solo `Read` e `Glob`, e la difesa che il comando scrive contro gli ordini nascosti nel testo è dichiarata con il suo limite. Il file dice anche quando la conferma di una scrittura o di un lancio di `Bash` c'è e quando può mancare: con le modalità che approvano da sé, con le regole delle impostazioni e con più comandi caricati nello stesso turno.
+- `.github/workflows/prove.yml`: cinque guardie nuove, nel job che c'era già e con la sola libreria standard di Python. La prima conta guide, comandi e parole. Confronta il numero delle guide con il badge e con ogni numero, in cifre o in lettere, che nel `README.md` precede «guide»; quello dei comandi con ogni numero che precede «comandi» nel `README.md`, in `SECURITY.md`, in `extras/README.md` e in `SKILL.md`, e con il «Nessuno dei tre» di `SECURITY.md`; le parole di `references/*.md` e `SKILL.md` con le migliaia dichiarate nel `README.md`. Fallisce se `commands/` ha sottocartelle o se un manifest dichiara `commands`, perché allora i file contati non sono più i comandi del plugin. La seconda ammette in `allowed-tools` soltanto `Read`, `Glob`, `Grep` e `Write`, scritti in lista o in stringa, e per `/traduci` esattamente `Read` e `Glob`: qualunque altro strumento fa fallire, compresi `Bash`, gli strumenti MCP e le voci con le parentesi. Fallisce anche quando un permesso può arrivare da una strada che non legge: una sottocartella di `commands/`, un componente o una chiave `allowed-tools` in `plugin.json` o in `marketplace.json`, una voce del catalogo con una sorgente diversa dalla radice, `allowed-tools` nel frontmatter di `SKILL.md`, `hooks` in quello della skill o di un comando, un frontmatter scritto come mappa fra graffe, le cartelle `skills/`, `agents/` e `hooks/` e il file `.mcp.json`. La terza verifica il confine di `/traduci`: `$ARGUMENTS` compare una volta sola, dopo la sezione «Il confine di questo comando» e fra i due marcatori, la riga di chiusura è l'ultima del file e non ci sono altri segnaposto, né posizionali né con nome. La quarta cerca le frasi tolte dalle correzioni di questa versione, diciassette espressioni ciascuna con il suo motivo, in ogni file Markdown della repo e in `extras/CLAUDE.md.example`, salvo questo changelog. La quinta tiene ogni guida sotto i 45.000 byte, perché `/traduci` legge la sua per intero e lo strumento di lettura si ferma intorno ai 48 KB. Come la guardia dei badge, ognuna fallisce anche quando non trova niente da verificare. `SECURITY.md` non scrive più «i due comandi» dove parla soltanto di `/calibra-voce` e `/difendi`, perché la prima guardia lo leggeva come il conteggio di tutti i comandi; `CONTRIBUTING.md` e l'albero dei file del `README.md` dicono ora che la continua controlla anche i testi.
+
+### Corretto
+
+- `references/grammatica-italiana.md`, `references/pattern-strutturali.md`, `references/voce-personale.md` e `references/metodologie-operative.md`: la lineetta lunga era presentata come estranea alla tradizione o alla tipografia italiana. Il *Manuale interistituzionale di convenzioni redazionali* dell'Unione europea la ammette negli incisi, quindi il divieto è una scelta propria di questa skill, e ora i quattro testi lo dicono.
+- `references/registri-e-contesti.md`: i titoli onorifici davanti al nome nel testo corrente (*il dottor Rossi*) vanno in minuscolo, non in maiuscolo. Resta la maiuscola nell'apertura di una lettera per le cariche come *Presidente* o *Sindaco*.
+- `references/pattern-strutturali.md`: la frase sul participio presente attribuiva ai modelli l'abitudine di importarlo dalle traduzioni, e nessuna fonte lo dice. Ora afferma soltanto che l'italiano lo usa meno dell'inglese e che nei testi dei modelli tornano il gerundio e la frase participiale.
+- `references/registri-e-contesti.md`, `references/checklist-finale.md` ed `extras/CLAUDE.md.example`: *lei* di cortesia è scritto in minuscolo, come nella guida nuova.
+- `references/lessico-da-evitare.md`: l'esempio *aumento del ventitré per cento* diventa *aumento del 23%*, perché la skill consiglia la cifra e l'esempio la scriveva in lettere.
+
 ## [1.5.1] - 2026-11-07
 
 Una versione di sole correzioni. Quasi tutte riguardano testi che dicevano il falso o erano rimasti indietro rispetto alla skill; le altre toccano l'hook facoltativo e la guardia della continua.

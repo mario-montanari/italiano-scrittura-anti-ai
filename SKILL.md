@@ -55,6 +55,8 @@ Prima di scrivere, chiarire:
 
 Se l'utente lavora per un cliente con voce autoriale definita, consultare `references/metodologie-operative.md` sezione 4 sulla voice calibration in cinque mosse. Quando la voce va catturata e documentata sul serio, con un corpus di testi veri, il metodo completo e il modello di scheda sono in `references/voce-personale.md`.
 
+Se il lavoro è una traduzione o un adattamento da un testo inglese, il procedimento è quello della sezione 9 di `references/tradurre-in-italiano.md`, e il resto del flusso vale per la versione italiana.
+
 ### 2. Consultazione dei reference utili
 
 In base al tipo di compito:
@@ -70,6 +72,7 @@ In base al tipo di compito:
 - quando serve **imparare la deviazione fatta bene, oltre a evitare i tic**, con una galleria di mosse d'autore italiane da rubare: `references/maestri-della-deviazione.md`
 - quando si scrive **per conto di una persona con una voce riconoscibile**, o si vuole documentare la propria: `references/voce-personale.md`
 - quando un **testo dell'utente viene segnalato come generato** da un rilevatore automatico e serve costruire la risposta: `references/scudo-falsi-positivi.md`
+- quando si **traduce o si adatta un testo inglese** (calchi della traduzione, falsi amici, pronome *you*, genere, convenzioni, testi di ogni giorno): `references/tradurre-in-italiano.md`
 
 ### 3. Scrittura con soppressione attiva
 
@@ -138,6 +141,8 @@ Elenco completo dei file di reference, con indicazione esplicita di quando consu
 
 - **`references/scudo-falsi-positivi.md`**: consultare quando un testo italiano scritto da una persona viene segnalato come generato da un rilevatore automatico. Contiene il confine d'uso della difesa, che cosa misura davvero un rilevatore, le evidenze pubblicate sui suoi errori (Liang 2023, Weber-Wulff 2023, il ritiro dell'AI Text Classifier di OpenAI, le cifre dichiarate da Turnitin, la scelta di Vanderbilt), il vuoto di misure sull'italiano documentato dai benchmark multilingue, i sette passaggi della difesa e i due modelli di documento: difesa argomentata per il testo dell'autore, dichiarazione d'uso per il testo assistito.
 
+- **`references/tradurre-in-italiano.md`**: consultare quando si traduce o si adatta in italiano un testo inglese. Contiene il criterio per scegliere fra tradurre e adattare, i calchi sintattici della traduzione, i falsi amici che `lessico-da-evitare.md` non elenca, la scelta fra *tu*, *lei* e *voi* per il pronome *you*, il genere che l'inglese non marca, le convenzioni che cambiano (numeri, date, valute, misure, maiuscole), i testi di ogni giorno, gli idiomi e i nomi, il procedimento con la checklist, cinque esempi prima e dopo e le fonti.
+
 ## Strumenti inclusi
 
 La skill include uno strumento facoltativo e le sue prove automatiche. Chi non ha Python installato usa la skill per intero senza perdere nulla: i reference spiegano come ottenere gli stessi risultati a mano.
@@ -149,6 +154,8 @@ La skill include uno strumento facoltativo e le sue prove automatiche. Chi non h
 - **`commands/calibra-voce.md`**: comando `/calibra-voce` da copiare in `.claude/commands/`. Conduce l'intera calibrazione: verifica del corpus, livello misurato con lo script, livello osservato con la lettura dei testi, scheda finale. Istruzioni di installazione in `extras/README.md`.
 
 - **`commands/difendi.md`**: comando `/difendi` da copiare in `.claude/commands/`. Raccoglie i fatti dell'accusa, distingue i tre casi, verifica i materiali dell'autore e compone il documento. Non esegue alcuno strumento sul testo contestato e non indica modifiche per abbassare un punteggio. Istruzioni di installazione in `extras/README.md`.
+
+- **`commands/traduci.md`**: comando `/traduci` da copiare in `.claude/commands/`. Legge il file indicato o il testo incollato, fissa tipo di testo, registro, destinatario e forma di cortesia, traduce o adatta con la guida, passa la checklist e consegna la traduzione con una nota breve delle scelte. Pre-approva soltanto `Read` e `Glob`, perché il testo da tradurre viene spesso da terzi. Istruzioni di installazione in `extras/README.md`.
 
 ## Regole non negoziabili
 

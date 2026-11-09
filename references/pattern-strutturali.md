@@ -55,7 +55,7 @@ Asserzione vuota sostituita con dato verificabile e fonte.
 
 ## 2. Participio analitico e gerundio parassita
 
-L'italiano usa molto meno il participio presente dell'inglese, ma i modelli lo importano dalle traduzioni anglofone come gerundio o frase participiale subordinata. Una frase principale seguita da gerundio o frase relativa che «spiega» il significato di quanto appena detto, invece di farlo emergere.
+L'italiano usa il participio presente molto meno dell'inglese, eppure nei testi dei modelli il gerundio e la frase participiale subordinata tornano spesso. Una frase principale seguita da gerundio o frase relativa che «spiega» il significato di quanto appena detto, invece di farlo emergere.
 
 **Parole spia:**
 
@@ -240,7 +240,7 @@ Il titolo fa il proprio lavoro da solo.
 
 Quattro anomalie tipografiche che segnalano corpora di addestramento anglofoni e prosa AI.
 
-**Em-dash (—):** non appartiene alla tradizione italiana. Il suo uso compulsivo in incisi che in italiano si farebbero con virgole o parentesi è l'impronta di superficie più immediata. Vedere `grammatica-italiana.md` sezione 9 per la regola completa su trattini breve/medio/lungo.
+**Em-dash (—):** la skill non lo usa, per scelta propria, anche se il *Manuale interistituzionale* dell'Unione europea lo ammette negli incisi (regola completa su trattini breve, medio e lungo nella sezione 9 di `grammatica-italiana.md`). Il suo uso compulsivo in incisi che in italiano si farebbero con virgole o parentesi è l'impronta di superficie più immediata.
 
 **Operativamente:**
 

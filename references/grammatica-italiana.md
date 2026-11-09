@@ -211,9 +211,9 @@ L'italiano distingue tre forme tipografiche distinte:
 - inciso: *la riforma, voluta dal governo – e contestata dall'opposizione –, è entrata in vigore a gennaio*
 - preceduto e seguito da spazio quando apre un inciso
 
-**Trattino lungo o em-dash (—)**: **non appartiene alla tradizione italiana** e va evitato sistematicamente.
+**Trattino lungo o em-dash (—)**: questa skill **non lo usa**, per scelta propria, anche se il *Manuale interistituzionale di convenzioni redazionali* dell'Unione europea lo ammette come alternativa alle parentesi negli incisi (punti 4.2.3 e 10.1.10).
 
-L'italiano colto usa virgole o parentesi tonde per gli incisi; al massimo il trattino medio con parsimonia. La sovrapresenza di em-dash nei testi italiani contemporanei è l'impronta tipografica più evidente dei modelli GPT, Claude e Gemini, addestrati su corpora anglofoni dove il trattino lungo è segno canonico.
+Per gli incisi la skill usa virgole o parentesi tonde, al massimo il trattino medio con parsimonia. Il motivo della scelta è la sovrapresenza di em-dash nei testi italiani contemporanei, l'impronta tipografica più evidente dei modelli GPT, Claude e Gemini, addestrati su corpora anglofoni dove il trattino lungo è segno canonico.
 
 **Operativamente:**
 
@@ -282,6 +282,8 @@ Le preposizioni *di, a, da, in, con, su, per, tra, fra* reggono costruzioni spes
 - *basato su* (da *based on*): forma ormai accettata ma abusata. Alternative: *fondato su, sulla base di, in base a*.
 - *in termini di* (da *in terms of*): meglio *quanto a, per quanto riguarda, sul piano di*.
 - *a livello di* (da *at the level of*): quasi sempre eliminabile.
+
+Gli altri calchi della traduzione, sintattici e lessicali: `tradurre-in-italiano.md` sezioni 2 e 3.
 
 **Concordanze del participio passato:**
 

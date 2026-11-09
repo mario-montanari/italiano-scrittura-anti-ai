@@ -222,7 +222,7 @@ Calvino nelle *Città invisibili* scrive: «D'una città non godi le sette o le 
 
 ### Seconda mossa: uso degli incisi e delle parentesi
 
-L'italiano colto predilige la sintassi a intarsio, con glosse racchiuse fra virgole, trattini medi o parentesi tonde (mai em-dash). Eco ne è il maestro.
+L'italiano colto predilige la sintassi a intarsio, con glosse racchiuse fra virgole, trattini medi o parentesi tonde (mai em-dash, per la regola 1 della skill). Eco ne è il maestro.
 
 Un paragrafo su due dovrebbe avere un inciso, uno su quattro una parentesi. Esempio:
 

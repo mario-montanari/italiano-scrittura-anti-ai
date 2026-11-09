@@ -240,3 +240,802 @@ jobs:
               print(f"Confronti eseguiti e corrispondenti: {confronti}. "
                     f"Confronti saltati: {saltati}.")
           PY
+
+      # Il README dichiara quante sono le guide e i comandi e quante migliaia
+      # di parole porta la skill, e con la 1.6.0 quei numeri sono cambiati
+      # tutti insieme. Qui si contano i file e si confronta ogni numero
+      # scritto, in cifre o in lettere, anche in SECURITY.md, in
+      # extras/README.md e in SKILL.md. Le parole sono sequenze di caratteri
+      # separate da spazi, come per «wc -w». Il wc di Git per Windows, nella
+      # locale C, prende per uno spazio il byte 0xA0, l'ultimo della «à» in
+      # UTF-8, e conta una parola in più a ogni «à» seguita da un segno: sui
+      # file della 1.6.0 il suo totale supera di oltre cento parole quello vero.
+      # Limite dichiarato, come nella guardia dei badge: si cercano solo il
+      # numero davanti a «guide» o a «comandi», «Nessuno dei» e «oltre ...
+      # parole». Un numerale storpiato fino a non somigliare a nessun
+      # numerale («quatordici») passa per una parola qualunque, e il suo
+      # numero non si controlla.
+      - name: Guide, comandi e parole contati
+        run: |
+          python - <<'PY'
+          import json
+          import pathlib
+          import re
+          import sys
+
+          # I numerali da 1 a 99 li scrive una funzione sola, che serve nelle
+          # due direzioni: per leggere «quattordici guide» e per scrivere
+          # «quarantacinquemila».
+          UNITA = ["", "uno", "due", "tre", "quattro", "cinque", "sei",
+                   "sette", "otto", "nove"]
+          DA_DIECI = ["dieci", "undici", "dodici", "tredici", "quattordici",
+                      "quindici", "sedici", "diciassette", "diciotto",
+                      "diciannove"]
+          DECINE = ["", "", "venti", "trenta", "quaranta", "cinquanta",
+                    "sessanta", "settanta", "ottanta", "novanta"]
+
+          def in_lettere(numero):
+              if not 1 <= numero <= 99:
+                  raise ValueError(f"{numero} è fuori dall'intervallo 1-99")
+              if numero < 10:
+                  return UNITA[numero]
+              if numero < 20:
+                  return DA_DIECI[numero - 10]
+              decina, unita = divmod(numero, 10)
+              radice = DECINE[decina]
+              # Davanti a «uno» e a «otto» la decina perde la vocale finale
+              # (ventuno, quarantotto), e «tre» in fondo vuole l'accento
+              # (ventitré).
+              if unita in (1, 8):
+                  radice = radice[:-1]
+              if unita == 3:
+                  return radice + "tré"
+              return radice + UNITA[unita]
+
+          def migliaia_in_lettere(migliaia):
+              # «Mille» fa eccezione. Negli altri casi «mila» si attacca al
+              # numerale, e l'accento di «tré» cade perché non sta più in
+              # fondo (ventitremila).
+              if migliaia == 1:
+                  return "mille"
+              base = in_lettere(migliaia)
+              if base.endswith("tré"):
+                  base = base[:-1] + "e"
+              return base + "mila"
+
+          # Una funzione sbagliata farebbe passare un numero falso: prima di
+          # servire si prova da sola sui casi in cui l'italiano devia.
+          campioni = [
+              (in_lettere, 3, "tre"), (in_lettere, 11, "undici"),
+              (in_lettere, 17, "diciassette"), (in_lettere, 21, "ventuno"),
+              (in_lettere, 23, "ventitré"), (in_lettere, 28, "ventotto"),
+              (in_lettere, 41, "quarantuno"), (in_lettere, 98, "novantotto"),
+              (migliaia_in_lettere, 1, "mille"),
+              (migliaia_in_lettere, 21, "ventunomila"),
+              (migliaia_in_lettere, 23, "ventitremila"),
+              (migliaia_in_lettere, 45, "quarantacinquemila"),
+          ]
+          for funzione, numero, atteso in campioni:
+              if funzione(numero) != atteso:
+                  print(f"La funzione scrive {numero} come "
+                        f"«{funzione(numero)}» invece di «{atteso}».")
+                  sys.exit(1)
+
+          DA_LETTERE = {in_lettere(n): n for n in range(1, 100)}
+          # Per la frase sulle parole il valore si tiene in unità, così una
+          # cifra («44.000») e un numerale («quarantaquattromila») si
+          # confrontano con lo stesso totale.
+          DA_MIGLIAIA = {migliaia_in_lettere(n): n * 1000
+                         for n in range(1, 100)}
+          # Lo stesso elenco della guardia dei badge. Serve a riconoscere un
+          # numerale che la funzione non sa leggere («ventitre», «tré»),
+          # perché non passi per una parola qualunque.
+          numerali = (
+              "zero|uno|un|due|tr[eéè]|quattro|cinque|sei|sette|otto|nove|"
+              "dieci|undici|dodici|tredici|quattordici|quindici|sedici|"
+              "diciassette|diciotto|diciannove|venti|vent|trenta|trent|"
+              "quaranta|quarant|cinquanta|cinquant|sessanta|sessant|"
+              "settanta|settant|ottanta|ottant|novanta|novant|cento|cent|"
+              "mille|mila|milione|milioni"
+          )
+          NUMERALE = re.compile(rf"(?:(?:{numerali})-?)+", re.IGNORECASE)
+
+          def leggi(grezza, vocabolario):
+              # Restituisce (numero, None), oppure (None, motivo) se la
+              # parola dichiara un numero che non si può leggere, oppure
+              # (None, None) se non è un numero («le guide», «di guide»).
+              parola = grezza.strip("*_`()[]«»\"'.,;:")
+              # Una cifra vale intera («14») o con il punto delle migliaia a
+              # gruppi di tre («44.000»): «4.4.000» non diventa 44.000.
+              if re.fullmatch(r"[0-9]+|[0-9]{1,3}(?:\.[0-9]{3})+", parola):
+                  return int(parola.replace(".", "")), None
+              if re.search(r"[0-9]", parola):
+                  return None, (f"«{grezza}» contiene una cifra ma non è un "
+                                f"numero puro, va scritta la sola cifra")
+              if parola.lower() in vocabolario:
+                  return vocabolario[parola.lower()], None
+              if NUMERALE.fullmatch(parola):
+                  return None, (f"«{parola}» sembra un numerale ma non si "
+                                f"riconosce")
+              return None, None
+
+          errori = []
+          confronti = []
+
+          def controlla(nome, testo, modello, vocabolario, vero, cosa,
+                        nota="", piu_di=None):
+              # Confronta con il valore vero ogni numero che il modello
+              # cattura, e restituisce quante volte il testo ne dichiara uno.
+              # Con piu_di, il numero dichiarato deve anche stare sotto quel
+              # totale: «oltre 44.000 parole» con 44.000 parole esatte non
+              # torna.
+              dichiarati = 0
+              for trovato in re.finditer(modello, testo, re.IGNORECASE):
+                  riga = testo.count("\n", 0, trovato.start(1)) + 1
+                  dove = f"{nome}:{riga}, {cosa}"
+                  numero, motivo = leggi(trovato.group(1), vocabolario)
+                  if motivo:
+                      dichiarati += 1
+                      print(f"{dove}: {motivo}")
+                      errori.append(f"{dove}: {motivo}")
+                  elif numero is not None:
+                      dichiarati += 1
+                      confronti.append(dove)
+                      valido = numero == vero and (piu_di is None
+                                                   or numero < piu_di)
+                      esito = "torna" if valido else "NON torna"
+                      if numero == vero and not valido:
+                          nota += f", ma «oltre» ne vuole più di {numero}"
+                      print(f"{dove}: scritto {numero}, nei file {vero}"
+                            f"{nota}, {esito}")
+                      if not valido:
+                          errori.append(f"{dove}: scritto {numero}, "
+                                        f"nei file {vero}{nota}")
+              return dichiarati
+
+          def leggi_testo(nome):
+              # Lo spazio che non va a capo, come carattere o come «&nbsp;»,
+              # separa la cifra dalla parola come uno spazio normale.
+              contenuto = pathlib.Path(nome).read_text(encoding="utf-8")
+              return contenuto.replace("&nbsp;", " ").replace("\u00a0", " ")
+
+          def file_md(cartella):
+              # L'estensione si confronta in minuscolo: su Linux «*.md» non
+              # troverebbe un «.MD», che su Windows invece si conta.
+              return sorted(p for p in pathlib.Path(cartella).glob("*")
+                            if p.is_file() and p.suffix.lower() == ".md")
+
+          ILLEGGIBILE = None
+
+          def voci_dei_manifesti():
+              # Il manifest del plugin e ogni voce di plugins[] nel catalogo:
+              # tutti e due possono dichiarare componenti. Un file che non si
+              # legge come oggetto JSON torna con la chiave ILLEGGIBILE, che
+              # non è una stringa e quindi non può venire dal JSON.
+              voci = []
+              for nome in (".claude-plugin/plugin.json",
+                           ".claude-plugin/marketplace.json"):
+                  percorso = pathlib.Path(nome)
+                  if not percorso.is_file():
+                      continue
+                  try:
+                      dato = json.loads(percorso.read_text(encoding="utf-8-sig"))
+                  except (ValueError, OSError, RecursionError) as errore:
+                      voci.append((nome, {ILLEGGIBILE: str(errore)}))
+                      continue
+                  if not isinstance(dato, dict):
+                      voci.append((nome, {ILLEGGIBILE: "non è un oggetto"}))
+                  elif nome.endswith("plugin.json"):
+                      voci.append((nome, dato))
+                  else:
+                      elenco = dato.get("plugins", [])
+                      if not isinstance(elenco, list):
+                          elenco = [elenco]
+                      for i, voce in enumerate(elenco):
+                          if not isinstance(voce, dict):
+                              voce = {ILLEGGIBILE: "non è un oggetto"}
+                          voci.append((f"{nome}, plugins[{i}]", voce))
+              return voci
+
+          guide = file_md("references")
+          comandi = file_md("commands")
+          print(f"Nei file: {len(guide)} guide in references/, "
+                f"{len(comandi)} comandi in commands/.")
+          # Claude Code carica anche i comandi delle sottocartelle, e un
+          # «commands» nel manifest prende il posto della cartella: in tutti
+          # e due i casi i file contati qui non sarebbero più i comandi del
+          # plugin. La repo tiene i comandi su un livello solo.
+          cartelle = sorted(p.as_posix() for p in
+                            pathlib.Path("commands").rglob("*") if p.is_dir())
+          if cartelle:
+              errori.append(f"commands/ contiene cartelle "
+                            f"({', '.join(cartelle)}): i comandi che portano "
+                            f"non si contano")
+          for manifesto, voce in voci_dei_manifesti():
+              if ILLEGGIBILE in voce:
+                  errori.append(f"{manifesto}: non si legge "
+                                f"({voce[ILLEGGIBILE]})")
+              elif "commands" in voce:
+                  errori.append(f"{manifesto}: dichiara «commands», che "
+                                f"prende il posto della cartella commands/")
+          readme = leggi_testo("README.md")
+
+          # Si controllano tutti i badge delle guide, non il primo: un badge
+          # vecchio dentro un commento non deve coprire quello che si vede.
+          badge = re.findall(r"badge/guide-([0-9]+)-", readme)
+          if not badge:
+              print("README.md: il badge delle guide non c'è")
+              errori.append("README.md: il badge delle guide non c'è")
+          for valore in badge:
+              confronti.append("badge")
+              print(f"README.md, badge delle guide: {valore}, "
+                    f"nei file {len(guide)}")
+              if int(valore) != len(guide):
+                  errori.append(f"README.md, badge delle guide: "
+                                f"{valore}, nei file {len(guide)}")
+
+          # Fra il numero e la parola possono stare i segni dell'enfasi
+          # («tre **comandi**»): senza, quella frase sfuggirebbe.
+          ENFASI = r"[*_`]*"
+          if controlla("README.md", readme, rf"(\S+)\s+{ENFASI}guide\b",
+                       DA_LETTERE, len(guide), "guide") == 0:
+              errori.append("README.md: nessun numero davanti a «guide», "
+                            "il controllo non verificherebbe niente")
+
+          # README.md, SECURITY.md ed extras/README.md dichiarano oggi il
+          # numero dei comandi: se la frase sparisse, o cambiasse forma fino
+          # a non farsi trovare, il controllo tacerebbe.
+          for nome in ("README.md", "SECURITY.md", "extras/README.md",
+                       "SKILL.md"):
+              dichiarati = controlla(nome, leggi_testo(nome),
+                                     rf"(\S+)\s+{ENFASI}comandi\b",
+                                     DA_LETTERE, len(comandi), "comandi")
+              if nome != "SKILL.md" and dichiarati == 0:
+                  errori.append(f"{nome}: nessun numero davanti a "
+                                f"«comandi», il controllo non verificherebbe "
+                                f"niente")
+          # Solo la frase sui permessi («Nessuno dei tre pre-approva»), non
+          # ogni «nessuno dei» di SECURITY.md.
+          if controlla("SECURITY.md", leggi_testo("SECURITY.md"),
+                       rf"\bnessuno\s+dei\s+(\S+)\s+(?:{ENFASI}comandi"
+                       rf"{ENFASI}\s+)?pre-approva\b", DA_LETTERE,
+                       len(comandi), "«Nessuno dei»") == 0:
+              errori.append("SECURITY.md: nessun «Nessuno dei ... "
+                            "pre-approva», il controllo non verificherebbe "
+                            "niente")
+
+          # I file si uniscono come fa «cat references/*.md SKILL.md»: se uno
+          # non finisse con l'a capo, la sua ultima parola e la prima del
+          # successivo ne farebbero una sola, come nel conteggio a mano.
+          contati = guide + [pathlib.Path("SKILL.md")]
+          parole = len(b"".join(p.read_bytes() for p in contati).split())
+          migliaia = parole // 1000
+          print(f"Parole in references/*.md e SKILL.md: {parole}, "
+                f"migliaia piene {migliaia}.")
+          if not 1 <= migliaia <= 99:
+              errori.append(f"{parole} parole: la funzione scrive le "
+                            f"migliaia solo da 1 a 99, va estesa")
+          elif controlla("README.md", readme,
+                         rf"\boltre{ENFASI}\s+(\S+)\s+{ENFASI}parole\b",
+                         DA_MIGLIAIA, migliaia * 1000, "parole",
+                         f" ({parole} parole, «"
+                         f"{migliaia_in_lettere(migliaia)}»)",
+                         piu_di=parole) == 0:
+              errori.append("README.md: nessun «oltre ... parole» con un "
+                            "numero, il controllo non verificherebbe niente")
+
+          if errori:
+              print("Da correggere:")
+              for errore in errori:
+                  print(f"  {errore}")
+              print(f"Numeri che non tornano o non si possono verificare: "
+                    f"{len(errori)}.")
+              sys.exit(1)
+          print(f"Guide, comandi e parole tornano in tutti i "
+                f"{len(confronti)} confronti.")
+          PY
+
+      # Un comando pre-approva gli strumenti elencati in allowed-tools: li
+      # lascia agire senza chiedere all'utente, e il testo che il comando
+      # legge può venire da terzi. Si ragiona per elenco degli ammessi, non
+      # dei vietati: uno strumento nuovo, un server MCP o una voce con le
+      # parentesi come «Bash(python *)» non stanno nell'elenco e fanno
+      # fallire. Un comando senza allowed-tools non pre-approva niente ed è
+      # ammesso. La chiave si cerca anche nelle grafie vicine (allowed_tools,
+      # allowedTools): controllarle non costa niente, e se Claude Code le
+      # leggesse sfuggirebbero.
+      - name: Permessi dei comandi
+        run: |
+          python - <<'PY'
+          import json
+          import pathlib
+          import re
+          import sys
+
+          AMMESSI = {"Read", "Glob", "Grep", "Write"}
+          # /traduci legge un testo che viene spesso da terzi, quindi niente
+          # Write: è una decisione della 1.6.0, e qui la si tiene ferma.
+          PER_TRADUCI = ["Glob", "Read"]
+          # YAML legge la stessa chiave anche fra virgolette.
+          CHIAVE = re.compile(r"^(\s*)[\"']?allowed[-_]?tools[\"']?\s*:(.*)$",
+                              re.IGNORECASE)
+          # Anche «hooks» nel frontmatter fa eseguire comandi di shell.
+          CHIAVE_HOOKS = re.compile(r"^\s*[\"']?hooks[\"']?\s*:", re.IGNORECASE)
+          CHIAVE_JSON = re.compile(r"allowed[-_]?tools", re.IGNORECASE)
+          # I componenti che un manifest può dichiarare al posto delle
+          # cartelle, o in più.
+          COMPONENTI = {"commands", "skills", "agents", "hooks", "mcpServers"}
+
+          def pulisci(voce):
+              return voce.strip().strip("\"'").strip()
+
+          def senza_commento(testo):
+              return re.sub(r"\s+#.*$", "", testo)
+
+          def dalla_stringa(valore):
+              # «Read, Glob», anche fra virgolette o fra parentesi quadre.
+              # Una voce senza parentesi si divide anche sugli spazi, per la
+              # forma «Read Glob»; una voce con le parentesi resta intera,
+              # così il messaggio la mostra com'è scritta.
+              valore = pulisci(valore)
+              if valore.startswith("[") and valore.endswith("]"):
+                  valore = valore[1:-1]
+              strumenti = []
+              for voce in valore.split(","):
+                  voce = pulisci(voce)
+                  if "(" in voce:
+                      strumenti.append(voce)
+                  elif voce:
+                      strumenti.extend(voce.split())
+              return strumenti
+
+          def leggi_permessi(percorso):
+              # Restituisce None se il comando non ha allowed-tools, altrimenti
+              # l'elenco degli strumenti. Un frontmatter aperto e mai chiuso
+              # solleva ValueError, come un file che non è UTF-8.
+              righe = percorso.read_text(encoding="utf-8").lstrip(
+                  "\ufeff").splitlines()
+              # Il «---» che apre e chiude il frontmatter sta in prima
+              # colonna: uno rientrato fa parte di un valore, per esempio di
+              # una description su più righe, e non chiude niente.
+              piene = [i for i, riga in enumerate(righe) if riga.strip()]
+              if not piene or righe[piene[0]].rstrip() != "---":
+                  return None
+              inizio = piene[0] + 1
+              fine = next((i for i in range(inizio, len(righe))
+                           if righe[i].rstrip() == "---"), None)
+              if fine is None:
+                  raise ValueError("il frontmatter si apre con «---» e non "
+                                   "si chiude")
+              intestazione = righe[inizio:fine]
+              if any(CHIAVE_HOOKS.match(riga) for riga in intestazione):
+                  raise ValueError("il frontmatter dichiara hooks, comandi di "
+                                   "shell che il controllo non vaglia")
+              # Una mappa scritta fra graffe nasconde le chiavi in mezzo alla
+              # riga, dove questo controllo non le cerca.
+              if any(riga.lstrip().startswith("{") for riga in intestazione):
+                  raise ValueError("il frontmatter è scritto come mappa fra "
+                                   "graffe, forma che il controllo non sa "
+                                   "leggere")
+              strumenti = None
+              indice = 0
+              while indice < len(intestazione):
+                  chiave = CHIAVE.match(intestazione[indice])
+                  indice += 1
+                  if chiave is None:
+                      continue
+                  if strumenti is None:
+                      strumenti = []
+                  rientro = len(chiave.group(1))
+                  valore = senza_commento(chiave.group(2)).strip()
+                  if valore:
+                      strumenti.extend(dalla_stringa(valore))
+                      # YAML unisce al valore della chiave il seguito
+                      # scritto su una riga più rientrata («Read, Glob,» e
+                      # poi «Write»): qui il seguito non si legge, quindi si
+                      # fa fallire.
+                      seguente = indice
+                      while seguente < len(intestazione) and (
+                              not intestazione[seguente].strip()
+                              or intestazione[seguente].lstrip()
+                              .startswith("#")):
+                          seguente += 1
+                      if seguente < len(intestazione):
+                          riga = intestazione[seguente]
+                          if len(riga) - len(riga.lstrip()) > rientro:
+                              raise ValueError(
+                                  "allowed-tools prosegue su una riga più "
+                                  "rientrata, forma che il controllo non "
+                                  "sa leggere")
+                      continue
+                  # La forma a lista: le righe che seguono, con il trattino.
+                  # Una riga più rientrata della chiave e senza trattino è un
+                  # contenuto che non si riconosce: finisce fra gli strumenti
+                  # e fa fallire.
+                  while indice < len(intestazione):
+                      riga = intestazione[indice]
+                      voce = re.match(r"^\s*-\s*(.*)$", riga)
+                      if not riga.strip() or riga.lstrip().startswith("#"):
+                          pass
+                      elif voce:
+                          strumenti.extend(
+                              dalla_stringa(senza_commento(voce.group(1))))
+                      elif len(riga) - len(riga.lstrip()) > rientro:
+                          strumenti.append(riga.strip())
+                      else:
+                          break
+                      indice += 1
+              return strumenti
+
+          # L'estensione si confronta in minuscolo, come nella guardia delle
+          # guide: su Linux «*.md» non troverebbe un «.MD».
+          comandi = sorted(p for p in pathlib.Path("commands").glob("*")
+                           if p.is_file() and p.suffix.lower() == ".md")
+          if not comandi:
+              print("Nessun comando in commands/: il controllo non verifica "
+                    "niente.")
+              sys.exit(1)
+          storto = False
+          for comando in comandi:
+              nome = comando.as_posix()
+              try:
+                  strumenti = leggi_permessi(comando)
+              except ValueError as errore:
+                  print(f"{nome}: {errore}")
+                  storto = True
+                  continue
+              if strumenti is None:
+                  print(f"{nome}: nessun allowed-tools, non pre-approva "
+                        f"niente")
+              else:
+                  print(f"{nome}: pre-approva "
+                        f"{', '.join(strumenti) or 'niente'}")
+                  for strumento in strumenti:
+                      if strumento not in AMMESSI:
+                          print(f"  «{strumento}» non è fra gli strumenti "
+                                f"ammessi ({', '.join(sorted(AMMESSI))})")
+                          storto = True
+              if comando.name == "traduci.md":
+                  # Un doppione («Read, Glob, Read») non cambia i permessi:
+                  # si confronta l'insieme.
+                  if sorted(set(strumenti or [])) != PER_TRADUCI:
+                      print("  /traduci deve pre-approvare esattamente Read "
+                            "e Glob")
+                      storto = True
+          if not pathlib.Path("commands/traduci.md").is_file():
+              print("commands/traduci.md non c'è: il suo permesso non si può "
+                    "verificare")
+              storto = True
+
+          ILLEGGIBILE = None
+
+          def voci_dei_manifesti():
+              # Come nella guardia dei conti: il manifest del plugin e ogni
+              # voce di plugins[] nel catalogo.
+              voci = []
+              for nome in (".claude-plugin/plugin.json",
+                           ".claude-plugin/marketplace.json"):
+                  percorso = pathlib.Path(nome)
+                  if not percorso.is_file():
+                      continue
+                  try:
+                      dato = json.loads(percorso.read_text(encoding="utf-8-sig"))
+                  except (ValueError, OSError, RecursionError) as errore:
+                      voci.append((nome, {ILLEGGIBILE: str(errore)}))
+                      continue
+                  if not isinstance(dato, dict):
+                      voci.append((nome, {ILLEGGIBILE: "non è un oggetto"}))
+                  elif nome.endswith("plugin.json"):
+                      voci.append((nome, dato))
+                  else:
+                      elenco = dato.get("plugins", [])
+                      if not isinstance(elenco, list):
+                          elenco = [elenco]
+                      for i, voce in enumerate(elenco):
+                          if not isinstance(voce, dict):
+                              voce = {ILLEGGIBILE: "non è un oggetto"}
+                          voci.append((f"{nome}, plugins[{i}]", voce))
+              return voci
+
+          def chiavi_dei_permessi(dato, dove):
+              # Ogni chiave allowed-tools, a qualunque profondità.
+              trovate = []
+              if isinstance(dato, dict):
+                  for chiave, valore in dato.items():
+                      sotto = f"{dove}.{chiave}"
+                      if CHIAVE_JSON.fullmatch(str(chiave)):
+                          trovate.append(sotto)
+                      trovate += chiavi_dei_permessi(valore, sotto)
+              elif isinstance(dato, list):
+                  for i, valore in enumerate(dato):
+                      trovate += chiavi_dei_permessi(valore, f"{dove}[{i}]")
+              return trovate
+
+          # Gli stessi permessi possono arrivare da altre strade, che Claude
+          # Code legge: le sottocartelle di commands/, i manifest, il
+          # frontmatter di SKILL.md e le cartelle e i file che il plugin
+          # carica da sé. Questa repo non ne usa nessuna, e ognuna fa
+          # fallire.
+          for cartella in sorted(p for p in pathlib.Path("commands").rglob("*")
+                                 if p.is_dir()):
+              print(f"{cartella.as_posix()}: una cartella dentro commands/, "
+                    f"i comandi che porta non si controllano")
+              storto = True
+          for manifesto, voce in voci_dei_manifesti():
+              if ILLEGGIBILE in voce:
+                  print(f"{manifesto}: non si legge ({voce[ILLEGGIBILE]})")
+                  storto = True
+                  continue
+              # Il catalogo elenca solo questo plugin, con la radice come
+              # sorgente: un'altra sorgente porterebbe file che qui non si
+              # leggono.
+              if "plugins[" in manifesto and voce.get("source") not in ("./", "."):
+                  print(f"{manifesto}: la sorgente {voce.get('source')!r} non "
+                        f"è la radice della repo")
+                  storto = True
+              dichiarati = sorted(COMPONENTI & set(map(str, voce)))
+              if dichiarati:
+                  print(f"{manifesto}: dichiara {', '.join(dichiarati)}, che "
+                        f"il controllo non legge")
+                  storto = True
+              for dove in chiavi_dei_permessi(voce, manifesto):
+                  print(f"{dove}: pre-approva strumenti fuori dal "
+                        f"frontmatter dei comandi")
+                  storto = True
+          try:
+              if leggi_permessi(pathlib.Path("SKILL.md")) is not None:
+                  print("SKILL.md: allowed-tools nel frontmatter; la skill si "
+                        "attiva da sola, anche su un testo di terzi")
+                  storto = True
+          except (ValueError, OSError) as errore:
+              print(f"SKILL.md: {errore}")
+              storto = True
+          for nome in ("skills", "agents", "hooks", ".mcp.json"):
+              if pathlib.Path(nome).exists():
+                  print(f"{nome}: il plugin lo carica da sé, e il controllo "
+                        f"non lo legge")
+                  storto = True
+          if storto:
+              print("Un comando pre-approva uno strumento fuori "
+                    "dall'elenco degli ammessi, /traduci non pre-approva "
+                    "esattamente Read e Glob, o i permessi arrivano da una "
+                    "strada che il controllo non legge.")
+              sys.exit(1)
+          print(f"I {len(comandi)} comandi pre-approvano solo strumenti "
+                f"ammessi, e /traduci soltanto Read e Glob.")
+          PY
+
+      # /traduci mette il testo dell'utente in fondo al file, fra due
+      # marcatori e dopo la sezione che dice di non eseguirne gli ordini.
+      # Il segnaposto si sostituisce dovunque compaia, quindi un secondo
+      # $ARGUMENTS, un posizionale come $1 o uno con nome come $testo
+      # porterebbe il testo di terzi in mezzo alle istruzioni. Qui si
+      # controlla che il confine regga.
+      - name: Il confine di /traduci
+        run: |
+          python - <<'PY'
+          import pathlib
+          import re
+          import sys
+
+          percorso = pathlib.Path("commands/traduci.md")
+          if not percorso.is_file():
+              print("commands/traduci.md non c'è: il confine non si può "
+                    "verificare.")
+              sys.exit(1)
+          righe = percorso.read_text(encoding="utf-8").splitlines()
+          TITOLO = "## Il confine di questo comando"
+          APRE = "<testo-da-tradurre>"
+          CHIUDE = "</testo-da-tradurre>"
+
+          def dove(cercata):
+              return [i for i, riga in enumerate(righe)
+                      if riga.strip() == cercata]
+
+          motivi = []
+          volte = sum(riga.count("$ARGUMENTS") for riga in righe)
+          if volte != 1:
+              motivi.append(f"$ARGUMENTS compare {volte} volte, deve "
+                            f"comparire una volta sola")
+          posizionali = [i + 1 for i, riga in enumerate(righe)
+                         if re.search(r"\$[0-9]", riga)]
+          if posizionali:
+              motivi.append(f"un segnaposto posizionale ($1, $2...) alle "
+                            f"righe {posizionali}")
+          # Anche un segnaposto con nome porta il testo dove compare: con
+          # «arguments: [testo]» nel frontmatter, «$testo» vale il primo
+          # argomento. Si vietano la chiave e ogni $nome diverso da
+          # $ARGUMENTS; ${CLAUDE_PLUGIN_ROOT}, con la graffa, non rientra.
+          con_nome = [i + 1 for i, riga in enumerate(righe)
+                      if re.search(r"\$(?!ARGUMENTS\b)"
+                                   r"(?!\{CLAUDE_PLUGIN_ROOT\})[A-Za-z_{]",
+                                   riga)]
+          if con_nome:
+              motivi.append(f"un segnaposto con nome ($nome, anche fra "
+                            f"graffe) alle righe {con_nome}")
+          # La chiave si cerca nel solo frontmatter, fra i due «---».
+          trattini = [i for i, riga in enumerate(righe)
+                      if riga.rstrip() == "---"][:2]
+          intestazione = (range(trattini[0] + 1, trattini[1])
+                          if len(trattini) == 2 else range(len(righe)))
+          chiave_arguments = [
+              i + 1 for i in intestazione
+              if re.match(r"^\s*[\"']?arguments[\"']?\s*:", righe[i],
+                          re.IGNORECASE)]
+          if chiave_arguments:
+              motivi.append(f"la chiave arguments, che dà nome ai "
+                            f"segnaposto, alle righe {chiave_arguments}")
+          titoli, aperture, chiusure = dove(TITOLO), dove(APRE), dove(CHIUDE)
+          for elenco, cosa in ((titoli, f"il titolo «{TITOLO}»"),
+                               (aperture, f"la riga {APRE}"),
+                               (chiusure, f"la riga {CHIUDE}")):
+              if len(elenco) != 1:
+                  motivi.append(f"{cosa} compare {len(elenco)} volte, deve "
+                                f"comparire una volta sola")
+          piene = [i for i, riga in enumerate(righe) if riga.strip()]
+          if chiusure and chiusure[-1] != piene[-1]:
+              motivi.append(f"la riga {CHIUDE} non è l'ultima riga non "
+                            f"vuota del file")
+          if volte == 1 and len(titoli) == len(aperture) == len(chiusure) == 1:
+              segnaposto = next(i for i, riga in enumerate(righe)
+                                if "$ARGUMENTS" in riga)
+              if not titoli[0] < segnaposto:
+                  motivi.append(f"$ARGUMENTS (riga {segnaposto + 1}) sta "
+                                f"prima del titolo del confine (riga "
+                                f"{titoli[0] + 1})")
+              if not titoli[0] < aperture[0]:
+                  motivi.append("la riga di apertura sta prima del titolo "
+                                "del confine")
+              if not aperture[0] < segnaposto < chiusure[0]:
+                  motivi.append(f"$ARGUMENTS (riga {segnaposto + 1}) non sta "
+                                f"fra la riga di apertura (riga "
+                                f"{aperture[0] + 1}) e quella di chiusura "
+                                f"(riga {chiusure[0] + 1})")
+          for motivo in motivi:
+              print(f"commands/traduci.md: {motivo}")
+          if motivi:
+              print("Il confine di /traduci non regge.")
+              sys.exit(1)
+          print("Il confine di /traduci regge: $ARGUMENTS una volta sola, "
+                "dopo il titolo del confine, fra i due marcatori in fondo al "
+                "file.")
+          PY
+
+      # Le correzioni della 1.6.0 tolgono frasi che dicevano il falso o
+      # violavano le regole della skill. Una correzione senza guardia può
+      # tornare con un copia e incolla da una versione vecchia, quindi ogni
+      # frase tolta ha qui la sua espressione e il suo motivo. Si cerca in
+      # tutti i file Markdown e in extras/CLAUDE.md.example, salvo il
+      # CHANGELOG, che le cita come storia. Gli spazi fra le parole valgono
+      # anche come a capo, perché i comandi vanno a capo dentro la frase.
+      - name: Frasi corrette che non tornano
+        run: |
+          python - <<'PY'
+          import pathlib
+          import re
+          import sys
+
+          # Dove la maiuscola non è il difetto, l'espressione la ignora: la
+          # frase può tornare a inizio di periodo o in un titolo. Dove lo è
+          # (Dottor, Lei, dell'italiano) o fa parte di un nome, resta
+          # sensibile. Fra le parole possono stare uno o due segni di enfasi
+          # («uso del **Lei**»).
+          CORRETTE = [
+              (r"(?i:non\s+appartiene\s+alla\s+tradizione\s+italiana)",
+               "lineetta: il Manuale interistituzionale la ammette, il "
+               "divieto è una scelta della skill"),
+              (r"(?i:tipografia\s+italiana\s+non\s+usa)",
+               "lineetta: il Manuale interistituzionale la ammette, il "
+               "divieto è una scelta della skill"),
+              (r"(?i:\(mai\s+em-dash\))",
+               "lineetta: il Manuale interistituzionale la ammette, il "
+               "divieto è una scelta della skill"),
+              (r"(?i:in\s+parte\s+ortografia\s+italiana\s+e\s+in\s+parte"
+               r"\s+convenzioni)",
+               "lineetta: il Manuale interistituzionale la ammette, il "
+               "divieto è una scelta della skill"),
+              (r"(?i:importano\s+dalle\s+traduzioni)",
+               "participio presente: nessuna fonte dice che i modelli lo "
+               "importino dalle traduzioni"),
+              (r"\bDottor\s+Rossi\b",
+               "titolo davanti al nome, in minuscolo: il dottor Rossi"),
+              (r"\buso\s+del\s+[*_]{0,2}Lei\b",
+               "lei di cortesia, in minuscolo"),
+              (r"(?i:\btu)[*_]{0,2}\s*(?:/|\bvs\b\.?|\bo\b)\s*[*_]{0,2}Lei\b",
+               "lei di cortesia, in minuscolo"),
+              (r"(?i:ventitr[eéè]\s+per\s+cento)",
+               "la skill consiglia la cifra: aumento del 23%"),
+              (r"\bMattarella\b",
+               "nessuna persona reale negli esempi"),
+              (r"Enciclopedia\s+dell['’]italiano",
+               "titolo dell'opera: Enciclopedia dell'Italiano"),
+              (r"(?i:\bil\s+[*_]{0,2}you\b)",
+               "articolo davanti a you, regola 13: il pronome you"),
+              (r"(?i:testi\s+pubblici\s+e\s+istituzionali)",
+               "asterisco e schwa: le fonti parlano di testi giuridici, "
+               "amministrativi e di comunicazioni ufficiali"),
+              (r"(?i:anteposizione\s+fissata\s+dall['’]uso)",
+               "la guida colpisce l'anteposizione ricalcata, non quella "
+               "dell'uso"),
+              (r"(?i:salvo\s+anteposizione\s+voluta)",
+               "la guida colpisce l'anteposizione ricalcata, non quella "
+               "dell'uso"),
+              (r"(?i:ormai\s+relegato)",
+               "la Crusca (2008) scrive «sempre più relegato»"),
+              (r"Della\s+Valle\s+non\s+esclude",
+               "posizione attribuita a Della Valle per il suo silenzio"),
+          ]
+          esempio = pathlib.Path("extras/CLAUDE.md.example")
+          if not esempio.is_file():
+              print("extras/CLAUDE.md.example non c'è: il controllo "
+                    "salterebbe un file che conteneva una delle frasi "
+                    "corrette.")
+              sys.exit(1)
+          # L'estensione si confronta in minuscolo: su Linux «*.md» non
+          # troverebbe un «.MD».
+          letti = sorted(p for p in pathlib.Path(".").rglob("*")
+                         if p.is_file() and p.suffix.lower() == ".md"
+                         and ".git" not in p.parts
+                         and p.as_posix() != "CHANGELOG.md")
+          letti.append(esempio)
+          modelli = [(re.compile(espressione), motivo)
+                     for espressione, motivo in CORRETTE]
+          tornate = 0
+          for percorso in letti:
+              testo = percorso.read_text(encoding="utf-8")
+              for modello, motivo in modelli:
+                  for trovata in modello.finditer(testo):
+                      riga = testo.count("\n", 0, trovata.start()) + 1
+                      frase = " ".join(trovata.group(0).split())
+                      print(f"{percorso.as_posix()}:{riga}: «{frase}», "
+                            f"{motivo}")
+                      tornate += 1
+          if tornate:
+              print(f"Frasi corrette nella 1.6.0 e tornate nel testo: "
+                    f"{tornate}. Vanno tolte di nuovo.")
+              sys.exit(1)
+          print(f"Nessuna delle {len(CORRETTE)} frasi corrette nella 1.6.0 "
+                f"è tornata, nei {len(letti)} file letti.")
+          PY
+
+      # /traduci chiede di leggere per intero la sua guida, e lo strumento
+      # di lettura di Claude Code si ferma a 25.000 token, cioè intorno ai
+      # 48 KB di questi testi: oltre, la guida arriverebbe tronca e nessuno
+      # se ne accorgerebbe. La soglia di 45.000 byte lascia un margine.
+      # Vale per tutte le guide, perché alla 1.6.0 stanno tutte sotto: la
+      # più pesante dopo tradurre-in-italiano.md, pattern-strutturali.md,
+      # pesa 39.063 byte.
+      - name: Peso delle guide
+        run: |
+          python - <<'PY'
+          import pathlib
+          import sys
+
+          SOGLIA = 45000
+          # L'estensione si confronta in minuscolo: su Linux «*.md» non
+          # troverebbe un «.MD».
+          guide = sorted(p for p in pathlib.Path("references").glob("*")
+                         if p.is_file() and p.suffix.lower() == ".md")
+          if not guide:
+              print("Nessuna guida in references/: il controllo non verifica "
+                    "niente.")
+              sys.exit(1)
+          # Si pesa il file con gli a capo LF, come sta nella repo: una copia
+          # di lavoro con gli a capo CRLF darebbe un byte in più per riga.
+          pesi = {guida.as_posix():
+                  len(guida.read_bytes().replace(b"\r\n", b"\n"))
+                  for guida in guide}
+          storto = False
+          for nome, peso in pesi.items():
+              if peso >= SOGLIA:
+                  print(f"{nome}: {peso} byte, la soglia è {SOGLIA}")
+                  storto = True
+          piu_pesante = max(pesi, key=pesi.get)
+          print(f"La guida più pesante è {piu_pesante}, con "
+                f"{pesi[piu_pesante]} byte.")
+          if storto:
+              print(f"Una guida arriva a {SOGLIA} byte o li supera: chi la "
+                    f"legge per intero rischia di riceverla tronca.")
+              sys.exit(1)
+          print(f"Le {len(pesi)} guide stanno tutte sotto i {SOGLIA} byte.")
+          PY

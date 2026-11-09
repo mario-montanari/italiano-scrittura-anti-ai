@@ -301,13 +301,15 @@ La regola operativa della sezione 4 di `metodologie-operative.md` dice che la
 voce del cliente prevale sempre sui filtri anti-AI generici. Vale, con un
 confine che va detto chiaro: **la voce prevale sul gusto, non sulla norma.**
 
-Le regole non negoziabili di `SKILL.md` non sono preferenze stilistiche. Sono
-in parte ortografia italiana e in parte convenzioni tipografiche della nostra
-lingua. Nessuno ha una voce personale fatta di errori.
+Le regole non negoziabili di `SKILL.md` non si piegano alla voce. Sono in
+parte ortografia italiana, in parte convenzioni tipografiche della nostra
+lingua e in parte scelte proprie della skill, come il divieto del trattino
+lungo. Nessuno ha una voce personale fatta di errori, e quelle scelte
+valgono per ogni testo che la skill produce.
 
 | Non è mai voce | Perché |
 |---|---|
-| trattino lungo al posto della virgola | segno che la tipografia italiana non usa |
+| trattino lungo al posto della virgola | la regola 1 lo esclude per scelta propria della skill, e la scelta prevale anche sulla voce |
 | virgolette inglesi per le citazioni | lo standard italiano sono i caporali |
 | *qual'è, un pò, un'altro, perchè* | errori ortografici |
 | *piuttosto che* in senso disgiuntivo | uso scorretto diffuso, non tratto d'autore |

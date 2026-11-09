@@ -30,8 +30,10 @@ La variazione diafasica dell'italiano, descritta dalla Treccani alla voce *regis
 - subordinazione multipla, periodi ipotattici
 - nominalizzazioni frequenti (*l'attuazione del piano* invece di *attuare il piano*)
 - lessico ricercato
-- uso del Lei
+- uso del lei di cortesia
 - congiuntivo dopo *benché, qualora, affinché*
+
+Per le comunicazioni rivolte ai cittadini, le direttive sulla semplificazione del linguaggio amministrativo (2002 e 2005) chiedono invece frasi brevi, coordinazione e forma attiva: `tradurre-in-italiano.md` sezione 7, «Il testo di un ente pubblico».
 
 **Errori tipici AI nel registro formale:**
 
@@ -168,8 +170,9 @@ Tre livelli gerarchici (ripresi da `grammatica-italiana.md` sezione 10):
 
 L'italiano usa le maiuscole con parsimonia, molto meno dell'inglese:
 
-- **Sì:** nomi propri, titoli onorifici con nome (*Dottor Rossi*), nomi di festività (*Natale, Pasqua*), enti con nome proprio (*Accademia della Crusca*)
-- **No:** nomi di mesi e giorni (*gennaio, lunedì*), punti cardinali (*nord, sud*), titoli onorifici senza nome (*il dottore, il professore*), nomi comuni di categoria (*il governo, il parlamento*)
+- **Sì:** nomi propri, nomi di festività (*Natale, Pasqua*), enti con nome proprio (*Accademia della Crusca*)
+- **No:** nomi di mesi e giorni (*gennaio, lunedì*), punti cardinali (*nord, sud*), titoli onorifici davanti al nome nel testo corrente (*il dottor Rossi, la ministra Neri*), titoli onorifici senza nome (*il dottore, il professore*), nomi comuni di categoria (*il governo, il parlamento*)
+- **Apertura di una lettera:** maiuscola per cariche come *Presidente*, *Ministro*, *Sindaco*, *Prefetto* (*Gentile Presidente,*), minuscola per gli altri titoli (*Gentile dottoressa Ferri,*); fonti e motivi nella sezione 6 di `tradurre-in-italiano.md`
 - **No title case:** titoli di articoli, capitoli, sezioni vogliono solo la maiuscola alla prima parola e ai nomi propri. *Come ottimizzare la SEO*, non *Come Ottimizzare la SEO*.
 
 ### Numerali

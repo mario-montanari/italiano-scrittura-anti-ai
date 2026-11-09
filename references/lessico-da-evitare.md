@@ -32,7 +32,7 @@ Ogni sezione è una lista di parole e formule con indicazione di sostituzione. L
 
 **Due tecniche di sostituzione:**
 
-- **Concretizzare:** sostituire la parola vaga con un dato verificabile. *Aumento significativo* diventa *aumento del ventitré per cento*. *Notevole successo* diventa *terzo posto in classifica per quattro settimane*.
+- **Concretizzare:** sostituire la parola vaga con un dato verificabile. *Aumento significativo* diventa *aumento del 23%*. *Notevole successo* diventa *terzo posto in classifica per quattro settimane*.
 - **Tagliare:** eliminare la parola e verificare se la frase regge. Se regge, la parola era calorica vuota. *Un approccio fondamentale* spesso diventa solo *un approccio*.
 
 **Soglie di densità consigliate:**
@@ -251,6 +251,8 @@ Una conclusione umana aggiunge, non riassume: sposta il livello, apre a una cons
 ## 9. Calchi dall'inglese
 
 Strutture formalmente corrette ma che un italiano madrelingua non userebbe mai. I lettori percepiscono l'artificialità anche senza saperne identificare l'origine.
+
+Per tradurre un testo intero: `tradurre-in-italiano.md`, con i calchi sintattici della traduzione e i falsi amici che la sezione 11 qui sotto non elenca.
 
 **Calchi di posizione sociale:**
 

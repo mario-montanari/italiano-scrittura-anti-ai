@@ -13,7 +13,7 @@
 [![Claude Cowork](https://img.shields.io/badge/Claude_Cowork-stesso_formato-D97757?style=flat-square&logo=anthropic&logoColor=white)](#come-plugin-in-claude-cowork)
 [![Agent Skills](https://img.shields.io/badge/Agent_Skills-standard_aperto-6B7280?style=flat-square)](SKILL.md)
 [![Lingua italiano](https://img.shields.io/badge/lingua-italiano-A4262C?style=flat-square)](SKILL.md)
-[![Guide](https://img.shields.io/badge/guide-13-1C1A17?style=flat-square)](#che-cosa-contiene)
+[![Guide](https://img.shields.io/badge/guide-14-1C1A17?style=flat-square)](#che-cosa-contiene)
 
 [![Prove automatiche](https://img.shields.io/badge/prove-246-4A5D23?style=flat-square)](scripts/prova_profilo_voce.py)
 [![Autoprova hook](https://img.shields.io/badge/autoprova_hook-59-4A5D23?style=flat-square)](extras/hooks/consenti-solo-profilo-voce.py)
@@ -60,7 +60,7 @@
 
 ## Che cos'è
 
-Una biblioteca di lavoro sull'italiano scritto, in forma di skill: tredici guide operative, oltre trentasettemila parole di regole, esempi e correzioni, più uno strumento eseguibile che misura la voce di un autore.
+Una biblioteca di lavoro sull'italiano scritto, in forma di skill: quattordici guide operative, oltre quarantaquattromila parole di regole, esempi e correzioni, più uno strumento eseguibile che misura la voce di un autore.
 
 Il nome dice «anti ai» perché da lì è nata, dalla firma riconoscibile che i modelli linguistici lasciano nei testi italiani. Ma il materiale che serve a togliere quella firma è lo stesso che serve a scrivere bene: la grammatica normativa dell'Accademia, il lessico giusto al posto di quello comodo, il ritmo della frase, i sei registri dell'italiano e le loro norme editoriali, la lezione dei prosatori del Novecento. Su un testo scritto da una persona funziona esattamente come su un testo generato, e nella metà dei casi è così che viene usata.
 
@@ -84,6 +84,8 @@ Bozze, articoli, tesi, relazioni, capitoli: la skill lavora su testo altrui senz
 
 I calchi dall'inglese sono il difetto più difficile da sentire, perché suonano familiari a chi ha appena letto l'originale. La skill porta il catalogo dei calchi lessicali e sintattici (*navigare le complessità*, *elevare il tuo business*, *approfondire*, *sfruttare*), la tabella dei falsi amici, e le alternative agli anglicismi secondo Zoppetti e Marazzini.
 
+Per tradurre un testo intero c'è una guida a parte, `tradurre-in-italiano.md`, e un comando, `/traduci`. La guida spiega quando tradurre e quando adattare, elenca i calchi sintattici e i falsi amici, scioglie il pronome *you* in *tu*, *lei* o *voi*, e tratta il genere che l'inglese non marca, le convenzioni di numeri, date, valute e misure, i testi di ogni giorno, gli idiomi e i nomi; poi porta il procedimento con la checklist, cinque esempi prima e dopo e le fonti. Il comando la applica. Alla traduzione unisce una nota delle scelte di registro, cortesia e genere.
+
 ### 4. Catturare la voce di chi firma
 
 Quando si scrive per un cliente, o per sé stessi, la voce dell'autore prevale sui filtri generici: un tratto che sembra artificiale ma è autentico per quella persona va rispettato. La skill porta il metodo per catturarla da un corpus di testi veri, con due livelli tenuti separati (il misurato, riproducibile da chiunque; l'osservato, dove ogni affermazione porta il passo che la dimostra), il modello di scheda da compilare, e il confine oltre il quale la voce non vince: la norma della lingua non è gusto, e nessuno ha una voce fatta di errori.
@@ -98,7 +100,7 @@ Serve a difendere un testo umano accusato ingiustamente. Non serve a far passare
 
 ## Che cosa contiene
 
-Tredici guide, caricate da Claude quando servono, più le sedici regole che valgono sempre.
+Quattordici guide, caricate da Claude quando servono, più le sedici regole che valgono sempre.
 
 | Guida | Che cosa porta |
 | --- | --- |
@@ -115,6 +117,7 @@ Tredici guide, caricate da Claude quando servono, più le sedici regole che valg
 | `canali-lettore-saggistica.md` | i quattro canali attraverso cui un lettore gode di un testo, come griglia diagnostica |
 | `checklist-finale.md` | undici famiglie di controllo, venti red flag per il Trova, tabella sinottica |
 | `scudo-falsi-positivi.md` | difesa di un testo umano segnalato, con le fonti per esteso |
+| `tradurre-in-italiano.md` | criterio per scegliere fra tradurre e adattare, calchi sintattici, falsi amici, *you* reso con *tu*, *lei* o *voi*, genere, numeri, date, valute e misure, testi di ogni giorno, idiomi e nomi, procedimento con checklist, cinque esempi prima e dopo, fonti |
 
 <p align="right"><a href="#italiano-scrittura-anti-ai">torna in alto</a></p>
 
@@ -128,7 +131,7 @@ python scripts/profilo_voce.py cartella-dei-testi --nome "Nome autore" --out car
 
 Misura il respiro della frase (lunghezza media, oscillazione, quota di domande), il respiro del paragrafo, la leggibilità Gulpease su blocchi separati, la varietà lessicale, la punteggiatura come firma involontaria, la persona a cui l'autore si rivolge, e le ricorrenze che tornano dove non servirebbero. Produce una scheda leggibile e i dati grezzi in JSON, e ogni misura dichiara che cosa non dice.
 
-Lo strumento misura e non giudica: non stabilisce se un testo sia stato generato da una macchina, e nessuno strumento al mondo lo fa in modo affidabile. Sotto le duemila parole di corpus il profilo esce dichiarato come indicativo. Chi non ha Python usa la skill per intero senza perdere niente, perché le stesse misure si ricavano a mano su cinquanta frasi e la procedura è scritta nel comando.
+Lo strumento misura e non giudica: non stabilisce se un testo sia stato generato da una macchina, e nessuno strumento al mondo lo fa in modo affidabile. Sotto le duemila parole di corpus il profilo esce dichiarato come indicativo. Chi non ha Python usa la skill per intero senza perdere niente, perché le stesse misure si ricavano a mano su cinquanta frasi e la procedura è scritta nel comando `/calibra-voce`.
 
 `scripts/prova_profilo_voce.py` porta 246 prove automatiche, e girano anche in continua a ogni push e a ogni pull request. Ognuna nasce da un difetto trovato durante l'audit e serve a impedire che torni.
 
@@ -143,7 +146,7 @@ Lo strumento misura e non giudica: non stabilisce se un testo sia stato generato
 
 Questa repo è due cose insieme, e si sceglie quale usare.
 
-È un **plugin**, con il suo manifest in `.claude-plugin/plugin.json`: si installa in un colpo solo e porta con sé la skill e i due comandi `/calibra-voce` e `/difendi`, già pronti. Il formato è quello che Claude Code e Claude Cowork condividono.
+È un **plugin**, con il suo manifest in `.claude-plugin/plugin.json`: si installa in un colpo solo e porta con sé la skill e i tre comandi `/calibra-voce`, `/difendi` e `/traduci`, già pronti. Il formato è quello che Claude Code e Claude Cowork condividono.
 
 Ed è una **skill semplice**, una cartella con dentro `SKILL.md`: si copia dove le skill vivono e funziona come ha sempre funzionato, senza plugin e senza marketplace. Chi la usa così non deve cambiare niente.
 
@@ -162,7 +165,7 @@ Per provarlo senza installare niente, da una copia locale della repo:
 claude --plugin-dir ./italiano-scrittura-anti-ai
 ```
 
-I comandi arrivano con il prefisso del plugin: `/italiano-scrittura-anti-ai:calibra-voce` e `/italiano-scrittura-anti-ai:difendi`.
+I comandi arrivano con il prefisso del plugin: `/italiano-scrittura-anti-ai:calibra-voce`, `/italiano-scrittura-anti-ai:difendi` e `/italiano-scrittura-anti-ai:traduci`.
 
 ### Come plugin, in Claude Cowork
 
@@ -213,7 +216,7 @@ Da sola, quando si chiede a Claude di:
 - rispondere a un rilevatore automatico che ha segnalato un testo come generato
 - catturare o calibrare la voce di un autore da un corpus di suoi testi
 
-Resta fuori dalle chat informali brevi e dai contesti non testuali come codice, dati e configurazioni. Due comandi facoltativi, `/calibra-voce` e `/difendi`, guidano i due flussi più lunghi passo per passo.
+Resta fuori dalle chat informali brevi e dai contesti non testuali come codice, dati e configurazioni. Tre comandi facoltativi, `/calibra-voce`, `/difendi` e `/traduci`, guidano i tre flussi più lunghi passo per passo.
 
 ## Un esempio, prima e dopo
 
@@ -251,9 +254,10 @@ italiano-scrittura-anti-ai/
 │   ├── plugin.json                    # Manifest del plugin: nome, versione, autore, licenza, icona
 │   └── marketplace.json               # Catalogo: la repo fa da marketplace di sé stessa
 ├── assets/                            # Il banner del README e l'icona del plugin, versionati qui
-├── commands/                          # I due comandi, nativi quando si installa il plugin
+├── commands/                          # I tre comandi, nativi quando si installa il plugin
 │   ├── calibra-voce.md                # Comando /calibra-voce
-│   └── difendi.md                     # Comando /difendi
+│   ├── difendi.md                     # Comando /difendi
+│   └── traduci.md                     # Comando /traduci
 ├── SKILL.md                           # File indice con frontmatter YAML
 ├── README.md                          # Questo file
 ├── CHANGELOG.md                       # Storia delle versioni, formato Keep a Changelog
@@ -265,11 +269,11 @@ italiano-scrittura-anti-ai/
 ├── .gitignore                         # File ignorati da git
 ├── .github/                           # Automazioni e modelli della repo
 │   ├── workflows/codeql.yml           # Analisi statica del solo script Python
-│   ├── workflows/prove.yml            # Suite dello strumento e autoprova dell'hook a ogni push
+│   ├── workflows/prove.yml            # Prove dello strumento e dell'hook, controlli sui testi, a ogni push
 │   ├── dependabot.yml                 # Aggiornamento settimanale delle action
 │   ├── ISSUE_TEMPLATE/                # Segnalazione e proposta di un pattern
 │   └── PULL_REQUEST_TEMPLATE.md       # Checklist con fonti citate
-├── references/                        # Le tredici guide, caricate quando servono
+├── references/                        # Le quattordici guide, caricate quando servono
 │   ├── grammatica-italiana.md
 │   ├── lessico-da-evitare.md
 │   ├── pattern-strutturali.md
@@ -282,6 +286,7 @@ italiano-scrittura-anti-ai/
 │   ├── segnali-misurabili.md
 │   ├── leak-conversazionale.md
 │   ├── canali-lettore-saggistica.md
+│   ├── tradurre-in-italiano.md
 │   └── scudo-falsi-positivi.md
 ├── scripts/                           # Strumenti facoltativi, sola libreria standard Python
 │   ├── profilo_voce.py                # Calcola il profilo quantitativo di una voce
@@ -302,7 +307,7 @@ La skill interviene sui testi che contano. Per il resto della giornata, dove non
 
 - **`extras/CLAUDE.md.example`**: memoria persistente per Claude Code, da mettere in `~/.claude/CLAUDE.md` o nella radice di un progetto.
 - **`extras/user-preferences.example.md`**: testo da incollare nelle user preferences di claude.ai.
-- **`commands/calibra-voce.md`** e **`commands/difendi.md`**: i due comandi, da copiare in `.claude/commands/`. Funzionano anche da soli, senza installare la skill intera.
+- **`commands/calibra-voce.md`**, **`commands/difendi.md`** e **`commands/traduci.md`**: i tre comandi, da copiare in `.claude/commands/`. Funzionano anche da soli, senza installare la skill intera: ricadono sul metodo scritto al loro interno, che per `/traduci` vuol dire i controlli essenziali e sei delle sedici regole.
 - **`extras/hooks/consenti-solo-profilo-voce.py`**: hook facoltativo per chi calibra spesso e vuole togliere la conferma manuale al lancio dello strumento, senza allargare la superficie eseguibile.
 
 I due template contengono le regole essenziali estratte dalla skill, scritte come istruzioni dirette sempre attive: il `CLAUDE.md` ne porta 22, le user preferences le riprendono in forma compatta, senza quella sul codice. È la filosofia dei tre livelli: la skill come bisturi, il file di memoria e le preferenze come igiene quotidiana. I dettagli stanno in [extras/README.md](extras/README.md).
@@ -372,6 +377,15 @@ La skill consolida e organizza materiale di documenti sorgente redatti dall'auto
 - Macko, Kopal (2025), benchmark CEAID, arXiv:2509.26051; Macko e colleghi (2023), benchmark MULTITuDE, EMNLP 2023
 - OpenAI, nota sul ritiro dell'AI Text Classifier (2023); Turnitin, dichiarazioni di Annie Chechitelli (2023); Vanderbilt University, disattivazione del rilevatore (2023)
 - ICMJE, raccomandazioni sull'uso di strumenti di AI da parte degli autori
+
+**Fonti sulla traduzione** (per esteso, con gli indirizzi, alla sezione 11 di `references/tradurre-in-italiano.md`):
+
+- Accademia della Crusca, consulenze linguistiche e due interventi sul genere nei testi giuridici e amministrativi (2023 e 2024)
+- Cecilia Robustelli, *Linee guida per l'uso del genere nel linguaggio amministrativo* (2012); Alma Sabatini, *Raccomandazioni per un uso non sessista della lingua italiana* (1987)
+- MIUR, *Linee Guida per l'uso del genere nel linguaggio amministrativo del MIUR* (2018); Parlamento europeo, *La neutralità di genere nel linguaggio usato al Parlamento europeo* (2018); Ministero dell'istruzione e del merito, nota del 21 marzo 2025
+- Ufficio delle pubblicazioni dell'Unione europea, *Manuale interistituzionale di convenzioni redazionali*
+- Direttive sulla semplificazione del linguaggio amministrativo: Frattini (2002) e Baccini (2005)
+- Treccani, *Enciclopedia dell'Italiano*, *Vocabolario* e magazine «Lingua italiana»
 
 **Fonti per gli anglicismi:**
 
