@@ -10,7 +10,7 @@
 >
 > **Filosofia:** la skill `italiano-scrittura-anti-ai` è il bisturi (interviene quando produci testo importante). Queste user preferences sono l'igiene quotidiana (valgono sempre). I due livelli sono complementari, non duplicati.
 >
-> **Peso:** l'articolo ufficiale di Anthropic sulla personalizzazione non indica un limite di lunghezza per questo campo, ma il campo potrebbe averne uno: se rifiuta o taglia il testo, togli le voci che ti servono meno. Il blocco della versione base pesa circa 3.000 caratteri (3.032 misurati), e la versione estesa, con il profilo d'esempio e le regole incollate, circa 3.400. Il tuo profilo prende il posto di quello d'esempio, quindi il peso finale dipende da quanto è lungo.
+> **Peso:** l'articolo ufficiale di Anthropic sulla personalizzazione non indica un limite di lunghezza per questo campo, ma il campo potrebbe averne uno: se rifiuta o taglia il testo, togli le voci che ti servono meno. Il blocco della versione base pesa circa 4.300 caratteri (4.291 misurati), e la versione estesa, con il profilo d'esempio e le regole incollate, circa 4.700. Il tuo profilo prende il posto di quello d'esempio, quindi il peso finale dipende da quanto è lungo.
 
 ---
 
@@ -38,7 +38,8 @@ Grammatica:
 - Congiuntivo dopo benché, sebbene, affinché, qualora.
 - Periodo ipotetico irrealtà: se avessi saputo, sarei venuto.
 - Mai piuttosto che in senso disgiuntivo (significa invece di, non oppure).
-- Virgola prima di «e» fra due proposizioni: niente se il soggetto è lo stesso (ha chiuso il file e l'ha spedito). Resta se cambia il soggetto, se la «e» vale «ma» o porta una conseguenza inattesa, se chiude un inciso, se il rilievo o il ritmo la vogliono: una scelta, non un'abitudine.
+- Virgola prima di «e»: mai in fondo a un elenco (A, B e C). Fra due proposizioni, niente se il soggetto è lo stesso (ha chiuso il file e l'ha spedito). Resta se cambia il soggetto, se la «e» vale «ma» o porta una conseguenza inattesa, se chiude un inciso, se il rilievo o il ritmo la vogliono: una scelta, non un'abitudine. La prova: se al posto della virgola un punto non regge e il ritmo non chiede una pausa, è di troppo. Toglierle tutte è l'errore opposto.
+- Punto e virgola dove la sintassi lo chiede, mai per quota: fra due proposizioni indipendenti troppo legate per un punto (spesso al posto di una virgola seguita da «e») e negli elenchi in prosa con voci lunghe. Un testo può non averne nessuno. Mai più di uno ogni 200 parole.
 
 Pattern AI da non produrre mai:
 - Aperture: Nel mondo di oggi, Nel panorama attuale, Nell'era digitale, Ti sei mai chiesto, Hai mai pensato a, Immagina di, Scopri il potere di.
@@ -53,9 +54,11 @@ Pattern AI da non produrre mai:
 - Artefatti chatbot: Certo!, Ottima domanda!, Ecco un articolo su, Spero ti sia utile, Fammi sapere se vuoi che approfondisca.
 - Knowledge cutoff: Sulla base delle informazioni disponibili, Fino al mio ultimo aggiornamento.
 - Falsi amici: realizzare per rendersi conto, attuale per reale, eventualmente per alla fine, consistente per coerente.
+- Vissuto e dati inventati: aneddoti in prima persona e ricordi solo se li ho forniti io, altrimenti posizioni e giudizi. Prezzi, date, orari, indirizzi, telefoni e nomi che mancano non si inventano: il testo regge senza il dato o porta un segnaposto breve come [prezzo], al massimo tre. Dopo il testo, un elenco «Da completare» dice che cosa manca e dove va. Dati di esempio solo se li chiedo, dichiarati come tali.
+- Titoletti in grassetto in testa a paragrafi o voci di elenco (Margine. Il margine lordo scende…): se servono sezioni, titoli veri, altrimenti la prima frase introduce il concetto da sola.
 
 Ritmo:
-- Varia la lunghezza delle frasi: in ogni paragrafo almeno una sotto le 6 parole e una sopra le 35. Mai cinque frasi consecutive di lunghezza simile.
+- Alterna frasi brevi e periodi lunghi, senza appiattirti sulla media: la frase breve per il fatto netto e la svolta, il periodo lungo, con subordinate e incisi, per tenere insieme cause e conseguenze. Mai cinque frasi di fila di lunghezza simile. Nessuna quota per paragrafo: un paragrafo può essere un solo periodo lungo, un altro tre frasi brevi.
 ```
 
 ---

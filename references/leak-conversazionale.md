@@ -50,6 +50,22 @@ Due annunci di rivelazione per dire una cosa sola, che si poteva dire subito.
 
 **Variante da sorvegliare.** Anche *la verità è che, il fatto è che, diciamoci la verità, sia chiaro* appartengono alla stessa famiglia. Nove volte su dieci si tagliano e la frase migliora.
 
+**La suspense del «è un altro».** Una forma più discreta, emersa nei testi scritti con questa skill: la frase annuncia che una cosa esiste, senza dirla, e la rimanda alla frase o al paragrafo dopo. La spia è una frase che finisce con *è un altro*, *è un'altra*, *è questo*, *è questa*, seguita da punto o da due punti.
+
+> «Per una lite tra due vicini la strada più frequente è un'altra. È quella civile.»
+>
+> «Il risultato di cui vado più fiero è un altro. In sei anni gli infortuni sono passati da undici a due.»
+>
+> «Il motivo preciso è questo. Nell'annuncio parlate del nuovo polo di Piacenza.»
+
+**Correzione:** dire subito la cosa annunciata.
+
+> «Per una lite tra due vicini la strada più frequente è quella civile.»
+>
+> «Il risultato di cui vado più fiero è il calo degli infortuni: in sei anni da undici a due.»
+
+I due punti restano leciti quando introducono davvero un elenco o una spiegazione (*le cause sono due: la rete satura e i treni vecchi*). Il segno del tic è la frase che si ferma prima del contenuto e lo lascia in sospeso.
+
 ## 3. I riassunti frattali di una conversazione mai avvenuta
 
 Il modello tende a ricapitolare. In chat è utile, perché tiene il filo di uno scambio lungo. In un documento diventa un riassunto frattale: ogni sezione si apre ricapitolando quella prima e si chiude annunciando quella dopo, e il testo passa più tempo a parlare di sé stesso che a dire qualcosa. È la versione strutturale del meta-annuncio.
@@ -88,7 +104,7 @@ Rileggere il testo immaginando un lettore che non ha mai parlato con chi scrive.
 
 Tre mosse pratiche:
 
-- Cercare le aperture *non è… è…, qui sta il punto, ecco la cosa, ti starai chiedendo, come abbiamo visto, andiamo a vedere insieme* e valutare ogni occorrenza con la domanda: il lettore aveva davvero bisogno di questo, o sto rispondendo a una conversazione?
+- Cercare le aperture *non è… è…, qui sta il punto, ecco la cosa, è un altro., è questo., ti starai chiedendo, come abbiamo visto, andiamo a vedere insieme* e valutare ogni occorrenza con la domanda: il lettore aveva davvero bisogno di questo, o sto rispondendo a una conversazione?
 - Affermare invece di negare, salvo quando l'equivoco è reale e diffuso.
 - Tagliare i ponti meta-testuali fra le sezioni: in un testo scritto il lettore naviga da solo.
 

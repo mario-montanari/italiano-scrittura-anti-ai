@@ -59,7 +59,7 @@ Cartella indicata dall'utente: $ARGUMENTS
 
 ## Cosa produce
 
-Una scheda voce che tiene separati due livelli, e li dichiara come tali.
+Una scheda voce che tiene separati due livelli e li dichiara come tali.
 
 - **Misurato**: conteggi riproducibili. Chiunque, con lo stesso corpus,
   ottiene gli stessi numeri.
@@ -110,7 +110,7 @@ python <percorso>/profilo_voce.py <cartella> --nome "<nome autore>" --out <carte
 ```
 
 Su Windows il comando è `python`, altrove di solito `python3`. Claude Code
-chiede conferma prima di eseguirlo: è voluto, e vale per ogni lancio.
+chiede conferma prima di eseguirlo: è voluto e vale per ogni lancio.
 
 Conviene indicare sempre `--out`. Senza, la scheda e i dati finiscono accanto
 ai testi. Nessun file dell'utente viene però sovrascritto: lo strumento firma
@@ -126,7 +126,7 @@ drammi e misurare a mano. È la procedura della sezione «Senza strumento» di
 reference potrebbe mancare. Su un campione di cinquanta frasi consecutive,
 prese da un punto qualsiasi del corpus:
 
-1. contare le parole di ogni frase, calcolare la media, e contare quante
+1. contare le parole di ogni frase, calcolare la media e contare quante
    stanno sotto sei parole e quante sopra trentacinque;
 2. contare le frasi che finiscono con un punto interrogativo;
 3. contare *io, mi, mio* e *tu, ti, tuo* in mille parole;
@@ -156,7 +156,7 @@ un'impressione, e un'impressione non entra in una scheda.
 
 Seguire il modello di `references/voce-personale.md` sezione 6, quando il
 reference è disponibile. La forma essenziale è comunque questa: la scheda sta
-in una pagina, si apre con registro, tipo di voce e affidabilità, e si chiude
+in una pagina, si apre con registro, tipo di voce e affidabilità; si chiude
 con le istruzioni operative: fai questo, non fare questo, nel dubbio.
 
 Le istruzioni sono la parte che serve davvero. «Il tono è caldo» non aiuta
@@ -172,7 +172,7 @@ Un tratto ricorrente resta nella scheda se è documentato in più testi, se è
 coerente con il registro e se non viola una norma della lingua. Se una delle
 tre risposte è no, va segnalato come da correggere invece che come voce. I
 trattini lunghi, le virgolette inglesi, *qual'è*, *un pò* e *piuttosto che* in
-senso disgiuntivo restano errori in qualunque scheda, e vanno detti.
+senso disgiuntivo restano errori in qualunque scheda e vanno detti.
 
 ## Limiti da dichiarare all'utente
 

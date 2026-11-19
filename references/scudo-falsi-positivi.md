@@ -24,7 +24,7 @@ quel numero come una prova. Qui c'è come si risponde.
 ## 1. Il confine, prima di tutto il resto
 
 Questo file serve a difendere un testo umano accusato ingiustamente. Non serve
-a far passare per umano un testo generato, e non contiene niente che aiuti a
+a far passare per umano un testo generato e non contiene niente che aiuti a
 farlo.
 
 La garanzia sta nel modo in cui la difesa è costruita, prima ancora che nella
@@ -34,7 +34,7 @@ senza diventare un manuale per barare.
 **Nessuno strumento certifica la paternità umana di un testo. Nemmeno questo.**
 Un rilevatore dichiara «l'ha scritto una macchina» senza poterlo sapere. Un
 contro-rilevatore dichiarerebbe «l'ha scritto una persona» con la stessa
-ignoranza, e venderebbe la medesima illusione con il segno invertito. La
+ignoranza e venderebbe la medesima illusione con il segno invertito. La
 sezione 8 di `segnali-misurabili.md` spiega perché il primo responso è un
 segnale debole, e quella debolezza vale in tutte e due le direzioni.
 
@@ -64,7 +64,7 @@ prevedibile per un modello linguistico: quanto poco «sorprendente» risulta la
 parola successiva, e quanto quella sorpresa varia lungo la pagina. Prosa poco
 sorprendente e uniforme finisce sopra soglia.
 
-Da qui discendono tre cose, e vanno dette a chi accusa.
+Da qui discendono tre cose e vanno dette a chi accusa.
 
 **Il responso è una somiglianza, non una provenienza.** Lo strumento afferma
 che il testo assomiglia a ciò che è stato addestrato a chiamare generato.
@@ -89,7 +89,7 @@ tutti. Il limite appartiene al problema, e nessun prodotto migliore lo aggira.
 ## 3. Quanto sbaglia, secondo chi lo ha misurato
 
 Quattro dati pubblicati, una decisione istituzionale che in una discussione
-pesa quanto un dato, e in fondo l'obiezione più seria, che va accolta in
+pesa quanto un dato, infine l'obiezione più seria, che va accolta in
 parte. Nessuno dei quattro dati viene da chi vende il servizio, tranne
 l'ultimo, che è il più interessante proprio per questo.
 
@@ -138,7 +138,7 @@ dichiarato da chi lo vende. Non sono un indizio.
 **C'è chi lo strumento lo ha spento.** Nell'agosto 2023 la Vanderbilt
 University ha disattivato la rilevazione AI di Turnitin, spiegando pubblicamente
 perché: nessuna trasparenza su come lo strumento decide, falsi positivi
-documentati in altri atenei, e il fatto che «AI detectors have been found to be
+documentati in altri atenei e il fatto che «AI detectors have been found to be
 more likely to label text written by non-native English speakers as AI-written».
 La conclusione dell'ateneo, testuale: «we do not believe that AI detection
 software is an effective tool that should be used». Nello stesso annuncio
@@ -153,7 +153,7 @@ esaminato lo strumento con calma e ha scelto di non usarlo.
 **L'obiezione più seria arriva dal 2025, e una parte va accolta.** Jabarian e
 Imas, in un working paper NBER del settembre 2025, scrivono che «Independent
 studies that examine AI detection are out of date and focus on a set of tools
-that rely on antiquated techniques», e citano proprio Weber-Wulff.
+that rely on antiquated techniques» e citano proprio Weber-Wulff.
 
 Il loro risultato va riportato per intero, anche dove non conviene. Su un
 corpus inglese di sei generi, i tre prodotti commerciali provati sbagliano
@@ -173,7 +173,7 @@ questioni aperte il caso di un modello che «rephrased a human-generated draft
 written by a non-native speaker».
 
 La domanda da portare a chi accusa diventa più precisa: quale prodotto avete
-usato, con quale soglia, e con quale tasso di errore misurato sul mio genere e
+usato, con quale soglia e con quale tasso di errore misurato sul mio genere e
 sulla mia lingua.
 
 ## 4. Chi paga il falso positivo
@@ -200,7 +200,7 @@ la prevedibilità è l'unica cosa che il rilevatore sa vedere.
 C'è un corollario amaro per gli studenti. A chi si difende viene spesso
 consigliato di «scrivere in modo più naturale» la prossima volta. È un consiglio
 che chiede a una persona di peggiorare la propria prosa per compiacere un
-programma, e va rifiutato con la stessa fermezza dell'accusa.
+programma e va rifiutato con la stessa fermezza dell'accusa.
 
 ## 5. La questione italiana
 
@@ -212,7 +212,7 @@ Le cifre della sezione 3 riguardano l'inglese. Chiunque affermi «sull'italiano
 i falsi positivi sono alti» sta estendendo un dato, non citandolo, e va detto
 apertamente. Questo file lo dice.
 
-Ciò che si può sostenere con onestà è più solido, e più utile in una
+Ciò che si può sostenere con onestà è più solido e più utile in una
 discussione:
 
 1. Dove l'errore è stato misurato, è grande (sezione 3).
@@ -270,7 +270,7 @@ Sette passaggi, nell'ordine.
 **1. Stabilire chi accusa e con che cosa.** Nome dello strumento, punteggio
 esatto, soglia dichiarata, livello del responso: documento intero o singole
 frasi. Molte accuse arrivano senza il nome dello strumento. Chiederlo è il
-primo atto della difesa, e a volte l'unico necessario.
+primo atto della difesa e a volte l'unico necessario.
 
 **2. Ricondurre il responso al suo statuto.** Con la sezione 2 di questo file:
 somiglianza, non provenienza. Soglia decisa da chi vende. Strumento non
@@ -285,8 +285,8 @@ sono il comportamento dichiarato del prodotto.
 **4. Presentare la prova di processo.** Bozze, versioni intermedie, cronologia
 del documento condiviso, appunti, scalette, messaggi in cui si discuteva il
 lavoro, tempi di stesura. Si ordina per data. La cronologia è ciò che un testo
-generato non può fabbricare all'indietro senza mentire in modo verificabile,
-ed è la prova più forte che esista. Prima di portarla si controlla che le date
+generato non può fabbricare all'indietro senza mentire in modo verificabile.
+È la prova più forte che esista. Prima di portarla si controlla che le date
 reggano fra loro e con il racconto dell'autore: una data che non torna non
 toglie valore al resto, ma va messa in chiaro come riserva prima che la trovi
 la controparte.
@@ -368,7 +368,7 @@ disonesto. Trattarlo come se fosse generato sarebbe falso.
 
 Per questo il documento cambia nome. La paternità qui non è in discussione:
 idea, struttura e tesi sono dell'autore. Quello che serve è una dichiarazione
-di che cosa è stato fatto, e da chi.
+di che cosa è stato fatto e da chi.
 
 La cornice resta quella della sezione 7. Il documento è la stessa pagina, con
 gli stessi sei punti e gli stessi allegati; cambiano il titolo e il punto 5,
@@ -393,11 +393,11 @@ Si compila riga per riga, con il nome dello strumento e l'intervento reale.
 «Correzione ortografica e di concordanze sul testo già scritto» dice qualcosa.
 «Uso di AI» non dice niente e insospettisce.
 
-Questa distinzione è oggi pratica corrente, e in ambito scientifico è una
+Questa distinzione è oggi pratica corrente e in ambito scientifico è una
 regola scritta. L'ICMJE, il comitato che fissa gli standard editoriali delle
 riviste mediche, chiede a chi usa strumenti di AI di «describe, in both the
 cover letter and the submitted work in the appropriate section if applicable,
-how they used it», e stabilisce che un chatbot non può comparire fra gli autori
+how they used it» e stabilisce che un chatbot non può comparire fra gli autori
 «because they cannot be responsible for the accuracy, integrity, and
 originality of the work». Da lì discende la frase che qui conta di più:
 «humans are responsible for any submitted material that included the use of
@@ -444,7 +444,7 @@ regge, perché non dipende da quale strumento è di moda.
 ---
 
 **Legami.** `segnali-misurabili.md` sezione 8 declassa le liste di parole e i
-rilevatori a segnale debole, ed è la base teorica di questo file.
+rilevatori a segnale debole ed è la base teorica di questo file.
 `metodologie-operative.md` sezione 6 raccoglie le metriche stilometriche: lì
 servono a diagnosticare un testo proprio, qui la stessa materia si legge al
 contrario, per difendere. `voce-personale.md` fornisce la prova di voce del
@@ -461,4 +461,4 @@ passaggio 5. `checklist-finale.md` contiene la voce di controllo sui detector.
 - Macko et al. (2023), *MULTITuDE: Large-Scale Multilingual Machine-Generated Text Detection Benchmark*, EMNLP 2023, ACL Anthology 2023.emnlp-main.616. Undici lingue misurate: arabo, catalano, ceco, tedesco, inglese, spagnolo, olandese, portoghese, russo, ucraino, cinese. L'italiano non è fra queste. Gli autori dichiarano «a lack of research into capabilities of recent LLMs to generate convincing text in languages other than English and into performance of detectors of machine-generated text in multilingual settings».
 - ICMJE, *Recommendations: Use of Artificial Intelligence-Assisted Technology by Authors*. Dichiarazione obbligatoria dell'uso di strumenti di AI nella lettera di accompagnamento e nel manoscritto; nessun chatbot fra gli autori, «because they cannot be responsible for the accuracy, integrity, and originality of the work»; «humans are responsible for any submitted material that included the use of AI-assisted technologies».
 - Jabarian, Imas (settembre 2025), *Artificial Writing and Automated Detection*, NBER Working Paper 34223, anche BFI Working Paper 2025-116. Sostengono che «Independent studies that examine AI detection are out of date and focus on a set of tools that rely on antiquated techniques (Weber-Wulff et al., 2023)». Corpus umano da sei fonti inglesi: notizie CC-News, blog del Blog Authorship Corpus, curriculum dal dataset Kaggle, recensioni Yelp e Amazon, romanzi anteriori al 2000 da Project Gutenberg; equivalenti artificiali generati con GPT-4.1, Claude Opus 4, Claude Sonnet 4 e Gemini 2.0 Flash. Falsi positivi dei tre prodotti commerciali fra 0,1 e 0,7 per cento; il modello aperto RoBERTa base sbaglia invece sulla maggior parte dei testi umani, con falsi positivi «di circa il 30-78 per cento a seconda dello scenario», e gli autori lo dichiarano inadatto agli usi che pesano. La cifra viene dalla sintesi del Becker Friedman Institute, l'istituto che ospita gli autori: il PDF del working paper non si è lasciato leggere dagli strumenti usati per la verifica, quindi la percentuale non è stata confermata sul primario. «Pangram is the only tool to satisfy a strict cap (FPR 0.005) without sacrificing accuracy». Nessun elaborato scolastico, nessuno scrivente non madrelingua e nessuna lingua diversa dall'inglese nel corpus.
-- Vanderbilt University, *Guidance on AI Detection and Why We're Disabling Turnitin's AI Detector*, 16 agosto 2023. Decisione istituzionale motivata, non una misura: assenza di trasparenza, falsi positivi documentati altrove, maggiore esposizione di chi non è madrelingua inglese, e il conto dei 750 elaborati su 75.000.
+- Vanderbilt University, *Guidance on AI Detection and Why We're Disabling Turnitin's AI Detector*, 16 agosto 2023. Decisione istituzionale motivata, non una misura: assenza di trasparenza, falsi positivi documentati altrove, maggiore esposizione di chi non è madrelingua inglese e il conto dei 750 elaborati su 75.000.

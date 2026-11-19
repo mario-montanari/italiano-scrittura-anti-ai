@@ -188,7 +188,15 @@ Eccezioni legittime solo in caso di incisi, dislocazioni o focalizzazioni marcat
 - **la virgola si può mettere** per dare rilievo all'ultimo elemento, o per staccare il ritmo in un periodo lungo; deve restare una scelta, non un'abitudine
 - **la virgola resta comunque** quando chiude un inciso che finisce proprio prima della *e*: *ha riletto la lettera, scritta di notte, e l'ha spedita*. Lì non appartiene alla *e*, e toglierla lascerebbe l'inciso aperto
 
-**Il punto e virgola** è centrale nella prosa italiana colta: separa coordinate complesse o elementi di elenchi articolati. I modelli linguistici lo usano poco: inserirlo aumenta la naturalezza del testo.
+Una prova pratica: se al posto della virgola un punto non regge e il ritmo non chiede una pausa, la virgola è di troppo. Toglierle tutte è l'errore opposto, perché anche l'assenza di un tratto comune si nota: nei blog umani del corpus PAISÀ la virgola precede il 7% delle *e*.
+
+**Il punto e virgola** è centrale nella prosa italiana colta: separa coordinate complesse o elementi di elenchi articolati. I modelli linguistici lo usano poco, come conferma la misura: nei blog del corpus PAISÀ (web italiano raccolto nel 2010, prima dei modelli) compare 1,6 volte ogni 1000 parole, nelle voci di Wikipedia 2,4; nei sette blog scritti da Claude con una versione precedente di questa skill non compariva mai (`extras/campioni/RAPPORTO.md`).
+
+Dove serve: fra due proposizioni indipendenti ma strettamente legate, quando il punto spezzerebbe troppo e la virgola legherebbe troppo poco. Spesso è il posto in cui il modello mette una virgola seguita da *e*, lecita ma debole: *Il fornaio cuoce pezzature grandi; una pagnotta da un chilo ha più mollica* lega le due cose meglio di *…pezzature grandi, e una pagnotta da un chilo…*. Serve anche negli elenchi in prosa con voci lunghe che contengono già virgole.
+
+Dove non serve: nei testi brevi e negli elenchi puntati. Mai per riempire una quota: un punto e virgola forzato è peggio di nessuno.
+
+**Quanti.** I campioni misurati da Renato Romano hanno mostrato tre errori in fila. Senza indicazioni i blog generati non lo usavano mai. Con una soglia minima ne mettevano due o tre per articolo, 5,2 ogni 1000 parole contro l'1,6 della prosa umana. Con un tetto ne mettevano esattamente uno in ogni articolo. La prosa umana non ha quote: lo mette dove due proposizioni lo chiedono, e un testo può non averne. Il limite superiore resta uno ogni 200 parole.
 
 **I due punti** introducono discorso diretto, spiegazione, enumerazione, conseguenza logica.
 

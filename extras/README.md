@@ -7,6 +7,7 @@ Questa cartella contiene **risorse complementari** alla skill `italiano-scrittur
 - **`CLAUDE.md.example`**: template per il file di memoria persistente di Claude Code, da posizionare a livello globale (`~/.claude/CLAUDE.md`) o di progetto.
 - **`user-preferences.example.md`**: template per le user preferences di claude.ai, da incollare in Settings, Profile, User Preferences.
 - **`hooks/consenti-solo-profilo-voce.py`**: hook `PreToolUse` facoltativo, per chi calibra spesso e vuole togliere la conferma al solo lancio dello strumento. Istruzioni sotto.
+- **`misura_campione.py`**, **`campiona_paisa.py`** e **`campioni/RAPPORTO.md`**: il metodo dei campioni misurati, con cui si controlla l'effetto delle regole sui testi generati. Istruzioni sotto.
 
 ## I comandi stanno in `commands/`
 
@@ -140,6 +141,23 @@ percorso di rete, l'eseguibile chiamato `python` messo in una cartella
 qualunque e le opzioni non previste. Leggerli è il modo più rapido per capire
 che cosa l'hook lascia passare.
 
+## Misurare l'effetto delle regole
+
+`misura_campione.py` conta in una cartella di testi i tratti che le regole della skill sorvegliano: la virgola prima di *e*, il punto e virgola, i gerundi in coda, i segnaposto, la suspense *è un altro*, la lunghezza delle frasi e altri segnali. Con più cartelle stampa un confronto colonna per colonna:
+
+```bash
+python extras/misura_campione.py prima/ dopo/
+```
+
+Per un riferimento umano, `campiona_paisa.py` estrae un campione dal corpus PAISÀ, che va scaricato a parte. Il corpus ha licenza CC BY-NC-SA 4.0: né il corpus né il campione estratto vanno nella repo.
+
+```bash
+python extras/campiona_paisa.py paisa.raw.utf8.gz riferimento
+python extras/misura_campione.py riferimento/paisa-blog dopo/
+```
+
+Il metodo è di Renato Romano. Nel suo fork ha fatto scrivere più volte i testi delle stesse 21 richieste (sette blog, sette testi di marketing, sette professionali) con versioni successive della skill, ne ha misurato i tic e li ha messi a confronto con PAISÀ. Il resoconto sta in `campioni/RAPPORTO.md`. I 147 testi di campione restano nel suo fork, al commit [`a52bdc9`](https://github.com/renatoromano-png/italiano-scrittura-anti-ai/tree/a52bdc9a7ae3ca30545a9c399d955680e5d63222/extras/campioni): portano i numeri di versione del fork e contengono apposta i tic che le prove della continua cercano. `prova_campioni.py` verifica i due strumenti.
+
 ## Filosofia: tre livelli di copertura
 
 La skill `italiano-scrittura-anti-ai` da sola copre il caso d'uso più importante: **produrre testo italiano destinato a uso pubblico, professionale, editoriale o di marketing**. La skill si attiva quando rileva una richiesta di questo tipo e fornisce a Claude tutto l'arsenale di regole, pattern, metodologie.
@@ -176,7 +194,7 @@ Non serve usarli tutti e tre: dipende dalle interfacce che usi e da quanto rigor
 ## Note importanti
 
 - I template sono **esempi generici**, pensati per chiunque scarichi la skill. Se vuoi aggiungere informazioni personali (professione, contesto di lavoro, preferenze stilistiche), inseriscile **prima** delle regole linguistiche, non al posto.
-- L'articolo ufficiale di Anthropic sulla personalizzazione non indica un limite di lunghezza per le user preferences, ma il campo potrebbe averne uno. Il blocco base del template pesa circa 3.000 caratteri, e la versione estesa, con il profilo d'esempio, circa 3.400: se il campo rifiuta o taglia il testo, togli le voci che ti servono meno.
+- L'articolo ufficiale di Anthropic sulla personalizzazione non indica un limite di lunghezza per le user preferences, ma il campo potrebbe averne uno. Il blocco base del template pesa circa 4.300 caratteri, e la versione estesa, con il profilo d'esempio, circa 4.700: se il campo rifiuta o taglia il testo, togli le voci che ti servono meno.
 - Il CLAUDE.md non ha limiti tecnici stretti, ma più è lungo più appesantisce ogni sessione di Claude Code. Mantieni l'essenziale.
 - Per personalizzazioni più sofisticate (cambio di stile, aggiunta di pattern specifici al tuo settore), considera di **creare una skill derivata** invece di sovraccaricare CLAUDE.md o preferences.
 
@@ -184,7 +202,7 @@ Non serve usarli tutti e tre: dipende dalle interfacce che usi e da quanto rigor
 
 **Posso usare CLAUDE.md o user preferences senza installare la skill?**
 
-Sì. I template sono autonomi: contengono le regole essenziali estratte dalla skill, formulate come istruzioni dirette. Il `CLAUDE.md` ne ha 22. Le user preferences le riprendono in forma più compatta, senza quella sul codice, e aggiungono il periodo ipotetico dell'irrealtà. Funzionano anche senza la skill. Il vantaggio della skill è che fornisce in più tutto il contesto profondo (grammatica avanzata, catalogo lessicale completo, metodologie operative come l'audit pass in due passaggi, voice calibration, sei mosse di umanizzazione, eccetera).
+Sì. I template sono autonomi: contengono le regole essenziali estratte dalla skill, formulate come istruzioni dirette. Il `CLAUDE.md` ne ha 25. Le user preferences le riprendono in forma più compatta, senza quella sul codice, e aggiungono il periodo ipotetico dell'irrealtà. Funzionano anche senza la skill. Il vantaggio della skill è che fornisce in più tutto il contesto profondo (grammatica avanzata, catalogo lessicale completo, metodologie operative come l'audit pass in due passaggi, voice calibration, sei mosse di umanizzazione, eccetera).
 
 **Cosa succede se le tre fonti dicono cose diverse?**
 

@@ -36,11 +36,11 @@ Prendiamo il caso già raccontato nella sezione 4 di
 `metodologie-operative.md`. Un avvocato penalista scrive newsletter mensili e
 apre di continuo con *occorre sottolineare*. Tutte le liste anti-AI di questo
 mondo lo condannano come formula di rilevanza. In quel testo, però, quella
-formula gli appartiene: compare in cinque newsletter su cinque, e viene da
+formula gli appartiene: compare in cinque newsletter su cinque e viene da
 quarant'anni di atti giudiziari. Toglierla significa consegnare al
 cliente un testo che non riconosce come proprio, e il cliente ha ragione.
 
-Il profilo di voce serve a distinguere i due casi, e serve a farlo prima di
+Il profilo di voce serve a distinguere i due casi e serve a farlo prima di
 scrivere, non dopo. Chi lo salta finisce a discutere di gusto.
 
 ## 2. I due livelli del profilo
@@ -100,9 +100,9 @@ Sei famiglie di conteggi. Nessuna, da sola, dice qualcosa di sensato.
 
 **Il respiro della frase.** Lunghezza media, deviazione standard e rapporto
 fra le due, cioè quanto il ritmo oscilla. Poi la quota di frasi sotto le sei
-parole e sopra le trentacinque, le soglie della regola 15, e la quota di
-frasi che sono domande. È la misura più rivelatrice: un autore si riconosce
-dal passo prima che dal lessico.
+parole e sopra le trentacinque, infine quella delle frasi che sono domande. È
+la misura più rivelatrice: un autore si riconosce dal passo prima che dal
+lessico.
 
 **Il respiro del paragrafo.** Frasi e parole per capoverso, quanto testo sta
 dentro elenchi. Chi scrive per lo schermo tiene paragrafi di tre righe; chi
@@ -277,8 +277,9 @@ nessun caso si chiede fiducia.
 Il profilo è un bersaglio, non una gabbia.
 
 **Rispetta il respiro.** Se l'autore scrive corto, non allungare per fare
-varietà. Se scrive lungo, non spezzare per fare ritmo. La regola 15 vale come
-tendenza generale, il profilo la specifica per quella persona.
+varietà. Se scrive lungo, non spezzare per fare ritmo. La regola 15 chiede
+variazione senza fissare quote: il profilo dice quale variazione è propria di
+quella persona.
 
 **Rispetta i tic.** Un tic autentico resta anche quando somiglia a un pattern
 AI. È il caso dell'avvocato del paragrafo 1.
@@ -332,7 +333,7 @@ una norma della lingua? Se le risposte sono tre sì, resta. Se una è no, va.
 Una voce non sta ferma. A distanza di mesi o di anni conviene rifare la
 scheda e mettere le due versioni accanto, per vedere dove l'autore si è
 spostato: la frase si è allungata o accorciata, i connettivi sono cresciuti,
-certe aperture sono sparite. Il confronto racconta un movimento, e non
+certe aperture sono sparite. Il confronto racconta un movimento e non
 promuove né boccia: la scheda vecchia descrive chi si era, quella nuova chi
 si è.
 

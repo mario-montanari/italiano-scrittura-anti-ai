@@ -6,7 +6,7 @@ La regola pratica è che nessuna singola parola condanna un testo. È la **co-oc
 
 Le fonti principali sono il catalogo del WikiProject AI Cleanup (skill Humanizer), AI Pattern Detector (aipatterndetector.it), il progetto *AAA Alternative Agli Anglicismi* di Antonio Zoppetti, le indicazioni di Claudio Marazzini per l'Accademia della Crusca.
 
-> **Statuto di questo catalogo: preferenza di gusto, non rilevatore.** Le liste di parole sospette che seguono sono uno strumento di gusto editoriale, non una prova di paternità artificiale del testo. Sono inaffidabili come rilevatore per quattro ragioni: cambiano a ogni versione del modello, dipendono dal prompt, sono confuse dal genere (parole additate come AI abbondano nella prosa umana accademica e di genere), e non si trasferiscono da un modello all'altro. Lo dimostra il calo di *delve* dopo la sua segnalazione pubblica nel 2024: appena una lista diventa nota, smette di funzionare come rilevatore. Restano utilissime come scelta di stile, «non voglio che la mia prosa suoni così», a patto di essere onesti su questo punto. Per i segnali davvero misurabili e con base peer-reviewed (varietà lessicale, pronomi, emozioni, interiorità, sottotesto, template sintattici) vedi `segnali-misurabili.md`.
+> **Statuto di questo catalogo: preferenza di gusto, non rilevatore.** Le liste di parole sospette che seguono sono uno strumento di gusto editoriale, non una prova di paternità artificiale del testo. Sono inaffidabili come rilevatore per quattro ragioni: cambiano a ogni versione del modello, dipendono dal prompt, sono confuse dal genere (parole additate come AI abbondano nella prosa umana accademica e di genere) e non si trasferiscono da un modello all'altro. Lo dimostra il calo di *delve* dopo la sua segnalazione pubblica nel 2024: appena una lista diventa nota, smette di funzionare come rilevatore. Restano utilissime come scelta di stile, «non voglio che la mia prosa suoni così», a patto di essere onesti su questo punto. Per i segnali davvero misurabili e con base peer-reviewed (varietà lessicale, pronomi, emozioni, interiorità, sottotesto, template sintattici) vedi `segnali-misurabili.md`.
 
 ## Indice
 
@@ -222,6 +222,17 @@ Aperture predefinite che le AI usano a prescindere dal contenuto. Un testo itali
 
 *Nel caos frenetico della vita moderna, Nell'oceano infinito dei dati, Nel labirinto intricato di, Nel cuore pulsante di*
 
+### Quando l'alternativa diventa schema
+
+Le aperture consigliate sopra (fatto, aneddoto, domanda specifica, citazione, immagine) funzionano finché variano. Usata ogni volta, la stessa diventa una firma nuova. Nel primo campione misurato da Renato Romano tutti e sette i blog scritti da Claude con questa skill si aprivano con una scena o un dettaglio concreto (*Sono le due e venti. Sopra la tua testa qualcuno trascina una sedia…*; *Il tabellone segna dieci minuti di ritardo, poi quindici, poi venticinque.*), e quattro su sette chiudevano con un consiglio in prima persona (*Io consiglierei…*, *Il mio consiglio, da pendolare…*). Ogni apertura presa da sola andava bene. Messe in fila, sembravano uscite dallo stesso stampo.
+
+Come si evita:
+
+- Scegliere l'apertura dal contenuto, non dall'abitudine. Un tema pratico (*come scegliere una bici usata*) regge bene il fatto nudo o la tesi; la scena serve quando il lettore deve riconoscersi in una situazione (*il vicino che fa rumore*).
+- Nei testi in serie (un blog, una newsletter, più articoli nella stessa conversazione) alternare i tipi: il fatto o il dato (*Una lattina pesa quindici grammi.*), la tesi (*Il regionale arriva tardi per colpa della rete.*), la scena, la domanda vera che il lettore si fa davvero, la citazione con fonte. Mai lo stesso tipo due volte di seguito.
+- La scena d'apertura non usa la progressione a tre *X, poi Y, poi Z* (*una sedia, poi un'altra, poi la lavatrice*), che è la regola del tre in un'altra forma.
+- Lo stesso vale per le chiusure: conseguenza, immagine, consiglio pratico, domanda aperta, dato finale. Il consiglio in prima persona è una scelta fra le tante, non la chiusura di default, e richiede comunque un io reale (regola 18 del `SKILL.md`).
+
 ## 8. Chiusure stereotipate
 
 Una conclusione umana aggiunge, non riassume: sposta il livello, apre a una conseguenza, chiude con un'immagine. Le AI riassumono e fanno la morale.
@@ -253,6 +264,8 @@ Una conclusione umana aggiunge, non riassume: sposta il livello, apre a una cons
 Strutture formalmente corrette ma che un italiano madrelingua non userebbe mai. I lettori percepiscono l'artificialità anche senza saperne identificare l'origine.
 
 Per tradurre un testo intero: `tradurre-in-italiano.md`, con i calchi sintattici della traduzione e i falsi amici che la sezione 11 qui sotto non elenca.
+
+Sul sito dell'Accademia della Crusca Massimo Palermo dà un nome al fenomeno: negli LLM usati in Occidente, a base inglese, emerge un *criptoinglese*, fatto di calchi o interferenze dalla lingua maggioritaria del Web, che «talvolta» permette di riconoscere le scritture artificiali. Per le stesse tracce riprende da Anna Maria De Cesare l'espressione «impronte algoritmiche dell'inglese» (Palermo, *Sui testi generati dall'intelligenza artificiale. Verso un nuovo rapporto tra norma e uso?*, Tema del mese, 20 maggio 2026; De Cesare, *L'italiano sintetico dell'intelligenza artificiale generativa*, Cesati 2026, pp. 89-118).
 
 **Calchi di posizione sociale:**
 

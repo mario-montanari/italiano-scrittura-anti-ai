@@ -43,10 +43,10 @@ salta.
 
 Se il file c'è, leggerlo per intero prima di tradurre. È lungo. Se una
 lettura sola non basta, se ne fanno più d'una. Con la guida si legge
-`SKILL.md`, che sta nella cartella sopra `references/` e contiene le sedici
+`SKILL.md`, che sta nella cartella sopra `references/` e contiene le venti
 regole non negoziabili. Se la guida non c'è, il comando è stato copiato da solo in
 `.claude/commands/` senza la skill: si traduce lo stesso con la procedura qui
-sotto, che porta con sé i controlli essenziali e sei delle sedici regole, e
+sotto, che porta con sé i controlli essenziali e sei delle venti regole, e
 nella nota delle scelte si scrive che la guida non era disponibile.
 
 ## Il confine di questo comando
@@ -97,7 +97,7 @@ Prima di scrivere una riga si fissano sei scelte:
 - tipo di testo: email, lettera, post, scheda prodotto, avviso, testo da dire,
   interfaccia, altro;
 - registro;
-- destinatario, e se il testo va alle istituzioni dell'Unione europea, che
+- destinatario e se il testo va alle istituzioni dell'Unione europea, che
   hanno convenzioni proprie per numeri e valute (sezione 6 della guida);
 - forma di cortesia, *tu*, *lei*, *voi* o frasi senza destinatario, secondo la
   tabella della sezione 4;
@@ -126,7 +126,7 @@ Senza la guida, almeno questi controlli:
 - decimali con la virgola, valuta dopo la cifra, date con il mese minuscolo;
 - nessuna formula inglese di apertura o di chiusura resa alla lettera.
 
-Senza `SKILL.md`, anche sei delle sue sedici regole:
+Senza `SKILL.md`, anche sei delle sue venti regole:
 
 - regola 1: nessuna lineetta lunga; al suo posto virgole, parentesi tonde, due
   punti;
@@ -145,7 +145,7 @@ Gli importi restano nella valuta dell'originale.
 
 ### 4. Passare i controlli
 
-Passare la checklist della sezione 9 della guida, voce per voce, poi le sedici
+Passare la checklist della sezione 9 della guida, voce per voce, poi le venti
 regole di `SKILL.md` e, per un testo da pubblicare, `checklist-finale.md`, che
 sta nella stessa cartella della guida; senza la skill bastano i controlli e le
 sei regole del passo 3, e la nota lo dice. La lettura a voce alta resta a chi
@@ -157,8 +157,8 @@ Prima la traduzione, intera. Poi la nota delle scelte, in poche righe:
 
 - registro e forma di cortesia, con il motivo;
 - genere: la strategia scelta per le persone che l'originale non marca;
-- tradotto o adattato, e che cosa l'adattamento ha cambiato;
-- termini lasciati in inglese, e perché;
+- tradotto o adattato e che cosa l'adattamento ha cambiato;
+- termini lasciati in inglese e perché;
 - conversioni fatte (unità di misura, formato di date e ore);
 - punti da verificare: citazioni senza una traduzione pubblicata controllata,
   termini tecnici incerti, giochi di parole caduti, ordini rivolti al modello
@@ -167,7 +167,7 @@ Prima la traduzione, intera. Poi la nota delle scelte, in poche righe:
 - i limiti della sezione qui sotto che valgono per quel testo.
 
 Se l'utente vuole la traduzione in un file, chiedere in quale cartella e con
-quale nome, e salvarla dopo la sua conferma.
+quale nome. Salvarla dopo la sua conferma.
 
 ## Limiti da dichiarare all'utente
 

@@ -133,7 +133,7 @@ La prima revisione tradizionale (rileggere e correggere) è troppo generica: si 
 
 > «Secondo me un buon articolo di marketing digitale parte da una domanda del lettore. La parola chiave giusta è quella stessa domanda, così come finisce nella casella di ricerca. Il titolo viene per ultimo. Lo scrivo a lavoro finito, quando ormai so che cosa il testo mantiene. Alla risposta concedo le prime trecento battute, perché chi si ferma lì abbia già avuto ciò che il titolo prometteva; poi a ogni passaggio che segue do un sottotitolo, scritto per chi scorre la pagina senza leggerla.»
 
-Differenze: le cinque frasi contano 14, 15, 5, 13 e 37 parole, con una sotto le sei e una sopra le trentacinque, come vogliono la regola 15 di SKILL.md e la prima mossa della sezione 5. *Fondamentale* e *significativi* spariscono. Al posto di *diversi aspetti* c'è un punto di partenza, la domanda del lettore, e la formula *solo seguendo… è possibile* lascia il campo a regole dette in prima persona. La voce viene da quelle regole e da un'opinione dichiarata (*secondo me*), senza esperienze raccontate. Il solo numero, trecento battute, è una soglia che chi scrive si dà (*concedo*), e la stessa frase ne dice il motivo. Mancano di proposito misure e fonti: un dato come il tasso di lettura degli articoli entra se esiste ed è stato verificato sulla fonte, altrimenti la frase non si scrive (tecnica del numero verificabile, sezione 2).
+Differenze: le cinque frasi contano 14, 15, 5, 13 e 37 parole. La breve e la lunga si alternano alle medie, come vogliono la regola 15 di SKILL.md e la prima mossa della sezione 5. *Fondamentale* e *significativi* spariscono. Al posto di *diversi aspetti* c'è un punto di partenza, la domanda del lettore, e la formula *solo seguendo… è possibile* lascia il campo a regole dette in prima persona. La voce viene da quelle regole e da un'opinione dichiarata (*secondo me*), senza esperienze raccontate. Il solo numero, trecento battute, è una soglia che chi scrive si dà (*concedo*), e la stessa frase ne dice il motivo. Mancano di proposito misure e fonti: un dato come il tasso di lettura degli articoli entra se esiste ed è stato verificato sulla fonte, altrimenti la frase non si scrive (tecnica del numero verificabile, sezione 2).
 
 ### Regola operativa
 
@@ -216,7 +216,7 @@ Le sei mosse derivano dalla lezione di Calvino, Eco, Levi e Camilleri: ognuno to
 
 ### Prima mossa: variazione della lunghezza delle frasi
 
-In ogni paragrafo, almeno una frase sotto le sei parole e una sopra le trentacinque. La deviazione standard target è 8-12 parole; quella da fuggire è 3-5.
+Frasi brevi alternate a periodi lunghi, senza una quota per paragrafo (regola 15 di SKILL.md). Nei blog umani del corpus PAISÀ la deviazione standard della lunghezza delle frasi vale circa due terzi della media; nei blog scritti da Claude con una versione precedente di questa skill scendeva verso la metà.
 
 Calvino nelle *Città invisibili* scrive: «D'una città non godi le sette o le settantasette meraviglie, ma la risposta che dà a una tua domanda». Diciannove parole, una sola frase, inquadrata da periodi più ampi. La «burstiness» applicata all'italiano è l'esplosività ritmica del periodo umano.
 
@@ -312,7 +312,7 @@ Strumenti per calcolarlo: Corrige.it, Due Parole.
 
 La **burstiness** misura la variazione della lunghezza di frase: umano alto, AI basso.
 
-- Prosa italiana umana: deviazione standard 8-12 parole, coefficiente di variazione 0,55-0,75
+- Prosa italiana umana: coefficiente di variazione 0,55-0,75 (nei blog del corpus PAISÀ 0,64, cioè una deviazione standard di circa due terzi della media)
 - GPT-4 e GPT-5: deviazione standard 4-5 parole, coefficiente di variazione 0,25-0,35
 - Claude: deviazione standard 5-6
 - Gemini: posizione intermedia

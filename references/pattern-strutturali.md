@@ -28,6 +28,7 @@ La regola generale resta la densità: nessun singolo pattern condanna un testo. 
 18. [Dichiarazioni di knowledge cutoff](#18-dichiarazioni-di-knowledge-cutoff)
 19. [Tono servile, adulazione, artefatti chatbot](#19-tono-servile-adulazione-artefatti-chatbot)
 20. [Connettivi sovrabbondanti](#20-connettivi-sovrabbondanti)
+21. [Gerundio irrelato](#21-gerundio-irrelato)
 
 ---
 
@@ -123,7 +124,7 @@ Zero aggettivi di mestiere, sei dati verificabili.
 
 **Esempio riscritto:**
 
-> «Il sito vende online prodotti artigianali. Ha un catalogo di 800 referenze, lavora con fornitori selezionati, ed è uno dei tre principali operatori italiani del settore.»
+> «Il sito vende online prodotti artigianali. Ha un catalogo di 800 referenze, lavora con fornitori selezionati ed è uno dei tre principali operatori italiani del settore.»
 
 Quattro verbi concreti, stesso contenuto, zero perifrasi.
 
@@ -209,6 +210,8 @@ Cinque voci, struttura identica, etichette ripetute nel testo che le segue. Tre 
 **Riscrittura in prosa:**
 
 > «La nuova versione cambia quattro cose: interfaccia ridisegnata, tempi di caricamento dimezzati, crittografia end-to-end, scalabilità testata fino a 50.000 utenti contemporanei. La quinta cosa, che non vediamo dal pannello ma fa la differenza, è che il sistema regge le query complesse che prima ammazzavano il database.»
+
+**Anche fuori dagli elenchi.** La stessa etichetta in grassetto compare in testa ai paragrafi di relazioni, circolari e note informative: *Margine. Il margine lordo scende…*, *Valutazione. A nostro giudizio…*. Nei campioni misurati da Renato Romano era sparita in due versioni della skill ed è tornata nella successiva, in cinque testi professionali su sette: per questo è diventata la regola 20 del `SKILL.md`. Si corregge allo stesso modo: titoli veri se servono sezioni, altrimenti la prima frase porta il concetto (*Il margine lordo scende al 31%…*). `scripts/controlla_testo.py` la segnala.
 
 **Quando la lista ha senso e va mantenuta:** voci davvero indipendenti, parallele, lette per riferimento (checklist operativa, elenco di requisiti, sequenza di passaggi numerati). In quel caso bullet point giustificato, senza grassetto dell'header.
 
@@ -537,3 +540,33 @@ Usati singolarmente sono normali; diventano firma AI quando si accumulano. Il ca
 > «L'azienda ha chiuso il bilancio in utile e ha aumentato gli investimenti in ricerca. Il mercato resta competitivo: il prossimo anno dovrà fare di più.»
 
 Da cinque frasi con connettivo in testa a due frasi scorrevoli.
+
+Fra le attitudini tipiche dei testi generati nel costruire la frase e il testo, Massimo Palermo cita proprio «il generoso ricorso a connettivi di raccordo tra le frasi» (*Sui testi generati dall'intelligenza artificiale. Verso un nuovo rapporto tra norma e uso?*, Accademia della Crusca, Tema del mese, 20 maggio 2026, che rimanda a Giuseppe Antonelli, *Alfabit. L'italiano digitale dagli SMS all'IA*, il Mulino 2026, p. 149).
+
+## 21. Gerundio irrelato
+
+Il gerundio italiano, di norma, ha lo stesso soggetto della frase reggente. Quando il soggetto implicito del gerundio è un altro, il gerundio è *irrelato*: la frase resta comprensibile solo perché il lettore ricostruisce da sé chi fa che cosa. È un difetto di sintassi, prima che di stile. Il gerundio parassita della sezione 2 è un caso diverso: ha il soggetto giusto ma non aggiunge nulla.
+
+**Struttura spia:** gerundio in apertura o in coda la cui azione non è compiuta dal soggetto grammaticale della principale. Il caso più insidioso è quando il soggetto della principale è una cosa, o la principale è passiva: *essendo arrivati tardi, la cena era fredda*; *leggendo il contratto, emergono tre clausole*; *compilando il modulo, i dati vengono salvati*. Con il *si* impersonale il gerundio resta regolare (*sbagliando s'impara*).
+
+**Esempi negativi:**
+
+> «Entrando nel museo, la prima sala ospita la collezione egizia.» (chi entra non è la sala)
+>
+> «Avendo analizzato i dati, il progetto è stato approvato.» (chi ha analizzato non è il progetto)
+>
+> «Compilando il modulo, i dati vengono salvati automaticamente.»
+
+**Perché è un pattern AI:** sul sito dell'Accademia della Crusca Massimo Palermo registra «una buona diffusione di questa costruzione anche nelle scritture artificiali», con un esempio scritto da Gemini, e la chiama «prediletta anche da altri sistemi di IA» (*Sui testi generati dall'intelligenza artificiale. Verso un nuovo rapporto tra norma e uso?*, Tema del mese, 20 maggio 2026). La stessa costruzione «si ritrova frequentemente nelle scritture scolastiche e negli scriventi inesperti», quindi da sola non prova niente sulla paternità del testo. Palermo ha anche chiesto a ChatGPT perché usi tanto il gerundio: le ragioni date (economia sintattica, coesione, stile) mostrano consapevolezza, ma il modello non ne coglie l'asintatticità e lo riduce a un fatto di stile. Nel commento allo stesso articolo Riccardo Gualdo propone un'ipotesi: sulla crescita dei gerundi irrelati peserebbe l'influsso delle forme inglesi in *-ing*.
+
+**Come correggere (test diagnostico):** chiedersi chi compie l'azione del gerundio e chi è il soggetto della principale. Se non coincidono, si esplicita il soggetto con una subordinata di modo finito oppure si rifà la principale con il soggetto giusto.
+
+**Esempi riscritti:**
+
+> «Appena si entra nel museo, la prima sala ospita la collezione egizia.»
+>
+> «Dopo aver analizzato i dati, la commissione ha approvato il progetto.»
+>
+> «Quando si compila il modulo, i dati vengono salvati automaticamente.»
+
+**Eccezioni:** il gerundio con soggetto proprio espresso (*essendo il treno in ritardo, abbiamo preso un taxi*) è corretto. Lo sono anche alcune formule cristallizzate, come *generalmente parlando* o *volendo*, che nell'uso hanno perso il legame con un soggetto.

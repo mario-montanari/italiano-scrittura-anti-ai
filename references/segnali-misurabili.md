@@ -53,7 +53,7 @@ Riferimento: Kobak et al. (2024) misurano in oltre quattordici milioni di abstra
 
 I testi generati da modelli usano meno pronomi di prima e seconda persona (*io, mi, mio; tu, ti, tuo*) in rapporto al totale delle parole. La prosa suona più riferita che vissuta: qualcuno racconta i fatti dall'esterno invece di attraversarli.
 
-**Come si misura.** Si conta la frequenza dei pronomi di prima persona singolare e di seconda persona rispetto al totale delle parole, e si confronta con quella attesa per il genere. In un pezzo in prima persona, un conteggio anomalo di *io / mi / mio* è un segnale da indagare.
+**Come si misura.** Si conta la frequenza dei pronomi di prima persona singolare e di seconda persona rispetto al totale delle parole e si confronta con quella attesa per il genere. In un pezzo in prima persona, un conteggio anomalo di *io / mi / mio* è un segnale da indagare.
 
 **Come si riconosce.** Un testo che dovrebbe parlare di un'esperienza diretta e invece scivola sempre nell'impersonale (*si nota che, è possibile osservare, va considerato*). Una pagina di blog firmata da un autore reale in cui l'autore non compare mai come soggetto.
 

@@ -42,7 +42,7 @@
 - [Che cos'è](#che-cosè)
 - [I cinque lavori che sa fare](#i-cinque-lavori-che-sa-fare)
 - [Che cosa contiene](#che-cosa-contiene)
-- [Lo strumento eseguibile](#lo-strumento-eseguibile)
+- [Gli strumenti eseguibili](#gli-strumenti-eseguibili)
 - [Prerequisiti](#prerequisiti)
 - [Installazione](#installazione)
 - [Come si attiva](#come-si-attiva)
@@ -60,13 +60,13 @@
 
 ## Che cos'è
 
-Una biblioteca di lavoro sull'italiano scritto, in forma di skill: quattordici guide operative, oltre quarantaquattromila parole di regole, esempi e correzioni, più uno strumento eseguibile che misura la voce di un autore.
+Una biblioteca di lavoro sull'italiano scritto, in forma di skill: quattordici guide operative, oltre quarantasettemila parole di regole, esempi e correzioni, più due strumenti eseguibili, uno che misura la voce di un autore e uno che segnala in una bozza i punti che le regole vietano.
 
-Il nome dice «anti ai» perché da lì è nata, dalla firma riconoscibile che i modelli linguistici lasciano nei testi italiani. Ma il materiale che serve a togliere quella firma è lo stesso che serve a scrivere bene: la grammatica normativa dell'Accademia, il lessico giusto al posto di quello comodo, il ritmo della frase, i sei registri dell'italiano e le loro norme editoriali, la lezione dei prosatori del Novecento. Su un testo scritto da una persona funziona esattamente come su un testo generato, e nella metà dei casi è così che viene usata.
+Il nome dice «anti ai» perché da lì è nata, dalla firma riconoscibile che i modelli linguistici lasciano nei testi italiani. Ma il materiale che serve a togliere quella firma è lo stesso che serve a scrivere bene: la grammatica normativa dell'Accademia, il lessico giusto al posto di quello comodo, il ritmo della frase, i sei registri dell'italiano e le loro norme editoriali, la lezione dei prosatori del Novecento. Su un testo scritto da una persona funziona esattamente come su un testo generato e nella metà dei casi è così che viene usata.
 
 Il principio sta in una riga. La macchina produce la media statistica, l'autore produce la deviazione dalla media: questa skill serve a intercettare la prima e a costruire la seconda.
 
-**In Claude e non solo.** Il formato è quello aperto delle Agent Skills, un file indice con frontmatter e una cartella di guide in Markdown: si installa in Claude Code, su claude.ai e via API. Le regole però sono testo, e restano leggibili da qualunque altro modello a cui si passi la cartella, o da una persona che voglia usarle come manuale. L'unico pezzo che chiede un interprete è lo strumento facoltativo, e serve a misurare, non a scrivere.
+La skill funziona in Claude e non solo. Il formato è quello aperto delle Agent Skills, un file indice con frontmatter e una cartella di guide in Markdown: si installa in Claude Code, su claude.ai e via API. Le regole però sono testo e restano leggibili da qualunque altro modello a cui si passi la cartella, o da una persona che voglia usarle come manuale. Chiedono un interprete soltanto gli strumenti facoltativi in Python, che servono a misurare e a controllare, non a scrivere.
 
 <p align="right"><a href="#italiano-scrittura-anti-ai">torna in alto</a></p>
 
@@ -78,35 +78,35 @@ Un testo nuovo, dalla prima riga, con la norma applicata mentre si scrive e non 
 
 ### 2. Correggere e rivedere un testo già scritto
 
-Bozze, articoli, tesi, relazioni, capitoli: la skill lavora su testo altrui senza chiedere chi lo ha scritto. Ha una checklist pre-consegna in undici famiglie tematiche, venti stringhe da cercare con il Trova, una tabella sinottica dei difetti con la correzione accanto, e un metodo di revisione in due passaggi che prima elenca i difetti e poi li corregge, invece di riscrivere tutto a occhio. Gli errori che tolgono credibilità in una riga (*un'altro*, *qual'è*, *un pò*, *perchè*, il *piuttosto che* usato al posto di *oppure*) hanno una voce dedicata ciascuno.
+Bozze, articoli, tesi, relazioni, capitoli: la skill lavora su testo altrui senza chiedere chi lo ha scritto. Ha una checklist pre-consegna in undici famiglie tematiche, venti stringhe da cercare con il Trova, una tabella sinottica dei difetti con la correzione accanto e un metodo di revisione in due passaggi che prima elenca i difetti e poi li corregge, invece di riscrivere tutto a occhio. Gli errori che tolgono credibilità in una riga (*un'altro*, *qual'è*, *un pò*, *perchè*, il *piuttosto che* usato al posto di *oppure*) hanno una voce dedicata ciascuno.
 
 ### 3. Tradurre verso l'italiano
 
-I calchi dall'inglese sono il difetto più difficile da sentire, perché suonano familiari a chi ha appena letto l'originale. La skill porta il catalogo dei calchi lessicali e sintattici (*navigare le complessità*, *elevare il tuo business*, *approfondire*, *sfruttare*), la tabella dei falsi amici, e le alternative agli anglicismi secondo Zoppetti e Marazzini.
+I calchi dall'inglese sono il difetto più difficile da sentire, perché suonano familiari a chi ha appena letto l'originale. La skill porta il catalogo dei calchi lessicali e sintattici (*navigare le complessità*, *elevare il tuo business*, *approfondire*, *sfruttare*), la tabella dei falsi amici e le alternative agli anglicismi secondo Zoppetti e Marazzini.
 
-Per tradurre un testo intero c'è una guida a parte, `tradurre-in-italiano.md`, e un comando, `/traduci`. La guida spiega quando tradurre e quando adattare, elenca i calchi sintattici e i falsi amici, scioglie il pronome *you* in *tu*, *lei* o *voi*, e tratta il genere che l'inglese non marca, le convenzioni di numeri, date, valute e misure, i testi di ogni giorno, gli idiomi e i nomi; poi porta il procedimento con la checklist, cinque esempi prima e dopo e le fonti. Il comando la applica. Alla traduzione unisce una nota delle scelte di registro, cortesia e genere.
+Per tradurre un testo intero c'è una guida a parte, `tradurre-in-italiano.md`, e un comando, `/traduci`. La guida spiega quando tradurre e quando adattare, elenca i calchi sintattici e i falsi amici, scioglie il pronome *you* in *tu*, *lei* o *voi* e tratta il genere che l'inglese non marca, le convenzioni di numeri, date, valute e misure, i testi di ogni giorno, gli idiomi e i nomi; poi porta il procedimento con la checklist, cinque esempi prima e dopo e le fonti. Il comando la applica. Alla traduzione unisce una nota delle scelte di registro, cortesia e genere.
 
 ### 4. Catturare la voce di chi firma
 
-Quando si scrive per un cliente, o per sé stessi, la voce dell'autore prevale sui filtri generici: un tratto che sembra artificiale ma è autentico per quella persona va rispettato. La skill porta il metodo per catturarla da un corpus di testi veri, con due livelli tenuti separati (il misurato, riproducibile da chiunque; l'osservato, dove ogni affermazione porta il passo che la dimostra), il modello di scheda da compilare, e il confine oltre il quale la voce non vince: la norma della lingua non è gusto, e nessuno ha una voce fatta di errori.
+Quando si scrive per un cliente, o per sé stessi, la voce dell'autore prevale sui filtri generici: un tratto che sembra artificiale ma è autentico per quella persona va rispettato. La skill porta il metodo per catturarla da un corpus di testi veri, con due livelli tenuti separati (il misurato, riproducibile da chiunque; l'osservato, dove ogni affermazione porta il passo che la dimostra), il modello di scheda da compilare e il confine oltre il quale la voce non vince: la norma della lingua non è gusto, e nessuno ha una voce fatta di errori.
 
 ### 5. Difendere un testo umano accusato da un rilevatore
 
 Se un docente, un committente o una redazione contesta la paternità di un testo, la skill costruisce la risposta: che cosa misura davvero quel punteggio, quanto sbagliano quegli strumenti secondo le misure pubblicate (Liang 2023, Weber-Wulff 2023, il ritiro dell'AI Text Classifier di OpenAI, la disattivazione decisa da Vanderbilt), il vuoto di dati sull'italiano documentato dai benchmark multilingue, i sette passaggi della difesa e due modelli di documento.
 
-Serve a difendere un testo umano accusato ingiustamente. Non serve a far passare per umano un testo generato, e non contiene niente che aiuti a farlo.
+Serve a difendere un testo umano accusato ingiustamente. Non serve a far passare per umano un testo generato e non contiene niente che aiuti a farlo.
 
 <p align="right"><a href="#italiano-scrittura-anti-ai">torna in alto</a></p>
 
 ## Che cosa contiene
 
-Quattordici guide, caricate da Claude quando servono, più le sedici regole che valgono sempre.
+Quattordici guide, caricate da Claude quando servono, più le venti regole che valgono sempre.
 
 | Guida | Che cosa porta |
 | --- | --- |
 | `grammatica-italiana.md` | articoli, accenti, apostrofi, punteggiatura, trattini, virgolette, congiuntivo, consecutio, preposizioni |
 | `lessico-da-evitare.md` | catalogo del lessico con soglie di densità, calchi, falsi amici, anglicismi con alternative |
-| `pattern-strutturali.md` | venti pattern smontati: gonfiatura, participio parassita, perifrasi della copula, meta-annunci, variazione elegante, contrasti fittizi |
+| `pattern-strutturali.md` | ventuno pattern smontati: gonfiatura, participio parassita, perifrasi della copula, meta-annunci, variazione elegante, contrasti fittizi, gerundio irrelato |
 | `metodologie-operative.md` | soppressione durante la stesura, quattro tecniche di prevenzione, revisione in due passaggi, calibrazione della voce, sei mosse di umanizzazione |
 | `personalita-e-anima.md` | sei sintomi della scrittura asettica, sei tecniche per rimettere qualcuno dentro il testo, guardia contro il finto umano |
 | `maestri-della-deviazione.md` | sette autori italiani, la mossa-firma di ognuno, il passo che la mostra, la regola per portarla via |
@@ -121,7 +121,7 @@ Quattordici guide, caricate da Claude quando servono, più le sedici regole che 
 
 <p align="right"><a href="#italiano-scrittura-anti-ai">torna in alto</a></p>
 
-## Lo strumento eseguibile
+## Gli strumenti eseguibili
 
 `scripts/profilo_voce.py` calcola il profilo quantitativo di una voce da una cartella di testi dello stesso autore e dello stesso registro.
 
@@ -129,18 +129,24 @@ Quattordici guide, caricate da Claude quando servono, più le sedici regole che 
 python scripts/profilo_voce.py cartella-dei-testi --nome "Nome autore" --out cartella-di-uscita
 ```
 
-Misura il respiro della frase (lunghezza media, oscillazione, quota di domande), il respiro del paragrafo, la leggibilità Gulpease su blocchi separati, la varietà lessicale, la punteggiatura come firma involontaria, la persona a cui l'autore si rivolge, e le ricorrenze che tornano dove non servirebbero. Produce una scheda leggibile e i dati grezzi in JSON, e ogni misura dichiara che cosa non dice.
+Misura il respiro della frase (lunghezza media, oscillazione, quota di domande), il respiro del paragrafo, la leggibilità Gulpease su blocchi separati, la varietà lessicale, la punteggiatura come firma involontaria, la persona a cui l'autore si rivolge e le ricorrenze che tornano dove non servirebbero. Produce una scheda leggibile e i dati grezzi in JSON, e ogni misura dichiara che cosa non dice.
 
 Lo strumento misura e non giudica: non stabilisce se un testo sia stato generato da una macchina, e nessuno strumento al mondo lo fa in modo affidabile. Sotto le duemila parole di corpus il profilo esce dichiarato come indicativo. Chi non ha Python usa la skill per intero senza perdere niente, perché le stesse misure si ricavano a mano su cinquanta frasi e la procedura è scritta nel comando `/calibra-voce`.
 
 `scripts/prova_profilo_voce.py` porta 246 prove automatiche, e girano anche in continua a ogni push e a ogni pull request. Ognuna nasce da un difetto trovato durante l'audit e serve a impedire che torni.
+
+`scripts/controlla_testo.py` segnala riga per riga i punti di una bozza che le regole vietano (em-dash, contrasto fittizio, errori ortografici, titoletti in grassetto, troppi segnaposto) o chiedono di giustificare (virgola prima di *e*, gerundio in coda, suspense). Non corregge e non scrive niente: le violazioni certe si correggono, i punti da verificare si guardano uno per uno. Lo ha scritto Renato Romano.
+
+```bash
+python scripts/controlla_testo.py bozza.md
+```
 
 <p align="right"><a href="#italiano-scrittura-anti-ai">torna in alto</a></p>
 
 ## Prerequisiti
 
 - **Per la skill**: Claude Code, oppure claude.ai (app desktop o web) con le skill personali abilitate. Nient'altro.
-- **Per lo strumento facoltativo**: Python 3, senza librerie esterne. La continua lo esegue su Python 3.12.
+- **Per gli strumenti facoltativi**: Python 3, senza librerie esterne. La continua li esegue su Python 3.12.
 
 ## Installazione
 
@@ -236,7 +242,7 @@ Data verificabile, tre casi d'uso concreti, una posizione presa, la prima person
 
 ## Le regole che non si negoziano
 
-Sedici, applicate sempre, anche senza aprire una guida. Le prime cinque, per dare la misura:
+Venti, applicate sempre, anche senza aprire una guida. Le prime cinque, per dare la misura:
 
 1. **Mai em-dash** (—) in un testo italiano: al suo posto virgole, parentesi tonde, due punti.
 2. **Mai maiuscole all'inglese** nei titoli: *Come ottimizzare la SEO*, mai *Come Ottimizzare la SEO*.
@@ -244,7 +250,7 @@ Sedici, applicate sempre, anche senza aprire una guida. Le prime cinque, per dar
 4. **Mai aprire** con *Nel mondo di oggi*, *Nell'era digitale*, *Ti sei mai chiesto…?*
 5. **Mai chiudere** con *In conclusione*, *Spero che questo articolo ti sia utile*.
 
-L'elenco completo sta in [SKILL.md](SKILL.md), e comprende gli errori ortografici da Trova e Sostituisci, il *piuttosto che* disgiuntivo, e l'obbligo di variare la lunghezza delle frasi dentro ogni paragrafo.
+L'elenco completo sta in [SKILL.md](SKILL.md): comprende gli errori ortografici da Trova e Sostituisci, il *piuttosto che* disgiuntivo, l'alternanza fra frasi brevi e periodi lunghi, la virgola prima di *e* e il divieto di inventare un vissuto.
 
 ## Struttura della skill
 
@@ -290,11 +296,17 @@ italiano-scrittura-anti-ai/
 │   └── scudo-falsi-positivi.md
 ├── scripts/                           # Strumenti facoltativi, sola libreria standard Python
 │   ├── profilo_voce.py                # Calcola il profilo quantitativo di una voce
-│   └── prova_profilo_voce.py          # 246 prove automatiche, una per ogni difetto corretto
+│   ├── prova_profilo_voce.py          # 246 prove automatiche, una per ogni difetto corretto
+│   └── controlla_testo.py             # Segnala in una bozza i punti che le regole vietano
 └── extras/                            # Risorse complementari opzionali
     ├── README.md                      # I tre livelli di copertura
     ├── CLAUDE.md.example              # Template per Claude Code
     ├── user-preferences.example.md    # Template per claude.ai
+    ├── misura_campione.py             # Misura i tic in una cartella di testi
+    ├── campiona_paisa.py              # Estrae un campione umano dal corpus PAISÀ
+    ├── prova_campioni.py              # Prove dei due strumenti di misura
+    ├── campioni/
+    │   └── RAPPORTO.md                # Il rapporto dei campioni misurati
     └── hooks/
         └── consenti-solo-profilo-voce.py  # Hook PreToolUse facoltativo
 ```
@@ -307,14 +319,14 @@ La skill interviene sui testi che contano. Per il resto della giornata, dove non
 
 - **`extras/CLAUDE.md.example`**: memoria persistente per Claude Code, da mettere in `~/.claude/CLAUDE.md` o nella radice di un progetto.
 - **`extras/user-preferences.example.md`**: testo da incollare nelle user preferences di claude.ai.
-- **`commands/calibra-voce.md`**, **`commands/difendi.md`** e **`commands/traduci.md`**: i tre comandi, da copiare in `.claude/commands/`. Funzionano anche da soli, senza installare la skill intera: ricadono sul metodo scritto al loro interno, che per `/traduci` vuol dire i controlli essenziali e sei delle sedici regole.
+- **`commands/calibra-voce.md`**, **`commands/difendi.md`** e **`commands/traduci.md`**: i tre comandi, da copiare in `.claude/commands/`. Funzionano anche da soli, senza installare la skill intera: ricadono sul metodo scritto al loro interno, che per `/traduci` vuol dire i controlli essenziali e sei delle venti regole.
 - **`extras/hooks/consenti-solo-profilo-voce.py`**: hook facoltativo per chi calibra spesso e vuole togliere la conferma manuale al lancio dello strumento, senza allargare la superficie eseguibile.
 
-I due template contengono le regole essenziali estratte dalla skill, scritte come istruzioni dirette sempre attive: il `CLAUDE.md` ne porta 22, le user preferences le riprendono in forma compatta, senza quella sul codice. È la filosofia dei tre livelli: la skill come bisturi, il file di memoria e le preferenze come igiene quotidiana. I dettagli stanno in [extras/README.md](extras/README.md).
+I due template contengono le regole essenziali estratte dalla skill, scritte come istruzioni dirette sempre attive: il `CLAUDE.md` ne porta 25, le user preferences le riprendono in forma compatta, senza quella sul codice. È la filosofia dei tre livelli: la skill come bisturi, il file di memoria e le preferenze come igiene quotidiana. I dettagli stanno in [extras/README.md](extras/README.md).
 
 ## Prossimi passi
 
-Senza date promesse, e in ordine di utilità dichiarata:
+Senza date promesse e in ordine di utilità dichiarata:
 
 - **Avviso sulla lingua del corpus** nello strumento, che oggi produce una scheda dalla forma regolare anche su testi che non sono in italiano.
 - Il resto nasce dalle segnalazioni: i pattern che la skill non copre ancora arrivano da chi scrive in italiano tutti i giorni.
@@ -338,6 +350,8 @@ MIT License. Il testo completo sta nel file [LICENSE](LICENSE).
 Significa che si può usare, modificare e integrare in qualsiasi progetto, anche commerciale, mantenendo l'attribuzione. La licenza è scelta per massimizzare la riutilizzabilità da parte della comunità italiana.
 
 L'upgrade 1.1.0 incorpora concetti adattati dal repository `creative-writing-skills` di haowjy, distribuito con licenza Apache 2.0. Le due licenze sono compatibili: si può integrare materiale Apache 2.0 in un progetto MIT mantenendo l'attribuzione, che è riportata sia in fondo ai tre reference interessati sia nella sezione crediti. La licenza della skill resta MIT.
+
+La versione 1.7.0 incorpora il lavoro di Renato Romano, preso dal suo fork con la stessa licenza MIT: la sua nota di copyright sta in [LICENSE](LICENSE) accanto a quella dell'autore.
 
 <p align="right"><a href="#italiano-scrittura-anti-ai">torna in alto</a></p>
 
@@ -409,6 +423,15 @@ La skill consolida e organizza materiale di documenti sorgente redatti dall'auto
 - van Laer, de Ruyter, Visconti, Wetzels (2014), *The Extended Transportation-Imagery Model*, Journal of Consumer Research 40(5), doi:10.1086/673383: il trasporto narrativo come costrutto misurabile
 - Thissen, Menninghaus, Schlotz (2018), *Measuring optimal reading experiences: The reading flow short scale*, Frontiers in Psychology, doi:10.3389/fpsyg.2018.02542: il flusso di lettura
 - Hemingway, *Death in the Afternoon* (1932), capitolo 16: la teoria dell'iceberg
+
+**Fonte dell'upgrade 1.7.0 (regole 15 e da 17 a 20, controllo del testo, campioni misurati):**
+
+- **Renato Romano**, fork `renatoromano-png/italiano-scrittura-anti-ai`, licenza MIT: le regole sulla virgola prima di *e*, sul vissuto inventato, sul punto e virgola e sui titoletti in grassetto, la regola 15 riscritta sulla misura, il gerundio irrelato, `scripts/controlla_testo.py` e il metodo dei campioni misurati (`extras/campioni/RAPPORTO.md`)
+
+**Fonti aggiunte con l'upgrade 1.7.0:**
+
+- PAISÀ, corpus di testi web italiani raccolti nel 2010, distribuito da Eurac Research (hdl.handle.net/20.500.12124/3) con licenza CC BY-NC-SA 4.0: riferimento umano per le misure, non incluso nella repo
+- Massimo Palermo, *Sui testi generati dall'intelligenza artificiale. Verso un nuovo rapporto tra norma e uso?*, Accademia della Crusca, Tema del mese, 20 maggio 2026, con il commento di Riccardo Gualdo: il gerundio irrelato, i connettivi di raccordo, il *criptoinglese*; l'articolo rimanda ad Antonelli 2026 e a De Cesare 2026
 
 A tutti questi autori, istituzioni e progetti va il riconoscimento per aver fornito la base su cui questa skill è costruita.
 

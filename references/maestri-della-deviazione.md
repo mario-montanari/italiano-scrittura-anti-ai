@@ -4,13 +4,13 @@ La macchina produce sempre la media: l'esito statisticamente più probabile, app
 
 È una scelta di metodo. Un rilevatore di parole invecchia: *delve* è morto appena è stato scoperto, e la skill stessa lo ammette in `lessico-da-evitare.md`. I maestri no. Una mossa d'autore studiata nel 1962 funziona ancora, perché sta nel modo di piegare la frase, non in una parola da mettere in lista.
 
-Il file completa la sezione 5 di `metodologie-operative.md` ribaltando l'asse. Là le mosse sono indicizzate per tecnica (variazione della lunghezza, incisi, voce personale, rotture della struttura). Qui si parte dall'autore: ognuno con la sua mossa-firma, un passo che la mostra, e la regola per portarla via.
+Il file completa la sezione 5 di `metodologie-operative.md` ribaltando l'asse. Là le mosse sono indicizzate per tecnica (variazione della lunghezza, incisi, voce personale, rotture della struttura). Qui si parte dall'autore: ognuno con la sua mossa-firma, un passo che la mostra e la regola per portarla via.
 
 ## Come usare la galleria
 
 Non si legge dall'inizio alla fine. Si cerca il maestro affine al proprio registro e al problema del momento: la frase piatta e uniforme chiama Calvino, il periodo che non finisce mai chiama Eco, la pagina fredda che non lascia traccia chiama Levi.
 
-Una avvertenza che vale per tutte le schede, e che rimanda alla guardia contro l'over-humanizing (in `personalita-e-anima.md`): si ruba la **mossa**, non l'autore. Chi imita Camilleri parola per parola non scrive come Camilleri, scrive una parodia di Camilleri, e la parodia è un nuovo pattern riconoscibile quanto quello di partenza. La mossa si assorbe e si dimentica, finché non resta il gesto senza la firma.
+Un'avvertenza che vale per tutte le schede e che rimanda alla guardia contro l'over-humanizing (in `personalita-e-anima.md`): si ruba la **mossa**, non l'autore. Chi imita Camilleri parola per parola non scrive come Camilleri, scrive una parodia di Camilleri, e la parodia è un nuovo pattern riconoscibile quanto quello di partenza. La mossa si assorbe e si dimentica, finché non resta il gesto senza la firma.
 
 ## Indice dei maestri
 
@@ -32,7 +32,7 @@ Una avvertenza che vale per tutte le schede, e che rimanda alla guardia contro l
 
 **Perché devia dalla media.** La macchina livella la lunghezza delle frasi verso un valore medio comodo, tutte sui venti-venticinque termini. Calvino no: fa respirare il periodo lungo e poi chiude corto, e la chiusa resta. La deviazione qui è statistica prima che stilistica, alta varianza di lunghezza, quella che i detector chiamano *burstiness* e che l'AI non ha.
 
-**Come rubarla.** In ogni paragrafo, una frase sotto le sei parole vicino a una sopra le trentacinque. Non per regola, ma perché il pensiero accelera e frena. La corta va in fondo, dove chiude, non all'inizio, dove sarebbe solo un attacco.
+**Come rubarla.** Una frase di poche parole accanto a un periodo lungo, dove il pensiero accelera e poi frena. La corta va in fondo, dove chiude, non all'inizio, dove sarebbe solo un attacco.
 
 ---
 
@@ -40,7 +40,7 @@ Una avvertenza che vale per tutte le schede, e che rimanda alla guardia contro l
 
 **La mossa.** Due gesti opposti tenuti insieme. Da un lato il periodo che si apre a scatole cinesi, un inciso dentro l'altro, una glossa che commenta la glossa. Dall'altro il coraggio dell'asserzione secca, la frase che chiude senza spiegarsi.
 
-**Il passo.** In *Come si fa una tesi di laurea* (Bompiani 1977) Eco detta la regola contro sé stesso, e lo fa a colpi di frasi brevissime: non siete Proust, quindi niente periodi lunghi; non siete e.e. cummings, quindi niente puntini di sospensione, niente punti esclamativi, e le ironie non si spiegano. È una parafrasi fedele, non una citazione: le fonti in rete concordano sul contenuto ma non bastano a garantire l'ordine e le parole esatte dell'edizione a stampa. Nessuna subordinata, nessuna attenuazione.
+**Il passo.** In *Come si fa una tesi di laurea* (Bompiani 1977) Eco detta la regola contro sé stesso e lo fa a colpi di frasi brevissime: non siete Proust, quindi niente periodi lunghi; non siete e.e. cummings, quindi niente puntini di sospensione, niente punti esclamativi, e le ironie non si spiegano. È una parafrasi fedele, non una citazione: le fonti in rete concordano sul contenuto ma non bastano a garantire l'ordine e le parole esatte dell'edizione a stampa. Nessuna subordinata, nessuna attenuazione.
 
 **Perché devia dalla media.** La macchina teme entrambi gli estremi. Evita la sintassi annidata, perché a ogni parentesi aumenta la probabilità di perdere il filo che ha pianificato. Ed evita l'asserzione nuda, perché preferisce la formula prudente, *si potrebbe dire che, è possibile sostenere che*. L'autore fa il contrario: scava a fondo quando serve profondità, taglia netto quando serve una verità.
 
@@ -50,11 +50,11 @@ Una avvertenza che vale per tutte le schede, e che rimanda alla guardia contro l
 
 ### Levi, la parola concreta che pesa
 
-**La mossa.** Dire la cosa esatta invece del concetto generico, e lasciare che il dettaglio concreto porti da solo il significato che non viene dichiarato. La chimica gli aveva insegnato che una sostanza ha un nome preciso, e che il nome preciso vale più di dieci aggettivi.
+**La mossa.** Dire la cosa esatta invece del concetto generico e lasciare che il dettaglio concreto porti da solo il significato che non viene dichiarato. La chimica gli aveva insegnato che una sostanza ha un nome preciso, e che il nome preciso vale più di dieci aggettivi.
 
 **Il principio.** In *Dello scrivere oscuro* (in *L'altrui mestiere*, Einaudi 1985) Levi difende l'etica della chiarezza: farsi capire da chi desidera capire è un dovere dello scrittore, scrivere è un servizio pubblico, e il lettore di buona volontà non va deluso. La scrittura come dovere verso chi legge, non come esibizione.
 
-**Perché devia dalla media.** La macchina generalizza per sicurezza: *la situazione era difficile, le condizioni erano dure*. Il generico non sbaglia mai, e per questo non dice niente. Levi nomina l'oggetto, il gesto, la misura, e nel dettaglio concreto lascia il sottotesto che l'astrazione cancella. Dove il modello scrive *provò una grande sofferenza*, l'autore mostra la scodella, il freddo, il numero sul braccio, e non aggiunge il commento.
+**Perché devia dalla media.** La macchina generalizza per sicurezza: *la situazione era difficile, le condizioni erano dure*. Il generico non sbaglia mai, e per questo non dice niente. Levi nomina l'oggetto, il gesto, la misura. Nel dettaglio concreto lascia il sottotesto che l'astrazione cancella. Dove il modello scrive *provò una grande sofferenza*, l'autore mostra la scodella, il freddo, il numero sul braccio e non aggiunge il commento.
 
 **Come rubarla.** Ogni volta che scrivi un'astrazione (*difficoltà, sofferenza, complessità, cambiamento*), fermati e chiediti quale oggetto o gesto concreto la contiene. Scrivi quello e togli l'astrazione. Non spiegare cosa deve provare il lettore: mettigli davanti la cosa e fidati che provi da sé.
 
@@ -122,7 +122,7 @@ Battuta inventata nello stile di Camilleri, non una sua citazione. Il resto dell
 
 ## Combinare i maestri senza caricatura
 
-Le mosse si sommano, ma con misura. Un testo può avere il ritmo di Calvino e la concretezza di Levi nello stesso paragrafo, e sarà più vivo per questo. Non può avere tutte e sette le firme in dieci righe: diventerebbe un campionario, un esercizio di stile che grida «guardate quante cose so fare», ed è il difetto opposto alla media anonima, altrettanto riconoscibile.
+Le mosse si sommano, ma con misura. Un testo può avere il ritmo di Calvino e la concretezza di Levi nello stesso paragrafo e sarà più vivo per questo. Non può avere tutte e sette le firme in dieci righe: diventerebbe un campionario, un esercizio di stile che grida «guardate quante cose so fare», ed è il difetto opposto alla media anonima, altrettanto riconoscibile.
 
 La regola è la stessa dell'anima (in `personalita-e-anima.md`): la mossa serve il contenuto, non sé stessa. Quando hai imparato a tagliare come Testa, taglia senza pensare a Testa. Quando la frase breve ti viene naturale dove pesa, hai smesso di imitare Calvino e hai una voce. A quel punto la galleria ha esaurito il suo compito, e puoi chiuderla.
 

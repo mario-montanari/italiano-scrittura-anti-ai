@@ -1,6 +1,6 @@
 # Tradurre in italiano
 
-Questa guida serve quando un testo nasce in inglese e deve arrivare a un lettore italiano. Raccoglie quello che il resto della skill tocca solo di passaggio: i calchi della sintassi, il pronome *you* da sciogliere in *tu*, *lei* o *voi*, il genere che l'inglese lascia aperto, le convenzioni di numeri, date e maiuscole, e le formule dei testi che si traducono ogni giorno. La usa il comando `/traduci`.
+Questa guida serve quando un testo nasce in inglese e deve arrivare a un lettore italiano. Raccoglie quello che il resto della skill tocca solo di passaggio: i calchi della sintassi, il pronome *you* da sciogliere in *tu*, *lei* o *voi*, il genere che l'inglese lascia aperto, le convenzioni di numeri, date e maiuscole, infine le formule dei testi che si traducono ogni giorno. La usa il comando `/traduci`.
 
 Le fonti sono nella sezione 11. Dove tacciono, la proposta si chiama indicazione della guida, o scelta di questa skill se fissa una convenzione per i testi che la skill produce; dove si contraddicono, si riporta chi dice che cosa.
 
@@ -34,13 +34,13 @@ Entrano solo i calchi documentati. Quando la fonte presenta l'influsso dell'ingl
 
 ### Il gerundio attaccato a un nome
 
-L'inglese mette la forma in *-ing* dopo un nome per descriverlo (*there is a boy singing*). L'italiano no. Marcello Barbato, per la Crusca, giudica *c'è un ragazzo cantando* e *mi è arrivato un messaggio dicendo che* «decisamente inaccettabili perché l'italiano standard non conosce l'impiego del gerundio come modificatore di nome», e qui ritiene l'influsso dell'inglese «tanto più probabile», senza darlo per dimostrato. Si rende con una relativa: *c'è un ragazzo che canta*.
+L'inglese mette la forma in *-ing* dopo un nome per descriverlo (*there is a boy singing*). L'italiano no. Marcello Barbato, per la Crusca, giudica *c'è un ragazzo cantando* e *mi è arrivato un messaggio dicendo che* «decisamente inaccettabili perché l'italiano standard non conosce l'impiego del gerundio come modificatore di nome» e qui ritiene l'influsso dell'inglese «tanto più probabile», senza darlo per dimostrato. Si rende con una relativa: *c'è un ragazzo che canta*.
 
-Barbato segnala un secondo caso. Il gerundio dopo una reggente al passivo (*è stato visto comprando*) suona strano per la posizione e per il passivo, e si scioglie con l'infinito o con una pseudo-relativa (*è stato visto comprare*, *che comprava*), mentre restano normali il gerundio prima della reggente e quello di modo o di mezzo.
+Barbato segnala un secondo caso. Il gerundio dopo una reggente al passivo (*è stato visto comprando*) suona strano per la posizione e per il passivo e si scioglie con l'infinito o con una pseudo-relativa (*è stato visto comprare*, *che comprava*), mentre restano normali il gerundio prima della reggente e quello di modo o di mezzo.
 
 ### Il passivo dei verbi intransitivi
 
-*Accedere* non ha passivo. Cristiana De Santis, per la Crusca, chiama *il server dovrà essere acceduto* «un calco dall'inglese (to) access, verbo transitivo che si trova spesso usato al passivo», e propone l'impersonale: «al canale si può accedere solo su invito». Così *the file was accessed by three users* diventa *tre utenti hanno aperto il file*.
+*Accedere* non ha passivo. Cristiana De Santis, per la Crusca, chiama *il server dovrà essere acceduto* «un calco dall'inglese (to) access, verbo transitivo che si trova spesso usato al passivo» e propone l'impersonale: «al canale si può accedere solo su invito». Così *the file was accessed by three users* diventa *tre utenti hanno aperto il file*.
 
 Il passivo resta legittimo. Nessuna fonte letta lo chiama calco, e Nicola Grandi, alla voce *Passiva, costruzione* dell'*Enciclopedia dell'Italiano*, lo descrive come una costruzione regolare; in questa skill torna come tic della prosa generata (`pattern-strutturali.md` sezione 16) e come scelta di registro nei testi della pubblica amministrazione, dove le direttive chiedono la forma attiva (sezione 7).
 
@@ -192,7 +192,7 @@ Per i testi delle amministrazioni pubbliche ci sono due norme scritte: la dirett
 - Parole comuni, pochi termini tecnici, e spiegati, sigle sciolte, niente parole straniere con un equivalente in uso, maiuscole di rispetto ridotte (2002, regole 2, 3, 4, 7 e 8); come misura, il lettore meno istruito (2005, punto 1b).
 - Indicativo o infinito al posto del congiuntivo «dove il contesto lo permette» (2002, regola 9), che con la regola 14 si concilia cambiando costruzione: *qualora desideri* diventa *se desidera*.
 
-**Frasi brevi e regola 15.** Per la direttiva del 2002 «frasi con più di 25 parole sono difficili da capire e ricordare»; quella del 2005 chiede di «preferire frasi brevi formate da meno di 15 parole» e di «escludere frasi con più di 40 parole» (punto 1c). Per tenerle insieme con la regola 15, che vuole in ogni paragrafo una frase sopra le 35 parole, nei testi della pubblica amministrazione la frase lunga è una sola, fra 36 e 40 parole, costruita per coordinazione come un elenco di passi uniti da *e* e da *poi*: rispetta la regola e il tetto del 2005, ma resta sopra la soglia di difficoltà del 2002. La sezione 10 lo mostra.
+**Frasi brevi e regola 15.** Per la direttiva del 2002 «frasi con più di 25 parole sono difficili da capire e ricordare»; quella del 2005 chiede di «preferire frasi brevi formate da meno di 15 parole» e di «escludere frasi con più di 40 parole» (punto 1c). La regola 15 chiede variazione, non quote, quindi nei testi della pubblica amministrazione valgono questi tetti: frasi brevi alternate a frasi medie e, dove un passo lo chiede, una frase più lunga costruita per coordinazione, come un elenco di passi uniti da *e* e da *poi*, mai oltre le 40 parole. La sezione 10 lo mostra.
 
 **Registro.** La sezione 1 di `registri-e-contesti.md` descrive il registro formale degli atti amministrativi, con subordinazione multipla e nominalizzazioni frequenti. È una descrizione. Per le comunicazioni ai cittadini valgono le direttive, con coordinazione e forma attiva, e questa guida ne ricava anche il verbo al posto del nome astratto (*attuare il piano* invece di *l'attuazione del piano*, l'esempio di quel file).
 
@@ -217,7 +217,7 @@ Qui le fonti lette tacciono.
 4. Scrivere la prima stesura, frase per frase se si traduce, blocco per blocco se si adatta.
 5. Rileggere il solo italiano come lo leggerà chi non conosce l'originale; una persona rilegge a voce alta un testo da dire.
 6. Confrontare con l'originale riga per riga: niente perso, niente aggiunto.
-7. Passare la checklist, poi le sedici regole di `SKILL.md` e, per i testi da pubblicare, `checklist-finale.md`.
+7. Passare la checklist, poi le venti regole di `SKILL.md` e, per i testi da pubblicare, `checklist-finale.md`.
 8. Scrivere la nota delle scelte: registro, cortesia, genere, termini lasciati in inglese, conversioni, punti da verificare.
 
 La checklist, che `/traduci` passa voce per voce:
@@ -232,11 +232,11 @@ La checklist, che `/traduci` passa voce per voce:
 - [ ] Caporali, nessuna lineetta lunga, nessuna virgola di Oxford, nessun titolo maiuscolo all'inglese davanti a un nome
 - [ ] Apertura, chiusura e invito all'azione italiani; nessuna cortesia inglese tradotta alla lettera
 - [ ] Idiomi resi nel senso; giochi di parole adattati o segnalati; citazioni dalla traduzione pubblicata o dichiarate proprie
-- [ ] Testo di un ente pubblico: frasi brevi, forma attiva, coordinazione, una sola frase lunga per paragrafo fra 36 e 40 parole
+- [ ] Testo di un ente pubblico: frasi brevi, forma attiva, coordinazione, nessuna frase oltre le 40 parole
 
 ## 10. Esempi prima e dopo
 
-Cinque testi inventati per questa guida, ognuno con l'originale, i punti che stonano nella traduzione ricalcata (da non imitare), una traduzione buona e il perché. Nelle versioni buone ogni paragrafo di prosa rispetta la regola 15; le formule (vocativo, saluto, firma) non sono paragrafi di prosa.
+Cinque testi inventati per questa guida, ognuno con l'originale, i punti che stonano nella traduzione ricalcata (da non imitare), una traduzione buona e il perché.
 
 ### Email di lavoro
 
@@ -290,7 +290,7 @@ Cinque testi inventati per questa guida, ognuno con l'originale, i punti che sto
 > **Carta d'identità: rinnovo solo su appuntamento.**\
 > Chi è residente e vuole rinnovare la carta d'identità prenota l'appuntamento online, sceglie un giorno dal lunedì al venerdì e un orario fra le 8.30 e le 12.30, poi si presenta con una fototessera recente e con la carta vecchia. Serve sempre l'appuntamento. L'ufficio rilascia la carta nuova entro sei giorni lavorativi.
 
-**Perché.** Il titolo dice la regola. Una frase lunga per coordinazione, entro le 40 parole del 2005, oltre le 25 del 2002 per la regola 15, e due brevi; *chi è residente* non marca il genere; cadono il participio *desideranti*, i possessivi e il passivo; *vecchia* va dopo il nome perché distingue la carta da quella nuova.
+**Perché.** Il titolo dice la regola. Una frase lunga per coordinazione, entro le 40 parole del 2005, e due brevi; *chi è residente* non marca il genere; cadono il participio *desideranti*, i possessivi e il passivo; *vecchia* va dopo il nome perché distingue la carta da quella nuova.
 
 ### Post di LinkedIn
 

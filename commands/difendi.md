@@ -42,7 +42,7 @@ il segnaposto con la cartella dove il plugin è installato. Se lo si legge con
 le parentesi graffe ancora al loro posto, il plugin non c'è e quella riga si
 salta.
 
-Se il file c'è, leggerlo prima di procedere, e con lui
+Se il file c'è, leggerlo prima di procedere, insieme a
 `references/voce-personale.md` per il passo 4. Se non c'è, il comando è stato
 copiato da solo in `.claude/commands/` senza la skill: la procedura qui sotto
 si esegue lo stesso, e i rimandi alle sezioni della guida restano un
@@ -72,11 +72,11 @@ Un punteggio prodotto qui varrebbe quanto quello che si sta contestando.
 
 Cinque domande, prima di ogni altra cosa.
 
-- Chi ha sollevato il caso, e in che veste.
+- Chi ha sollevato il caso e in che veste.
 - Con quali parole esatte: verbale, messaggio, commento a margine.
 - Quale strumento, con quale punteggio e quale soglia.
 - Il responso riguarda il documento intero o singole frasi.
-- Che decisione è in gioco, e con quanto tempo davanti.
+- Che decisione è in gioco e con quanto tempo davanti.
 
 Se lo strumento non è stato indicato, chiederlo. Se l'utente non lo sa, la
 richiesta di conoscerlo va in cima al documento: un'accusa che non dichiara lo

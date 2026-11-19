@@ -63,11 +63,13 @@ Ammettere quello che non si sa, quello che rimane in sospeso, quello che inquiet
 
 ### Tecnica quattro: usare la prima persona quando ha senso
 
-L'io è onesto, e resta professionale come ogni altra scelta di persona. Sono segnali di un essere umano che pensa frasi del tipo:
+L'io è onesto e resta professionale come ogni altra scelta di persona. Sono segnali di un essere umano che pensa frasi del tipo:
 
 *Continuo a pensarci, non riesco a togliermelo dalla testa, mi torna in mente ogni volta che, ho provato per due anni a, la mia esperienza con questo è stata, ho cambiato idea su questo punto, mi sono sbagliato quando ho scritto*
 
 La macchina evita la prima persona reale (la usa solo come finzione retorica neutra tipo *come abbiamo visto, andiamo a esplorare*). L'autore umano la usa quando serve.
+
+**Limite:** le formule qui sopra valgono solo se dietro c'è un fatto vero. Chi scrive per conto di un altro non può inventare *ho provato per due anni a* o *mi sono sbagliato quando*: o l'esperienza l'ha fornita l'utente, o si chiede, o si toglie. I dati pratici mancanti (prezzi, date, nomi) seguono un'altra strada: vanno nell'elenco *Da completare* in fondo al testo. Senza fatti, la prima persona onesta resta quella del giudizio (*trovo che, non sono convinto che*), che non finge un vissuto (regola 18 del `SKILL.md`).
 
 ### Tecnica cinque: lasciare entrare un po' di disordine
 
@@ -123,7 +125,7 @@ Stesso contenuto, stessa lunghezza approssimativa, ma il secondo paragrafo ha qu
 
 Iniettare anima ha un fallimento speculare, meno ovvio dei sei sintomi ma altrettanto insidioso. Chi corregge troppo produce un finto-umano di plastica: digressioni messe apposta, imperfezioni piazzate a tavolino, colloquialità gonfiata, l'occhiolino continuo al lettore. È riconoscibile quanto la media asettica, solo dall'altro lato. Un testo così non sembra scritto da una persona: sembra scritto da una macchina che imita una persona, che è peggio.
 
-Chi umanizza a mano, o con un altro modello, lascia tracce sue. Ecco i sintomi del finto-umano, specchio dei sei di prima:
+Chi umanizza a mano, o con un altro modello, lascia tracce sue. Ecco i sintomi del finto-umano: i primi sei fanno da specchio a quelli di prima, il settimo è il più grave.
 
 1. **La digressione decorativa.** Una parentesi personale che non nasce dal pensiero ma è aggiunta per «sembrare umani». Se la togli e non manca niente, era finta.
 
@@ -136,6 +138,8 @@ Chi umanizza a mano, o con un altro modello, lascia tracce sue. Ecco i sintomi d
 5. **La complessità automatica.** *È una questione complicata, ha molte sfumature, non è tutto bianco o nero* messo per riflesso su qualsiasi tema. Ammettere la complessità vale se la complessità è reale e specifica, non come clausola di stile.
 
 6. **Il dettaglio sensoriale finto.** *Era una fredda mattina di novembre* appiccicato per spuntare la casella del concreto. Il dettaglio che pesa è vero e ricordato, non generico e verosimile: la macchina genera specificità plausibili, ed è esattamente ciò che l'umanizzazione pigra imita.
+
+7. **Il vissuto inventato.** L'aneddoto in prima persona creato dal nulla per dare calore: *ho cominciato a correre a quarantatré anni*, *la prima volta che ho sfornato una pagnotta*. È il sintomo più grave, perché oltre che di plastica è falso, e chi pubblica il testo se ne assume la paternità. Nei sette blog scritti da Claude con una versione precedente di questa skill, quattro aprivano o chiudevano con un aneddoto del genere. Si corregge con i fatti dell'utente, oppure togliendo l'aneddoto.
 
 Il test è uno solo, lo stesso dei maestri (in `maestri-della-deviazione.md`): una mossa d'anima è autentica se serve il contenuto e non la puoi togliere senza perdere senso. È di plastica se è decorativa, rimovibile, e la potresti incollare identica su qualunque altro testo. La digressione buona nasce dove il pensiero devia davvero; quella finta è messa perché «adesso tocca una digressione».
 

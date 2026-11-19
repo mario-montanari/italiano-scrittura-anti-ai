@@ -43,6 +43,12 @@ jobs:
       - name: Autoprova dell'hook
         run: python extras/hooks/consenti-solo-profilo-voce.py --prova
 
+      - name: Autoprova del controllo del testo
+        run: python scripts/controlla_testo.py --prova
+
+      - name: Prove degli strumenti di misura
+        run: python extras/prova_campioni.py
+
       # La versione è scritta in quattro posti, e finora niente impediva di
       # aggiornarne tre su quattro. Qui si controlla che dicano la stessa cosa.
       - name: Versione coerente nei quattro posti
@@ -1002,9 +1008,9 @@ jobs:
       # di lettura di Claude Code si ferma a 25.000 token, cioè intorno ai
       # 48 KB di questi testi: oltre, la guida arriverebbe tronca e nessuno
       # se ne accorgerebbe. La soglia di 45.000 byte lascia un margine.
-      # Vale per tutte le guide, perché alla 1.6.0 stanno tutte sotto: la
+      # Vale per tutte le guide, perché alla 1.7.0 stanno tutte sotto: la
       # più pesante dopo tradurre-in-italiano.md, pattern-strutturali.md,
-      # pesa 39.063 byte.
+      # pesa 43.035 byte.
       - name: Peso delle guide
         run: |
           python - <<'PY'

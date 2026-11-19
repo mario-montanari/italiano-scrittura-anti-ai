@@ -25,6 +25,7 @@ Scorrere in ordine. Ogni voce è un controllo discreto, con azione pratica.
 - [ ] **Articoli davanti a sigle e parole straniere**: *l'IBAN, lo SPID, l'SMS, lo humour, l'hotel, il web, uno yeti*
 - [ ] **Plurali in -cia/-gia**: *province, camicie, ciliegie*
 - [ ] **Consecutio temporum**: verbi di opinione reggono il congiuntivo (*penso che sia*, non *penso che è*); periodo ipotetico dell'irrealtà con trapassato più condizionale passato (*se avessi saputo, sarei venuto*)
+- [ ] **Nessun gerundio irrelato**: il soggetto implicito del gerundio coincide con quello della principale (non *entrando nel museo, la prima sala ospita…*)
 - [ ] **Concordanze participio passato**: con *essere* concorda col soggetto, con *avere* concorda col pronome oggetto anteposto (*le ho scelte*)
 - [ ] **Preposizioni**: *a Roma* ma *in Italia*; *credere a una persona* ma *credere in Dio*
 
@@ -38,6 +39,7 @@ Scorrere in ordine. Ogni voce è un controllo discreto, con azione pratica.
 - [ ] **Virgolette alte (" ")** solo per citazioni dentro citazioni, parole in senso ironico, testate giornalistiche
 - [ ] **Nessuna virgola di Oxford**: *A, B e C*, non *A, B, e C*
 - [ ] **Nessuna virgola prima di *e* fra due proposizioni con lo stesso soggetto**: *ha chiuso il file e l'ha spedito*. Resta quando cambia il soggetto, quando la *e* vale *ma* o introduce una conseguenza inattesa, quando chiude un inciso o quando il rilievo o il ritmo sono voluti (`grammatica-italiana.md`, sezione 8)
+- [ ] **Punto e virgola dove la sintassi lo chiede**: né per quota né evitato per principio, mai più di uno ogni 200 parole
 - [ ] **Nessuna virgola fra soggetto e verbo**, né fra verbo e oggetto diretto
 - [ ] **Puntini di sospensione sempre tre** (…)
 - [ ] **Titoli in minuscolo** tranne prima parola e nomi propri: *Come ottimizzare la SEO*, non *Come Ottimizzare la SEO*
@@ -72,9 +74,9 @@ Scorrere in ordine. Ogni voce è un controllo discreto, con azione pratica.
 ### Struttura e ritmo
 
 - [ ] **Connettivi sotto soglia**: non più di uno ogni 3-4 frasi fra *inoltre, tuttavia, pertanto, di conseguenza, infatti, d'altra parte*
-- [ ] **Variazione della lunghezza delle frasi**: in ogni paragrafo almeno una frase sotto le 6 parole e una sopra le 35; deviazione standard target 8-12 parole
+- [ ] **Frasi brevi alternate a periodi lunghi**: nella prosa continuata c'è qualche periodo oltre le 30 parole, non solo frasi corte tutte simili; mai cinque frasi di fila di lunghezza simile
 - [ ] **Nessuna tripletta meccanica**: non tutti gli elenchi da tre voci; variare con liste da 2, 4, 6, 7
-- [ ] **Nessuna lista con header inline grassettato**: se cinque voci con struttura identica, riscrivere in prosa
+- [ ] **Nessun titoletto in grassetto** in testa a paragrafi o voci di elenco: titoli veri se servono sezioni, altrimenti la prima frase porta il concetto; se cinque voci hanno struttura identica, riscriverle in prosa
 - [ ] **Nessun header seguito da frase di rincalzo**: dopo un titolo H2, la prima frase non deve glossare il titolo
 - [ ] **Nessuna ripetizione di soggetto con sinonimi forzati**: se Calvino è nominato, richiamarlo come *Calvino* o con pronome, non come *il celebre scrittore ligure*
 - [ ] **Presenza di incisi**: almeno un paragrafo su due con un inciso fra virgole, parentesi o trattini medi
@@ -84,6 +86,8 @@ Scorrere in ordine. Ogni voce è un controllo discreto, con azione pratica.
 
 - [ ] **Il testo prende posizione**: niente diplomatismi tipo *vantaggi e svantaggi in entrambi gli approcci*
 - [ ] **Prima persona usata con misura**: due-tre formule di opinione attenuate (*a mio avviso, mi pare, trovo che*) distribuite nel testo
+- [ ] **Nessun vissuto inventato**: la prima persona racconta solo fatti forniti dall'utente
+- [ ] **Dati pratici mancanti in fondo**: al massimo tre segnaposto nel testo; l'elenco *Da completare* raccoglie ogni dato mancante
 - [ ] **Passivi e impersonali non dominanti**: fuori da registri tecnici, verificare soggetti espliciti e verbi attivi
 - [ ] **Hedging vago eliminato**: niente *diversi studi dimostrano, numerosi esperti concordano* senza fonte citata
 - [ ] **Se pattern formulaico è autentico del cliente**, lasciarlo: la voce del cliente prevale sui filtri anti-AI generici
@@ -118,7 +122,7 @@ Controlli con base scientifica, più affidabili delle liste di parole. Dettagli 
 Controlli per il testo che parla come se rispondesse in chat. Dettagli in `leak-conversazionale.md`.
 
 - [ ] **Nessuna negazione che corregge un equivoco inesistente**: via *non è X, è Y* quando il lettore non pensava X; affermare direttamente, salvo equivoco reale e diffuso
-- [ ] **Nessuna suspense inutile**: via *qui sta il punto, ecco la cosa, la verità è che, il fatto è che*
+- [ ] **Nessuna suspense inutile**: via *qui sta il punto, ecco la cosa, la verità è che, il fatto è che* e le frasi che annunciano una cosa senza dirla (*la strada più frequente è un'altra.*)
 - [ ] **Nessun riassunto frattale**: via i paragrafi che ricapitolano sé stessi e annunciano la sezione dopo (*come abbiamo visto, vedremo ora*)
 - [ ] **Nessuna domanda messa in bocca al lettore**: via *ti starai chiedendo, andiamo a scoprirlo insieme*
 - [ ] **Test radice**: rileggere immaginando un lettore che non era nella conversazione; ciò che risponde a una domanda mai posta si taglia
@@ -175,7 +179,9 @@ Altre stringhe da verificare rapidamente:
 - `qual'è`, `un pò`, `se stesso`, `perchè`, `nè` (errori ortografici ricorrenti)
 - `Ottima domanda`, `Certo!`, `Certamente!`
 - `Sulla base delle informazioni disponibili`
+- `, e` seguito da uno spazio (virgola prima di *e*: tenerla solo nei casi della sezione 8 di `grammatica-italiana.md`)
 - `non è` + `è` (struttura *non è X, è Y* che corregge un equivoco inesistente)
+- `è un altro.`, `è un'altra.`, `è questo.`, `è questa:` (suspense che rimanda il contenuto alla frase dopo)
 - `qui sta il punto`, `ecco la cosa`, `la verità è che`, `il fatto è che`
 - `come abbiamo visto`, `vedremo ora`, `andiamo a scoprirlo insieme`, `ti starai chiedendo`
 
@@ -187,6 +193,7 @@ Tabella finale di consultazione, consolidata dal documento principale e dal comp
 |---|---|---|
 | Gonfiatura di significato | *si configura come un punto di svolta* | Dichiarare il fatto con dati |
 | Gerundio parassita | *confermando la sua leadership* | Cancellare la coda |
+| Gerundio irrelato | *avendo analizzato i dati, il progetto è stato approvato* | Esplicitare il soggetto o usare una subordinata di modo finito |
 | Linguaggio da brochure | *incastonato nel cuore di* | Dettagli specifici e verificabili |
 | Perifrasi della copula | *rappresenta un punto di riferimento* | Sostituire con *è, ha, fa* |
 | Meta-annuncio | *È importante sottolineare che* | Dire direttamente |
@@ -199,9 +206,9 @@ Tabella finale di consultazione, consolidata dal documento principale e dal comp
 | Lista con header in grassetto | *Performance: Le prestazioni…* | Prosa o bullet senza header |
 | Header con frase di rincalzo | «Performance / La performance è importante» | Entrare direttamente nel contenuto |
 | Em-dash | *La soluzione — che pareva impossibile —* | Virgole o parentesi tonde |
+| Virgola prima di *e* con lo stesso soggetto | *ha letto il libro, e l'ha trovato utile* | Togliere la virgola o spezzare con un punto, salvo inciso, *e* avversativa o rilievo voluto |
 | Title case italiano | *Come Ottimizzare la SEO* | Minuscolo tranne prima parola e nomi propri |
 | Virgolette inglesi | *"Va bene", disse Marco.* | *«Va bene», disse Marco.* |
-| Virgola all'inglese prima di *e* | *ha chiuso il file, e l'ha spedito* | Togliere la virgola se il soggetto è lo stesso, salvo inciso, *e* avversativa o rilievo voluto |
 | Sinonimia forzata | *Calvino… l'autore… il narratore… il romanziere ligure* | Ripetere il nome o usare pronome |
 | Contrasto fittizio | *non solo X ma anche Y* | Congiunzione semplice |
 | False range | *dalla matematica all'arte* | Elenco onesto con esempi veri |
@@ -213,7 +220,9 @@ Tabella finale di consultazione, consolidata dal documento principale e dal comp
 | Knowledge cutoff | *Sulla base delle informazioni disponibili* | Verificare e dichiarare fonte specifica |
 | Tono servile | *Ottima domanda! Spero ti sia utile!* | Eliminare senza sostituzione |
 | Parola spia | *approfondire il panorama* | Parola semplice e contestuale |
-| Domanda retorica generica | *Ti sei mai chiesto…?* | Fatto concreto, aneddoto datato |
+| Suspense «è un altro» | *la strada più frequente è un'altra. È quella civile.* | Dire subito la cosa |
+| Vissuto inventato | *ho cominciato a correre a quarantatré anni*, senza che l'utente l'abbia detto | Fatti dati dall'utente, oppure posizione senza biografia |
+| Domanda retorica generica | *Ti sei mai chiesto…?* | Fatto concreto, aneddoto vero e datato |
 | Meta-annuncio | *Andiamo a vedere insieme* | Entrare nel contenuto |
 | Frase adulatoria residua | *Hai perfettamente ragione, è un punto molto interessante* | Eliminare |
 
