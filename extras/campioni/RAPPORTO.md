@@ -276,3 +276,63 @@ Risale al 12,7% nei blog, dopo lo zero della 1.11.0. Le occorrenze lette a mano 
 ### Conclusione
 
 Chiedere variazione funziona meglio che fissare quote: il punto e virgola si distribuisce, i periodi si allungano senza una soglia per paragrafo. È la prima versione in cui tutte le misure si muovono nella direzione della prosa umana senza superarla.
+
+---
+
+## Ottavo campione: virgola prima di «e» e periodo lungo, sulla 1.7.0
+
+Stesse 21 richieste, due campioni con tre agenti nuovi ciascuno. Il primo usa la 1.7.0 di questa repo così com'è. Il secondo usa la stessa versione con due modifiche: la sottosezione «Come si costruisce il periodo lungo» di `metodologie-operative.md` e la regola 17 riscritta, che con un soggetto nuovo ammette la virgola prima di *e* senza imporla. 8.049 e 7.998 parole.
+
+| Misura | 1.7.0 | dopo le modifiche | PAISÀ blog |
+|---|---|---|---|
+| *e* precedute da virgola, tutti i registri | 16,1% | 9,6% | 7,0% |
+| *e* precedute da virgola, blog | 15,5% | 8,8% | 7,0% |
+| *e* precedute da virgola, marketing | 20,9% | 13,8% | |
+| *e* precedute da virgola, professionale | 12,1% | 5,8% | |
+| Virgola prima di *e* ogni 1000 parole | 4,35 | 2,75 | 1,84 |
+| Parole per frase, media, blog | 25,1 | 24,7 | 26,5 |
+| Frasi oltre le 35 parole, blog | 28,4% | 26,7% | 21,8% |
+| Variazione lunghezza frasi (CV), blog | 0,55 | 0,56 | 0,64 |
+| Gerundio in coda ogni 1000 parole | 0,75 | 1,38 | 1,39 |
+| Punto e virgola ogni 1000 parole | 2,11 | 1,88 | 1,63 |
+| Segnaposto ogni 1000 parole | 3,11 | 2,88 | 0,16 |
+
+### La premessa che non reggeva più
+
+Il lavoro era partito da una misura sulla 1.12.0 del fork: nei blog 19,4 parole per frase e l'11,5% di frasi oltre le 35 parole, contro le 26,5 e il 21,8% di PAISÀ. I blog della 1.7.0 di questa repo arrivano invece a 25,1 parole per frase e al 28,4% di periodi lunghi. Le frasi corte non erano più il problema.
+
+La distanza netta rimasta era la virgola prima di *e*: 16,1% contro il 7% umano. La causa stava nella regola 17, che con un soggetto nuovo diceva che la virgola «resta». Il modello la metteva ogni volta che il soggetto cambiava, anche dopo una proposizione di poche parole. La regola riscritta la ammette solo se la prima proposizione è lunga o se senza virgola nascerebbe un equivoco.
+
+La sottosezione sul periodo lungo resta come guida di mestiere. La sua verifica è più modesta: che i periodi lunghi tengano e che siano costruiti bene.
+
+### Virgola prima di *e*
+
+Su tutti i registri la quota scende dal 16,1% al 9,6%, nei blog dal 15,5% all'8,8%, vicino al 7% umano. Nei testi professionali arriva al 5,8%, appena sotto la prosa umana; quelli di marketing restano i più alti, al 13,8%. Le sequenze «, e » trovate con `grep` passano da 37 a 23.
+
+Le stesse richieste producono testi diversi, quindi le frasi del primo campione non hanno una gemella nel secondo. Nel campione di base si vedono però le virgole che la regola nuova toglie, con una prima proposizione breve e nessun equivoco possibile:
+
+- *Un caffè si giudica nella tazza, e quello che finisce nella tazza dipende in buona parte da quanti giorni sono passati…* (marketing-02)
+- *Una bici troppo grande o troppo piccola affatica schiena e ginocchia, e nessun affare la rende comoda.* (blog-02)
+- *L'impresa non può smontare beni privati, e quello che resta al suo posto rischia di rovinarsi…* (professionale-07)
+
+### Periodo lungo
+
+I periodi lunghi tengono: nei blog 24,7 parole per frase e il 26,7% oltre le 35, contro 25,1 e 28,4% della base. La variazione resta quasi ferma, 0,56 contro lo 0,64 umano.
+
+### Lettura a mano
+
+Nel secondo campione le frasi oltre le 35 parole sono 78. Lette una per una, 70 sono costruite bene e 8 sono gonfie, il 10,3%.
+
+Un periodo riuscito, da blog-01, porta 49 parole su un solo filo causale e mette il verbo subito: *In cottura i granuli di amido assorbono l'acqua dell'impasto, si gonfiano e perdono la loro struttura ordinata; quando il pane si raffredda le catene di amido tornano piano piano ad allinearsi…*
+
+Uno gonfio, da blog-06, accumula complementi e una parentesi di esempi prima del verbo: *Due volte alla settimana, a casa, dieci minuti di esercizi per polpacci, glutei e muscoli addominali (…) proteggono più di qualsiasi scarpa…* A voce alta non basta un fiato per arrivare a *proteggono*. Gli altri sette hanno quasi tutti lo stesso guasto: un inciso, una relativa o una serie di participi allontana il verbo o il pronome dalla parola a cui si lega. Chi legge deve tornare indietro.
+
+### Gerundio in coda e segnaposto
+
+Il gerundio in coda sale da 0,75 a 1,38 ogni 1000 parole, quasi il valore umano. Fra due campioni consecutivi del fork la stessa misura ha oscillato fino a 0,88: lo spostamento sta dentro questo rumore e non va attribuito alle modifiche.
+
+I segnaposto stanno solo nei testi di marketing e professionali, dove la regola 18 li chiede al posto dei dati che la richiesta non dà. Nei blog non ce n'è nessuno.
+
+### Limiti
+
+Sette testi per registro e un solo campione per versione: gli spostamenti piccoli, come quello del gerundio, non dicono niente. La classificazione dei periodi lunghi è una lettura sola, non ripetuta da un secondo lettore. I 42 testi restano nel fork, `renatoromano-png/italiano-scrittura-anti-ai`, come quelli dei campioni precedenti.
