@@ -222,7 +222,7 @@ Calvino nelle *Città invisibili* scrive: «D'una città non godi le sette o le 
 
 #### Come si costruisce il periodo lungo
 
-La regola 15 chiede periodi lunghi dove il contenuto li regge. Quando prova a variare, il modello spesso allinea frasi corte e lascia al lettore il compito di collegarle. Qui si vede come riconoscere quella catena e come costruire al suo posto un periodo lungo che si legge senza fatica.
+La regola 15 chiede periodi lunghi dove il contenuto li regge. Nei campioni misurati delle versioni precedenti il modello, quando provava a variare, allineava spesso frasi corte e lasciava al lettore il compito di collegarle. Qui si vede come riconoscere quella catena e come costruire al suo posto un periodo lungo che si legge senza fatica.
 
 **La diagnosi.** Tre o quattro frasi brevi di fila, in cui la seconda è la causa, la conseguenza o l'obiezione della prima, senza che una parola lo dica. Dalla relazione trimestrale di un campione misurato (fork 1.9.0, `professionale-02`):
 
@@ -230,38 +230,38 @@ La regola 15 chiede periodi lunghi dove il contenuto li regge. Quando prova a va
 
 Ogni frase è corretta, ma il lettore deve ricostruire da sé che la seconda limita la prima e che la terza la spiega: il testo gli consegna tre fatti e gli lascia il ragionamento. La prova è semplice. Se fra due frasi si può inserire *perché*, *quindi*, *ma* o *anche se* senza cambiare il senso, il legame c'era e la scrittura l'ha taciuto. Lo stesso passo, con il legame detto:
 
-> «La crescita c'è ma è più lenta del previsto, e lo scarto viene quasi tutto da un solo mercato.»
+> «La crescita c'è ma è più lenta del previsto: quasi tutto lo scarto viene da un solo mercato.»
 
 **Sei tecniche.** Gli esempi «prima» vengono dai campioni misurati nel fork della skill; il «dopo» riscrive lo stesso passo.
 
 1. **La subordinata che nomina il legame**: *perché*, *sicché*, *anche se*, *finché*, *mentre*.
-   > Prima: «Il motivo per cui vale la pena farlo è l'energia. Produrre alluminio dalla bauxite, il minerale di partenza, richiede enormi quantità di elettricità. Rifonderlo ne richiede circa il 5 per cento.» (1.5.0, `blog-05`)
+   > Prima: «Il motivo per cui vale la pena farlo è l'energia. Produrre alluminio dalla bauxite, il minerale di partenza, richiede enormi quantità di elettricità. Rifonderlo ne richiede circa il 5 per cento.» (fork 1.5.0, `blog-05`)
    >
    > Dopo: «Vale la pena farlo per l'energia, perché produrre alluminio dalla bauxite, il minerale di partenza, richiede enormi quantità di elettricità mentre rifonderlo ne richiede circa il 5 per cento.»
 2. **La causale o la concessiva in testa.** Il periodo si apre sulla condizione e chiude sull'affermazione, che resta in posizione forte.
-   > Prima: «Io consiglierei di arrivarci tardi, però. Con il vicino ci condividi le scale, magari per vent'anni. Vale la pena provare un'altra volta col campanello.» (1.5.0, `blog-04`, dopo un paragrafo sulla diffida dell'avvocato)
+   > Prima: «Io consiglierei di arrivarci tardi, però. Con il vicino ci condividi le scale, magari per vent'anni. Vale la pena provare un'altra volta col campanello.» (fork 1.5.0, `blog-04`, dopo un paragrafo sulla diffida dell'avvocato)
    >
    > Dopo: «Visto che con il vicino condividi le scale, magari per vent'anni, alla diffida io arriverei tardi: prima proverei un'altra volta con il campanello.»
 3. **La relativa appositiva** al posto della frase che riprende il soggetto per aggiungere un dettaglio.
-   > Prima: «C'è un test semplice per capire se un oggetto è di alluminio. Accartocciato nella mano, resta accartocciato. Un incarto di plastica metallizzata, quello delle patatine, torna su da solo.» (1.5.0, `blog-05`)
+   > Prima: «C'è un test semplice per capire se un oggetto è di alluminio. Accartocciato nella mano, resta accartocciato. Un incarto di plastica metallizzata, quello delle patatine, torna su da solo.» (fork 1.5.0, `blog-05`)
    >
-   > Dopo: «Per distinguere l'alluminio, che accartocciato nella mano resta accartocciato, dalla plastica metallizzata delle patatine, che invece torna su da sola, basta un test semplice.»
+   > Dopo: «Basta un test semplice per distinguere l'alluminio, che accartocciato nella mano resta accartocciato, dalla plastica metallizzata delle patatine, che invece torna su da sola.»
 4. **L'inciso**, descritto nella seconda mossa: tiene un dettaglio dentro il periodo invece di dargli una frase sua.
-   > Prima: «L'Italia ha inventato la macchina, ma la parola «espresso» probabilmente non indicava la velocità. Secondo molti storici voleva dire caffè fatto «espressamente», al momento, per quel cliente. Che poi fosse anche rapido era un vantaggio in più.» (1.5.0, `blog-03`)
+   > Prima: «L'Italia ha inventato la macchina, ma la parola “espresso” probabilmente non indicava la velocità. Secondo molti storici voleva dire caffè fatto “espressamente”, al momento, per quel cliente. Che poi fosse anche rapido era un vantaggio in più.» (fork 1.5.0, `blog-03`)
    >
-   > Dopo: «L'Italia ha inventato la macchina, ma la parola «espresso», secondo molti storici, probabilmente non indicava la velocità: voleva dire caffè fatto «espressamente», al momento e per quel cliente. Che poi fosse anche rapido era un vantaggio in più.»
+   > Dopo: «L'Italia ha inventato la macchina, ma la parola “espresso”, secondo molti storici, probabilmente non indicava la velocità: voleva dire caffè fatto “espressamente”, al momento e per quel cliente. Che poi fosse anche rapido era un vantaggio in più.»
 5. **La coordinazione che cresce.** Passi che seguono un ordine, di tempo o di intensità, stanno in un solo periodo, legati da *poi* e *finché*. La virgola prima di *e* resta fuori, salvo i casi della regola 17.
-   > Prima: «Per le prime settimane non correre di continuo. Un minuto di corsa lenta e due di camminata, ripetuti per venti o trenta minuti. Ogni settimana allunghi un po' la corsa e accorci la camminata. Dopo due mesi, più o meno, arrivi a correre mezz'ora di fila.» (1.5.0, `blog-06`)
+   > Prima: «Per le prime settimane non correre di continuo. Un minuto di corsa lenta e due di camminata, ripetuti per venti o trenta minuti. Ogni settimana allunghi un po' la corsa e accorci la camminata. Dopo due mesi, più o meno, arrivi a correre mezz'ora di fila.» (fork 1.5.0, `blog-06`)
    >
    > Dopo: «Per le prime settimane alterni un minuto di corsa lenta e due di camminata, per venti o trenta minuti; poi ogni settimana allunghi un po' la corsa e accorci la camminata, finché, in due mesi più o meno, arrivi a correre mezz'ora di fila.»
 6. **I due punti che spiegano**, al posto del punto che lascia l'inferenza al lettore.
-   > Prima: «Il ritmo giusto è quello in cui riesci a parlare. Se non riesci a dire una frase intera senza ansimare, stai andando troppo forte.» (1.5.0, `blog-06`)
+   > Prima: «Il ritmo giusto è quello in cui riesci a parlare. Se non riesci a dire una frase intera senza ansimare, stai andando troppo forte.» (fork 1.5.0, `blog-06`)
    >
    > Dopo: «Il ritmo giusto è quello in cui riesci a parlare: se non riesci a dire una frase intera senza ansimare, stai andando troppo forte.»
 
 **Quando la frase breve resta la scelta giusta.**
 
-- Istruzioni e passaggi numerati, perché chi esegue legge un passo alla volta. Nell'avviso condominiale di un campione (1.9.0, `professionale-07`) *Tenere le finestre chiuse durante le demolizioni e la sabbiatura. La polvere entra anche dalle fessure.* va bene così.
+- Istruzioni e passaggi numerati, perché chi esegue legge un passo alla volta. Nell'avviso condominiale di un campione (fork 1.9.0, `professionale-07`) *Tenere le finestre chiuse durante le demolizioni e la sabbiatura. La polvere entra anche dalle fessure.* va bene così.
 - Testi brevi: l'oggetto di una mail, il microcopy, una didascalia, un post di poche righe.
 - La voce d'autore che scrive corto: il profilo di voce (sezione 4 e `voce-personale.md`) prevale sulla regola 15.
 - Il fatto netto, la svolta, la chiusura. Accanto a un periodo lungo la frase breve pesa di più.

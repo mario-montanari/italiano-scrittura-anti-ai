@@ -307,7 +307,7 @@ La sottosezione sul periodo lungo resta come guida di mestiere. La sua verifica 
 
 ### Virgola prima di *e*
 
-Su tutti i registri la quota scende dal 16,1% al 9,6%, nei blog dal 15,5% all'8,8%, vicino al 7% umano. Nei testi professionali arriva al 5,8%, appena sotto la prosa umana; quelli di marketing restano i più alti, al 13,8%. Le sequenze «, e » trovate con `grep` passano da 37 a 23.
+Su tutti i registri la quota scende dal 16,1% al 9,6%, nei blog dal 15,5% all'8,8%, vicino al 7% umano. Nei testi professionali arriva al 5,8%, appena sotto la prosa umana; quelli di marketing restano i più alti, al 13,8%. In numeri assoluti le virgole prima di *e* passano da 35 a 22.
 
 Le stesse richieste producono testi diversi, quindi le frasi del primo campione non hanno una gemella nel secondo. Nel campione di base si vedono però le virgole che la regola nuova toglie, con una prima proposizione breve e nessun equivoco possibile:
 
@@ -317,7 +317,7 @@ Le stesse richieste producono testi diversi, quindi le frasi del primo campione 
 
 ### Periodo lungo
 
-I periodi lunghi tengono: nei blog 24,7 parole per frase e il 26,7% oltre le 35, contro 25,1 e 28,4% della base. La variazione resta quasi ferma, 0,56 contro lo 0,64 umano.
+I periodi lunghi tengono: nei blog 24,7 parole per frase e il 26,7% oltre le 35, contro 25,1 e 28,4% della base. La variazione resta quasi ferma, da 0,55 a 0,56, contro lo 0,64 umano.
 
 ### Lettura a mano
 

@@ -10,7 +10,7 @@ Tutte le modifiche rilevanti alla skill sono annotate qui. Il formato segue la c
 
 ### Modificato
 
-- `SKILL.md`, regola 17, `references/grammatica-italiana.md`, sezione 8, e `references/checklist-finale.md`: con un soggetto nuovo la virgola prima di *e* è ammessa, non dovuta; si mette se la prima proposizione è lunga o se senza virgola nascerebbe un equivoco.
+- `SKILL.md`, regola 17, `references/grammatica-italiana.md`, sezione 8, `references/checklist-finale.md`, `extras/CLAUDE.md.example` e `extras/user-preferences.example.md`: con un soggetto nuovo la virgola prima di *e* è ammessa, non dovuta; si mette se la prima proposizione è lunga o se senza virgola nascerebbe un equivoco.
 - `SKILL.md`, regola 15 ed elenco dei reference, e `references/checklist-finale.md`: rimandi alla sottosezione sul periodo lungo.
 - `README.md`: totale delle parole aggiornato.
 - `extras/campioni/RAPPORTO.md`: ottavo campione, la 1.7.0 prima e dopo queste modifiche.
