@@ -232,8 +232,6 @@ Ogni frase è corretta, ma il lettore deve ricostruire da sé che la seconda lim
 
 > «La crescita c'è ma è più lenta del previsto, e lo scarto viene quasi tutto da un solo mercato.»
 
-Il tic è catalogato come pattern 22 in `pattern-strutturali.md`.
-
 **Sei tecniche.** Gli esempi «prima» vengono dai campioni misurati nel fork della skill; il «dopo» riscrive lo stesso passo.
 
 1. **La subordinata che nomina il legame**: *perché*, *sicché*, *anche se*, *finché*, *mentre*.

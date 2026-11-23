@@ -38,7 +38,7 @@ Scorrere in ordine. Ogni voce è un controllo discreto, con azione pratica.
 - [ ] **Virgolette caporali (« »)** per dialoghi e citazioni dirette
 - [ ] **Virgolette alte (" ")** solo per citazioni dentro citazioni, parole in senso ironico, testate giornalistiche
 - [ ] **Nessuna virgola di Oxford**: *A, B e C*, non *A, B, e C*
-- [ ] **Nessuna virgola prima di *e* fra due proposizioni con lo stesso soggetto**: *ha chiuso il file e l'ha spedito*. Resta quando cambia il soggetto, quando la *e* vale *ma* o introduce una conseguenza inattesa, quando chiude un inciso o quando il rilievo o il ritmo sono voluti (`grammatica-italiana.md`, sezione 8)
+- [ ] **Nessuna virgola prima di *e* fra due proposizioni con lo stesso soggetto**: *ha chiuso il file e l'ha spedito*. Con un soggetto nuovo resta solo se la prima proposizione è lunga o se senza virgola nascerebbe un equivoco; resta anche quando la *e* vale *ma* o introduce una conseguenza inattesa, quando chiude un inciso o quando il rilievo o il ritmo sono voluti (`grammatica-italiana.md`, sezione 8)
 - [ ] **Punto e virgola dove la sintassi lo chiede**: né per quota né evitato per principio, mai più di uno ogni 200 parole
 - [ ] **Nessuna virgola fra soggetto e verbo**, né fra verbo e oggetto diretto
 - [ ] **Puntini di sospensione sempre tre** (…)
