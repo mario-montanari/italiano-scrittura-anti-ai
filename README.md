@@ -60,7 +60,7 @@
 
 ## Che cos'è
 
-Una biblioteca di lavoro sull'italiano scritto, in forma di skill: quattordici guide operative, oltre quarantasettemila parole di regole, esempi e correzioni, più due strumenti eseguibili, uno che misura la voce di un autore e uno che segnala in una bozza i punti che le regole vietano.
+Una biblioteca di lavoro sull'italiano scritto, in forma di skill: quattordici guide operative, oltre quarantottomila parole di regole, esempi e correzioni, più due strumenti eseguibili, uno che misura la voce di un autore e uno che segnala in una bozza i punti che le regole vietano.
 
 Il nome dice «anti ai» perché da lì è nata, dalla firma riconoscibile che i modelli linguistici lasciano nei testi italiani. Ma il materiale che serve a togliere quella firma è lo stesso che serve a scrivere bene: la grammatica normativa dell'Accademia, il lessico giusto al posto di quello comodo, il ritmo della frase, i sei registri dell'italiano e le loro norme editoriali, la lezione dei prosatori del Novecento. Su un testo scritto da una persona funziona esattamente come su un testo generato e nella metà dei casi è così che viene usata.
 

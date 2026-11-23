@@ -38,7 +38,7 @@ Grammatica:
 - Congiuntivo dopo benché, sebbene, affinché, qualora.
 - Periodo ipotetico irrealtà: se avessi saputo, sarei venuto.
 - Mai piuttosto che in senso disgiuntivo (significa invece di, non oppure).
-- Virgola prima di «e»: mai in fondo a un elenco (A, B e C). Fra due proposizioni, niente se il soggetto è lo stesso (ha chiuso il file e l'ha spedito). Resta se cambia il soggetto, se la «e» vale «ma» o porta una conseguenza inattesa, se chiude un inciso, se il rilievo o il ritmo la vogliono: una scelta, non un'abitudine. La prova: se al posto della virgola un punto non regge e il ritmo non chiede una pausa, è di troppo. Toglierle tutte è l'errore opposto.
+- Virgola prima di «e»: mai in fondo a un elenco (A, B e C). Fra due proposizioni, niente se il soggetto è lo stesso (ha chiuso il file e l'ha spedito). Con un soggetto nuovo è ammessa, non dovuta: si mette se la prima proposizione è lunga o se senza virgola nascerebbe un equivoco. Resta se la «e» vale «ma» o porta una conseguenza inattesa, se chiude un inciso, se il rilievo o il ritmo la vogliono: una scelta, non un'abitudine. La prova: se al posto della virgola un punto non regge e il ritmo non chiede una pausa, è di troppo. Toglierle tutte è l'errore opposto.
 - Punto e virgola dove la sintassi lo chiede, mai per quota: fra due proposizioni indipendenti troppo legate per un punto (spesso al posto di una virgola seguita da «e») e negli elenchi in prosa con voci lunghe. Un testo può non averne nessuno. Mai più di uno ogni 200 parole.
 
 Pattern AI da non produrre mai:
