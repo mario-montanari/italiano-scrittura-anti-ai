@@ -243,23 +243,23 @@ Il tic è catalogato come pattern 22 in `pattern-strutturali.md`.
 2. **La causale o la concessiva in testa.** Il periodo si apre sulla condizione e chiude sull'affermazione, che resta in posizione forte.
    > Prima: «Io consiglierei di arrivarci tardi, però. Con il vicino ci condividi le scale, magari per vent'anni. Vale la pena provare un'altra volta col campanello.» (1.5.0, `blog-04`, dopo un paragrafo sulla diffida dell'avvocato)
    >
-   > Dopo: «Visto che con il vicino condividi le scale, magari per vent'anni, alla diffida conviene arrivare tardi, dopo aver provato un'altra volta con il campanello.»
+   > Dopo: «Visto che con il vicino condividi le scale, magari per vent'anni, alla diffida io arriverei tardi: prima proverei un'altra volta con il campanello.»
 3. **La relativa appositiva** al posto della frase che riprende il soggetto per aggiungere un dettaglio.
    > Prima: «C'è un test semplice per capire se un oggetto è di alluminio. Accartocciato nella mano, resta accartocciato. Un incarto di plastica metallizzata, quello delle patatine, torna su da solo.» (1.5.0, `blog-05`)
    >
-   > Dopo: «Per capire se un oggetto è di alluminio basta accartocciarlo nella mano: l'alluminio resta com'è, mentre la plastica metallizzata, che si usa per esempio per le patatine, torna su da sola.»
+   > Dopo: «Per distinguere l'alluminio, che accartocciato nella mano resta accartocciato, dalla plastica metallizzata delle patatine, che invece torna su da sola, basta un test semplice.»
 4. **L'inciso**, descritto nella seconda mossa: tiene un dettaglio dentro il periodo invece di dargli una frase sua.
    > Prima: «L'Italia ha inventato la macchina, ma la parola «espresso» probabilmente non indicava la velocità. Secondo molti storici voleva dire caffè fatto «espressamente», al momento, per quel cliente. Che poi fosse anche rapido era un vantaggio in più.» (1.5.0, `blog-03`)
    >
-   > Dopo: «L'Italia ha inventato la macchina, ma la parola «espresso», secondo molti storici, non indicava la velocità: voleva dire caffè fatto «espressamente», al momento e per quel cliente. Che fosse anche rapido era un vantaggio in più.»
+   > Dopo: «L'Italia ha inventato la macchina, ma la parola «espresso», secondo molti storici, probabilmente non indicava la velocità: voleva dire caffè fatto «espressamente», al momento e per quel cliente. Che poi fosse anche rapido era un vantaggio in più.»
 5. **La coordinazione che cresce.** Passi che seguono un ordine, di tempo o di intensità, stanno in un solo periodo, legati da *poi* e *finché*. La virgola prima di *e* resta fuori, salvo i casi della regola 17.
    > Prima: «Per le prime settimane non correre di continuo. Un minuto di corsa lenta e due di camminata, ripetuti per venti o trenta minuti. Ogni settimana allunghi un po' la corsa e accorci la camminata. Dopo due mesi, più o meno, arrivi a correre mezz'ora di fila.» (1.5.0, `blog-06`)
    >
-   > Dopo: «Per le prime settimane alterni un minuto di corsa lenta e due di camminata, per venti o trenta minuti; poi ogni settimana allunghi un po' la corsa e accorci la camminata, finché dopo due mesi, più o meno, arrivi a correre mezz'ora di fila.»
+   > Dopo: «Per le prime settimane alterni un minuto di corsa lenta e due di camminata, per venti o trenta minuti; poi ogni settimana allunghi un po' la corsa e accorci la camminata, finché, in due mesi più o meno, arrivi a correre mezz'ora di fila.»
 6. **I due punti che spiegano**, al posto del punto che lascia l'inferenza al lettore.
    > Prima: «Il ritmo giusto è quello in cui riesci a parlare. Se non riesci a dire una frase intera senza ansimare, stai andando troppo forte.» (1.5.0, `blog-06`)
    >
-   > Dopo: «Il ritmo giusto è quello in cui riesci a parlare: se non dici una frase intera senza ansimare, stai andando troppo forte.»
+   > Dopo: «Il ritmo giusto è quello in cui riesci a parlare: se non riesci a dire una frase intera senza ansimare, stai andando troppo forte.»
 
 **Quando la frase breve resta la scelta giusta.**
 
@@ -275,7 +275,7 @@ Il tic è catalogato come pattern 22 in `pattern-strutturali.md`.
 - i verbi diventano nomi (*l'effettuazione della verifica*, *la realizzazione dell'implementazione*): lo stile nominale allunga senza collegare;
 - il periodo chiude su un'aggiunta debole (*…, il che è importante*) e l'informazione forte resta in mezzo.
 
-Lo stesso passo della relazione, riscritto apposta male per mostrare l'errore opposto alla catena di frasi corte:
+Sullo stesso passo della relazione, un periodo costruito apposta male mostra l'errore opposto alla catena di frasi corte:
 
 > «Considerata la presenza di una crescita, rivelatasi tuttavia inferiore alle previsioni formulate in sede di budget, ed essendo lo scarto riconducibile pressoché integralmente a un unico mercato, si rende necessaria l'effettuazione di una revisione delle stime.»
 
